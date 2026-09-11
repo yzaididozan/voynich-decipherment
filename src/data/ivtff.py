@@ -32,13 +32,15 @@ class IVTFFParseError(ValueError):
     """Raised when IVTFF input violates a structural assumption."""
 
 
+_PAGE_NAME_PATTERN = r"(?:f\d+[rv]\d*|fRos)"
+
 _PAGE_HEADER_RE = re.compile(
-    r"^<(?P<page>f\d+[rv]\d*)>(?P<rest>.*)$"
+    rf"^<(?P<page>{_PAGE_NAME_PATTERN})>(?P<rest>.*)$"
 )
 
 _LOCUS_RE = re.compile(
     r"^<"
-    r"(?P<page>f\d+[rv]\d*)"
+    rf"(?P<page>{_PAGE_NAME_PATTERN})"
     r"\."
     r"(?P<number>\d{1,3})"
     r","
@@ -155,7 +157,14 @@ def _quire_number(code: Optional[str]) -> Optional[int]:
 
 
 def _parse_page_name(page: str) -> Tuple[Optional[int], Optional[str], Optional[int]]:
-    """Return ``(physical_leaf, recto_verso, foldout_panel)``."""
+    """Return ``(physical_leaf, recto_verso, foldout_panel)``.
+
+    ``fRos`` is the special Rosettes page spanning parts of f85v and f86r,
+    so it has no single physical leaf/side representation.
+    """
+    if page == "fRos":
+        return None, None, None
+
     match = re.fullmatch(r"f(\d+)([rv])(\d*)", page)
     if not match:
         return None, None, None

@@ -276,3 +276,18 @@ def test_supported_robustness_headers(sample, transcription_id, alphabet):
     record = parse_text(sample, transcription_id)[0]
     assert record.transcription_id == transcription_id
     assert record.ivtff_alphabet == alphabet
+
+
+def test_rosettes_page_fros_is_supported():
+    sample = """#=IVTFF Eva- 2.0 M 5
+<fRos> <! $Q=N $I=C $L=B $H=4>
+<fRos.1,@P0> <%>daiin.ol<$>
+"""
+    record = parse_text(sample, "ZL3b")[0]
+
+    assert record.folio == "fRos"
+    assert record.quire == 14
+    assert record.section == "cosmological"
+    assert record.physical_leaf is None
+    assert record.recto_verso is None
+    assert record.foldout_panel is None
