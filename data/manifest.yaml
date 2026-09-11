@@ -1,19 +1,29 @@
 # Voynich Decipherment Project — Data Manifest
 # Path: data/manifest.yaml
 #
-# Raw source files are immutable. Verify each downloaded file locally and
-# replace `sha256: null` with the checksum you compute from your exact copy.
+# Raw source files are immutable archival inputs.
+# Never normalize, edit, reformat, or overwrite files under data/raw/.
+# All derived representations belong under data/parsed/ or data/analytical/.
 
-manifest_version: "1.0"
+manifest_version: "1.1"
+
+project:
+  primary_transcription: "ZL3b"
+  primary_format: "IVTFF 2.0"
+  split_unit: "physical_leaf"
+  raw_data_is_immutable: true
+  semantic_analysis_before_structural_freeze: false
+  locked_test_tuning_allowed: false
 
 datasets:
+
   - id: "ZL3b"
-    name: "Zandbergen–Landini Voynich Transcription"
+    name: "Zandbergen–Landini Voynich Transliteration"
     filename: "ZL3b-n.txt"
     local_path: "data/raw/zl/ZL3b-n.txt"
 
     role: "primary_transcription"
-    status: "required"
+    independence: "primary"
 
     version: "3b"
     version_date: "2025-05-13"
@@ -25,13 +35,18 @@ datasets:
       url: "https://www.voynich.nu/data/ZL3b-n.txt"
       reference_page: "https://www.voynich.nu/transcr.html"
 
+    source_header:
+      - "#=IVTFF Eva- 2.0 M 5"
+      - "# ZL transliteration file, updated from EVMT project"
+      - "# Version 3b of 13/05/2025"
+
     reported_statistics:
       loci: 5385
       long_words: 36278
       characters: 157304
       note: >
-        These are source-reported corpus statistics and should be reproduced
-        during corpus QC using the stated counting convention.
+        Source-reported statistics. These values must be reproduced during
+        corpus QC using the source counting conventions before model training.
 
     integrity:
       size_bytes: 411671
@@ -44,37 +59,187 @@ datasets:
       allow_overwrite: false
       derived_files_must_use_separate_directory: true
 
-    expected_header:
-      - "#=IVTFF Eva- 2.0 M 5"
-      - "# ZL transliteration file, updated from EVMT project"
-      - "# Version 3b of 13/05/2025"
-
-robustness_datasets:
-  - id: "RF1b"
-    name: "Reference Voynich Transcription"
-    role: "robustness_transcription"
-    status: "planned"
-    local_path: "data/raw/rf/"
-    sha256: null
 
   - id: "GC2a"
-    name: "Glen Claston Transcription"
+    name: "Glen Claston v101 Transliteration"
+    filename: "GC2a-n.txt"
+    local_path: "data/raw/gc/GC2a-n.txt"
+
     role: "robustness_transcription"
-    status: "planned"
-    local_path: "data/raw/gc/"
-    sha256: null
+    independence: "independent_transliteration"
+
+    version: "2a"
+    original_version_date: "2023-02-05"
+    modified_date: "2025-06-25"
+    format: "IVTFF 2.0"
+    alphabet: "v101"
+
+    source:
+      publisher: "René Zandbergen / voynich.nu"
+      original_transcriber: "Glen Claston"
+      original_file: "voyn101.txt"
+      url: "https://www.voynich.nu/data/GC2a-n.txt"
+      reference_page: "https://www.voynich.nu/transcr.html"
+
+    source_header:
+      - "#=IVTFF v101 2.0 M 6"
+      - "# Original file: voyn101.txt"
+      - "# IVTFF version 2a of 05/02/2023 modified 25/06/2025"
+
+    integrity:
+      size_bytes: 314916
+      sha256: "b09570cb6c993bc2d87134d115e60a978650a8a6495483ddbb1f6005a586096f"
+      verification_status: "verified_locally"
+
+    notes:
+      - "Independent transliteration approach using the v101 alphabet."
+      - "Use as a major robustness check against conclusions derived from ZL/EVA."
+      - "Do not silently remove known source anomalies from the raw file; handle them only in derived analytical layers."
+
+    preservation:
+      immutable_raw: true
+      allow_overwrite: false
+      derived_files_must_use_separate_directory: true
+
 
   - id: "IT2a"
-    name: "Interlinear / Takahashi-derived Transcription"
-    role: "robustness_transcription"
-    status: "planned"
-    local_path: "data/raw/it/"
-    sha256: null
+    name: "Takahashi-derived Interlinear Transliteration"
+    filename: "IT2a-n.txt"
+    local_path: "data/raw/it/IT2a-n.txt"
 
-project_rules:
-  raw_data_is_immutable: true
-  primary_transcription: "ZL3b"
-  primary_format: "IVTFF 2.0"
-  split_unit: "physical_leaf"
-  semantic_analysis_before_structural_freeze: false
-  locked_test_tuning_allowed: false
+    role: "robustness_transcription"
+    independence: "historical_independent_transliteration"
+
+    version: "2a"
+    original_version_date: "2023-02-02"
+    modified_date: "2025-06-25"
+    format: "IVTFF 2.0"
+    alphabet: "EvaT"
+
+    source:
+      publisher: "René Zandbergen / voynich.nu"
+      original_transcriber: "Takeshi Takahashi"
+      provenance: "Extracted from LSI_ivtff_0d.txt"
+      url: "https://www.voynich.nu/data/IT2a-n.txt"
+      reference_page: "https://www.voynich.nu/transcr.html"
+
+    source_header:
+      - "#=IVTFF EvaT 2.0 M 3"
+      - "# Extracted from LSI_ivtff_0d.txt"
+      - "# Version 2a of 02/02/2023 modified 25/06/2025"
+
+    integrity:
+      size_bytes: 342104
+      sha256: "7f27a8b0feed8f6de0a99900df6bf912dd1d295c38e5f830bac8b41c3f536fb5"
+      verification_status: "verified_locally"
+
+    notes:
+      - "Represents the Takahashi-derived interlinear transliteration preserved in the LSI lineage."
+      - "Use as a historical robustness transcription, not as a replacement for ZL."
+      - "Do not silently remove known source anomalies from the raw file; handle them only in derived analytical layers."
+
+    preservation:
+      immutable_raw: true
+      allow_overwrite: false
+      derived_files_must_use_separate_directory: true
+
+
+  - id: "RF1b-full"
+    name: "Reference Transliteration — Full Extended EVA"
+    filename: "RF1b-e.txt"
+    local_path: "data/raw/rf/RF1b-e.txt"
+
+    role: "robustness_transcription"
+    independence: "derived_from_ZL_and_GC"
+
+    version: "1b"
+    version_date: null
+    format: "IVTFF 2.0"
+    alphabet: "extended_EVA"
+
+    source:
+      publisher: "René Zandbergen / voynich.nu"
+      url: "https://www.voynich.nu/data/RF1b-e.txt"
+      reference_page: "https://www.voynich.nu/transcr.html"
+
+    source_header:
+      - "#=IVTFF Eva- 2.0 D 9"
+
+    derivation:
+      inputs:
+        - "ZL"
+        - "GC"
+      method: "automatically generated reference transliteration"
+
+    integrity:
+      size_bytes: 362373
+      sha256: "e7d3238e35743e06c63367a933909ec37b1e2de7ada3a1b449447eafa1918782"
+      verification_status: "verified_locally"
+
+    notes:
+      - "Not statistically independent from ZL because ZL is one of its source transliterations."
+      - "Useful for representation robustness, not independent confirmation of a ZL-derived result."
+
+    preservation:
+      immutable_raw: true
+      allow_overwrite: false
+      derived_files_must_use_separate_directory: true
+
+
+  - id: "RF1b-basic"
+    name: "Reference Transliteration — Basic/Reduced EVA"
+    filename: "RF1b-er.txt"
+    local_path: "data/raw/rf/RF1b-er.txt"
+
+    role: "representation_robustness"
+    independence: "derived_from_ZL_and_GC"
+
+    version: "1b"
+    version_date: null
+    format: "IVTFF 2.0"
+    alphabet: "basic_reduced_EVA"
+
+    source:
+      publisher: "René Zandbergen / voynich.nu"
+      url: "https://www.voynich.nu/data/RF1b-er.txt"
+      reference_page: "https://www.voynich.nu/transcr.html"
+
+    source_header:
+      - "#=IVTFF Eva- 2.0 D 9"
+
+    derivation:
+      inputs:
+        - "ZL"
+        - "GC"
+      method: "automatically generated reference transliteration"
+
+    integrity:
+      size_bytes: 343891
+      sha256: "eb857a1f353b18983fbc25b954e1bbce227a26d99cefabfda9206ff9b57644d2"
+      verification_status: "verified_locally"
+
+    notes:
+      - "Reduced/basic-EVA rendering of RF1b."
+      - "Use for representation sensitivity testing."
+      - "Not statistically independent from ZL."
+
+    preservation:
+      immutable_raw: true
+      allow_overwrite: false
+      derived_files_must_use_separate_directory: true
+
+
+integrity_policy:
+  algorithm: "SHA-256"
+  local_verification_required: true
+  raw_files_may_be_modified: false
+  source_updates_require_new_manifest_entry: true
+  silent_replacement_allowed: false
+
+analysis_policy:
+  primary_confirmatory_transcription: "ZL3b"
+  strongest_independent_robustness_transcription: "GC2a"
+  additional_robustness_transcription: "IT2a"
+  derived_reference_transcriptions:
+    - "RF1b-full"
+    - "RF1b-basic"
