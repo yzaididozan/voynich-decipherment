@@ -1,0 +1,80 @@
+# Voynich Decipherment Project — Data Manifest
+# Path: data/manifest.yaml
+#
+# Raw source files are immutable. Verify each downloaded file locally and
+# replace `sha256: null` with the checksum you compute from your exact copy.
+
+manifest_version: "1.0"
+
+datasets:
+  - id: "ZL3b"
+    name: "Zandbergen–Landini Voynich Transcription"
+    filename: "ZL3b-n.txt"
+    local_path: "data/raw/zl/ZL3b-n.txt"
+
+    role: "primary_transcription"
+    status: "required"
+
+    version: "3b"
+    version_date: "2025-05-13"
+    format: "IVTFF 2.0"
+    alphabet: "EVA"
+
+    source:
+      publisher: "René Zandbergen / voynich.nu"
+      url: "https://www.voynich.nu/data/ZL3b-n.txt"
+      reference_page: "https://www.voynich.nu/transcr.html"
+
+    reported_statistics:
+      loci: 5385
+      long_words: 36278
+      characters: 157304
+      note: >
+        These are source-reported corpus statistics and should be reproduced
+        during corpus QC using the stated counting convention.
+
+    integrity:
+      size_bytes: 411671
+      sha256: "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+      expected_sha256_from_secondary_record: "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+      verification_status: "verified"
+
+    preservation:
+      immutable_raw: true
+      allow_overwrite: false
+      derived_files_must_use_separate_directory: true
+
+    expected_header:
+      - "#=IVTFF Eva- 2.0 M 5"
+      - "# ZL transliteration file, updated from EVMT project"
+      - "# Version 3b of 13/05/2025"
+
+robustness_datasets:
+  - id: "RF1b"
+    name: "Reference Voynich Transcription"
+    role: "robustness_transcription"
+    status: "planned"
+    local_path: "data/raw/rf/"
+    sha256: null
+
+  - id: "GC2a"
+    name: "Glen Claston Transcription"
+    role: "robustness_transcription"
+    status: "planned"
+    local_path: "data/raw/gc/"
+    sha256: null
+
+  - id: "IT2a"
+    name: "Interlinear / Takahashi-derived Transcription"
+    role: "robustness_transcription"
+    status: "planned"
+    local_path: "data/raw/it/"
+    sha256: null
+
+project_rules:
+  raw_data_is_immutable: true
+  primary_transcription: "ZL3b"
+  primary_format: "IVTFF 2.0"
+  split_unit: "physical_leaf"
+  semantic_analysis_before_structural_freeze: false
+  locked_test_tuning_allowed: false
