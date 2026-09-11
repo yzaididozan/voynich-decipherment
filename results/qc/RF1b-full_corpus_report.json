@@ -1,0 +1,79 @@
+{
+  "alternative_reading_occurrences": 0,
+  "comparison": {
+    "loci": {
+      "delta": 0,
+      "expected": 5385,
+      "observed": 5385,
+      "status": "PASS"
+    },
+    "long_words": {
+      "delta": 0,
+      "expected": 37848,
+      "observed": 37848,
+      "status": "PASS"
+    },
+    "paragraphs": {
+      "delta": null,
+      "expected": null,
+      "observed": 0,
+      "status": "not_published"
+    },
+    "sta1_characters": {
+      "delta": null,
+      "expected": 157254,
+      "observed": null,
+      "status": "PENDING_STA1_CONVERSION"
+    }
+  },
+  "currier_counts": {
+    "A": 1821,
+    "B": 2809,
+    "UNSET": 755
+  },
+  "drawing_intrusion_occurrences": 761,
+  "file_size_bytes": 362373,
+  "high_ascii_occurrences": 4125,
+  "ivtff_alphabet": "Eva-",
+  "ivtff_options": "D 9",
+  "ivtff_version": "2.0",
+  "loci": 5385,
+  "locus_type_counts": {
+    "C": 84,
+    "L": 1029,
+    "P": 4130,
+    "R": 142
+  },
+  "long_words": 37848,
+  "pages": 227,
+  "paragraphs": 0,
+  "physical_leaves_observed": 102,
+  "published_targets": {
+    "loci": 5385,
+    "long_words": 37848,
+    "paragraphs": null,
+    "sta1_characters": 157254
+  },
+  "scribe_counts": {
+    "1": 1754,
+    "2": 1371,
+    "3": 1221,
+    "4": 894,
+    "5": 145
+  },
+  "section_counts": {
+    "astronomical": 240,
+    "biological": 861,
+    "cosmological": 401,
+    "herbal": 1640,
+    "marginal_stars": 1164,
+    "pharmaceutical": 458,
+    "text_only": 286,
+    "zodiac": 335
+  },
+  "source_path": "data/raw/rf/RF1b-e.txt",
+  "transcription_id": "RF1b-full",
+  "uncertain_space_occurrences": 677,
+  "unknown_run_occurrences": 22,
+  "unknown_single_occurrences": 32
+}

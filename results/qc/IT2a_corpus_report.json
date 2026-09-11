@@ -1,0 +1,79 @@
+{
+  "alternative_reading_occurrences": 0,
+  "comparison": {
+    "loci": {
+      "delta": 0,
+      "expected": 5215,
+      "observed": 5215,
+      "status": "PASS"
+    },
+    "long_words": {
+      "delta": 0,
+      "expected": 37919,
+      "observed": 37919,
+      "status": "PASS"
+    },
+    "paragraphs": {
+      "delta": 0,
+      "expected": 772,
+      "observed": 772,
+      "status": "PASS"
+    },
+    "sta1_characters": {
+      "delta": null,
+      "expected": 155292,
+      "observed": null,
+      "status": "PENDING_STA1_CONVERSION"
+    }
+  },
+  "currier_counts": {
+    "A": 1815,
+    "B": 2648,
+    "UNSET": 752
+  },
+  "drawing_intrusion_occurrences": 875,
+  "file_size_bytes": 342104,
+  "high_ascii_occurrences": 0,
+  "ivtff_alphabet": "EvaT",
+  "ivtff_options": "M 3",
+  "ivtff_version": "2.0",
+  "loci": 5215,
+  "locus_type_counts": {
+    "C": 72,
+    "L": 883,
+    "P": 4118,
+    "R": 142
+  },
+  "long_words": 37919,
+  "pages": 225,
+  "paragraphs": 772,
+  "physical_leaves_observed": 102,
+  "published_targets": {
+    "loci": 5215,
+    "long_words": 37919,
+    "paragraphs": 772,
+    "sta1_characters": 155292
+  },
+  "scribe_counts": {
+    "1": 1748,
+    "2": 1371,
+    "3": 1219,
+    "4": 732,
+    "5": 145
+  },
+  "section_counts": {
+    "astronomical": 240,
+    "biological": 861,
+    "cosmological": 239,
+    "herbal": 1636,
+    "marginal_stars": 1163,
+    "pharmaceutical": 456,
+    "text_only": 285,
+    "zodiac": 335
+  },
+  "source_path": "data/raw/it/IT2a-n.txt",
+  "transcription_id": "IT2a",
+  "uncertain_space_occurrences": 0,
+  "unknown_run_occurrences": 30,
+  "unknown_single_occurrences": 127
+}

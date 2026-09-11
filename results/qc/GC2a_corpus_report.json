@@ -1,0 +1,79 @@
+{
+  "alternative_reading_occurrences": 0,
+  "comparison": {
+    "loci": {
+      "delta": 0,
+      "expected": 5367,
+      "observed": 5367,
+      "status": "PASS"
+    },
+    "long_words": {
+      "delta": 0,
+      "expected": 38242,
+      "observed": 38242,
+      "status": "PASS"
+    },
+    "paragraphs": {
+      "delta": 0,
+      "expected": 775,
+      "observed": 775,
+      "status": "PASS"
+    },
+    "sta1_characters": {
+      "delta": null,
+      "expected": 157096,
+      "observed": null,
+      "status": "PENDING_STA1_CONVERSION"
+    }
+  },
+  "currier_counts": {
+    "A": 1818,
+    "B": 2797,
+    "UNSET": 752
+  },
+  "drawing_intrusion_occurrences": 0,
+  "file_size_bytes": 314916,
+  "high_ascii_occurrences": 341,
+  "ivtff_alphabet": "v101",
+  "ivtff_options": "M 6",
+  "ivtff_version": "2.0",
+  "loci": 5367,
+  "locus_type_counts": {
+    "C": 84,
+    "L": 1011,
+    "P": 4130,
+    "R": 142
+  },
+  "long_words": 38242,
+  "pages": 226,
+  "paragraphs": 775,
+  "physical_leaves_observed": 102,
+  "published_targets": {
+    "loci": 5367,
+    "long_words": 38242,
+    "paragraphs": 775,
+    "sta1_characters": 157096
+  },
+  "scribe_counts": {
+    "1": 1751,
+    "2": 1371,
+    "3": 1220,
+    "4": 880,
+    "5": 145
+  },
+  "section_counts": {
+    "astronomical": 239,
+    "biological": 861,
+    "cosmological": 388,
+    "herbal": 1636,
+    "marginal_stars": 1164,
+    "pharmaceutical": 459,
+    "text_only": 285,
+    "zodiac": 335
+  },
+  "source_path": "data/raw/gc/GC2a-n.txt",
+  "transcription_id": "GC2a",
+  "uncertain_space_occurrences": 2459,
+  "unknown_run_occurrences": 2,
+  "unknown_single_occurrences": 71
+}
