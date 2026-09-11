@@ -1,49 +1,20 @@
 """Loss-aware parser for IVTFF Voynich transliteration files.
 
-This module is intentionally conservative.
-
 The raw IVTFF source is treated as evidence and is never destructively
-normalised.  Every parsed locus preserves:
+normalized. Every parsed locus preserves:
 
-* the exact original physical source line(s);
-* the transliterated text as written, including continuation syntax;
-* a separate logical/normalised representation in which only IVTFF
+- the exact original physical source line(s);
+- the transliterated text as written, including continuation syntax;
+- file-level provenance such as transcription ID and IVTFF alphabet;
+- a separate logical/normalized representation in which only IVTFF
   presentation-level line wrapping is removed.
 
 Semantic IVTFF markup such as uncertain spaces, alternative readings,
 ligatures, drawing interruptions, inline comments, paragraph markers,
 and text tags is preserved in ``text_normalized``.
 
-The parser is designed primarily for IVTFF 2.x files such as ZL v3b,
-while remaining deliberately small and auditable.
-
-Relevant IVTFF concepts
------------------------
-Page headers
-    ``<f1r> <! $Q=A $P=A $F=a $B=1 $I=T $L=A $H=1 ...>``
-
-Locus identifiers
-    ``<f1r.1,@P0>``
-
-The three-character locus code consists of:
-
-    ``locator`` + ``generic type`` + ``subtype``
-
-For example, ``@P0`` means locator ``@`` and complete locus type ``P0``.
-
-Paragraph markers
-    ``<%>`` starts a paragraph and ``<$>`` ends one.
-
-Text tags
-    ``<@X=y>`` override page variable X from that line onward.
-
-Line wrapping
-    A physical line ending in ``/`` continues on the next physical line,
-    which begins with ``/``.  Those wrapping slashes are layout syntax,
-    not Voynich transliteration content.
-
-No semantic cleanup is performed here.  Later analysis code should derive
-new representations from these records rather than modifying the raw data.
+This parser is intended for IVTFF 2.x corpora including ZL, GC, IT, and RF.
+It deliberately does not harmonize their different alphabets.
 """
 
 from __future__ import annotations
@@ -58,19 +29,13 @@ PathLike = Union[str, Path]
 
 
 class IVTFFParseError(ValueError):
-    """Raised when input violates a structural assumption of this parser."""
+    """Raised when IVTFF input violates a structural assumption."""
 
 
-# Page header, e.g.
-# <f1r>      <! $Q=A $P=A $F=a $B=1 $I=T $L=A $H=1 $C=1 $X=V>
 _PAGE_HEADER_RE = re.compile(
-    r"^<(?P<page>f\d+[rv]\d*)>"
-    r"(?P<rest>.*)$"
+    r"^<(?P<page>f\d+[rv]\d*)>(?P<rest>.*)$"
 )
 
-# Standard locus identifier, e.g.
-# <f1r.1,@P0>
-# <f1r.1,@P0;Z>       (optional interlinear transcriber ID)
 _LOCUS_RE = re.compile(
     r"^<"
     r"(?P<page>f\d+[rv]\d*)"
@@ -83,21 +48,14 @@ _LOCUS_RE = re.compile(
     r">"
 )
 
-# Page variable syntax inside the dedicated page-header comment:
-# $Q=A, $L=B, ...
 _PAGE_VAR_RE = re.compile(r"\$([A-Z])=([^\s>])")
-
-# Text tag syntax in transliterated text:
-# <@L=A>, <@H=2>, <@X=@>
 _TEXT_TAG_RE = re.compile(r"<@([A-Z])=([^>])>")
 
-# File header, e.g. #=IVTFF Eva- 2.0 M 5
 _FILE_HEADER_RE = re.compile(
     r"^#=IVTFF\s+(?P<alphabet>\S+)\s+(?P<version>\S+)"
     r"(?:\s+(?P<options>.*))?$"
 )
 
-# Page illustration/section codes from the IVTFF specification.
 _SECTION_NAMES: Mapping[str, str] = {
     "A": "astronomical",
     "B": "biological",
@@ -122,7 +80,7 @@ class IVTFFFileHeader:
 
 @dataclass
 class PageState:
-    """Mutable parsing state for the current IVTFF page."""
+    """Mutable parsing state for the active IVTFF page."""
 
     page: str
     page_vars: Dict[str, Optional[str]]
@@ -132,7 +90,6 @@ class PageState:
     active_text_tags: Dict[str, Optional[str]] = field(default_factory=dict)
 
     def effective_vars(self) -> Dict[str, Optional[str]]:
-        """Return page variables after applying active text-tag overrides."""
         values: Dict[str, Optional[str]] = dict(self.page_vars)
         for key, value in self.active_text_tags.items():
             values[key] = value
@@ -141,14 +98,16 @@ class PageState:
 
 @dataclass(frozen=True)
 class LocusRecord:
-    """One logical IVTFF locus.
+    """One logical IVTFF locus with preserved provenance."""
 
-    The first eleven fields correspond closely to the initial research
-    schema.  Additional fields preserve information that would otherwise
-    be lost and are useful for later QC and robustness analysis.
-    """
+    # Dataset/file provenance.
+    transcription_id: Optional[str]
+    ivtff_alphabet: Optional[str]
+    ivtff_version: Optional[str]
+    ivtff_options: Optional[str]
+    file_header_original: str
 
-    # Core requested research fields.
+    # Core research fields.
     folio: str
     quire: Optional[int]
     currier: Optional[str]
@@ -187,7 +146,7 @@ class LocusRecord:
 
 
 def _quire_number(code: Optional[str]) -> Optional[int]:
-    """Convert IVTFF quire code A..T to 1..20 without discarding the code."""
+    """Convert IVTFF quire code A..T to 1..20 while preserving raw code elsewhere."""
     if code is None or code == "@":
         return None
     if len(code) == 1 and "A" <= code <= "T":
@@ -200,6 +159,7 @@ def _parse_page_name(page: str) -> Tuple[Optional[int], Optional[str], Optional[
     match = re.fullmatch(r"f(\d+)([rv])(\d*)", page)
     if not match:
         return None, None, None
+
     leaf = int(match.group(1))
     side = match.group(2)
     panel = int(match.group(3)) if match.group(3) else None
@@ -209,18 +169,11 @@ def _parse_page_name(page: str) -> Tuple[Optional[int], Optional[str], Optional[
 def _section_name(code: Optional[str]) -> Optional[str]:
     if code is None or code == "@":
         return None
-    # Preserve unknown/custom codes as an explicit machine-readable label
-    # rather than silently dropping them.
     return _SECTION_NAMES.get(code, f"unknown_{code}")
 
 
 def _parse_page_variables(rest: str) -> Dict[str, Optional[str]]:
-    """Extract ``$X=y`` page variables from a page header.
-
-    ``@`` means the variable is intentionally unset pending text tags, so
-    it is represented as ``None`` in the effective semantic value.  The raw
-    page-header line remains available in every record.
-    """
+    """Extract ``$X=y`` page variables from a page header."""
     variables: Dict[str, Optional[str]] = {}
     for key, value in _PAGE_VAR_RE.findall(rest):
         variables[key] = None if value == "@" else value
@@ -228,10 +181,7 @@ def _parse_page_variables(rest: str) -> Dict[str, Optional[str]]:
 
 
 def _extract_text_tags(text: str) -> Dict[str, Optional[str]]:
-    """Return text-tag updates appearing on this locus.
-
-    IVTFF specifies ``<@X=y>``.  A value of ``@`` unsets the tag.
-    """
+    """Return ``<@X=y>`` text-tag updates on the current locus."""
     updates: Dict[str, Optional[str]] = {}
     for key, value in _TEXT_TAG_RE.findall(text):
         updates[key] = None if value == "@" else value
@@ -241,26 +191,22 @@ def _extract_text_tags(text: str) -> Dict[str, Optional[str]]:
 def normalize_text_lossless(text_raw: str) -> str:
     """Create a conservative logical representation of IVTFF text.
 
-    This function performs *only* presentation-level line-wrap removal:
+    Only presentation-level line wrapping is removed.
 
-    * physical continuation newlines are removed;
-    * a trailing ``/`` and the matching leading ``/`` are removed;
-    * indentation after a continuation marker is removed.
+    Preserved markup includes:
 
-    It deliberately preserves semantic/analytical IVTFF markup, including:
+    - ``.`` confident spaces;
+    - ``,`` uncertain spaces;
+    - ``<->`` / ``<~>`` drawing interruptions;
+    - ``[a:b]`` alternative readings;
+    - ``{...}`` ligature notation;
+    - ``@221;``-style encoded glyphs;
+    - ``?`` / ``???`` unreadable text;
+    - inline comments;
+    - ``<%>`` / ``<$>`` paragraph markers;
+    - ``<@X=y>`` text tags.
 
-    * ``.`` confident word spaces;
-    * ``,`` uncertain word spaces;
-    * ``<->`` / ``<~>`` drawing interruptions;
-    * ``[a:b]`` alternative readings;
-    * ``{...}`` ligature notation;
-    * ``?`` / ``???`` unreadable characters;
-    * inline comments;
-    * ``<%>`` / ``<$>`` paragraph markers;
-    * ``<@X=y>`` text tags.
-
-    Because ``text_raw`` and ``original`` are retained, later normalization
-    policies can always be recomputed from the original evidence.
+    No alphabet conversion or semantic normalization occurs here.
     """
     if "\n" not in text_raw:
         return text_raw.strip()
@@ -274,8 +220,6 @@ def normalize_text_lossless(text_raw: str) -> str:
     for continuation in parts[1:]:
         piece = continuation
 
-        # Physical continuation lines are required to begin with "/".
-        # Remove only the wrapping syntax, never slash-like material elsewhere.
         if piece.startswith("/"):
             piece = piece[1:]
         piece = piece.lstrip()
@@ -289,9 +233,10 @@ def normalize_text_lossless(text_raw: str) -> str:
 
 
 def parse_file_header(line: str) -> IVTFFFileHeader:
-    """Parse the first IVTFF line without rejecting unknown future variants."""
+    """Parse an IVTFF file header without enforcing a specific alphabet."""
     stripped = line.rstrip("\r\n")
     match = _FILE_HEADER_RE.match(stripped)
+
     if not match:
         return IVTFFFileHeader(
             original=stripped,
@@ -299,6 +244,7 @@ def parse_file_header(line: str) -> IVTFFFileHeader:
             version=None,
             options=None,
         )
+
     return IVTFFFileHeader(
         original=stripped,
         alphabet=match.group("alphabet"),
@@ -310,17 +256,7 @@ def parse_file_header(line: str) -> IVTFFFileHeader:
 def _logical_lines(
     lines: Sequence[str],
 ) -> Iterator[Tuple[Tuple[str, ...], Tuple[int, ...]]]:
-    """Yield physical IVTFF lines grouped into logical lines.
-
-    A transliteration locus may be wrapped over multiple physical source
-    lines.  This helper groups those lines but does not alter their bytes
-    beyond removing the Python newline terminator supplied by ``splitlines``.
-
-    Yields
-    ------
-    (physical_lines, source_line_numbers)
-        ``source_line_numbers`` are 1-based.
-    """
+    """Group physical source lines into IVTFF logical lines."""
     i = 0
     total = len(lines)
 
@@ -330,12 +266,10 @@ def _logical_lines(
         numbers = [i + 1]
 
         if current.startswith("#"):
-            # Comment lines cannot be continued with "/".
             yield tuple(physical), tuple(numbers)
             i += 1
             continue
 
-        # A locus may continue when the current physical line ends with "/".
         while physical[-1].endswith("/") and i + 1 < total:
             nxt = lines[i + 1].rstrip("\r\n")
             physical.append(nxt)
@@ -349,6 +283,7 @@ def _logical_lines(
 def parse_ivtff_lines(
     lines: Iterable[str],
     *,
+    transcription_id: Optional[str] = None,
     strict: bool = True,
 ) -> Iterator[LocusRecord]:
     """Parse IVTFF source lines into :class:`LocusRecord` objects.
@@ -356,42 +291,40 @@ def parse_ivtff_lines(
     Parameters
     ----------
     lines:
-        Iterable of source lines.  Newline characters are permitted.
+        Iterable of source lines.
+    transcription_id:
+        Dataset identifier supplied by the caller, e.g. ``"ZL3b"``,
+        ``"GC2a"``, ``"IT2a"``, ``"RF1b-full"``. The parser never guesses it.
     strict:
-        If ``True``, structural inconsistencies such as a locus referring
-        to a different page than the active page raise
-        :class:`IVTFFParseError`.  If ``False``, unrecognised non-comment
-        lines are skipped where possible.
+        If ``True``, structural inconsistencies raise
+        :class:`IVTFFParseError`.
 
     Notes
     -----
-    This parser intentionally does not tokenize Voynichese.  Tokenization,
-    alternative-reading resolution, ligature decomposition, and treatment
-    of uncertain spaces belong in later analytical layers.
+    This parser intentionally does not harmonize alphabets, tokenize
+    Voynichese, resolve alternatives, decompose ligatures, or reinterpret
+    uncertain spaces.
     """
     source_lines = list(lines)
     if not source_lines:
         return
 
-    # Validate/parse the file header but do not force a particular alphabet
-    # or IVTFF minor version here.
-    _ = parse_file_header(source_lines[0])
+    file_header = parse_file_header(source_lines[0])
+
+    if strict and not source_lines[0].startswith("#=IVTFF"):
+        raise IVTFFParseError("Input does not begin with an IVTFF file header")
 
     page_state: Optional[PageState] = None
 
     for physical_lines, source_numbers in _logical_lines(source_lines):
         first = physical_lines[0]
 
-        # File header and comments.
         if first.startswith("#"):
             continue
 
         if first == "":
-            # Strict IVTFF generally does not need blank lines, but accepting
-            # them is harmless and avoids converting formatting into data.
             continue
 
-        # Continuation lines should already have been consumed by _logical_lines.
         if first.startswith("/"):
             if strict:
                 raise IVTFFParseError(
@@ -399,7 +332,6 @@ def parse_ivtff_lines(
                 )
             continue
 
-        # Page header must be distinguished from a locus identifier.
         page_match = _PAGE_HEADER_RE.match(first)
         locus_match = _LOCUS_RE.match(first)
 
@@ -438,21 +370,18 @@ def parse_ivtff_lines(
         locus_raw = first[:locus_identifier_end]
         locus = locus_raw[1:-1]
 
-        # Preserve the exact transliterated source substring(s).  Optional
-        # alignment whitespace between identifier and text is formatting, so
-        # it is excluded from text_raw but remains present in ``original``.
         first_text = first[locus_identifier_end:].lstrip(" ")
 
         text_parts: List[str] = [first_text]
         if len(physical_lines) > 1:
             text_parts.extend(physical_lines[1:])
+
         text_raw = "\n".join(text_parts)
         text_normalized = normalize_text_lossless(text_raw)
 
         complete_type = locus_match.group("complete_type")
         generic_type = complete_type[0]
 
-        # Text tags take effect on the line where they appear.
         tag_updates = _extract_text_tags(text_normalized)
         page_state.active_text_tags.update(tag_updates)
         effective = page_state.effective_vars()
@@ -478,6 +407,11 @@ def parse_ivtff_lines(
         leaf, side, panel = _parse_page_name(locus_page)
 
         record = LocusRecord(
+            transcription_id=transcription_id,
+            ivtff_alphabet=file_header.alphabet,
+            ivtff_version=file_header.version,
+            ivtff_options=file_header.options,
+            file_header_original=file_header.original,
             folio=locus_page,
             quire=_quire_number(effective.get("Q")),
             currier=effective.get("L"),
@@ -523,41 +457,55 @@ def parse_ivtff_lines(
 def iter_ivtff_records(
     path: PathLike,
     *,
+    transcription_id: Optional[str] = None,
     encoding: str = "ascii",
     strict: bool = True,
 ) -> Iterator[LocusRecord]:
-    """Stream parsed records from an IVTFF file.
-
-    The entire source is currently read before logical-line reconstruction so
-    that wrapped physical lines can be handled deterministically.  ZL-sized
-    IVTFF files are small enough that this is negligible, while keeping the
-    implementation simple and testable.
-    """
+    """Stream parsed records from an IVTFF file."""
     source = Path(path)
+
     with source.open("r", encoding=encoding, newline="") as handle:
-        yield from parse_ivtff_lines(handle, strict=strict)
+        yield from parse_ivtff_lines(
+            handle,
+            transcription_id=transcription_id,
+            strict=strict,
+        )
 
 
 def load_ivtff(
     path: PathLike,
     *,
+    transcription_id: Optional[str] = None,
     encoding: str = "ascii",
     strict: bool = True,
 ) -> List[LocusRecord]:
     """Load an IVTFF file into memory as records."""
-    return list(iter_ivtff_records(path, encoding=encoding, strict=strict))
+    return list(
+        iter_ivtff_records(
+            path,
+            transcription_id=transcription_id,
+            encoding=encoding,
+            strict=strict,
+        )
+    )
 
 
 def load_ivtff_dicts(
     path: PathLike,
     *,
+    transcription_id: Optional[str] = None,
     encoding: str = "ascii",
     strict: bool = True,
 ) -> List[Dict[str, object]]:
     """Load an IVTFF file as dictionaries suitable for pandas/JSON."""
     return [
         record.to_dict()
-        for record in iter_ivtff_records(path, encoding=encoding, strict=strict)
+        for record in iter_ivtff_records(
+            path,
+            transcription_id=transcription_id,
+            encoding=encoding,
+            strict=strict,
+        )
     ]
 
 
