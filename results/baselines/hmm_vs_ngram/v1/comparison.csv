@@ -1,0 +1,3 @@
+view,ngram_order,hmm_hidden_states,bootstrap_units,bootstrap_replicates,seed,ngram_bits_per_event,hmm_bits_per_event,delta_hmm_minus_ngram_bits_per_event,relative_nll_reduction_ngram_vs_hmm,ci_95_lower,ci_95_upper,bootstrap_probability_trigram_better,bootstrap_probability_hmm_better,conclusion,locked_test_accessed
+space_free,3,16,15,10000,40814041438,2.6682081266777646,2.7173591944427953,0.04915106776503064,0.018087806671104906,0.022131345099147028,0.06417896858144105,0.9986,0.0014,3-GRAM BETTER; CI EXCLUDES ZERO,False
+token_aware,3,16,15,10000,40814041438,2.33647575122042,2.427493490010689,0.09101773879026887,0.037494534656761565,0.059544141500680936,0.10902537418638092,1.0,0.0,3-GRAM BETTER; CI EXCLUDES ZERO,False

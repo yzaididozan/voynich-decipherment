@@ -1,0 +1,50 @@
+{
+  "analysis": "paired physical-leaf bootstrap: HMM K=16 vs 3-gram Witten-Bell",
+  "bootstrap_replicates": 10000,
+  "delta_definition": "HMM bits/event minus 3-gram bits/event; positive means 3-gram is better",
+  "hmm_hidden_states": 16,
+  "hmm_input": "results/baselines/hmm/v1/per_leaf_validation.csv",
+  "locked_test_accessed": false,
+  "ngram_input": "results/baselines/ngram/v1/per_leaf_validation.csv",
+  "ngram_order": 3,
+  "results": [
+    {
+      "bootstrap_probability_hmm_better": 0.0014,
+      "bootstrap_probability_trigram_better": 0.9986,
+      "bootstrap_replicates": 10000,
+      "bootstrap_units": 15,
+      "ci_95_lower": 0.022131345099147028,
+      "ci_95_upper": 0.06417896858144105,
+      "conclusion": "3-GRAM BETTER; CI EXCLUDES ZERO",
+      "delta_hmm_minus_ngram_bits_per_event": 0.04915106776503064,
+      "hmm_bits_per_event": 2.7173591944427953,
+      "hmm_hidden_states": 16,
+      "locked_test_accessed": false,
+      "ngram_bits_per_event": 2.6682081266777646,
+      "ngram_order": 3,
+      "relative_nll_reduction_ngram_vs_hmm": 0.018087806671104906,
+      "seed": 40814041438,
+      "view": "space_free"
+    },
+    {
+      "bootstrap_probability_hmm_better": 0.0,
+      "bootstrap_probability_trigram_better": 1.0,
+      "bootstrap_replicates": 10000,
+      "bootstrap_units": 15,
+      "ci_95_lower": 0.059544141500680936,
+      "ci_95_upper": 0.10902537418638092,
+      "conclusion": "3-GRAM BETTER; CI EXCLUDES ZERO",
+      "delta_hmm_minus_ngram_bits_per_event": 0.09101773879026887,
+      "hmm_bits_per_event": 2.427493490010689,
+      "hmm_hidden_states": 16,
+      "locked_test_accessed": false,
+      "ngram_bits_per_event": 2.33647575122042,
+      "ngram_order": 3,
+      "relative_nll_reduction_ngram_vs_hmm": 0.037494534656761565,
+      "seed": 40814041438,
+      "view": "token_aware"
+    }
+  ],
+  "schema_version": "1.0",
+  "seed": 40814041438
+}
