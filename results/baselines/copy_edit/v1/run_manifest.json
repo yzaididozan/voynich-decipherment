@@ -1,0 +1,51 @@
+{
+  "artifacts": [
+    "training_fit.csv",
+    "validation_results.csv",
+    "per_leaf_validation.csv",
+    "per_locus_validation.csv",
+    "matched_trigram_validation.csv",
+    "matched_trigram_per_leaf.csv",
+    "matched_trigram_per_locus.csv",
+    "summary.json",
+    "models/*.npz"
+  ],
+  "config": {
+    "edit_channel": "geometric_gap_insertions_plus_deletion_plus_exact_copy_or_unigram_emission",
+    "innovation_model": "smoothed_length_times_independent_smoothed_glyphs",
+    "matched_trigram_order": 3,
+    "max_token_length": 64,
+    "pseudocount": 0.5,
+    "rho_max_iterations": 100,
+    "rho_tolerance": 1e-10,
+    "schema_version": "1.0",
+    "source_scope": "previous_readable_tokens_within_same_locus_segment",
+    "source_windows": [
+      1,
+      4,
+      16
+    ],
+    "training_source_inference": "minimum_normalized_levenshtein_then_raw_distance_then_recency",
+    "unknown_policy": "exclude_token_if_contains_Z1_and_reset_context",
+    "validation_selection": "lowest_bits_per_event",
+    "validation_tie_breaker": "lower_source_window"
+  },
+  "provenance": {
+    "config_path": "configs/baselines/copy_edit_v1.json",
+    "config_sha256": "74e0319a48ed477ed6c94fd5a8e3551bbb42f1d46f79ad8dbb7b20d42e6afc0c",
+    "locked_test_accessed": false,
+    "numpy_version": "2.0.2",
+    "primary_transcription": "ZL3b",
+    "source_path": "data/raw/zl/ZL3b-n.txt",
+    "source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "sta1_rules_path": "data/reference/sta1/STA-Eva_def.bit",
+    "sta1_rules_sha256": "7f37853510144fb3e2dc3ee9458d634f41e6d95bc1fbf1c4b8f479a53a021f81",
+    "train_physical_leaves": 72,
+    "train_split_path": "data/splits/v1/train.txt",
+    "train_split_sha256": "5bb5232d5e211a4bb90800f259294c554c1c9e2005548055ebaf94e782e3cc00",
+    "validation_physical_leaves": 15,
+    "validation_split_path": "data/splits/v1/validation.txt",
+    "validation_split_sha256": "bdae856ac8c52849a0abd0fd6361f42fd57579e76f7f844309a7ddc9e0fc02f1"
+  },
+  "schema_version": "1.0"
+}
