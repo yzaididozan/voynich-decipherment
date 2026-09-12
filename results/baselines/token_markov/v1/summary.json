@@ -1,0 +1,128 @@
+{
+  "analysis_tier": "token-level Markov generative competitor",
+  "evaluation_scope": "VALIDATION ONLY",
+  "fit_scope": "TRAIN ONLY",
+  "guardrails": [
+    "Token context uses previous observed validation tokens only; validation targets never update counts.",
+    "Validation selects context order only from frozen orders [1, 2].",
+    "Tokens containing Z1 are excluded and reset token context in both train and validation.",
+    "All evaluated token models and matched comparator use the same readable token set and glyph+EOT event count.",
+    "No context order above 2 may be added after viewing validation results.",
+    "Locked test remains untouched."
+  ],
+  "locked_test_accessed": false,
+  "matched_trigram": {
+    "bits_per_event": 2.3372686526466864,
+    "events": 28735,
+    "order": 3,
+    "perplexity_per_event": 5.053449992128439,
+    "representation": "independently reset token + explicit EOT"
+  },
+  "model": {
+    "bos_policy": "left_pad_with_TOKEN_BOS",
+    "char_base_order": 3,
+    "context_orders": [
+      1,
+      2
+    ],
+    "family": "interpolated token Markov with character-trigram open-vocabulary base",
+    "max_context": 2,
+    "sequence_boundary": "locus_or_Z1_reset",
+    "smoothing": "interpolated_witten_bell_to_char_trigram",
+    "token_base_note": "Token recursion backs off to the exact same fitted token-reset glyph+EOT 3-gram used as the external matched comparator; no renormalization is applied."
+  },
+  "provenance": {
+    "config_path": "configs/baselines/token_markov_v1.json",
+    "config_sha256": "9ab06d214dda4e0a6adc8e53237c22f100ca9f3cdfb382193973586b493d47d1",
+    "locked_test_accessed": false,
+    "primary_transcription": "ZL3b",
+    "source_path": "data/raw/zl/ZL3b-n.txt",
+    "source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "sta1_rules_path": "data/reference/sta1/STA-Eva_def.bit",
+    "sta1_rules_sha256": "7f37853510144fb3e2dc3ee9458d634f41e6d95bc1fbf1c4b8f479a53a021f81",
+    "train_physical_leaves": 72,
+    "train_split_path": "data/splits/v1/train.txt",
+    "train_split_sha256": "5bb5232d5e211a4bb90800f259294c554c1c9e2005548055ebaf94e782e3cc00",
+    "validation_physical_leaves": 15,
+    "validation_split_path": "data/splits/v1/validation.txt",
+    "validation_split_sha256": "bdae856ac8c52849a0abd0fd6361f42fd57579e76f7f844309a7ddc9e0fc02f1"
+  },
+  "schema_version": "1.0",
+  "selected_context_order": 1,
+  "selected_token_ngram_order": 2,
+  "selected_validation_bits_per_event": 2.464345276857271,
+  "selected_validation_bits_per_token": 12.362598032558255,
+  "train_token_diagnostics": {
+    "excluded_glyphs_in_Z1_tokens": 556,
+    "excluded_tokens_with_Z1": 116,
+    "included_glyphs": 110675,
+    "included_tokens": 27367,
+    "readable_segments": 3859,
+    "unknown_resets_context": true
+  },
+  "training_context_summary": [
+    {
+      "contexts": 1,
+      "distinct_context_next_edges": 6513,
+      "history_length": 0,
+      "token_ngram_order": 1,
+      "transitions": 27367
+    },
+    {
+      "contexts": 5315,
+      "distinct_context_next_edges": 22376,
+      "history_length": 1,
+      "token_ngram_order": 2,
+      "transitions": 27367
+    },
+    {
+      "contexts": 19150,
+      "distinct_context_next_edges": 25310,
+      "history_length": 2,
+      "token_ngram_order": 3,
+      "transitions": 27367
+    }
+  ],
+  "training_events": 138042,
+  "training_glyphs": 110675,
+  "training_tokens": 27367,
+  "unknown_policy": "exclude_token_if_contains_Z1_and_reset_context",
+  "validation_results": [
+    {
+      "bits_per_event": 2.464345276857271,
+      "bits_per_token": 12.362598032558255,
+      "context_order": 1,
+      "events": 28735,
+      "glyphs": 23007,
+      "model": "token_markov",
+      "oov_glyphs": 13,
+      "oov_tokens": 933,
+      "perplexity_per_event": 5.518764322332129,
+      "token_ngram_order": 2,
+      "tokens": 5728,
+      "total_bits": 70812.96153049369
+    },
+    {
+      "bits_per_event": 2.516662390624696,
+      "bits_per_token": 12.625051290956817,
+      "context_order": 2,
+      "events": 28735,
+      "glyphs": 23007,
+      "model": "token_markov",
+      "oov_glyphs": 13,
+      "oov_tokens": 933,
+      "perplexity_per_event": 5.722566768448971,
+      "token_ngram_order": 3,
+      "tokens": 5728,
+      "total_bits": 72316.29379460064
+    }
+  ],
+  "validation_token_diagnostics": {
+    "excluded_glyphs_in_Z1_tokens": 96,
+    "excluded_tokens_with_Z1": 16,
+    "included_glyphs": 23007,
+    "included_tokens": 5728,
+    "readable_segments": 787,
+    "unknown_resets_context": true
+  }
+}

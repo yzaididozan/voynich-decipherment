@@ -1,0 +1,2 @@
+view,order,smoothing,total_bits,total_events,bits_per_event,perplexity_per_event,glyph_bits,glyph_events,glyph_bits_per_glyph,glyph_perplexity,boundary_bits,boundary_events,boundary_bits_per_boundary,oov_events,delta_bits_per_event_vs_unigram,relative_nll_reduction_vs_unigram
+token_reset_eot,3,interpolated_witten_bell,67161.41473380254,28735,2.3372686526466864,5.053449992128439,63891.095101854866,23007,2.7770285174883673,6.854391126302168,3270.319631947666,5728,0.5709356899349975,13,,

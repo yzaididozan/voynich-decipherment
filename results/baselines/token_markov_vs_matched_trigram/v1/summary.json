@@ -1,0 +1,43 @@
+{
+  "analysis": "paired physical-leaf bootstrap: validation-selected token Markov vs matched token-reset character 3-gram",
+  "bootstrap_method": "paired resampling of leaf groups with replacement; ratio-of-sums corpus bits/event computed separately for each model in every replicate",
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "physical_leaf_group",
+  "delta_definition": "token-Markov bits/event minus matched-trigram bits/event; positive means matched trigram is better",
+  "frozen_context_order_grid": [
+    1,
+    2
+  ],
+  "locked_test_accessed": false,
+  "matched_trigram_input": "results/baselines/token_markov/v1/matched_trigram_per_leaf.csv",
+  "matched_trigram_input_sha256": "328854965b4022a99345ed22461c796cd16d220befc2d814667256309203ed2c",
+  "matched_trigram_order": 3,
+  "matched_trigram_view": "token_reset_eot",
+  "result": {
+    "bootstrap_probability_tie": 0.0,
+    "bootstrap_probability_token_markov_better": 0.0,
+    "bootstrap_probability_trigram_better": 1.0,
+    "bootstrap_replicates": 10000,
+    "bootstrap_units": 15,
+    "ci_95_lower": 0.1049935838129855,
+    "ci_95_upper": 0.14955628415177877,
+    "conclusion": "MATCHED 3-GRAM BETTER; CI EXCLUDES ZERO",
+    "delta_token_minus_trigram_bits_per_event": 0.12707662421058474,
+    "locked_test_accessed": false,
+    "matched_trigram_bits_per_event": 2.3372686526466864,
+    "matched_trigram_order": 3,
+    "matched_trigram_view": "token_reset_eot",
+    "relative_nll_reduction_trigram_vs_token_markov": 0.051566079398031005,
+    "seed": 40814041438,
+    "selected_context_order": 1,
+    "selected_token_ngram_order": 2,
+    "token_markov_bits_per_event": 2.464345276857271
+  },
+  "schema_version": "1.0",
+  "seed": 40814041438,
+  "selected_context_order": 1,
+  "token_markov_input": "results/baselines/token_markov/v1/per_leaf_validation.csv",
+  "token_markov_input_sha256": "fa100ee98b677b99cf70c88d2c5f2ffab6815336e23603ce5267a467ca01ee1d",
+  "validation_summary_input": "results/baselines/token_markov/v1/summary.json",
+  "validation_summary_input_sha256": "4cc69a519019791e67fb8a0a6c95aaf55d7bfa3247240817e8dc50a5d0fe0c3c"
+}

@@ -1,0 +1,4 @@
+history_length,token_ngram_order,contexts,transitions,distinct_context_next_edges
+0,1,1,27367,6513
+1,2,5315,27367,22376
+2,3,19150,27367,25310
