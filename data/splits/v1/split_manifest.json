@@ -1,0 +1,170 @@
+{
+  "algorithm_version": "physical-leaf-stratified-v1",
+  "atomic_unit": "physical_leaf",
+  "freeze_gate": {
+    "status": "PASS",
+    "summary_path": "results/qc/transcription_summary.json"
+  },
+  "linked_leaf_groups": [
+    [
+      "f85",
+      "f86"
+    ]
+  ],
+  "locked_test_policy": "Do not inspect or use the locked test for segmentation, model selection, hyperparameter tuning, threshold setting, or mechanism selection. Evaluate it only after those decisions are frozen.",
+  "optimization": {
+    "coverage_gap_penalty": 100.0,
+    "family_weights": {
+      "currier_presence": 1.0,
+      "locus_total": 0.75,
+      "locus_type_counts": 1.0,
+      "scribe_presence": 1.0,
+      "section_presence": 1.0
+    },
+    "objective_score": 0.0011214239461221915,
+    "restarts": 48,
+    "swap_proposals_per_restart": 500
+  },
+  "optimization_uses_text_content": false,
+  "primary_transcription": "ZL3b",
+  "recto_verso_together": true,
+  "schema_version": "1.0",
+  "seed": 40814041438,
+  "source_path": "data/raw/zl/ZL3b-n.txt",
+  "source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+  "special_page_assignments": {
+    "fRos": {
+      "linked_leaves": [
+        "f85",
+        "f86"
+      ],
+      "split": "train"
+    }
+  },
+  "splits": {
+    "test": [
+      "f2",
+      "f5",
+      "f13",
+      "f31",
+      "f49",
+      "f53",
+      "f55",
+      "f56",
+      "f57",
+      "f58",
+      "f71",
+      "f75",
+      "f76",
+      "f99",
+      "f103"
+    ],
+    "train": [
+      "f1",
+      "f3",
+      "f4",
+      "f6",
+      "f7",
+      "f8",
+      "f9",
+      "f10",
+      "f14",
+      "f15",
+      "f16",
+      "f18",
+      "f19",
+      "f20",
+      "f21",
+      "f22",
+      "f23",
+      "f24",
+      "f25",
+      "f26",
+      "f28",
+      "f29",
+      "f32",
+      "f34",
+      "f36",
+      "f37",
+      "f39",
+      "f40",
+      "f41",
+      "f42",
+      "f43",
+      "f44",
+      "f45",
+      "f46",
+      "f47",
+      "f48",
+      "f51",
+      "f52",
+      "f65",
+      "f67",
+      "f68",
+      "f69",
+      "f72",
+      "f73",
+      "f77",
+      "f78",
+      "f79",
+      "f80",
+      "f81",
+      "f82",
+      "f83",
+      "f85",
+      "f86",
+      "f87",
+      "f88",
+      "f89",
+      "f90",
+      "f93",
+      "f94",
+      "f95",
+      "f96",
+      "f100",
+      "f101",
+      "f104",
+      "f105",
+      "f107",
+      "f108",
+      "f111",
+      "f112",
+      "f114",
+      "f115",
+      "f116"
+    ],
+    "validation": [
+      "f11",
+      "f17",
+      "f27",
+      "f30",
+      "f33",
+      "f35",
+      "f38",
+      "f50",
+      "f54",
+      "f66",
+      "f70",
+      "f84",
+      "f102",
+      "f106",
+      "f113"
+    ]
+  },
+  "stratified_as_feasible_by": [
+    "Currier class",
+    "scribal hand",
+    "manuscript section",
+    "locus composition"
+  ],
+  "target_leaf_counts": {
+    "test": 15,
+    "train": 72,
+    "validation": 15
+  },
+  "target_ratios": {
+    "test": 0.15,
+    "train": 0.7,
+    "validation": 0.15
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "coverage_gaps": [],
+  "coverage_rule": "category occurs on >=3 physical leaves",
+  "global": {
+    "currier_presence": {
+      "A": 54,
+      "B": 41,
+      "UNSET": 10
+    },
+    "leaf_count": 102,
+    "locus_total": 5385,
+    "locus_type_counts": {
+      "C": 84,
+      "L": 1029,
+      "P": 4130,
+      "R": 142
+    },
+    "quire_presence_report_only": {
+      "1": 8,
+      "10": 2,
+      "11": 2,
+      "12": 1,
+      "13": 10,
+      "14": 3,
+      "15": 4,
+      "17": 4,
+      "19": 4,
+      "2": 7,
+      "20": 12,
+      "3": 8,
+      "4": 8,
+      "5": 8,
+      "6": 8,
+      "7": 8,
+      "8": 4,
+      "9": 2
+    },
+    "scribe_presence": {
+      "1": 54,
+      "2": 23,
+      "3": 16,
+      "4": 8,
+      "5": 4
+    },
+    "section_presence": {
+      "astronomical": 2,
+      "biological": 10,
+      "cosmological": 8,
+      "herbal": 64,
+      "marginal_stars": 13,
+      "pharmaceutical": 6,
+      "text_only": 6,
+      "zodiac": 4
+    }
+  },
+  "objective_score": 0.0011214239461221915,
+  "splits": {
+    "test": {
+      "currier_presence": {
+        "A": 8,
+        "B": 6,
+        "UNSET": 2
+      },
+      "leaf_count": 15,
+      "leaf_fraction": 0.14705882352941177,
+      "locus_fraction": 0.14744661095636025,
+      "locus_total": 794,
+      "locus_type_counts": {
+        "C": 10,
+        "L": 164,
+        "P": 616,
+        "R": 4
+      },
+      "quire_presence_report_only": {
+        "1": 2,
+        "11": 1,
+        "13": 2,
+        "19": 1,
+        "2": 1,
+        "20": 1,
+        "4": 1,
+        "7": 4,
+        "8": 2
+      },
+      "scribe_presence": {
+        "1": 8,
+        "2": 4,
+        "3": 2,
+        "4": 1,
+        "5": 1
+      },
+      "section_presence": {
+        "biological": 2,
+        "cosmological": 1,
+        "herbal": 9,
+        "marginal_stars": 2,
+        "pharmaceutical": 1,
+        "text_only": 1,
+        "zodiac": 1
+      }
+    },
+    "train": {
+      "currier_presence": {
+        "A": 38,
+        "B": 29,
+        "UNSET": 7
+      },
+      "leaf_count": 72,
+      "leaf_fraction": 0.7058823529411765,
+      "locus_fraction": 0.7060352831940576,
+      "locus_total": 3802,
+      "locus_type_counts": {
+        "C": 60,
+        "L": 712,
+        "P": 2907,
+        "R": 123
+      },
+      "quire_presence_report_only": {
+        "1": 6,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 7,
+        "14": 3,
+        "15": 4,
+        "17": 4,
+        "19": 2,
+        "2": 5,
+        "20": 9,
+        "3": 7,
+        "4": 5,
+        "5": 5,
+        "6": 8,
+        "7": 2,
+        "8": 1,
+        "9": 2
+      },
+      "scribe_presence": {
+        "1": 38,
+        "2": 16,
+        "3": 12,
+        "4": 6,
+        "5": 2
+      },
+      "section_presence": {
+        "astronomical": 2,
+        "biological": 7,
+        "cosmological": 6,
+        "herbal": 45,
+        "marginal_stars": 9,
+        "pharmaceutical": 4,
+        "text_only": 4,
+        "zodiac": 2
+      }
+    },
+    "validation": {
+      "currier_presence": {
+        "A": 8,
+        "B": 6,
+        "UNSET": 1
+      },
+      "leaf_count": 15,
+      "leaf_fraction": 0.14705882352941177,
+      "locus_fraction": 0.14651810584958216,
+      "locus_total": 789,
+      "locus_type_counts": {
+        "C": 14,
+        "L": 153,
+        "P": 607,
+        "R": 15
+      },
+      "quire_presence_report_only": {
+        "10": 1,
+        "13": 1,
+        "19": 1,
+        "2": 1,
+        "20": 2,
+        "3": 1,
+        "4": 2,
+        "5": 3,
+        "7": 2,
+        "8": 1
+      },
+      "scribe_presence": {
+        "1": 8,
+        "2": 3,
+        "3": 2,
+        "4": 1,
+        "5": 1
+      },
+      "section_presence": {
+        "biological": 1,
+        "cosmological": 1,
+        "herbal": 10,
+        "marginal_stars": 2,
+        "pharmaceutical": 1,
+        "text_only": 1,
+        "zodiac": 1
+      }
+    }
+  },
+  "target_leaf_counts": {
+    "test": 15,
+    "train": 72,
+    "validation": 15
+  }
+}
