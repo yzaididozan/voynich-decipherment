@@ -1,0 +1,594 @@
+{
+  "analysis_tier": "Tier 0 descriptive structural analysis",
+  "branching_entropy": {
+    "order_1": {
+      "context_order": 1,
+      "contexts": 162,
+      "transitions": 83541,
+      "unweighted_mean_context_entropy_bits": 0.8205939113074902,
+      "weighted_next_symbol_entropy_bits": 2.5059041328739546
+    },
+    "order_2": {
+      "context_order": 2,
+      "contexts": 646,
+      "transitions": 56985,
+      "unweighted_mean_context_entropy_bits": 0.9440169481301656,
+      "weighted_next_symbol_entropy_bits": 2.2915322299608682
+    }
+  },
+  "counts": {
+    "folios": 163,
+    "glyphs_all_including_unknown": 111231,
+    "glyphs_known": 111070,
+    "hapax_token_types": 4665,
+    "loci": 3802,
+    "paragraphs": 525,
+    "physical_leaves": 72,
+    "tokens": 27483,
+    "unique_known_glyphs": 190,
+    "unique_tokens": 6620,
+    "unknown_Z1_symbols": 161
+  },
+  "entropy": {
+    "conditional_entropy_by_order": {
+      "1": {
+        "contexts": 162,
+        "entropy_bits": 2.5059041328739546,
+        "transitions": 83541
+      },
+      "2": {
+        "contexts": 646,
+        "entropy_bits": 2.2915322299608682,
+        "transitions": 56985
+      },
+      "3": {
+        "contexts": 1867,
+        "entropy_bits": 1.9405740728821923,
+        "transitions": 33458
+      },
+      "4": {
+        "contexts": 2955,
+        "entropy_bits": 1.3995644588436174,
+        "transitions": 16287
+      }
+    },
+    "empirical_unigram_bits_per_glyph": 4.017581741757479,
+    "unigram_entropy_bits_known_glyphs": 4.017581741757479,
+    "unigram_perplexity_known_glyphs": 16.196180728907184
+  },
+  "locus_length_glyphs": {
+    "max": 208,
+    "mean": 29.255917937927407,
+    "median": 30.0,
+    "min": 1,
+    "n": 3802,
+    "p25": 13.0,
+    "p75": 42.0,
+    "p95": 52.0
+  },
+  "locus_length_tokens": {
+    "max": 54,
+    "mean": 7.228563913729616,
+    "median": 8.0,
+    "min": 1,
+    "n": 3802,
+    "p25": 3.0,
+    "p75": 10.0,
+    "p95": 13.0
+  },
+  "markup": {
+    "alternative_readings": 571,
+    "brace_ligature_spans": 328,
+    "drawing_interruptions": 536,
+    "high_ascii_codes": 119,
+    "inline_comments": 625,
+    "triple_unknown_runs": 21,
+    "uncertain_space_markers": 1882,
+    "unknown_question_marks": 249,
+    "unknown_runs": 204
+  },
+  "metadata_locus_counts": {
+    "currier": {
+      "A": 1184,
+      "B": 2000,
+      "UNSET": 618
+    },
+    "locus_type": {
+      "C": 60,
+      "L": 712,
+      "P": 2907,
+      "R": 123
+    },
+    "quire": {
+      "1": 191,
+      "10": 80,
+      "11": 183,
+      "12": 66,
+      "13": 599,
+      "14": 348,
+      "15": 239,
+      "17": 129,
+      "19": 87,
+      "2": 116,
+      "20": 791,
+      "3": 183,
+      "4": 102,
+      "5": 143,
+      "6": 207,
+      "7": 50,
+      "8": 7,
+      "9": 281
+    },
+    "scribe": {
+      "1": 1184,
+      "2": 962,
+      "3": 847,
+      "4": 770,
+      "5": 39
+    },
+    "section": {
+      "astronomical": 240,
+      "biological": 599,
+      "cosmological": 350,
+      "herbal": 1166,
+      "marginal_stars": 790,
+      "pharmaceutical": 260,
+      "text_only": 148,
+      "zodiac": 249
+    }
+  },
+  "notes": [
+    "Descriptive estimates are train-only and are not confirmatory model performance.",
+    "Empirical entropy estimates are plug-in estimates and are not bias-corrected.",
+    "Token MI can be upward-biased in sparse vocabularies; pair counts are reported.",
+    "Quire is described but is not used here as a model-selection signal."
+  ],
+  "paragraph_length_tokens": {
+    "max": 365,
+    "mean": 46.94095238095238,
+    "median": 39,
+    "min": 4,
+    "n": 525,
+    "p25": 28.0,
+    "p75": 55.0,
+    "p95": 98.39999999999986
+  },
+  "provenance": {
+    "config_path": "configs/tier0/train_v1.json",
+    "config_sha256": "b7fc80c0d155f8bd07a61dcdfe4c348ff9b5b17f48add5b09bf4b02d07585c46",
+    "locked_test_accessed": false,
+    "primary_transcription": "ZL3b",
+    "source_path": "data/raw/zl/ZL3b-n.txt",
+    "source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "sta1_rules_path": "data/reference/sta1/STA-Eva_def.bit",
+    "sta1_rules_sha256": "7f37853510144fb3e2dc3ee9458d634f41e6d95bc1fbf1c4b8f479a53a021f81",
+    "train_split_path": "data/splits/v1/train.txt",
+    "train_split_sha256": "5bb5232d5e211a4bb90800f259294c554c1c9e2005548055ebaf94e782e3cc00",
+    "validation_accessed": false
+  },
+  "representation": "S0_ZL_CONVENTIONAL_STA1_GLYPHS",
+  "representation_notes": {
+    "alternative_reading_policy": "first reading",
+    "certain_period_space_is_boundary": true,
+    "drawing_interruptions_are_boundaries": true,
+    "glyph_unit": "STA1 symbol via frozen EVA->STA1 bitrans rules",
+    "uncertain_comma_space_is_boundary": true,
+    "unknown_Z1_policy": "retained in token lengths/frequency diagnostics; excluded from core glyph entropy/ngram/branching/MI estimates"
+  },
+  "schema_version": "1.0",
+  "scope": "TRAIN ONLY",
+  "token_length_glyphs": {
+    "max": 11,
+    "mean": 4.047265582360004,
+    "median": 4,
+    "min": 1,
+    "n": 27483,
+    "p25": 3.0,
+    "p75": 5.0,
+    "p95": 6.0
+  },
+  "top_known_glyphs": [
+    {
+      "count": 18014,
+      "item": "A1"
+    },
+    {
+      "count": 12609,
+      "item": "A2"
+    },
+    {
+      "count": 10502,
+      "item": "A3"
+    },
+    {
+      "count": 9503,
+      "item": "B1"
+    },
+    {
+      "count": 7895,
+      "item": "K1"
+    },
+    {
+      "count": 7355,
+      "item": "B2"
+    },
+    {
+      "count": 7138,
+      "item": "J1"
+    },
+    {
+      "count": 6958,
+      "item": "Q1"
+    },
+    {
+      "count": 4779,
+      "item": "C1"
+    },
+    {
+      "count": 4378,
+      "item": "Q2"
+    },
+    {
+      "count": 3901,
+      "item": "D1"
+    },
+    {
+      "count": 3195,
+      "item": "K2"
+    },
+    {
+      "count": 3051,
+      "item": "G1"
+    },
+    {
+      "count": 3013,
+      "item": "L1"
+    },
+    {
+      "count": 2005,
+      "item": "C2"
+    },
+    {
+      "count": 1278,
+      "item": "F1"
+    },
+    {
+      "count": 1038,
+      "item": "P1"
+    },
+    {
+      "count": 796,
+      "item": "B3"
+    },
+    {
+      "count": 692,
+      "item": "U2"
+    },
+    {
+      "count": 576,
+      "item": "U1"
+    },
+    {
+      "count": 448,
+      "item": "F3"
+    },
+    {
+      "count": 298,
+      "item": "P2"
+    },
+    {
+      "count": 295,
+      "item": "M1"
+    },
+    {
+      "count": 152,
+      "item": "T1"
+    },
+    {
+      "count": 149,
+      "item": "E1"
+    },
+    {
+      "count": 128,
+      "item": "H1"
+    },
+    {
+      "count": 118,
+      "item": "G3"
+    },
+    {
+      "count": 114,
+      "item": "B4"
+    },
+    {
+      "count": 94,
+      "item": "E2"
+    },
+    {
+      "count": 66,
+      "item": "F2"
+    },
+    {
+      "count": 47,
+      "item": "T2"
+    },
+    {
+      "count": 27,
+      "item": "U3"
+    },
+    {
+      "count": 25,
+      "item": "X1"
+    },
+    {
+      "count": 21,
+      "item": "Lb"
+    },
+    {
+      "count": 21,
+      "item": "W2"
+    },
+    {
+      "count": 17,
+      "item": "S1"
+    },
+    {
+      "count": 16,
+      "item": "U4"
+    },
+    {
+      "count": 15,
+      "item": "S2"
+    },
+    {
+      "count": 14,
+      "item": "W1"
+    },
+    {
+      "count": 12,
+      "item": "B5"
+    },
+    {
+      "count": 10,
+      "item": "G2"
+    },
+    {
+      "count": 8,
+      "item": "Ka"
+    },
+    {
+      "count": 8,
+      "item": "U5"
+    },
+    {
+      "count": 8,
+      "item": "V1"
+    },
+    {
+      "count": 7,
+      "item": "A4"
+    },
+    {
+      "count": 7,
+      "item": "Lp"
+    },
+    {
+      "count": 7,
+      "item": "N1"
+    },
+    {
+      "count": 7,
+      "item": "T3"
+    },
+    {
+      "count": 7,
+      "item": "Tb"
+    },
+    {
+      "count": 7,
+      "item": "U6"
+    }
+  ],
+  "top_tokens": [
+    {
+      "count": 623,
+      "item": "B1A3G1"
+    },
+    {
+      "count": 413,
+      "item": "A1B2"
+    },
+    {
+      "count": 368,
+      "item": "K1J1B1A2"
+    },
+    {
+      "count": 355,
+      "item": "A3G1"
+    },
+    {
+      "count": 278,
+      "item": "A1C1"
+    },
+    {
+      "count": 278,
+      "item": "K1A1B2"
+    },
+    {
+      "count": 276,
+      "item": "A3C1"
+    },
+    {
+      "count": 274,
+      "item": "L1J1B1A2"
+    },
+    {
+      "count": 245,
+      "item": "C2"
+    },
+    {
+      "count": 241,
+      "item": "K1J1A2"
+    },
+    {
+      "count": 225,
+      "item": "B1A3C1"
+    },
+    {
+      "count": 224,
+      "item": "D1A1Q1K2B1A2"
+    },
+    {
+      "count": 203,
+      "item": "D1A1Q1K2A2"
+    },
+    {
+      "count": 201,
+      "item": "D1A1Q1A3F1"
+    },
+    {
+      "count": 200,
+      "item": "A2"
+    },
+    {
+      "count": 197,
+      "item": "D1A1Q1A3G1"
+    },
+    {
+      "count": 193,
+      "item": "D1A1Q1J1B1A2"
+    },
+    {
+      "count": 182,
+      "item": "B1A2"
+    },
+    {
+      "count": 174,
+      "item": "L1J1A2"
+    },
+    {
+      "count": 171,
+      "item": "A3B2"
+    },
+    {
+      "count": 158,
+      "item": "B1A3B2"
+    },
+    {
+      "count": 151,
+      "item": "K1A1C1"
+    },
+    {
+      "count": 149,
+      "item": "B1A3F1"
+    },
+    {
+      "count": 147,
+      "item": "A1Q1A3G1"
+    },
+    {
+      "count": 138,
+      "item": "D1A1Q1A3B2"
+    },
+    {
+      "count": 137,
+      "item": "K1K2A2"
+    },
+    {
+      "count": 133,
+      "item": "L1A1B2"
+    },
+    {
+      "count": 127,
+      "item": "A1"
+    },
+    {
+      "count": 126,
+      "item": "A1Q1K2A2"
+    },
+    {
+      "count": 126,
+      "item": "B2"
+    },
+    {
+      "count": 126,
+      "item": "K1J1A1B2"
+    },
+    {
+      "count": 119,
+      "item": "A1Q2J1B1A2"
+    },
+    {
+      "count": 115,
+      "item": "D1A1Q1A3C1"
+    },
+    {
+      "count": 114,
+      "item": "K1A2"
+    },
+    {
+      "count": 113,
+      "item": "A1Q2A3G1"
+    },
+    {
+      "count": 112,
+      "item": "K1B1A2"
+    },
+    {
+      "count": 111,
+      "item": "C1"
+    },
+    {
+      "count": 106,
+      "item": "L1K2A2"
+    },
+    {
+      "count": 103,
+      "item": "A1Q2K2A2"
+    },
+    {
+      "count": 103,
+      "item": "D1A1B2"
+    },
+    {
+      "count": 97,
+      "item": "A1Q2A3C1"
+    },
+    {
+      "count": 96,
+      "item": "A1Q1A3C1"
+    },
+    {
+      "count": 94,
+      "item": "A1Q1A3B2"
+    },
+    {
+      "count": 93,
+      "item": "A1Q2A3B2"
+    },
+    {
+      "count": 92,
+      "item": "C2A3G1"
+    },
+    {
+      "count": 92,
+      "item": "D1A1Q1A2"
+    },
+    {
+      "count": 91,
+      "item": "A1Q1A3F1"
+    },
+    {
+      "count": 90,
+      "item": "K1U1A2"
+    },
+    {
+      "count": 87,
+      "item": "U2A2"
+    },
+    {
+      "count": 86,
+      "item": "A3F1"
+    }
+  ]
+}

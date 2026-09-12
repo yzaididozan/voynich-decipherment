@@ -1,0 +1,9 @@
+{
+  "edit_example_limit": 10,
+  "edit_max_distance": 2,
+  "edit_vocab_limit": 300,
+  "entropy_max_order": 4,
+  "glyph_mi_max_distance": 8,
+  "token_mi_max_distance": 5,
+  "top_items_in_summary": 50
+}

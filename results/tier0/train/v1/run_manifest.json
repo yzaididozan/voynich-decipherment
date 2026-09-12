@@ -1,0 +1,40 @@
+{
+  "analysis_tier": "Tier 0",
+  "artifacts": [
+    "currier_glyph_js.csv",
+    "edit_neighborhoods.csv",
+    "glyph_1gram_frequency.csv",
+    "glyph_2gram_frequency.csv",
+    "glyph_3gram_frequency.csv",
+    "glyph_frequency.csv",
+    "glyph_mi_by_distance.csv",
+    "group_glyph_frequency.csv",
+    "locus_token_frequency.csv",
+    "metadata_locus_counts.csv",
+    "paragraph_token_frequency.csv",
+    "positional_summary.csv",
+    "scribe_glyph_js.csv",
+    "section_glyph_js.csv",
+    "summary.json",
+    "token_frequency.csv",
+    "token_internal_glyph_frequency.csv",
+    "token_length_distribution.csv",
+    "token_mi_by_distance.csv"
+  ],
+  "provenance": {
+    "config_path": "configs/tier0/train_v1.json",
+    "config_sha256": "b7fc80c0d155f8bd07a61dcdfe4c348ff9b5b17f48add5b09bf4b02d07585c46",
+    "locked_test_accessed": false,
+    "primary_transcription": "ZL3b",
+    "source_path": "data/raw/zl/ZL3b-n.txt",
+    "source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "sta1_rules_path": "data/reference/sta1/STA-Eva_def.bit",
+    "sta1_rules_sha256": "7f37853510144fb3e2dc3ee9458d634f41e6d95bc1fbf1c4b8f479a53a021f81",
+    "train_split_path": "data/splits/v1/train.txt",
+    "train_split_sha256": "5bb5232d5e211a4bb90800f259294c554c1c9e2005548055ebaf94e782e3cc00",
+    "validation_accessed": false
+  },
+  "representation": "S0_ZL_CONVENTIONAL_STA1_GLYPHS",
+  "schema_version": "1.0",
+  "scope": "TRAIN ONLY"
+}

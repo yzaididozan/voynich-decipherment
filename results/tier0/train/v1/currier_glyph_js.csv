@@ -1,0 +1,4 @@
+dimension,group_a,group_b,js_divergence_bits,glyphs_a,glyphs_b
+currier,A,B,0.026196757226165965,28956,71990
+currier,A,UNSET,0.029029122568411794,28956,10124
+currier,B,UNSET,0.025391055422269784,71990,10124
