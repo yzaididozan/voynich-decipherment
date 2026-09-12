@@ -1,0 +1,17 @@
+{
+  "canvas_count": 213,
+  "downloaded_or_resolved_canvases": 16,
+  "locked_test_accessed": false,
+  "manifest_id": "https://collections.library.yale.edu/manifests/2002046",
+  "manifest_label": [
+    "Cipher manuscript"
+  ],
+  "manifest_url": "https://collections.library.yale.edu/manifests/2002046",
+  "max_width": 1800,
+  "resolved_folios": 15,
+  "resolver": "exact labels + multi-part generic folios + documented coarse foldout map",
+  "sample_pages": 15,
+  "schema_version": "3.0",
+  "unresolved_folios": [],
+  "validation_split_accessed": false
+}
