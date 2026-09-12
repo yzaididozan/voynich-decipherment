@@ -1,0 +1,61 @@
+{
+  "assignment": "sha256_rank_without_replacement",
+  "config_path": "configs/evaluation/level2_predictive_controls_v1.json",
+  "config_sha256": "6f6214286c9c8e47e90c27cf4c41da60f21c12fd8c31c07a4a98e3aada8b236c",
+  "freeze_id": "level2-predictive-controls-v1",
+  "level2_results_inspected_before_split_freeze": false,
+  "schema_version": "1.0",
+  "seed": 40814041438,
+  "sources": {
+    "french_profiterole_ud218": {
+      "counts": {
+        "reserved_test": 387,
+        "train": 1858,
+        "validation": 387
+      },
+      "language": "French",
+      "source_sha256": "7f667acbc6bb124901d803749a0b518463bdd9d836b5c713646ec6037fcd8f91",
+      "split_path": "data/controls/splits/level2_v1/french_profiterole_ud218.json",
+      "split_sha256": "a2bcd579d20150ebd253602588ced58124a67cf8ad833d900cc3ba3e46a80bfd"
+    },
+    "german_rem_v21": {
+      "counts": {
+        "reserved_test": 658,
+        "train": 3155,
+        "validation": 657
+      },
+      "language": "German",
+      "source_sha256": "343f261bf5c9338ba31cbb273c723b997f079dc6a026e768f328bbdfa122c601",
+      "split_path": "data/controls/splits/level2_v1/german_rem_v21.json",
+      "split_sha256": "ff54bbad57c39eb578cd2682603472e9b8137a84a17597708740f283bce1fb6c"
+    },
+    "italian_old_ud218": {
+      "counts": {
+        "reserved_test": 109,
+        "train": 522,
+        "validation": 109
+      },
+      "language": "Italian",
+      "source_sha256": "fbcd49798c1ee6517578f7a36d7450e6cf71e21e9f8c3ba2841eea4611e072a4",
+      "split_path": "data/controls/splits/level2_v1/italian_old_ud218.json",
+      "split_sha256": "8c8cf9dd8c675d79d6a547d89a9911158eeb2bce8b1fb347018e240c11740ea4"
+    },
+    "latin_udante_ud218": {
+      "counts": {
+        "reserved_test": 107,
+        "train": 512,
+        "validation": 106
+      },
+      "language": "Latin",
+      "source_sha256": "8e5eecd174b432056549ee7f5ef811ff1ab2814f14de6aa51973571cb22d5fd4",
+      "split_path": "data/controls/splits/level2_v1/latin_udante_ud218.json",
+      "split_sha256": "5fd8a813983e6588a21f3d9674a6df8fb6733d34c88d88adcac6423f75e48a29"
+    }
+  },
+  "voynich_locked_test_accessed": false,
+  "weights": {
+    "reserved_test": 15,
+    "train": 72,
+    "validation": 15
+  }
+}
