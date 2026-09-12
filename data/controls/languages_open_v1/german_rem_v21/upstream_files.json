@@ -1,0 +1,15 @@
+{
+  "files": [
+    {
+      "bytes": 27899230,
+      "expected_md5": "c57828a32f2634f3c5e72c3009e958a2",
+      "md5": "c57828a32f2634f3c5e72c3009e958a2",
+      "path": "data/controls/downloads/open_language_v1/german_rem_v21/ReM-v2.1_tei.zip",
+      "reused_existing_download": false,
+      "sha256": "a04e8ac60c87b24eadd7ff3155040c09fccbd359a229fec3fdebae53295351d1",
+      "url": "https://zenodo.org/records/13982324/files/ReM-v2.1_tei.zip?download=1"
+    }
+  ],
+  "schema_version": "1.0",
+  "source_id": "german_rem_v21"
+}

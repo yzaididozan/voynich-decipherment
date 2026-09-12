@@ -1,0 +1,13 @@
+{
+  "files": [
+    {
+      "bytes": 13671547,
+      "path": "data/controls/downloads/open_language_v1/french_profiterole_ud218/fro_profiterole-ud-train.conllu",
+      "reused_existing_download": false,
+      "sha256": "e8dee1e24558ac998c1cc136cafad81883190eb4cb58f3ebdfea101877c2aedc",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Old_French-PROFITEROLE/r2.18/fro_profiterole-ud-train.conllu"
+    }
+  ],
+  "schema_version": "1.0",
+  "source_id": "french_profiterole_ud218"
+}

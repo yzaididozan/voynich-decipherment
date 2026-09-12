@@ -1,0 +1,113 @@
+{
+  "freeze_id": "open-language-controls-v1",
+  "normalization": {
+    "accent_stripping": false,
+    "case": "lower",
+    "language_specific_modernization": false,
+    "punctuation_digits": "separators",
+    "token_definition": "contiguous_unicode_alphabetic_characters",
+    "unicode_normalization": "NFKC"
+  },
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "corpus": "UD Latin-UDante",
+      "date_scope": "14th-century literary Medieval Latin",
+      "description": "Latin works associated with Dante Alighieri; UDante describes itself as literary Medieval Latin (XIVth century).",
+      "files": [
+        {
+          "name": "la_udante-ud-train.conllu",
+          "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Latin-UDante/r2.18/la_udante-ud-train.conllu"
+        }
+      ],
+      "homepage": "https://universaldependencies.org/treebanks/la_udante/index.html",
+      "kind": "ud_conllu",
+      "language": "Latin",
+      "language_code": "la",
+      "license": "CC BY-NC-SA 3.0",
+      "limitations": [
+        "UD treebank tokenization/edition rather than a diplomatic manuscript transcription.",
+        "Only the fixed UD train file is sampled; this is a structural language control, not a complete edition."
+      ],
+      "repository": "https://github.com/UniversalDependencies/UD_Latin-UDante",
+      "source_id": "latin_udante_ud218",
+      "version": "UD 2.18"
+    },
+    {
+      "corpus": "UD Italian-Old",
+      "date_scope": "Old Italian / Florentine, Dante's Commedia (c. 1306-1321)",
+      "description": "Old Italian treebank containing Dante Alighieri's Commedia, based on the Petrocchi edition via DanteSearch.",
+      "files": [
+        {
+          "name": "it_old-ud-train.conllu",
+          "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Italian-Old/r2.18/it_old-ud-train.conllu"
+        }
+      ],
+      "homepage": "https://universaldependencies.org/treebanks/it_old/index.html",
+      "kind": "ud_conllu",
+      "language": "Italian",
+      "language_code": "it",
+      "license": "CC BY-SA 4.0",
+      "limitations": [
+        "Critical/edited treebank text rather than a diplomatic manuscript transcription.",
+        "Chronologically earlier than the Voynich manuscript."
+      ],
+      "repository": "https://github.com/UniversalDependencies/UD_Italian-Old",
+      "source_id": "italian_old_ud218",
+      "version": "UD 2.18"
+    },
+    {
+      "corpus": "Referenzkorpus Mittelhochdeutsch (ReM)",
+      "date_scope": "Middle High German, 1050-1350",
+      "description": "Reference Corpus of Middle High German: diplomatically transcribed and annotated texts, around two million word forms.",
+      "doi": "10.5281/zenodo.13982324",
+      "files": [
+        {
+          "expected_md5": "c57828a32f2634f3c5e72c3009e958a2",
+          "name": "ReM-v2.1_tei.zip",
+          "url": "https://zenodo.org/records/13982324/files/ReM-v2.1_tei.zip?download=1"
+        }
+      ],
+      "homepage": "https://www.linguistics.rub.de/rem/access/index.en.html",
+      "kind": "rem_tei_zip",
+      "language": "German",
+      "language_code": "gmh",
+      "license": "CC BY-SA 4.0",
+      "limitations": [
+        "Chronologically broader/earlier than the Voynich manuscript.",
+        "Deterministic archive-member order is used to select the first 20,000 normalized tokens.",
+        "TEI line/sentence boundaries are used when present; they are not claimed equivalent to Voynich manuscript loci."
+      ],
+      "repository": "https://zenodo.org/records/13982324",
+      "source_id": "german_rem_v21",
+      "version": "2.1"
+    },
+    {
+      "corpus": "UD Old French-PROFITEROLE",
+      "date_scope": "Old French, 9th-13th centuries",
+      "description": "Old French PROFITEROLE treebank containing twelve medieval texts.",
+      "files": [
+        {
+          "name": "fro_profiterole-ud-train.conllu",
+          "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Old_French-PROFITEROLE/r2.18/fro_profiterole-ud-train.conllu"
+        }
+      ],
+      "homepage": "https://universaldependencies.org/treebanks/fro_profiterole/index.html",
+      "kind": "ud_conllu",
+      "language": "French",
+      "language_code": "fro",
+      "license": "CC BY-NC-SA 3.0",
+      "limitations": [
+        "Chronologically earlier than the Voynich manuscript.",
+        "UD treebank representation rather than a diplomatic manuscript transcription."
+      ],
+      "repository": "https://github.com/UniversalDependencies/UD_Old_French-PROFITEROLE",
+      "source_id": "french_profiterole_ud218",
+      "version": "UD 2.18"
+    }
+  ],
+  "target_normalized_tokens_per_source": 20000,
+  "ud_release": "2.18",
+  "ud_release_date": "2026-05-15",
+  "ud_tag": "r2.18"
+}

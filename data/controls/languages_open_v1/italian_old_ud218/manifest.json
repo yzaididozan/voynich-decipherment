@@ -1,0 +1,38 @@
+{
+  "corpus": "UD Italian-Old",
+  "date_scope": "Old Italian / Florentine, Dante's Commedia (c. 1306-1321)",
+  "description": "Old Italian treebank containing Dante Alighieri's Commedia, based on the Petrocchi edition via DanteSearch.",
+  "doi": null,
+  "freeze_id": "open-language-controls-v1",
+  "frozen_lines": 740,
+  "frozen_normalized_tokens": 20000,
+  "homepage": "https://universaldependencies.org/treebanks/it_old/index.html",
+  "language": "Italian",
+  "language_code": "it",
+  "license": "CC BY-SA 4.0",
+  "limitations": [
+    "Critical/edited treebank text rather than a diplomatic manuscript transcription.",
+    "Chronologically earlier than the Voynich manuscript."
+  ],
+  "normalization": {
+    "accent_stripping": false,
+    "case": "lower",
+    "language_specific_modernization": false,
+    "punctuation_digits": "separators",
+    "token_definition": "contiguous_unicode_alphabetic_characters",
+    "unicode_normalization": "NFKC"
+  },
+  "registry_sha256": "004b3eb70f3ef1afd0b82780f10cb3faded9475a8f9fad40a13cc3d59ff88983",
+  "repository": "https://github.com/UniversalDependencies/UD_Italian-Old",
+  "retrieved_utc": "2026-09-12T20:17:45.412254+00:00",
+  "schema_version": "1.0",
+  "selection_rule": "first 20,000 normalized alphabetic tokens encountered in the version-pinned upstream resource order",
+  "source_id": "italian_old_ud218",
+  "source_path": "data/controls/languages_open_v1/italian_old_ud218/source.txt",
+  "source_sha256": "fbcd49798c1ee6517578f7a36d7450e6cf71e21e9f8c3ba2841eea4611e072a4",
+  "upstream_files_path": "data/controls/languages_open_v1/italian_old_ud218/upstream_files.json",
+  "upstream_files_sha256": "bee1cee2fa3296c3161ee9d072299b3293fe554e95d3a7366a93210f1cc09c13",
+  "upstream_version": "UD 2.18",
+  "voynich_locked_test_accessed": false,
+  "voynich_validation_accessed": false
+}

@@ -1,0 +1,39 @@
+{
+  "corpus": "Referenzkorpus Mittelhochdeutsch (ReM)",
+  "date_scope": "Middle High German, 1050-1350",
+  "description": "Reference Corpus of Middle High German: diplomatically transcribed and annotated texts, around two million word forms.",
+  "doi": "10.5281/zenodo.13982324",
+  "freeze_id": "open-language-controls-v1",
+  "frozen_lines": 4470,
+  "frozen_normalized_tokens": 20000,
+  "homepage": "https://www.linguistics.rub.de/rem/access/index.en.html",
+  "language": "German",
+  "language_code": "gmh",
+  "license": "CC BY-SA 4.0",
+  "limitations": [
+    "Chronologically broader/earlier than the Voynich manuscript.",
+    "Deterministic archive-member order is used to select the first 20,000 normalized tokens.",
+    "TEI line/sentence boundaries are used when present; they are not claimed equivalent to Voynich manuscript loci."
+  ],
+  "normalization": {
+    "accent_stripping": false,
+    "case": "lower",
+    "language_specific_modernization": false,
+    "punctuation_digits": "separators",
+    "token_definition": "contiguous_unicode_alphabetic_characters",
+    "unicode_normalization": "NFKC"
+  },
+  "registry_sha256": "004b3eb70f3ef1afd0b82780f10cb3faded9475a8f9fad40a13cc3d59ff88983",
+  "repository": "https://zenodo.org/records/13982324",
+  "retrieved_utc": "2026-09-12T20:18:01.209076+00:00",
+  "schema_version": "1.0",
+  "selection_rule": "first 20,000 normalized alphabetic tokens encountered in the version-pinned upstream resource order",
+  "source_id": "german_rem_v21",
+  "source_path": "data/controls/languages_open_v1/german_rem_v21/source.txt",
+  "source_sha256": "343f261bf5c9338ba31cbb273c723b997f079dc6a026e768f328bbdfa122c601",
+  "upstream_files_path": "data/controls/languages_open_v1/german_rem_v21/upstream_files.json",
+  "upstream_files_sha256": "f4d1ccd684d34f7f232e28961ae00f001f86acc5a40f1c3a9673b3cfb5e5b87d",
+  "upstream_version": "2.1",
+  "voynich_locked_test_accessed": false,
+  "voynich_validation_accessed": false
+}

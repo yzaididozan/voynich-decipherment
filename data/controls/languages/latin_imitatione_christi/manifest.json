@@ -1,0 +1,38 @@
+{
+  "api_endpoint": "https://la.wikisource.org/w/api.php",
+  "author": "traditionally attributed to Thomas à Kempis",
+  "content_page_count": 4,
+  "edition_note": "Latin Wikisource transcription; four-book text. This is an edited electronic text, not a diplomatic manuscript transcription.",
+  "freeze_id": "language-controls-v1",
+  "frozen_normalized_tokens": 20000,
+  "landing_url": "https://la.wikisource.org/wiki/De_imitatione_Christi",
+  "language": "Latin",
+  "language_code": "la",
+  "limitations": [
+    "Not a diplomatic manuscript transcription.",
+    "Latin orthography reflects the Wikisource electronic edition.",
+    "The work's dating/authorship are debated; the registry preserves the Wikisource page's own medieval dating note rather than treating it as a precise chronological witness."
+  ],
+  "normalization": {
+    "accent_stripping": false,
+    "case": "lower",
+    "language_specific_modernization": false,
+    "punctuation_digits": "separators",
+    "token_definition": "contiguous_unicode_alphabetic_characters",
+    "unicode_normalization": "NFKC"
+  },
+  "registry_sha256": "1a7e0c0fd32c312a2299f9f5db654c8adce30ef290b9765f9964a106f5d407bd",
+  "retrieved_utc": "2026-09-12T20:01:43.037968+00:00",
+  "rights_note": "underlying medieval work is public domain; Wikisource transcription is reused under Wikisource site terms",
+  "schema_version": "1.0",
+  "source_id": "latin_imitatione_christi",
+  "source_pages_path": "data/controls/languages/latin_imitatione_christi/source_pages.json",
+  "source_pages_sha256": "97ca1b407f3b8b61927d528856ca5ddd40d8249a3875a6aaa21e195f92a39129",
+  "source_path": "data/controls/languages/latin_imitatione_christi/source.txt",
+  "source_sha256": "15f009d17a72cefc111d70fcf813618864cd5e174ddba6fac4d11ca7da7ad254",
+  "target_normalized_tokens": 20000,
+  "voynich_locked_test_accessed": false,
+  "voynich_validation_accessed": false,
+  "work": "De imitatione Christi",
+  "work_date_note": "late medieval; date/authorship are historically debated. The selected Latin Wikisource page labels the work 'saeculo XIV' and attributes it to Thomas a Kempis."
+}

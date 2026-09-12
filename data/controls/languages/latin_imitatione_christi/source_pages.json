@@ -1,0 +1,56 @@
+{
+  "discovery_pages": [
+    {
+      "pageid": 37772,
+      "revid": 193274,
+      "title": "De imitatione Christi/I"
+    },
+    {
+      "pageid": 37773,
+      "revid": 193196,
+      "title": "De imitatione Christi/II"
+    },
+    {
+      "pageid": 37774,
+      "revid": 193197,
+      "title": "De imitatione Christi/III"
+    },
+    {
+      "pageid": 37775,
+      "revid": 193198,
+      "title": "De imitatione Christi/IV"
+    }
+  ],
+  "pages_in_text_order": [
+    {
+      "extracted_text_sha256": "c9ce7fda5e60b66ec5dcbafa1b8133ee00002dfde0a5a5bda51db6a250356844",
+      "extracted_tokens": 8328,
+      "pageid": 37772,
+      "revid": 193274,
+      "title": "De imitatione Christi/I"
+    },
+    {
+      "extracted_text_sha256": "6cd61f6a6f5f2fbf2437a849b2de1b006037eb9535e6a0f8dab0014405f738e0",
+      "extracted_tokens": 5018,
+      "pageid": 37773,
+      "revid": 193196,
+      "title": "De imitatione Christi/II"
+    },
+    {
+      "extracted_text_sha256": "d4c11766c702eff70d37943f089405dbe0005138b7f0e4c72bfe1fdf6a2b1cbf",
+      "extracted_tokens": 19803,
+      "pageid": 37774,
+      "revid": 193197,
+      "title": "De imitatione Christi/III"
+    },
+    {
+      "extracted_text_sha256": "50ea399d0caa5967b25a973e2bb39e80d04265c629aa6e9d0626e195d5f9d605",
+      "extracted_tokens": 7721,
+      "pageid": 37775,
+      "revid": 193198,
+      "title": "De imitatione Christi/IV"
+    }
+  ],
+  "schema_version": "1.0",
+  "source_id": "latin_imitatione_christi"
+}

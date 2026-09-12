@@ -1,0 +1,13 @@
+{
+  "files": [
+    {
+      "bytes": 13156778,
+      "path": "data/controls/downloads/open_language_v1/italian_old_ud218/it_old-ud-train.conllu",
+      "reused_existing_download": false,
+      "sha256": "9e94e25d826632a005adc2a8a1daa88f46bdd1509d56090b4c82d27779e1a5e0",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Italian-Old/r2.18/it_old-ud-train.conllu"
+    }
+  ],
+  "schema_version": "1.0",
+  "source_id": "italian_old_ud218"
+}

@@ -1,0 +1,38 @@
+{
+  "corpus": "UD Latin-UDante",
+  "date_scope": "14th-century literary Medieval Latin",
+  "description": "Latin works associated with Dante Alighieri; UDante describes itself as literary Medieval Latin (XIVth century).",
+  "doi": null,
+  "freeze_id": "open-language-controls-v1",
+  "frozen_lines": 725,
+  "frozen_normalized_tokens": 20000,
+  "homepage": "https://universaldependencies.org/treebanks/la_udante/index.html",
+  "language": "Latin",
+  "language_code": "la",
+  "license": "CC BY-NC-SA 3.0",
+  "limitations": [
+    "UD treebank tokenization/edition rather than a diplomatic manuscript transcription.",
+    "Only the fixed UD train file is sampled; this is a structural language control, not a complete edition."
+  ],
+  "normalization": {
+    "accent_stripping": false,
+    "case": "lower",
+    "language_specific_modernization": false,
+    "punctuation_digits": "separators",
+    "token_definition": "contiguous_unicode_alphabetic_characters",
+    "unicode_normalization": "NFKC"
+  },
+  "registry_sha256": "004b3eb70f3ef1afd0b82780f10cb3faded9475a8f9fad40a13cc3d59ff88983",
+  "repository": "https://github.com/UniversalDependencies/UD_Latin-UDante",
+  "retrieved_utc": "2026-09-12T20:17:43.508559+00:00",
+  "schema_version": "1.0",
+  "selection_rule": "first 20,000 normalized alphabetic tokens encountered in the version-pinned upstream resource order",
+  "source_id": "latin_udante_ud218",
+  "source_path": "data/controls/languages_open_v1/latin_udante_ud218/source.txt",
+  "source_sha256": "8e5eecd174b432056549ee7f5ef811ff1ab2814f14de6aa51973571cb22d5fd4",
+  "upstream_files_path": "data/controls/languages_open_v1/latin_udante_ud218/upstream_files.json",
+  "upstream_files_sha256": "52cdabd1ad994f27673e3c147badf4661bb6596edc1de50c058dc806b574ba01",
+  "upstream_version": "UD 2.18",
+  "voynich_locked_test_accessed": false,
+  "voynich_validation_accessed": false
+}

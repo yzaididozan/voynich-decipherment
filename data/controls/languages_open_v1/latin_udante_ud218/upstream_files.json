@@ -1,0 +1,13 @@
+{
+  "files": [
+    {
+      "bytes": 3006783,
+      "path": "data/controls/downloads/open_language_v1/latin_udante_ud218/la_udante-ud-train.conllu",
+      "reused_existing_download": false,
+      "sha256": "7308e1b9145bc5c4e6febc1149722a8fed89b2cf5a59a9a83ec53744de57744f",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Latin-UDante/r2.18/la_udante-ud-train.conllu"
+    }
+  ],
+  "schema_version": "1.0",
+  "source_id": "latin_udante_ud218"
+}

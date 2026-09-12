@@ -243,3 +243,38 @@ analysis_policy:
   derived_reference_transcriptions:
     - "RF1b-full"
     - "RF1b-basic"
+
+# Versioned open historical-language controls.
+historical_language_controls_open_v1:
+  freeze_id: "open-language-controls-v1"
+  target_normalized_tokens_per_source: 20000
+  master_manifest: "data/controls/languages_open_v1/language_controls_open_v1_manifest.json"
+  sources:
+    - id: "latin_udante_ud218"
+      language: "Latin"
+      corpus: "UD Latin-UDante"
+      version: "UD 2.18"
+      license: "CC BY-NC-SA 3.0"
+      local_path: "data/controls/languages_open_v1/latin_udante_ud218/source.txt"
+      sha256: "8e5eecd174b432056549ee7f5ef811ff1ab2814f14de6aa51973571cb22d5fd4"
+    - id: "italian_old_ud218"
+      language: "Italian"
+      corpus: "UD Italian-Old"
+      version: "UD 2.18"
+      license: "CC BY-SA 4.0"
+      local_path: "data/controls/languages_open_v1/italian_old_ud218/source.txt"
+      sha256: "fbcd49798c1ee6517578f7a36d7450e6cf71e21e9f8c3ba2841eea4611e072a4"
+    - id: "german_rem_v21"
+      language: "German"
+      corpus: "Referenzkorpus Mittelhochdeutsch (ReM)"
+      version: "2.1"
+      license: "CC BY-SA 4.0"
+      local_path: "data/controls/languages_open_v1/german_rem_v21/source.txt"
+      sha256: "343f261bf5c9338ba31cbb273c723b997f079dc6a026e768f328bbdfa122c601"
+    - id: "french_profiterole_ud218"
+      language: "French"
+      corpus: "UD Old French-PROFITEROLE"
+      version: "UD 2.18"
+      license: "CC BY-NC-SA 3.0"
+      local_path: "data/controls/languages_open_v1/french_profiterole_ud218/source.txt"
+      sha256: "7f667acbc6bb124901d803749a0b518463bdd9d836b5c713646ec6037fcd8f91"

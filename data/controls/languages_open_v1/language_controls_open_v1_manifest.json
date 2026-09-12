@@ -1,0 +1,52 @@
+{
+  "freeze_id": "open-language-controls-v1",
+  "registry_sha256": "004b3eb70f3ef1afd0b82780f10cb3faded9475a8f9fad40a13cc3d59ff88983",
+  "schema_version": "1.0",
+  "source_registry_file_sha256": "88ff76479263045da0dde3aaa0294a268577604575de396d54e8dad63562bc71",
+  "source_registry_path": "data/controls/languages_open_v1/source_registry.json",
+  "sources": [
+    {
+      "corpus": "UD Latin-UDante",
+      "language": "Latin",
+      "license": "CC BY-NC-SA 3.0",
+      "manifest_path": "data/controls/languages_open_v1/latin_udante_ud218/manifest.json",
+      "source_id": "latin_udante_ud218",
+      "source_path": "data/controls/languages_open_v1/latin_udante_ud218/source.txt",
+      "source_sha256": "8e5eecd174b432056549ee7f5ef811ff1ab2814f14de6aa51973571cb22d5fd4",
+      "upstream_version": "UD 2.18"
+    },
+    {
+      "corpus": "UD Italian-Old",
+      "language": "Italian",
+      "license": "CC BY-SA 4.0",
+      "manifest_path": "data/controls/languages_open_v1/italian_old_ud218/manifest.json",
+      "source_id": "italian_old_ud218",
+      "source_path": "data/controls/languages_open_v1/italian_old_ud218/source.txt",
+      "source_sha256": "fbcd49798c1ee6517578f7a36d7450e6cf71e21e9f8c3ba2841eea4611e072a4",
+      "upstream_version": "UD 2.18"
+    },
+    {
+      "corpus": "Referenzkorpus Mittelhochdeutsch (ReM)",
+      "language": "German",
+      "license": "CC BY-SA 4.0",
+      "manifest_path": "data/controls/languages_open_v1/german_rem_v21/manifest.json",
+      "source_id": "german_rem_v21",
+      "source_path": "data/controls/languages_open_v1/german_rem_v21/source.txt",
+      "source_sha256": "343f261bf5c9338ba31cbb273c723b997f079dc6a026e768f328bbdfa122c601",
+      "upstream_version": "2.1"
+    },
+    {
+      "corpus": "UD Old French-PROFITEROLE",
+      "language": "French",
+      "license": "CC BY-NC-SA 3.0",
+      "manifest_path": "data/controls/languages_open_v1/french_profiterole_ud218/manifest.json",
+      "source_id": "french_profiterole_ud218",
+      "source_path": "data/controls/languages_open_v1/french_profiterole_ud218/source.txt",
+      "source_sha256": "7f667acbc6bb124901d803749a0b518463bdd9d836b5c713646ec6037fcd8f91",
+      "upstream_version": "UD 2.18"
+    }
+  ],
+  "target_normalized_tokens_per_source": 20000,
+  "voynich_locked_test_accessed": false,
+  "voynich_validation_accessed": false
+}

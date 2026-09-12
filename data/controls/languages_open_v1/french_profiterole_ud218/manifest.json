@@ -1,0 +1,38 @@
+{
+  "corpus": "UD Old French-PROFITEROLE",
+  "date_scope": "Old French, 9th-13th centuries",
+  "description": "Old French PROFITEROLE treebank containing twelve medieval texts.",
+  "doi": null,
+  "freeze_id": "open-language-controls-v1",
+  "frozen_lines": 2632,
+  "frozen_normalized_tokens": 20000,
+  "homepage": "https://universaldependencies.org/treebanks/fro_profiterole/index.html",
+  "language": "French",
+  "language_code": "fro",
+  "license": "CC BY-NC-SA 3.0",
+  "limitations": [
+    "Chronologically earlier than the Voynich manuscript.",
+    "UD treebank representation rather than a diplomatic manuscript transcription."
+  ],
+  "normalization": {
+    "accent_stripping": false,
+    "case": "lower",
+    "language_specific_modernization": false,
+    "punctuation_digits": "separators",
+    "token_definition": "contiguous_unicode_alphabetic_characters",
+    "unicode_normalization": "NFKC"
+  },
+  "registry_sha256": "004b3eb70f3ef1afd0b82780f10cb3faded9475a8f9fad40a13cc3d59ff88983",
+  "repository": "https://github.com/UniversalDependencies/UD_Old_French-PROFITEROLE",
+  "retrieved_utc": "2026-09-12T20:18:03.283461+00:00",
+  "schema_version": "1.0",
+  "selection_rule": "first 20,000 normalized alphabetic tokens encountered in the version-pinned upstream resource order",
+  "source_id": "french_profiterole_ud218",
+  "source_path": "data/controls/languages_open_v1/french_profiterole_ud218/source.txt",
+  "source_sha256": "7f667acbc6bb124901d803749a0b518463bdd9d836b5c713646ec6037fcd8f91",
+  "upstream_files_path": "data/controls/languages_open_v1/french_profiterole_ud218/upstream_files.json",
+  "upstream_files_sha256": "a50d2eb57a704c3d543f35bfa8fbe211f6d75e109837183474c724f795ac0da4",
+  "upstream_version": "UD 2.18",
+  "voynich_locked_test_accessed": false,
+  "voynich_validation_accessed": false
+}

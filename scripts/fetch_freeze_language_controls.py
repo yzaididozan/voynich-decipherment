@@ -23,6 +23,8 @@ import sys
 import unicodedata
 from urllib.parse import quote, unquote, urlencode, urlparse
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError, URLError
+import time
 from typing import Dict, Iterable, List, Mapping, Optional, Sequence, Tuple
 
 
@@ -33,6 +35,12 @@ USER_AGENT = (
     "VOYAGER-Voynich-Research/1.0 "
     "(historical language-control corpus acquisition)"
 )
+
+# Transport-only safeguards. These do not alter source selection,
+# normalization, or frozen corpus contents.
+REQUEST_DELAY_SECONDS = 1.0
+MAX_HTTP_ATTEMPTS = 8
+RETRYABLE_HTTP_STATUS = {429, 500, 502, 503, 504}
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -48,6 +56,7 @@ def sha256_file(path: Path) -> str:
 
 
 def api_get(endpoint: str, params: Mapping[str, object]) -> dict:
+    # GET MediaWiki JSON with throttling and bounded retry/backoff.
     query = urlencode(
         {key: str(value) for key, value in params.items()}
     )
@@ -59,10 +68,72 @@ def api_get(endpoint: str, params: Mapping[str, object]) -> dict:
             "Accept": "application/json",
         },
     )
-    with urlopen(request, timeout=60) as response:
-        payload = response.read()
-    return json.loads(payload.decode("utf-8"))
 
+    last_error = None
+
+    for attempt in range(1, MAX_HTTP_ATTEMPTS + 1):
+        try:
+            with urlopen(request, timeout=60) as response:
+                payload = response.read()
+
+            time.sleep(REQUEST_DELAY_SECONDS)
+            return json.loads(payload.decode("utf-8"))
+
+        except HTTPError as exc:
+            last_error = exc
+
+            if (
+                exc.code not in RETRYABLE_HTTP_STATUS
+                or attempt >= MAX_HTTP_ATTEMPTS
+            ):
+                raise
+
+            retry_after = exc.headers.get("Retry-After")
+            wait = 0.0
+
+            if retry_after:
+                try:
+                    wait = float(retry_after)
+                except ValueError:
+                    wait = 0.0
+
+            if wait <= 0.0:
+                wait = min(
+                    120.0,
+                    5.0 * (2 ** (attempt - 1)),
+                )
+            else:
+                wait = min(wait, 300.0)
+
+            print(
+                f"  HTTP {exc.code}; retry "
+                f"{attempt + 1}/{MAX_HTTP_ATTEMPTS} "
+                f"in {wait:.0f}s",
+                file=sys.stderr,
+            )
+            time.sleep(wait)
+
+        except URLError as exc:
+            last_error = exc
+
+            if attempt >= MAX_HTTP_ATTEMPTS:
+                raise
+
+            wait = min(
+                120.0,
+                5.0 * (2 ** (attempt - 1)),
+            )
+            print(
+                f"  network error; retry "
+                f"{attempt + 1}/{MAX_HTTP_ATTEMPTS} "
+                f"in {wait:.0f}s: {exc}",
+                file=sys.stderr,
+            )
+            time.sleep(wait)
+
+    if last_error is not None:
+        raise last_error
+    raise RuntimeError("MediaWiki request exhausted without a result")
 
 class LinkCollector(HTMLParser):
     """Collect ordered /wiki/... links from a parsed Wikisource page."""
@@ -444,6 +515,86 @@ def crop_lines(
     return output, count
 
 
+
+def load_verified_partial_source(
+    source: Mapping[str, object],
+    *,
+    output_root: Path,
+    registry_hash: str,
+    target_tokens: int,
+) -> Optional[dict]:
+    # Reuse a source fully completed before an interrupted first freeze.
+    source_id = str(source["source_id"])
+    source_dir = output_root / source_id
+    source_path = source_dir / "source.txt"
+    manifest_path = source_dir / "manifest.json"
+    pages_path = source_dir / "source_pages.json"
+
+    required = (source_path, manifest_path, pages_path)
+    present = [path.exists() for path in required]
+
+    if not any(present):
+        return None
+
+    if not all(present):
+        missing = [
+            path.name
+            for path, exists in zip(required, present)
+            if not exists
+        ]
+        raise ValueError(
+            f"{source_id}: incomplete source directory from an interrupted "
+            f"freeze; missing {missing}. Remove only "
+            f"{source_dir} and retry."
+        )
+
+    manifest = json.loads(
+        manifest_path.read_text(encoding="utf-8")
+    )
+
+    expected_fields = {
+        "source_id": source_id,
+        "registry_sha256": registry_hash,
+        "target_normalized_tokens": target_tokens,
+        "frozen_normalized_tokens": target_tokens,
+    }
+    for key, expected in expected_fields.items():
+        observed = manifest.get(key)
+        if observed != expected:
+            raise ValueError(
+                f"{source_id}: saved partial manifest mismatch for {key}: "
+                f"{observed!r} != {expected!r}. "
+                "Refusing to mix freeze protocols."
+            )
+
+    observed_source_hash = sha256_file(source_path)
+    if observed_source_hash != manifest.get("source_sha256"):
+        raise ValueError(
+            f"{source_id}: source.txt SHA-256 mismatch"
+        )
+
+    observed_pages_hash = sha256_file(pages_path)
+    if observed_pages_hash != manifest.get("source_pages_sha256"):
+        raise ValueError(
+            f"{source_id}: source_pages.json SHA-256 mismatch"
+        )
+
+    observed_tokens = sum(
+        len(line.split())
+        for line in source_path.read_text(
+            encoding="utf-8"
+        ).splitlines()
+        if line.strip()
+    )
+    if observed_tokens != target_tokens:
+        raise ValueError(
+            f"{source_id}: frozen source has {observed_tokens:,} tokens; "
+            f"expected {target_tokens:,}"
+        )
+
+    return manifest
+
+
 def freeze_source(
     source: Mapping[str, object],
     *,
@@ -781,24 +932,19 @@ def main() -> int:
             print("No network fetch performed.")
             return 0
 
-        # Refuse ambiguous partial state rather than silently mixing revisions.
-        partial = [
-            source["source_id"]
-            for source in registry["sources"]
-            if (
-                args.output_root
-                / source["source_id"]
-                / "manifest.json"
-            ).exists()
-        ]
-        if partial:
-            raise ValueError(
-                "Partial language-control freeze exists without the "
-                "master manifest: "
-                + ", ".join(partial)
-                + ". Remove the incomplete attempt before the first "
-                "successful v1 freeze."
+        # Interrupted first freezes are resumable. Fully completed sources
+        # are verified against this exact registry and reused; only missing
+        # sources are fetched.
+        verified_partial = {}
+        for source in registry["sources"]:
+            manifest = load_verified_partial_source(
+                source,
+                output_root=args.output_root,
+                registry_hash=registry_hash,
+                target_tokens=target_tokens,
             )
+            if manifest is not None:
+                verified_partial[source["source_id"]] = manifest
 
         manifests = []
 
@@ -815,16 +961,26 @@ def main() -> int:
         print()
 
         for source in registry["sources"]:
+            source_id = source["source_id"]
             print(
                 f"[{source['language']}] "
-                f"{source['source_id']}"
+                f"{source_id}"
             )
-            manifest = freeze_source(
-                source,
-                target_tokens=target_tokens,
-                output_root=args.output_root,
-                registry_hash=registry_hash,
-            )
+
+            if source_id in verified_partial:
+                manifest = verified_partial[source_id]
+                print(
+                    "  existing partial freeze: VERIFIED; "
+                    "no network re-fetch"
+                )
+            else:
+                manifest = freeze_source(
+                    source,
+                    target_tokens=target_tokens,
+                    output_root=args.output_root,
+                    registry_hash=registry_hash,
+                )
+
             manifests.append(manifest)
             print(
                 f"  pages={manifest['content_page_count']}  "
