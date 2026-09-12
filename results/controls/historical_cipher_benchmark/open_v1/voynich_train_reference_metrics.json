@@ -1,0 +1,30 @@
+{
+  "metrics": {
+    "conditional_entropy_order_1": 2.5059041328739546,
+    "conditional_entropy_order_2": 2.2915322299608682,
+    "conditional_entropy_order_3": 1.9405740728821923,
+    "conditional_entropy_order_4": 1.3995644588436174,
+    "edit_mean_neighbors_distance_1": 7.78,
+    "edit_mean_neighbors_within_2": 44.79333333333334,
+    "glyph_mi_distance_1": 1.409963339177805,
+    "glyph_mi_distance_2": 0.7171884440608763,
+    "glyph_mi_distance_3": 0.337576774480585,
+    "glyph_mi_distance_4": 0.15711135894611883,
+    "glyph_mi_distance_5": 0.1307416483816093,
+    "glyph_mi_distance_6": 0.19801289679383824,
+    "glyph_mi_distance_7": 0.39949178063565804,
+    "glyph_mi_distance_8": 0.8219071335845233,
+    "hapax_type_ratio": 0.7046827794561934,
+    "position_js_initial_final": 0.6027621556504114,
+    "position_js_initial_medial": 0.2563857854904784,
+    "position_js_medial_final": 0.6978931669801738,
+    "token_length_mean": 4.047265582360004,
+    "token_length_median": 4.0,
+    "top_token_frequency": 0.022668558745406252,
+    "unigram_entropy_bits": 4.017581741757479,
+    "unique_token_ratio": 0.24087617800094605
+  },
+  "schema_version": "1.0",
+  "scope": "VOYNICH TRAIN ONLY",
+  "source": "results/tier0/train/v1"
+}

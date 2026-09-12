@@ -1,0 +1,27 @@
+{
+  "ciphertext": {
+    "alphabet_size": 32,
+    "glyphs": 103370,
+    "lines": 725,
+    "tokens": 20000,
+    "unique_tokens": 5403
+  },
+  "config_sha256": "8949303dea4a6cbf0234050eff43e91e60ddac03f0409f08bf6c8c1bf4765404",
+  "diagnostics": {
+    "coded_word_occurrences": 7241,
+    "coded_word_types": 64
+  },
+  "family": "nomenclator",
+  "plaintext": {
+    "alphabet_size": 24,
+    "characters": 112040,
+    "lines": 725,
+    "tokens": 20000,
+    "unique_tokens": 5403
+  },
+  "round_trip_verified": true,
+  "schema_version": "1.0",
+  "seed": 40814041441,
+  "source_id": "latin_udante_ud218",
+  "source_sha256": "8e5eecd174b432056549ee7f5ef811ff1ab2814f14de6aa51973571cb22d5fd4"
+}

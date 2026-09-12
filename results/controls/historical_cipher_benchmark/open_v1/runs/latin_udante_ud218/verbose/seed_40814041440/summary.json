@@ -1,0 +1,148 @@
+{
+  "benchmark": {
+    "analysis_tier": "Tier-0-compatible historical cipher control benchmark",
+    "branching_entropy": {
+      "order_1": {
+        "context_order": 1,
+        "contexts": 5,
+        "transitions": 204080,
+        "unweighted_mean_context_entropy_bits": 2.134286389287883,
+        "weighted_next_symbol_entropy_bits": 2.1405255366455487
+      },
+      "order_2": {
+        "context_order": 2,
+        "contexts": 25,
+        "transitions": 184080,
+        "unweighted_mean_context_entropy_bits": 1.9102279586761055,
+        "weighted_next_symbol_entropy_bits": 2.002346862372522
+      }
+    },
+    "counts": {
+      "glyphs": 224080,
+      "hapax_token_types": 3463,
+      "hapax_type_ratio": 0.6409402183971867,
+      "lines": 725,
+      "tokens": 20000,
+      "top_token_frequency": 0.0331,
+      "unique_glyphs": 5,
+      "unique_token_ratio": 0.27015,
+      "unique_tokens": 5403
+    },
+    "edit_neighborhood_summary": {
+      "frequency_weighted_mean_neighbors_distance_1": 0.36730113126234515,
+      "frequency_weighted_mean_neighbors_within_2": 3.2777877536362006,
+      "mean_neighbors_distance_1": 0.17333333333333334,
+      "mean_neighbors_within_2": 1.6333333333333333,
+      "vocab_evaluated": 300
+    },
+    "entropy": {
+      "conditional_entropy_by_order": {
+        "1": {
+          "contexts": 5,
+          "entropy_bits": 2.1405255366455487,
+          "transitions": 204080
+        },
+        "2": {
+          "contexts": 25,
+          "entropy_bits": 2.002346862372522,
+          "transitions": 184080
+        },
+        "3": {
+          "contexts": 124,
+          "entropy_bits": 1.69739896248327,
+          "transitions": 164241
+        },
+        "4": {
+          "contexts": 555,
+          "entropy_bits": 1.4935687193265028,
+          "transitions": 144402
+        }
+      },
+      "unigram_entropy_bits": 2.280008073984325
+    },
+    "line_length_glyphs": {
+      "max": 1142,
+      "mean": 309.07586206896553,
+      "median": 276,
+      "min": 18,
+      "n": 725,
+      "p25": 184.0,
+      "p75": 406.0,
+      "p95": 607.1999999999998
+    },
+    "line_length_tokens": {
+      "max": 103,
+      "mean": 27.586206896551722,
+      "median": 25,
+      "min": 2,
+      "n": 725,
+      "p25": 17.0,
+      "p75": 36.0,
+      "p95": 54.799999999999955
+    },
+    "line_token_position_js": {
+      "initial_vs_final": 0.9119614972301643,
+      "initial_vs_medial": 0.5848674682217642,
+      "medial_vs_final": 0.7453211486801344
+    },
+    "notes": [
+      "Metric implementations reuse VOYAGER Tier-0 functions where the underlying structure is applicable.",
+      "Control line boundaries come from source-edition text and are not assumed equivalent to Voynich manuscript loci.",
+      "Raw token MI is descriptive only because sparse token vocabularies can strongly bias plug-in MI upward.",
+      "Currier/scribe/section/quire and manuscript-layout constraints are unavailable for generic cipher controls."
+    ],
+    "schema_version": "1.0",
+    "token_internal_glyph_position_js": {
+      "initial_vs_final": 0.08868250564823972,
+      "initial_vs_medial": 0.007677878122591285,
+      "medial_vs_final": 0.12153548001632183
+    },
+    "token_length_glyphs": {
+      "max": 38,
+      "mean": 11.204,
+      "median": 10.0,
+      "min": 2,
+      "n": 20000,
+      "p25": 6.0,
+      "p75": 14.0,
+      "p95": 22.0
+    }
+  },
+  "control_corpus_path": "data/controls/ciphers/historical_open_v1/latin_udante_ud218/verbose/seed_40814041440/corpus.jsonl",
+  "control_corpus_sha256": "d51fb200ab7384f865e7f7fcd757c16d688138821a9758530dd7d102d2636f12",
+  "family": "verbose",
+  "language": "Latin",
+  "locked_test_accessed": false,
+  "scalar_metrics": {
+    "conditional_entropy_order_1": 2.1405255366455487,
+    "conditional_entropy_order_2": 2.002346862372522,
+    "conditional_entropy_order_3": 1.69739896248327,
+    "conditional_entropy_order_4": 1.4935687193265028,
+    "edit_mean_neighbors_distance_1": 0.17333333333333334,
+    "edit_mean_neighbors_within_2": 1.6333333333333333,
+    "glyph_mi_distance_1": 0.14282991711067505,
+    "glyph_mi_distance_2": 0.01297061990701407,
+    "glyph_mi_distance_3": 0.021420427014643178,
+    "glyph_mi_distance_4": 0.012869041603043668,
+    "glyph_mi_distance_5": 0.016989527804433927,
+    "glyph_mi_distance_6": 0.007719121911089581,
+    "glyph_mi_distance_7": 0.004735313834986234,
+    "glyph_mi_distance_8": 0.007292134859148528,
+    "hapax_type_ratio": 0.6409402183971867,
+    "position_js_initial_final": 0.08868250564823972,
+    "position_js_initial_medial": 0.007677878122591285,
+    "position_js_medial_final": 0.12153548001632183,
+    "token_length_mean": 11.204,
+    "token_length_median": 10.0,
+    "top_token_frequency": 0.0331,
+    "unigram_entropy_bits": 2.280008073984325,
+    "unique_token_ratio": 0.27015
+  },
+  "schema_version": "1.0",
+  "seed": 40814041440,
+  "source_id": "latin_udante_ud218",
+  "source_sha256": "8e5eecd174b432056549ee7f5ef811ff1ab2814f14de6aa51973571cb22d5fd4",
+  "validation_accessed": false,
+  "voynich_reference": "results/tier0/train/v1",
+  "voynich_scope": "TRAIN ONLY"
+}

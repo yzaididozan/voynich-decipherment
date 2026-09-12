@@ -1,0 +1,352 @@
+{
+  "analysis": "historical cipher control corpus generation",
+  "config_path": "configs/cipher/historical_controls_v1.json",
+  "config_sha256": "8949303dea4a6cbf0234050eff43e91e60ddac03f0409f08bf6c8c1bf4765404",
+  "families": [
+    "monoalphabetic",
+    "homophonic",
+    "verbose",
+    "null_insertion",
+    "nomenclator",
+    "transposition",
+    "syllabic_hybrid"
+  ],
+  "plaintext_normalization": {
+    "case": "lower",
+    "language_specific_modernization": false,
+    "preserve_nonempty_line_boundaries": true,
+    "punctuation_digits": "separators",
+    "token_definition": "contiguous_unicode_alphabetic_characters",
+    "unicode_normalization": "NFKC"
+  },
+  "runs": [
+    {
+      "ciphertext_alphabet_size": 48,
+      "ciphertext_glyphs": 73606,
+      "ciphertext_tokens": 20000,
+      "family": "monoalphabetic",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/monoalphabetic/seed_40814041438",
+      "round_trip_verified": true,
+      "seed": 40814041438
+    },
+    {
+      "ciphertext_alphabet_size": 48,
+      "ciphertext_glyphs": 73606,
+      "ciphertext_tokens": 20000,
+      "family": "monoalphabetic",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/monoalphabetic/seed_40814041439",
+      "round_trip_verified": true,
+      "seed": 40814041439
+    },
+    {
+      "ciphertext_alphabet_size": 48,
+      "ciphertext_glyphs": 73606,
+      "ciphertext_tokens": 20000,
+      "family": "monoalphabetic",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/monoalphabetic/seed_40814041440",
+      "round_trip_verified": true,
+      "seed": 40814041440
+    },
+    {
+      "ciphertext_alphabet_size": 48,
+      "ciphertext_glyphs": 73606,
+      "ciphertext_tokens": 20000,
+      "family": "monoalphabetic",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/monoalphabetic/seed_40814041441",
+      "round_trip_verified": true,
+      "seed": 40814041441
+    },
+    {
+      "ciphertext_alphabet_size": 48,
+      "ciphertext_glyphs": 73606,
+      "ciphertext_tokens": 20000,
+      "family": "monoalphabetic",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/monoalphabetic/seed_40814041442",
+      "round_trip_verified": true,
+      "seed": 40814041442
+    },
+    {
+      "ciphertext_alphabet_size": 126,
+      "ciphertext_glyphs": 73606,
+      "ciphertext_tokens": 20000,
+      "family": "homophonic",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/homophonic/seed_40814041438",
+      "round_trip_verified": true,
+      "seed": 40814041438
+    },
+    {
+      "ciphertext_alphabet_size": 126,
+      "ciphertext_glyphs": 73606,
+      "ciphertext_tokens": 20000,
+      "family": "homophonic",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/homophonic/seed_40814041439",
+      "round_trip_verified": true,
+      "seed": 40814041439
+    },
+    {
+      "ciphertext_alphabet_size": 127,
+      "ciphertext_glyphs": 73606,
+      "ciphertext_tokens": 20000,
+      "family": "homophonic",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/homophonic/seed_40814041440",
+      "round_trip_verified": true,
+      "seed": 40814041440
+    },
+    {
+      "ciphertext_alphabet_size": 127,
+      "ciphertext_glyphs": 73606,
+      "ciphertext_tokens": 20000,
+      "family": "homophonic",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/homophonic/seed_40814041441",
+      "round_trip_verified": true,
+      "seed": 40814041441
+    },
+    {
+      "ciphertext_alphabet_size": 126,
+      "ciphertext_glyphs": 73606,
+      "ciphertext_tokens": 20000,
+      "family": "homophonic",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/homophonic/seed_40814041442",
+      "round_trip_verified": true,
+      "seed": 40814041442
+    },
+    {
+      "ciphertext_alphabet_size": 7,
+      "ciphertext_glyphs": 147212,
+      "ciphertext_tokens": 20000,
+      "family": "verbose",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/verbose/seed_40814041438",
+      "round_trip_verified": true,
+      "seed": 40814041438
+    },
+    {
+      "ciphertext_alphabet_size": 7,
+      "ciphertext_glyphs": 147212,
+      "ciphertext_tokens": 20000,
+      "family": "verbose",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/verbose/seed_40814041439",
+      "round_trip_verified": true,
+      "seed": 40814041439
+    },
+    {
+      "ciphertext_alphabet_size": 7,
+      "ciphertext_glyphs": 147212,
+      "ciphertext_tokens": 20000,
+      "family": "verbose",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/verbose/seed_40814041440",
+      "round_trip_verified": true,
+      "seed": 40814041440
+    },
+    {
+      "ciphertext_alphabet_size": 7,
+      "ciphertext_glyphs": 147212,
+      "ciphertext_tokens": 20000,
+      "family": "verbose",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/verbose/seed_40814041441",
+      "round_trip_verified": true,
+      "seed": 40814041441
+    },
+    {
+      "ciphertext_alphabet_size": 7,
+      "ciphertext_glyphs": 147212,
+      "ciphertext_tokens": 20000,
+      "family": "verbose",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/verbose/seed_40814041442",
+      "round_trip_verified": true,
+      "seed": 40814041442
+    },
+    {
+      "ciphertext_alphabet_size": 51,
+      "ciphertext_glyphs": 88342,
+      "ciphertext_tokens": 20000,
+      "family": "null_insertion",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/null_insertion/seed_40814041438",
+      "round_trip_verified": true,
+      "seed": 40814041438
+    },
+    {
+      "ciphertext_alphabet_size": 51,
+      "ciphertext_glyphs": 88409,
+      "ciphertext_tokens": 20000,
+      "family": "null_insertion",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/null_insertion/seed_40814041439",
+      "round_trip_verified": true,
+      "seed": 40814041439
+    },
+    {
+      "ciphertext_alphabet_size": 51,
+      "ciphertext_glyphs": 88371,
+      "ciphertext_tokens": 20000,
+      "family": "null_insertion",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/null_insertion/seed_40814041440",
+      "round_trip_verified": true,
+      "seed": 40814041440
+    },
+    {
+      "ciphertext_alphabet_size": 51,
+      "ciphertext_glyphs": 88359,
+      "ciphertext_tokens": 20000,
+      "family": "null_insertion",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/null_insertion/seed_40814041441",
+      "round_trip_verified": true,
+      "seed": 40814041441
+    },
+    {
+      "ciphertext_alphabet_size": 51,
+      "ciphertext_glyphs": 88358,
+      "ciphertext_tokens": 20000,
+      "family": "null_insertion",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/null_insertion/seed_40814041442",
+      "round_trip_verified": true,
+      "seed": 40814041442
+    },
+    {
+      "ciphertext_alphabet_size": 56,
+      "ciphertext_glyphs": 70042,
+      "ciphertext_tokens": 20000,
+      "family": "nomenclator",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/nomenclator/seed_40814041438",
+      "round_trip_verified": true,
+      "seed": 40814041438
+    },
+    {
+      "ciphertext_alphabet_size": 56,
+      "ciphertext_glyphs": 70042,
+      "ciphertext_tokens": 20000,
+      "family": "nomenclator",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/nomenclator/seed_40814041439",
+      "round_trip_verified": true,
+      "seed": 40814041439
+    },
+    {
+      "ciphertext_alphabet_size": 56,
+      "ciphertext_glyphs": 70042,
+      "ciphertext_tokens": 20000,
+      "family": "nomenclator",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/nomenclator/seed_40814041440",
+      "round_trip_verified": true,
+      "seed": 40814041440
+    },
+    {
+      "ciphertext_alphabet_size": 56,
+      "ciphertext_glyphs": 70042,
+      "ciphertext_tokens": 20000,
+      "family": "nomenclator",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/nomenclator/seed_40814041441",
+      "round_trip_verified": true,
+      "seed": 40814041441
+    },
+    {
+      "ciphertext_alphabet_size": 56,
+      "ciphertext_glyphs": 70042,
+      "ciphertext_tokens": 20000,
+      "family": "nomenclator",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/nomenclator/seed_40814041442",
+      "round_trip_verified": true,
+      "seed": 40814041442
+    },
+    {
+      "ciphertext_alphabet_size": 48,
+      "ciphertext_glyphs": 73606,
+      "ciphertext_tokens": 20000,
+      "family": "transposition",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/transposition/seed_40814041438",
+      "round_trip_verified": true,
+      "seed": 40814041438
+    },
+    {
+      "ciphertext_alphabet_size": 48,
+      "ciphertext_glyphs": 73606,
+      "ciphertext_tokens": 20000,
+      "family": "transposition",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/transposition/seed_40814041439",
+      "round_trip_verified": true,
+      "seed": 40814041439
+    },
+    {
+      "ciphertext_alphabet_size": 48,
+      "ciphertext_glyphs": 73606,
+      "ciphertext_tokens": 20000,
+      "family": "transposition",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/transposition/seed_40814041440",
+      "round_trip_verified": true,
+      "seed": 40814041440
+    },
+    {
+      "ciphertext_alphabet_size": 48,
+      "ciphertext_glyphs": 73606,
+      "ciphertext_tokens": 20000,
+      "family": "transposition",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/transposition/seed_40814041441",
+      "round_trip_verified": true,
+      "seed": 40814041441
+    },
+    {
+      "ciphertext_alphabet_size": 48,
+      "ciphertext_glyphs": 73606,
+      "ciphertext_tokens": 20000,
+      "family": "transposition",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/transposition/seed_40814041442",
+      "round_trip_verified": true,
+      "seed": 40814041442
+    },
+    {
+      "ciphertext_alphabet_size": 112,
+      "ciphertext_glyphs": 48501,
+      "ciphertext_tokens": 20000,
+      "family": "syllabic_hybrid",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/syllabic_hybrid/seed_40814041438",
+      "round_trip_verified": true,
+      "seed": 40814041438
+    },
+    {
+      "ciphertext_alphabet_size": 112,
+      "ciphertext_glyphs": 48501,
+      "ciphertext_tokens": 20000,
+      "family": "syllabic_hybrid",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/syllabic_hybrid/seed_40814041439",
+      "round_trip_verified": true,
+      "seed": 40814041439
+    },
+    {
+      "ciphertext_alphabet_size": 112,
+      "ciphertext_glyphs": 48501,
+      "ciphertext_tokens": 20000,
+      "family": "syllabic_hybrid",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/syllabic_hybrid/seed_40814041440",
+      "round_trip_verified": true,
+      "seed": 40814041440
+    },
+    {
+      "ciphertext_alphabet_size": 112,
+      "ciphertext_glyphs": 48501,
+      "ciphertext_tokens": 20000,
+      "family": "syllabic_hybrid",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/syllabic_hybrid/seed_40814041441",
+      "round_trip_verified": true,
+      "seed": 40814041441
+    },
+    {
+      "ciphertext_alphabet_size": 112,
+      "ciphertext_glyphs": 48501,
+      "ciphertext_tokens": 20000,
+      "family": "syllabic_hybrid",
+      "path": "data/controls/ciphers/historical_open_v1/german_rem_v21/syllabic_hybrid/seed_40814041442",
+      "round_trip_verified": true,
+      "seed": 40814041442
+    }
+  ],
+  "schema_version": "1.0",
+  "seeds": [
+    40814041438,
+    40814041439,
+    40814041440,
+    40814041441,
+    40814041442
+  ],
+  "source_id": "german_rem_v21",
+  "source_path": "data/controls/languages_open_v1/german_rem_v21/source.txt",
+  "source_sha256": "343f261bf5c9338ba31cbb273c723b997f079dc6a026e768f328bbdfa122c601",
+  "voynich_locked_test_accessed": false,
+  "voynich_validation_accessed": false
+}

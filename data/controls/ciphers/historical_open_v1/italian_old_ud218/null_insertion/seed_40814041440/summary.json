@@ -1,0 +1,26 @@
+{
+  "ciphertext": {
+    "alphabet_size": 31,
+    "glyphs": 92670,
+    "lines": 740,
+    "tokens": 20000,
+    "unique_tokens": 9282
+  },
+  "config_sha256": "8949303dea4a6cbf0234050eff43e91e60ddac03f0409f08bf6c8c1bf4765404",
+  "diagnostics": {
+    "inserted_nulls": 15471
+  },
+  "family": "null_insertion",
+  "plaintext": {
+    "alphabet_size": 28,
+    "characters": 77199,
+    "lines": 740,
+    "tokens": 20000,
+    "unique_tokens": 4380
+  },
+  "round_trip_verified": true,
+  "schema_version": "1.0",
+  "seed": 40814041440,
+  "source_id": "italian_old_ud218",
+  "source_sha256": "fbcd49798c1ee6517578f7a36d7450e6cf71e21e9f8c3ba2841eea4611e072a4"
+}

@@ -1,0 +1,37 @@
+{
+  "insertion_position": "after_real_glyph",
+  "insertion_probability": 0.2,
+  "mapping": {
+    "a": "G0005",
+    "b": "G0008",
+    "c": "G0006",
+    "d": "G0023",
+    "e": "G0010",
+    "f": "G0021",
+    "g": "G0019",
+    "h": "G0013",
+    "i": "G0004",
+    "k": "G0016",
+    "l": "G0014",
+    "m": "G0007",
+    "n": "G0003",
+    "o": "G0015",
+    "p": "G0022",
+    "q": "G0001",
+    "r": "G0009",
+    "s": "G0024",
+    "t": "G0020",
+    "u": "G0002",
+    "v": "G0012",
+    "x": "G0011",
+    "y": "G0017",
+    "z": "G0018"
+  },
+  "max_nulls_per_real_glyph": 1,
+  "null_symbols": [
+    "G0025",
+    "G0026",
+    "G0027"
+  ],
+  "word_boundaries_preserved": true
+}

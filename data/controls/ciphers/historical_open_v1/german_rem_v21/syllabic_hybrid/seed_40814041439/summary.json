@@ -1,0 +1,26 @@
+{
+  "ciphertext": {
+    "alphabet_size": 112,
+    "glyphs": 48501,
+    "lines": 4470,
+    "tokens": 20000,
+    "unique_tokens": 4214
+  },
+  "config_sha256": "8949303dea4a6cbf0234050eff43e91e60ddac03f0409f08bf6c8c1bf4765404",
+  "diagnostics": {
+    "bigram_encoded_occurrences": 25105
+  },
+  "family": "syllabic_hybrid",
+  "plaintext": {
+    "alphabet_size": 48,
+    "characters": 73606,
+    "lines": 4470,
+    "tokens": 20000,
+    "unique_tokens": 4214
+  },
+  "round_trip_verified": true,
+  "schema_version": "1.0",
+  "seed": 40814041439,
+  "source_id": "german_rem_v21",
+  "source_sha256": "343f261bf5c9338ba31cbb273c723b997f079dc6a026e768f328bbdfa122c601"
+}

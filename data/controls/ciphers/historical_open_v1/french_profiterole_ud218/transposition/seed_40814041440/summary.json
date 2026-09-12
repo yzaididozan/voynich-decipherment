@@ -1,0 +1,24 @@
+{
+  "ciphertext": {
+    "alphabet_size": 32,
+    "glyphs": 79989,
+    "lines": 2632,
+    "tokens": 20000,
+    "unique_tokens": 12108
+  },
+  "config_sha256": "8949303dea4a6cbf0234050eff43e91e60ddac03f0409f08bf6c8c1bf4765404",
+  "diagnostics": {},
+  "family": "transposition",
+  "plaintext": {
+    "alphabet_size": 32,
+    "characters": 79989,
+    "lines": 2632,
+    "tokens": 20000,
+    "unique_tokens": 3642
+  },
+  "round_trip_verified": true,
+  "schema_version": "1.0",
+  "seed": 40814041440,
+  "source_id": "french_profiterole_ud218",
+  "source_sha256": "7f667acbc6bb124901d803749a0b518463bdd9d836b5c713646ec6037fcd8f91"
+}

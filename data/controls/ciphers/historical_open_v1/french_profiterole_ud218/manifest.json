@@ -1,0 +1,352 @@
+{
+  "analysis": "historical cipher control corpus generation",
+  "config_path": "configs/cipher/historical_controls_v1.json",
+  "config_sha256": "8949303dea4a6cbf0234050eff43e91e60ddac03f0409f08bf6c8c1bf4765404",
+  "families": [
+    "monoalphabetic",
+    "homophonic",
+    "verbose",
+    "null_insertion",
+    "nomenclator",
+    "transposition",
+    "syllabic_hybrid"
+  ],
+  "plaintext_normalization": {
+    "case": "lower",
+    "language_specific_modernization": false,
+    "preserve_nonempty_line_boundaries": true,
+    "punctuation_digits": "separators",
+    "token_definition": "contiguous_unicode_alphabetic_characters",
+    "unicode_normalization": "NFKC"
+  },
+  "runs": [
+    {
+      "ciphertext_alphabet_size": 32,
+      "ciphertext_glyphs": 79989,
+      "ciphertext_tokens": 20000,
+      "family": "monoalphabetic",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/monoalphabetic/seed_40814041438",
+      "round_trip_verified": true,
+      "seed": 40814041438
+    },
+    {
+      "ciphertext_alphabet_size": 32,
+      "ciphertext_glyphs": 79989,
+      "ciphertext_tokens": 20000,
+      "family": "monoalphabetic",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/monoalphabetic/seed_40814041439",
+      "round_trip_verified": true,
+      "seed": 40814041439
+    },
+    {
+      "ciphertext_alphabet_size": 32,
+      "ciphertext_glyphs": 79989,
+      "ciphertext_tokens": 20000,
+      "family": "monoalphabetic",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/monoalphabetic/seed_40814041440",
+      "round_trip_verified": true,
+      "seed": 40814041440
+    },
+    {
+      "ciphertext_alphabet_size": 32,
+      "ciphertext_glyphs": 79989,
+      "ciphertext_tokens": 20000,
+      "family": "monoalphabetic",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/monoalphabetic/seed_40814041441",
+      "round_trip_verified": true,
+      "seed": 40814041441
+    },
+    {
+      "ciphertext_alphabet_size": 32,
+      "ciphertext_glyphs": 79989,
+      "ciphertext_tokens": 20000,
+      "family": "monoalphabetic",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/monoalphabetic/seed_40814041442",
+      "round_trip_verified": true,
+      "seed": 40814041442
+    },
+    {
+      "ciphertext_alphabet_size": 94,
+      "ciphertext_glyphs": 79989,
+      "ciphertext_tokens": 20000,
+      "family": "homophonic",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/homophonic/seed_40814041438",
+      "round_trip_verified": true,
+      "seed": 40814041438
+    },
+    {
+      "ciphertext_alphabet_size": 94,
+      "ciphertext_glyphs": 79989,
+      "ciphertext_tokens": 20000,
+      "family": "homophonic",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/homophonic/seed_40814041439",
+      "round_trip_verified": true,
+      "seed": 40814041439
+    },
+    {
+      "ciphertext_alphabet_size": 94,
+      "ciphertext_glyphs": 79989,
+      "ciphertext_tokens": 20000,
+      "family": "homophonic",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/homophonic/seed_40814041440",
+      "round_trip_verified": true,
+      "seed": 40814041440
+    },
+    {
+      "ciphertext_alphabet_size": 94,
+      "ciphertext_glyphs": 79989,
+      "ciphertext_tokens": 20000,
+      "family": "homophonic",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/homophonic/seed_40814041441",
+      "round_trip_verified": true,
+      "seed": 40814041441
+    },
+    {
+      "ciphertext_alphabet_size": 94,
+      "ciphertext_glyphs": 79989,
+      "ciphertext_tokens": 20000,
+      "family": "homophonic",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/homophonic/seed_40814041442",
+      "round_trip_verified": true,
+      "seed": 40814041442
+    },
+    {
+      "ciphertext_alphabet_size": 6,
+      "ciphertext_glyphs": 159978,
+      "ciphertext_tokens": 20000,
+      "family": "verbose",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/verbose/seed_40814041438",
+      "round_trip_verified": true,
+      "seed": 40814041438
+    },
+    {
+      "ciphertext_alphabet_size": 6,
+      "ciphertext_glyphs": 159978,
+      "ciphertext_tokens": 20000,
+      "family": "verbose",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/verbose/seed_40814041439",
+      "round_trip_verified": true,
+      "seed": 40814041439
+    },
+    {
+      "ciphertext_alphabet_size": 6,
+      "ciphertext_glyphs": 159978,
+      "ciphertext_tokens": 20000,
+      "family": "verbose",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/verbose/seed_40814041440",
+      "round_trip_verified": true,
+      "seed": 40814041440
+    },
+    {
+      "ciphertext_alphabet_size": 6,
+      "ciphertext_glyphs": 159978,
+      "ciphertext_tokens": 20000,
+      "family": "verbose",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/verbose/seed_40814041441",
+      "round_trip_verified": true,
+      "seed": 40814041441
+    },
+    {
+      "ciphertext_alphabet_size": 6,
+      "ciphertext_glyphs": 159978,
+      "ciphertext_tokens": 20000,
+      "family": "verbose",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/verbose/seed_40814041442",
+      "round_trip_verified": true,
+      "seed": 40814041442
+    },
+    {
+      "ciphertext_alphabet_size": 35,
+      "ciphertext_glyphs": 95973,
+      "ciphertext_tokens": 20000,
+      "family": "null_insertion",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/null_insertion/seed_40814041438",
+      "round_trip_verified": true,
+      "seed": 40814041438
+    },
+    {
+      "ciphertext_alphabet_size": 35,
+      "ciphertext_glyphs": 96066,
+      "ciphertext_tokens": 20000,
+      "family": "null_insertion",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/null_insertion/seed_40814041439",
+      "round_trip_verified": true,
+      "seed": 40814041439
+    },
+    {
+      "ciphertext_alphabet_size": 35,
+      "ciphertext_glyphs": 96013,
+      "ciphertext_tokens": 20000,
+      "family": "null_insertion",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/null_insertion/seed_40814041440",
+      "round_trip_verified": true,
+      "seed": 40814041440
+    },
+    {
+      "ciphertext_alphabet_size": 35,
+      "ciphertext_glyphs": 96022,
+      "ciphertext_tokens": 20000,
+      "family": "null_insertion",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/null_insertion/seed_40814041441",
+      "round_trip_verified": true,
+      "seed": 40814041441
+    },
+    {
+      "ciphertext_alphabet_size": 35,
+      "ciphertext_glyphs": 95989,
+      "ciphertext_tokens": 20000,
+      "family": "null_insertion",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/null_insertion/seed_40814041442",
+      "round_trip_verified": true,
+      "seed": 40814041442
+    },
+    {
+      "ciphertext_alphabet_size": 40,
+      "ciphertext_glyphs": 75691,
+      "ciphertext_tokens": 20000,
+      "family": "nomenclator",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/nomenclator/seed_40814041438",
+      "round_trip_verified": true,
+      "seed": 40814041438
+    },
+    {
+      "ciphertext_alphabet_size": 40,
+      "ciphertext_glyphs": 75691,
+      "ciphertext_tokens": 20000,
+      "family": "nomenclator",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/nomenclator/seed_40814041439",
+      "round_trip_verified": true,
+      "seed": 40814041439
+    },
+    {
+      "ciphertext_alphabet_size": 40,
+      "ciphertext_glyphs": 75691,
+      "ciphertext_tokens": 20000,
+      "family": "nomenclator",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/nomenclator/seed_40814041440",
+      "round_trip_verified": true,
+      "seed": 40814041440
+    },
+    {
+      "ciphertext_alphabet_size": 40,
+      "ciphertext_glyphs": 75691,
+      "ciphertext_tokens": 20000,
+      "family": "nomenclator",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/nomenclator/seed_40814041441",
+      "round_trip_verified": true,
+      "seed": 40814041441
+    },
+    {
+      "ciphertext_alphabet_size": 40,
+      "ciphertext_glyphs": 75691,
+      "ciphertext_tokens": 20000,
+      "family": "nomenclator",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/nomenclator/seed_40814041442",
+      "round_trip_verified": true,
+      "seed": 40814041442
+    },
+    {
+      "ciphertext_alphabet_size": 32,
+      "ciphertext_glyphs": 79989,
+      "ciphertext_tokens": 20000,
+      "family": "transposition",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/transposition/seed_40814041438",
+      "round_trip_verified": true,
+      "seed": 40814041438
+    },
+    {
+      "ciphertext_alphabet_size": 32,
+      "ciphertext_glyphs": 79989,
+      "ciphertext_tokens": 20000,
+      "family": "transposition",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/transposition/seed_40814041439",
+      "round_trip_verified": true,
+      "seed": 40814041439
+    },
+    {
+      "ciphertext_alphabet_size": 32,
+      "ciphertext_glyphs": 79989,
+      "ciphertext_tokens": 20000,
+      "family": "transposition",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/transposition/seed_40814041440",
+      "round_trip_verified": true,
+      "seed": 40814041440
+    },
+    {
+      "ciphertext_alphabet_size": 32,
+      "ciphertext_glyphs": 79989,
+      "ciphertext_tokens": 20000,
+      "family": "transposition",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/transposition/seed_40814041441",
+      "round_trip_verified": true,
+      "seed": 40814041441
+    },
+    {
+      "ciphertext_alphabet_size": 32,
+      "ciphertext_glyphs": 79989,
+      "ciphertext_tokens": 20000,
+      "family": "transposition",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/transposition/seed_40814041442",
+      "round_trip_verified": true,
+      "seed": 40814041442
+    },
+    {
+      "ciphertext_alphabet_size": 96,
+      "ciphertext_glyphs": 52161,
+      "ciphertext_tokens": 20000,
+      "family": "syllabic_hybrid",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/syllabic_hybrid/seed_40814041438",
+      "round_trip_verified": true,
+      "seed": 40814041438
+    },
+    {
+      "ciphertext_alphabet_size": 96,
+      "ciphertext_glyphs": 52161,
+      "ciphertext_tokens": 20000,
+      "family": "syllabic_hybrid",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/syllabic_hybrid/seed_40814041439",
+      "round_trip_verified": true,
+      "seed": 40814041439
+    },
+    {
+      "ciphertext_alphabet_size": 96,
+      "ciphertext_glyphs": 52161,
+      "ciphertext_tokens": 20000,
+      "family": "syllabic_hybrid",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/syllabic_hybrid/seed_40814041440",
+      "round_trip_verified": true,
+      "seed": 40814041440
+    },
+    {
+      "ciphertext_alphabet_size": 96,
+      "ciphertext_glyphs": 52161,
+      "ciphertext_tokens": 20000,
+      "family": "syllabic_hybrid",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/syllabic_hybrid/seed_40814041441",
+      "round_trip_verified": true,
+      "seed": 40814041441
+    },
+    {
+      "ciphertext_alphabet_size": 96,
+      "ciphertext_glyphs": 52161,
+      "ciphertext_tokens": 20000,
+      "family": "syllabic_hybrid",
+      "path": "data/controls/ciphers/historical_open_v1/french_profiterole_ud218/syllabic_hybrid/seed_40814041442",
+      "round_trip_verified": true,
+      "seed": 40814041442
+    }
+  ],
+  "schema_version": "1.0",
+  "seeds": [
+    40814041438,
+    40814041439,
+    40814041440,
+    40814041441,
+    40814041442
+  ],
+  "source_id": "french_profiterole_ud218",
+  "source_path": "data/controls/languages_open_v1/french_profiterole_ud218/source.txt",
+  "source_sha256": "7f667acbc6bb124901d803749a0b518463bdd9d836b5c713646ec6037fcd8f91",
+  "voynich_locked_test_accessed": false,
+  "voynich_validation_accessed": false
+}
