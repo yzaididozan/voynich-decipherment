@@ -1,0 +1,20 @@
+{
+  "edit_channel": "geometric_gap_insertions_plus_deletion_plus_exact_copy_or_unigram_emission",
+  "innovation_model": "smoothed_length_times_independent_smoothed_glyphs",
+  "matched_trigram_order": 3,
+  "max_token_length": 64,
+  "pseudocount": 0.5,
+  "rho_max_iterations": 100,
+  "rho_tolerance": 1e-10,
+  "schema_version": "1.0",
+  "source_scope": "previous_readable_tokens_within_same_locus_segment",
+  "source_windows": [
+    1,
+    4,
+    16
+  ],
+  "training_source_inference": "minimum_normalized_levenshtein_then_raw_distance_then_recency",
+  "unknown_policy": "exclude_token_if_contains_Z1_and_reset_context",
+  "validation_selection": "lowest_bits_per_event",
+  "validation_tie_breaker": "lower_source_window"
+}
