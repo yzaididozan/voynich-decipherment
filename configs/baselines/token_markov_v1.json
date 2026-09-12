@@ -1,0 +1,16 @@
+{
+  "bos_policy": "left_pad_with_TOKEN_BOS",
+  "char_base_order": 3,
+  "context_orders": [
+    1,
+    2
+  ],
+  "matched_comparator": "token_reset_char_trigram_with_explicit_EOT",
+  "max_context": 2,
+  "schema_version": "1.0",
+  "sequence_boundary": "locus_or_Z1_reset",
+  "smoothing": "interpolated_witten_bell_to_char_trigram",
+  "unknown_policy": "exclude_token_if_contains_Z1_and_reset_context",
+  "validation_selection": "lowest_bits_per_event",
+  "validation_tie_breaker": "lower_context_order"
+}
