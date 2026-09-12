@@ -1,0 +1,110 @@
+{
+  "freeze_id": "language-controls-v1",
+  "normalization": {
+    "accent_stripping": false,
+    "case": "lower",
+    "language_specific_modernization": false,
+    "preserve_extracted_paragraph_or_verse_line_boundaries": true,
+    "punctuation_digits": "separators",
+    "token_definition": "contiguous_unicode_alphabetic_characters",
+    "unicode_normalization": "NFKC"
+  },
+  "schema_version": "1.0",
+  "selection_rule": "Take normalized alphabetic tokens from the beginning of the frozen edition in source order until exactly 20,000 tokens are retained.",
+  "sources": [
+    {
+      "acquisition": {
+        "pages": [
+          "De imitatione Christi/I",
+          "De imitatione Christi/II",
+          "De imitatione Christi/III",
+          "De imitatione Christi/IV"
+        ],
+        "strategy": "exact_pages"
+      },
+      "api_endpoint": "https://la.wikisource.org/w/api.php",
+      "author": "traditionally attributed to Thomas à Kempis",
+      "edition_note": "Latin Wikisource transcription; four-book text. This is an edited electronic text, not a diplomatic manuscript transcription.",
+      "landing_url": "https://la.wikisource.org/wiki/De_imitatione_Christi",
+      "language": "Latin",
+      "language_code": "la",
+      "limitations": [
+        "Not a diplomatic manuscript transcription.",
+        "Latin orthography reflects the Wikisource electronic edition.",
+        "The work's dating/authorship are debated; the registry preserves the Wikisource page's own medieval dating note rather than treating it as a precise chronological witness."
+      ],
+      "rights_note": "underlying medieval work is public domain; Wikisource transcription is reused under Wikisource site terms",
+      "source_id": "latin_imitatione_christi",
+      "work": "De imitatione Christi",
+      "work_date_note": "late medieval; date/authorship are historically debated. The selected Latin Wikisource page labels the work 'saeculo XIV' and attributes it to Thomas a Kempis."
+    },
+    {
+      "acquisition": {
+        "exclude_title_regex": "(Indice|Bibliografia|Note|Fonti|Versione|Discussione)",
+        "max_depth": 2,
+        "root_page": "Decameron",
+        "strategy": "ordered_recursive_leaf_subpages"
+      },
+      "api_endpoint": "https://it.wikisource.org/w/api.php",
+      "author": "Giovanni Boccaccio",
+      "edition_note": "Italian Wikisource text edited by Aldo Francesco Massèra, Laterza, 1927; Wikisource marks the text as proofread/checked.",
+      "landing_url": "https://it.wikisource.org/wiki/Decameron",
+      "language": "Italian",
+      "language_code": "it",
+      "limitations": [
+        "Critical/edited printed text rather than a diplomatic manuscript transcription.",
+        "Fourteenth-century Italian is earlier than the Voynich manuscript."
+      ],
+      "rights_note": "Wikisource page declares CC BY-SA 3.0 and GFDL for the electronic text; underlying Boccaccio work is public domain",
+      "source_id": "italian_decameron_massera",
+      "work": "Decameron",
+      "work_date_note": "fourteenth century; composed in the mid-fourteenth century"
+    },
+    {
+      "acquisition": {
+        "exclude_title_regex": "(Inhaltsverzeichnis|Anmerkungen|Literatur|Korrekturen|Register)",
+        "root_page": "Doctor Brants Narrenschiff",
+        "strategy": "ordered_direct_subpages"
+      },
+      "api_endpoint": "https://de.wikisource.org/w/api.php",
+      "author": "Sebastian Brant",
+      "edition_note": "German Wikisource transcription of the 1499 Basel edition; the page states it was twice proofread and that spelling follows the source.",
+      "landing_url": "https://de.wikisource.org/wiki/Doctor_Brants_Narrenschiff",
+      "language": "German",
+      "language_code": "de",
+      "limitations": [
+        "Printed 1499 witness rather than manuscript handwriting.",
+        "Superscript letters are retained as letters when present in page text."
+      ],
+      "rights_note": "underlying 1499 edition is public domain; Wikisource editorial/transcription layer is reused under site terms",
+      "source_id": "german_narrenschiff_1499",
+      "work": "Doctor Brants Narrenschiff",
+      "work_date_note": "1494 original; selected Wikisource edition is the third German Basel edition of 1499"
+    },
+    {
+      "acquisition": {
+        "pages": [
+          "La Chanson de Roland/Léon Gautier/Édition critique/Première partie/Texte",
+          "La Chanson de Roland/Léon Gautier/Édition critique/Deuxième partie/Texte",
+          "La Chanson de Roland/Léon Gautier/Édition critique/Troisième partie/Texte"
+        ],
+        "strategy": "exact_pages"
+      },
+      "api_endpoint": "https://fr.wikisource.org/w/api.php",
+      "author": "anonymous; critical edition by Léon Gautier",
+      "edition_note": "Old French source text from Léon Gautier's 1872 critical edition, Volume I; only the three source-text parts are used, not Gautier's French translation, introduction, notes, or glossary.",
+      "landing_url": "https://fr.wikisource.org/wiki/La_Chanson_de_Roland/L%C3%A9on_Gautier/%C3%89dition_critique",
+      "language": "French",
+      "language_code": "fr",
+      "limitations": [
+        "Much earlier than the Voynich manuscript and therefore a diachronic medieval French control.",
+        "Gautier's critical edition regularizes/reconstructs the Old French text; it is not diplomatic."
+      ],
+      "rights_note": "1872 edition is public domain; Wikisource transcription is reused under Wikisource site terms",
+      "source_id": "french_roland_gautier_1872",
+      "work": "La Chanson de Roland",
+      "work_date_note": "medieval Old French work, conventionally dated to the eleventh century"
+    }
+  ],
+  "target_normalized_tokens_per_source": 20000
+}

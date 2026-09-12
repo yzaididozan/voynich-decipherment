@@ -1,0 +1,28 @@
+{
+  "benchmark_id": "historical-cipher-controls-tier0-v1",
+  "control_root": "data/controls/ciphers/historical_v1",
+  "interpretation_guardrails": [
+    "No single aggregate similarity score is computed.",
+    "Plug-in entropy and raw token MI are sample-size sensitive.",
+    "Control source line boundaries are edition/layout boundaries, not claimed equivalents of Voynich manuscript loci.",
+    "Metadata-specific Voynich constraints such as Currier, scribe, and section cannot be evaluated on generic plaintext cipher controls.",
+    "The benchmark reads Voynich TRAIN Tier-0 results only; validation and locked test are not required."
+  ],
+  "metrics": {
+    "edit_example_limit": 10,
+    "edit_max_distance": 2,
+    "edit_vocab_limit": 300,
+    "entropy_orders": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "glyph_mi_max_distance": 8,
+    "token_mi_max_distance": 5
+  },
+  "output_dir": "results/controls/historical_cipher_benchmark/v1",
+  "schema_version": "1.0",
+  "tier0_config": "configs/tier0/train_v1.json",
+  "voynich_reference": "results/tier0/train/v1"
+}
