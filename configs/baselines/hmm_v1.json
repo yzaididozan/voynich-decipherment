@@ -1,0 +1,25 @@
+{
+  "batch_size": 256,
+  "hidden_states": [
+    2,
+    4,
+    8,
+    16
+  ],
+  "max_iterations": 50,
+  "min_iterations": 5,
+  "pseudocount": 0.5,
+  "restart_selection": "highest_training_log_likelihood",
+  "restarts": 5,
+  "schema_version": "1.0",
+  "seed": 40814041438,
+  "sequence_boundary": "locus",
+  "tolerance_bits_per_event": 1e-05,
+  "unknown_policy": "reset_and_do_not_score",
+  "validation_selection": "lowest_bits_per_event",
+  "validation_tie_breaker": "lower_hidden_state_count",
+  "views": [
+    "space_free",
+    "token_aware"
+  ]
+}
