@@ -231,3 +231,39 @@ def test_evaluation_preserves_per_leaf_and_per_locus_rows():
     assert len(leaves) == 4
     assert len(loci) == 4
     assert {row["leaf_group"] for row in leaves} == {"f10", "f11"}
+
+def test_evaluation_supports_single_nonunigram_order():
+    from src.models.ngram import BaselineSequence
+
+    model = WittenBellNGram(max_order=3).fit(
+        [
+            ("A", "B", "C"),
+            ("A", "B", "D"),
+            ("A", "B", "C"),
+        ]
+    )
+
+    examples = [
+        BaselineSequence(
+            leaf_group="f1",
+            folio="f1r",
+            locus="f1r.1,+P0",
+            symbols=("A", "B", "C"),
+            is_boundary=(False, False, False),
+        )
+    ]
+
+    aggregate, leaves, loci = evaluate_model(
+        model,
+        examples,
+        orders=(3,),
+        view="single_order_regression",
+    )
+
+    assert len(aggregate) == 1
+    assert aggregate[0]["order"] == 3
+    assert aggregate[0]["delta_bits_per_event_vs_unigram"] is None
+    assert aggregate[0]["relative_nll_reduction_vs_unigram"] is None
+    assert len(leaves) == 1
+    assert len(loci) == 1
+

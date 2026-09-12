@@ -1,0 +1,55 @@
+{
+  "artifacts": [
+    "training_restarts.csv",
+    "validation_results.csv",
+    "per_leaf_validation.csv",
+    "per_locus_validation.csv",
+    "matched_trigram_validation.csv",
+    "matched_trigram_per_leaf.csv",
+    "matched_trigram_per_locus.csv",
+    "summary.json",
+    "models/*.npz"
+  ],
+  "config": {
+    "matched_comparator": "token_reset_with_explicit_EOT",
+    "matched_trigram_order": 3,
+    "max_iterations": 50,
+    "max_token_length": 64,
+    "min_iterations": 5,
+    "pseudocount": 0.5,
+    "restart_selection": "highest_training_log_likelihood",
+    "restarts": 5,
+    "schema_version": "1.0",
+    "seed": 40814041438,
+    "slot_count": 8,
+    "templates": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "tolerance_bits_per_token": 1e-05,
+    "unknown_policy": "exclude_token_if_contains_Z1",
+    "validation_selection": "lowest_bits_per_event",
+    "validation_tie_breaker": "lower_template_count"
+  },
+  "provenance": {
+    "config_path": "configs/baselines/slot_grammar_v1.json",
+    "config_sha256": "5f2169e8474afb94e75f8eefd76ced727ace3d31fee98b707baccffabd57c8f3",
+    "locked_test_accessed": false,
+    "numpy_version": "2.0.2",
+    "primary_transcription": "ZL3b",
+    "source_path": "data/raw/zl/ZL3b-n.txt",
+    "source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "sta1_rules_path": "data/reference/sta1/STA-Eva_def.bit",
+    "sta1_rules_sha256": "7f37853510144fb3e2dc3ee9458d634f41e6d95bc1fbf1c4b8f479a53a021f81",
+    "train_physical_leaves": 72,
+    "train_split_path": "data/splits/v1/train.txt",
+    "train_split_sha256": "5bb5232d5e211a4bb90800f259294c554c1c9e2005548055ebaf94e782e3cc00",
+    "validation_physical_leaves": 15,
+    "validation_split_path": "data/splits/v1/validation.txt",
+    "validation_split_sha256": "bdae856ac8c52849a0abd0fd6361f42fd57579e76f7f844309a7ddc9e0fc02f1"
+  },
+  "schema_version": "1.0"
+}

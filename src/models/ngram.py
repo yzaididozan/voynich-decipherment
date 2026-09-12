@@ -566,13 +566,20 @@ def evaluate_model(
             }
         )
 
-    unigram = next(row for row in aggregate_rows if row["order"] == 1)
+    unigram = next(
+        (row for row in aggregate_rows if row["order"] == 1),
+        None,
+    )
     for row in aggregate_rows:
-        row["delta_bits_per_event_vs_unigram"] = (
-            unigram["bits_per_event"] - row["bits_per_event"]
-        )
-        row["relative_nll_reduction_vs_unigram"] = (
-            1.0 - row["total_bits"] / unigram["total_bits"]
-        )
+        if unigram is None:
+            row["delta_bits_per_event_vs_unigram"] = None
+            row["relative_nll_reduction_vs_unigram"] = None
+        else:
+            row["delta_bits_per_event_vs_unigram"] = (
+                unigram["bits_per_event"] - row["bits_per_event"]
+            )
+            row["relative_nll_reduction_vs_unigram"] = (
+                1.0 - row["total_bits"] / unigram["total_bits"]
+            )
 
     return aggregate_rows, leaf_rows, locus_rows

@@ -1,0 +1,24 @@
+{
+  "matched_comparator": "token_reset_with_explicit_EOT",
+  "matched_trigram_order": 3,
+  "max_iterations": 50,
+  "max_token_length": 64,
+  "min_iterations": 5,
+  "pseudocount": 0.5,
+  "restart_selection": "highest_training_log_likelihood",
+  "restarts": 5,
+  "schema_version": "1.0",
+  "seed": 40814041438,
+  "slot_count": 8,
+  "templates": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "tolerance_bits_per_token": 1e-05,
+  "unknown_policy": "exclude_token_if_contains_Z1",
+  "validation_selection": "lowest_bits_per_event",
+  "validation_tie_breaker": "lower_template_count"
+}
