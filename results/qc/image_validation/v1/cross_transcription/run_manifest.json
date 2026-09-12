@@ -1,0 +1,62 @@
+{
+  "config": {
+    "path": "configs/qc/cross_transcription_sample_v1.json",
+    "sha256": "c7833f96a24cc92911f06c814b64eba08e9839b07c24a10aebb71593b95ccad5",
+    "values": {
+      "consensus_control_reviews": 2,
+      "high_glyph_similarity_threshold": 0.95,
+      "low_glyph_similarity_threshold": 0.85,
+      "max_initial_reviews_per_folio": 1,
+      "policy": {
+        "mandatory": [
+          "missing_or_uncomparable_locus",
+          "GC2a_and_IT2a_consensus_against_ZL3b",
+          "minimum_pairwise_glyph_similarity_below_0.85",
+          "all_three_glyphs_exact_but_token_boundaries_differ"
+        ],
+        "targeting": "mandatory cases are never dropped; otherwise choose highest-priority disagreements to reach six disagreement checks, favoring distinct folios, then add two three-way-exact controls"
+      },
+      "schema_version": "1.0",
+      "target_disagreement_reviews": 8
+    }
+  },
+  "locked_test_accessed": false,
+  "outputs": [
+    "agreement_report.csv",
+    "recommended_manual_review.csv",
+    "summary.json",
+    "report.md"
+  ],
+  "provenance": {
+    "GC2a": {
+      "ivtff_alphabet": "v101",
+      "path": "data/raw/gc/GC2a-n.txt",
+      "records": 5367,
+      "sha256": "b09570cb6c993bc2d87134d115e60a978650a8a6495483ddbb1f6005a586096f",
+      "sta1_rule_path": "data/reference/sta1/STA-v101_def.bit",
+      "sta1_rule_sha256": "ee6eed1a526b84a755cfcf4fa90fb2e7e004af7ed6c2eb46a3ab677ae1f6f322"
+    },
+    "IT2a": {
+      "ivtff_alphabet": "EvaT",
+      "path": "data/raw/it/IT2a-n.txt",
+      "records": 5215,
+      "sha256": "7f27a8b0feed8f6de0a99900df6bf912dd1d295c38e5f830bac8b41c3f536fb5",
+      "sta1_rule_path": "data/reference/sta1/STA-EvaT_def.bit",
+      "sta1_rule_sha256": "c8ff6e19b0273ceaa2f5a8a82584dc3bc9eec08f004864836988969601f9c96c"
+    },
+    "ZL3b": {
+      "ivtff_alphabet": "Eva-",
+      "path": "data/raw/zl/ZL3b-n.txt",
+      "records": 5385,
+      "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+      "sta1_rule_path": "data/reference/sta1/STA-Eva_def.bit",
+      "sta1_rule_sha256": "7f37853510144fb3e2dc3ee9458d634f41e6d95bc1fbf1c4b8f479a53a021f81"
+    }
+  },
+  "sample": {
+    "path": "results/qc/image_validation/v1/loci.csv",
+    "sha256": "dc8b7f020d94b155022c43584aed13e677fcc6f04e9d9ebd706a813e8e4408a1"
+  },
+  "schema_version": "1.0",
+  "validation_split_accessed": false
+}

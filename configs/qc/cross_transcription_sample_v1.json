@@ -1,0 +1,17 @@
+{
+  "consensus_control_reviews": 2,
+  "high_glyph_similarity_threshold": 0.95,
+  "low_glyph_similarity_threshold": 0.85,
+  "max_initial_reviews_per_folio": 1,
+  "policy": {
+    "mandatory": [
+      "missing_or_uncomparable_locus",
+      "GC2a_and_IT2a_consensus_against_ZL3b",
+      "minimum_pairwise_glyph_similarity_below_0.85",
+      "all_three_glyphs_exact_but_token_boundaries_differ"
+    ],
+    "targeting": "mandatory cases are never dropped; otherwise choose highest-priority disagreements to reach six disagreement checks, favoring distinct folios, then add two three-way-exact controls"
+  },
+  "schema_version": "1.0",
+  "target_disagreement_reviews": 8
+}

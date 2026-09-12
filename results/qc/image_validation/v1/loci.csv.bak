@@ -1,5 +1,5 @@
 sample_index,folio,locus_check_index,locus,source_line_number,text_normalized,uncertain_spaces,alternative_readings,unknown_question_marks,drawing_interruptions,check_status,glyph_alignment,spacing_alignment,locus_alignment,notes
-1,f68r2,1,"f68r2.1,@P0",3115,"<%>tsheeor.chor.sheal,dar.opchey.oeecthy.sheol.dokechy.otcheoly",1,0,0,0,TRANSCRIPTION_DISAGREEMENT,NO,UNCERTAIN,YES,
+1,f68r2,1,"f68r2.1,@P0",3115,"<%>tsheeor.chor.sheal,dar.opchey.oeecthy.sheol.dokechy.otcheoly",1,0,0,0,,,,,
 1,f68r2,2,"f68r2.6,@Cc",3123,<!09:30>okeo.ok[a:?]r.ok[y:o].okozy.okaesy.qokool.chio.qoiol,0,2,1,0,,,,,
 1,f68r2,3,"f68r2.16,@Ls",3135,oteool,0,0,0,0,,,,,
 1,f68r2,4,"f68r2.31,@Cc",3152,"<!09:30>okey.okoaiin.okol.o,ky.oeeeo.r.okey.okeeol.cheo.o.@231;@232;@233;@234;",1,0,0,0,,,,,
