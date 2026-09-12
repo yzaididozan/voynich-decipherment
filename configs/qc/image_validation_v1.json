@@ -1,0 +1,9 @@
+{
+  "loci_per_page": 4,
+  "max_pages_per_leaf_group": 1,
+  "sample_size": 15,
+  "schema_version": "1.0",
+  "scope": "train_only",
+  "seed": 40814041438,
+  "selection_goal": "representative metadata and transcription-uncertainty coverage"
+}

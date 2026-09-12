@@ -1,0 +1,146 @@
+{
+  "locked_test_accessed": false,
+  "locus_checks": 57,
+  "primary_image_source": {
+    "repository": "Beinecke Rare Book and Manuscript Library, Yale University",
+    "shelfmark": "Beinecke MS 408",
+    "url": "https://beinecke.library.yale.edu/beinecke/collections/beinecke-cipher-voynich-manuscript"
+  },
+  "provenance": {
+    "config_path": "configs/qc/image_validation_v1.json",
+    "config_sha256": "d9194da79d0432c597ff63a97b515195d6a3dc12c5d2c0bf2d5ec5a3e2400102",
+    "source_path": "data/raw/zl/ZL3b-n.txt",
+    "source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "train_split_path": "data/splits/v1/train.txt",
+    "train_split_sha256": "5bb5232d5e211a4bb90800f259294c554c1c9e2005548055ebaf94e782e3cc00"
+  },
+  "purpose": "manual manuscript-image validation before additional model-development decisions",
+  "sample_size_pages": 15,
+  "schema_version": "1.0",
+  "scope": "TRAIN ONLY",
+  "seed": 40814041438,
+  "selected_pages": [
+    {
+      "folio": "f68r2",
+      "leaf_group": "f68",
+      "sample_index": 1
+    },
+    {
+      "folio": "f116v",
+      "leaf_group": "f116",
+      "sample_index": 2
+    },
+    {
+      "folio": "f41r",
+      "leaf_group": "f41",
+      "sample_index": 3
+    },
+    {
+      "folio": "f101v",
+      "leaf_group": "f101",
+      "sample_index": 4
+    },
+    {
+      "folio": "f86v3",
+      "leaf_group": "f85+f86",
+      "sample_index": 5
+    },
+    {
+      "folio": "f72r3",
+      "leaf_group": "f72",
+      "sample_index": 6
+    },
+    {
+      "folio": "f79r",
+      "leaf_group": "f79",
+      "sample_index": 7
+    },
+    {
+      "folio": "f111v",
+      "leaf_group": "f111",
+      "sample_index": 8
+    },
+    {
+      "folio": "f69v",
+      "leaf_group": "f69",
+      "sample_index": 9
+    },
+    {
+      "folio": "f108v",
+      "leaf_group": "f108",
+      "sample_index": 10
+    },
+    {
+      "folio": "f114r",
+      "leaf_group": "f114",
+      "sample_index": 11
+    },
+    {
+      "folio": "f112r",
+      "leaf_group": "f112",
+      "sample_index": 12
+    },
+    {
+      "folio": "f104v",
+      "leaf_group": "f104",
+      "sample_index": 13
+    },
+    {
+      "folio": "f115v",
+      "leaf_group": "f115",
+      "sample_index": 14
+    },
+    {
+      "folio": "f78r",
+      "leaf_group": "f78",
+      "sample_index": 15
+    }
+  ],
+  "selection": {
+    "algorithm": "deterministic greedy feature coverage with seeded tie-breaking",
+    "coverage_dimensions": [
+      "Currier",
+      "scribe",
+      "section",
+      "locus type",
+      "uncertain spaces",
+      "alternative readings",
+      "unknown glyph marks",
+      "drawing interruptions",
+      "ordinary/no-markup pages",
+      "foldout/panel-like folio identifiers"
+    ],
+    "max_pages_per_leaf_group": 1,
+    "selected_features": [
+      "currier:A",
+      "currier:B",
+      "currier:UNSET",
+      "locus_type:C",
+      "locus_type:L",
+      "locus_type:P",
+      "locus_type:R",
+      "markup:alternative_reading",
+      "markup:drawing_interruption",
+      "markup:high_ascii",
+      "markup:uncertain_space",
+      "markup:unknown_glyph",
+      "page:foldout_or_panel",
+      "profile:markup_present",
+      "profile:ordinary_no_markup",
+      "scribe:1",
+      "scribe:2",
+      "scribe:3",
+      "scribe:4",
+      "scribe:5",
+      "section:astronomical",
+      "section:biological",
+      "section:cosmological",
+      "section:herbal",
+      "section:marginal_stars",
+      "section:pharmaceutical",
+      "section:text_only",
+      "section:zodiac"
+    ]
+  },
+  "validation_split_accessed": false
+}
