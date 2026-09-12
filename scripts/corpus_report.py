@@ -1,48 +1,49 @@
 #!/usr/bin/env python3
-"""Generate the first reproducible corpus-QC report for an IVTFF file.
+"""Generate reproducible corpus-QC reports for IVTFF transliterations.
 
-Primary use:
+Example:
 
     python scripts/corpus_report.py \
         data/raw/zl/ZL3b-n.txt \
-        --transcription-id ZL3b
+        --transcription-id ZL3b \
+        --json results/qc/ZL3b_corpus_report.json
 
-For ZL3b, this script compares directly reproducible structural counts with
-the source-published values:
+The report validates published locus, paragraph, long-word, and STA1
+character counts. STA1 character validation is an explicit derived stage:
+the lossless IVTFF parser remains unchanged, while ``src.data.sta1`` converts
+native transliteration text using locally stored official bitrans rules.
 
-    loci       5,385
-    paragraphs   740
-    long words 36,278
-
-The published character total (157,304) is explicitly *not* reproduced by
-this script because that number is defined after conversion to the STA1
-alphabet. Counting raw EVA code points would be a different measurement and
-would create a false validation result. STA1 character validation should be
-implemented as a separate QC stage.
-
-"Long words" follows the source definition: uncertain word spaces (`,` in
-IVTFF) do not separate words. Confident spaces (`.`) and drawing-intrusion
-word spaces (`<->`, `<~>`) do.
+For STA1, the report preserves three named measures: codewise STA1,
+IVTFF-semantic unreadables (literal native ??? is one unknown sequence), and
+an all-adjacent-Z1-collapse diagnostic. If a file contains unreadable syntax
+outside the IVTFF-defined forms, the semantic measure is reported unavailable
+rather than guessed. A published value is considered
+reproduced if it exactly matches either of the first two documented
+conventions; the matched convention is recorded explicitly. The lossy
+RF1b-basic representation is not assigned an inverse-STA character target.
 """
 
 from __future__ import annotations
 
 import argparse
 from collections import Counter
-from dataclasses import dataclass, asdict
+from dataclasses import asdict, dataclass
 import json
 from pathlib import Path
 import re
 import sys
 from typing import Iterable, Optional
 
-# Allow direct execution from the repository root:
-#     python scripts/corpus_report.py ...
 REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from src.data.ivtff import LocusRecord, load_ivtff
+from src.data.sta1 import (
+    DEFAULT_RULES_DIR,
+    STA1Error,
+    count_records_as_sta1,
+)
 
 
 PUBLISHED_COUNTS = {
@@ -50,7 +51,6 @@ PUBLISHED_COUNTS = {
         "loci": 5385,
         "paragraphs": 740,
         "long_words": 36278,
-        # Published after STA1 conversion; intentionally not computed here.
         "sta1_characters": 157304,
     },
     "GC2a": {
@@ -75,27 +75,20 @@ PUBLISHED_COUNTS = {
         "loci": 5385,
         "paragraphs": None,
         "long_words": 37848,
-        "sta1_characters": 157254,
+        # Basic Eva is a lossy simplification of RF's STA representation.
+        # The single published RF character total therefore is not a valid
+        # inverse-conversion target for RF1b-er.
+        "sta1_characters": None,
     },
 }
 
 
-# Inline IVTFF markup that is metadata rather than transliterated text.
 _TEXT_TAG_RE = re.compile(r"<@[A-Z]=[^>]>")
 _FREE_COMMENT_RE = re.compile(r"<![^>]*>")
 
 
 def _text_for_long_word_count(text: str) -> str:
-    """Return text suitable for source-style 'long word' counting.
-
-    This is intentionally narrow:
-    - paragraph markers are removed;
-    - text tags/free comments are removed;
-    - drawing interruptions become confident boundaries;
-    - uncertain spaces (comma) remain inside a long word;
-    - alternative readings, ligatures, high-ASCII encodings, and unreadable
-      symbols remain represented because they belong to the transliteration.
-    """
+    """Return text suitable for the published 'long word' convention."""
     text = text.replace("<%>", "").replace("<$>", "")
     text = _TEXT_TAG_RE.sub("", text)
     text = _FREE_COMMENT_RE.sub("", text)
@@ -104,14 +97,11 @@ def _text_for_long_word_count(text: str) -> str:
 
 
 def count_long_words(records: Iterable[LocusRecord]) -> int:
-    """Count words while *not* treating uncertain comma spaces as boundaries."""
+    """Count words without treating uncertain comma-spaces as boundaries."""
     total = 0
 
     for record in records:
         text = _text_for_long_word_count(record.text_normalized)
-
-        # IVTFF '.' is a confident word space.  Commas intentionally stay
-        # inside spans for the "long words" statistic.
         for span in text.split("."):
             span = span.strip()
             if span:
@@ -134,6 +124,15 @@ class CorpusReport:
     physical_leaves_observed: int
     paragraphs: int
     long_words: int
+    sta1_characters: int
+    sta1_characters_ivtff_semantic: Optional[int]
+    sta1_ivtff_semantic_valid: bool
+    sta1_ivtff_semantic_error: Optional[str]
+    sta1_characters_collapsed_unknown_runs: int
+    sta1_unknown_collapse_delta: int
+
+    sta1_rules_file: str
+    sta1_rules_sha256: str
 
     uncertain_space_occurrences: int
     alternative_reading_occurrences: int
@@ -164,6 +163,7 @@ def build_report(
     transcription_id: str,
     *,
     strict: bool = True,
+    sta1_rules_dir: Path = DEFAULT_RULES_DIR,
 ) -> CorpusReport:
     records = load_ivtff(
         source,
@@ -184,11 +184,20 @@ def build_report(
     paragraphs = sum(1 for r in records if r.paragraph_start)
     long_words = count_long_words(records)
 
+    # Explicit derived representation. Missing/incompatible rule files are a
+    # QC error rather than silently reverting to raw EVA/v101 character count.
+    sta1 = count_records_as_sta1(
+        records,
+        rules_dir=sta1_rules_dir,
+        strict=True,
+    )
+
     targets = PUBLISHED_COUNTS.get(transcription_id)
 
     comparison = None
     if targets is not None:
         comparison = {}
+
         for metric, observed in {
             "loci": loci,
             "paragraphs": paragraphs,
@@ -211,12 +220,54 @@ def build_report(
                     "status": "PASS" if delta == 0 else "MISMATCH",
                 }
 
-        comparison["sta1_characters"] = {
-            "observed": None,
-            "expected": targets.get("sta1_characters"),
-            "delta": None,
-            "status": "PENDING_STA1_CONVERSION",
-        }
+        sta_expected = targets.get("sta1_characters")
+        if sta_expected is None:
+            comparison["sta1_characters"] = {
+                "observed": sta1.characters,
+                "observed_ivtff_semantic": (
+                    sta1.characters_ivtff_semantic
+                ),
+                "expected": None,
+                "delta": None,
+                "status": "not_applicable_lossy_representation",
+                "matched_convention": None,
+            }
+        elif sta1.characters == sta_expected:
+            comparison["sta1_characters"] = {
+                "observed": sta1.characters,
+                "observed_ivtff_semantic": (
+                    sta1.characters_ivtff_semantic
+                ),
+                "expected": sta_expected,
+                "delta": 0,
+                "status": "PASS_CODEWISE_STA1",
+                "matched_convention": "codewise_sta1",
+            }
+        elif (
+            sta1.characters_ivtff_semantic is not None
+            and sta1.characters_ivtff_semantic == sta_expected
+        ):
+            comparison["sta1_characters"] = {
+                "observed": sta1.characters,
+                "observed_ivtff_semantic": (
+                    sta1.characters_ivtff_semantic
+                ),
+                "expected": sta_expected,
+                "delta": 0,
+                "status": "PASS_IVTFF_SEMANTIC",
+                "matched_convention": "ivtff_unknown_sequence",
+            }
+        else:
+            comparison["sta1_characters"] = {
+                "observed": sta1.characters,
+                "observed_ivtff_semantic": (
+                    sta1.characters_ivtff_semantic
+                ),
+                "expected": sta_expected,
+                "delta": sta1.characters - sta_expected,
+                "status": "MISMATCH",
+                "matched_convention": None,
+            }
 
     return CorpusReport(
         transcription_id=transcription_id,
@@ -230,12 +281,34 @@ def build_report(
         physical_leaves_observed=len(physical_leaves),
         paragraphs=paragraphs,
         long_words=long_words,
+        sta1_characters=sta1.characters,
+        sta1_characters_ivtff_semantic=(
+            sta1.characters_ivtff_semantic
+        ),
+        sta1_ivtff_semantic_valid=sta1.ivtff_semantic_valid,
+        sta1_ivtff_semantic_error=sta1.ivtff_semantic_error,
+        sta1_characters_collapsed_unknown_runs=(
+            sta1.characters_collapsed_unknown_runs
+        ),
+        sta1_unknown_collapse_delta=sta1.unknown_collapse_delta,
+        sta1_rules_file=sta1.rule_file,
+        sta1_rules_sha256=sta1.rule_sha256,
         uncertain_space_occurrences=all_text.count(","),
-        alternative_reading_occurrences=len(re.findall(r"\[[^\]]+\]", all_text)),
-        drawing_intrusion_occurrences=all_text.count("<->") + all_text.count("<~>"),
-        high_ascii_occurrences=len(re.findall(r"@\d{3};", all_text)),
-        unknown_single_occurrences=len(re.findall(r"(?<!\?)\?(?!\?)", all_text)),
-        unknown_run_occurrences=len(re.findall(r"\?{3,}", all_text)),
+        alternative_reading_occurrences=len(
+            re.findall(r"\[[^\]]+\]", all_text)
+        ),
+        drawing_intrusion_occurrences=(
+            all_text.count("<->") + all_text.count("<~>")
+        ),
+        high_ascii_occurrences=len(
+            re.findall(r"@\d{3};", all_text)
+        ),
+        unknown_single_occurrences=len(
+            re.findall(r"(?<!\?)\?(?!\?)", all_text)
+        ),
+        unknown_run_occurrences=len(
+            re.findall(r"\?{3,}", all_text)
+        ),
         currier_counts=_sorted_counter(
             r.currier if r.currier is not None else "UNSET"
             for r in records
@@ -248,7 +321,9 @@ def build_report(
             r.section if r.section is not None else "UNSET"
             for r in records
         ),
-        locus_type_counts=_sorted_counter(r.locus_type for r in records),
+        locus_type_counts=_sorted_counter(
+            r.locus_type for r in records
+        ),
         published_targets=targets,
         comparison=comparison,
     )
@@ -270,6 +345,32 @@ def print_report(report: CorpusReport) -> None:
     print(f"  Physical leaves:   {report.physical_leaves_observed:,}")
     print(f"  Paragraphs:        {report.paragraphs:,}")
     print(f"  Long words:        {report.long_words:,}")
+    print(f"  STA1 characters (codewise): {report.sta1_characters:,}")
+    if report.sta1_characters_ivtff_semantic is None:
+        print("  STA1 characters (IVTFF semantic): unavailable")
+    else:
+        print(
+            "  STA1 characters (IVTFF semantic): "
+            f"{report.sta1_characters_ivtff_semantic:,}"
+        )
+    print(
+        "  STA1 chars (all adjacent Z1 collapsed, diagnostic): "
+        f"{report.sta1_characters_collapsed_unknown_runs:,}"
+    )
+    print(
+        "  Unknown-run delta: "
+        f"{report.sta1_unknown_collapse_delta:,}"
+    )
+    print()
+    print("STA1 DERIVATION")
+    print(f"  Rules file:        {report.sta1_rules_file}")
+    print(f"  Rules SHA-256:     {report.sta1_rules_sha256}")
+    if not report.sta1_ivtff_semantic_valid:
+        print("  IVTFF semantic:    unavailable")
+        print(
+            "  Semantic reason:   "
+            f"{report.sta1_ivtff_semantic_error}"
+        )
     print()
     print("IVTFF FEATURES")
     print(f"  Uncertain spaces:  {report.uncertain_space_occurrences:,}")
@@ -282,18 +383,43 @@ def print_report(report: CorpusReport) -> None:
     if report.comparison is not None:
         print()
         print("PUBLISHED-COUNT CHECK")
-        for metric in ("loci", "paragraphs", "long_words", "sta1_characters"):
+        for metric in ("loci", "paragraphs", "long_words"):
             result = report.comparison[metric]
             observed = result["observed"]
             expected = result["expected"]
             status = result["status"]
 
-            obs_text = "pending" if observed is None else f"{observed:,}"
+            obs_text = "n/a" if observed is None else f"{observed:,}"
             exp_text = "n/a" if expected is None else f"{expected:,}"
             print(
                 f"  {metric:16s} observed={obs_text:>9s} "
                 f"expected={exp_text:>9s}  {status}"
             )
+
+        sta_result = report.comparison["sta1_characters"]
+        sta_obs = sta_result["observed"]
+        sta_sem = sta_result.get("observed_ivtff_semantic")
+        sta_exp = sta_result["expected"]
+        sta_status = sta_result["status"]
+
+        sem_text = "n/a" if sta_sem is None else f"{sta_sem:,}"
+        exp_text = "n/a" if sta_exp is None else f"{sta_exp:,}"
+        print(
+            f"  {'sta1_characters':16s} codewise={sta_obs:>9,} "
+            f"semantic={sem_text:>9s} "
+            f"expected={exp_text:>9s}  "
+            f"{sta_status}"
+        )
+
+        matched = sta_result.get("matched_convention")
+        if matched:
+            print(f"    matched convention: {matched}")
+
+        print()
+        print(
+            "  STA1 conventions are reported separately; no count is "
+            "silently rewritten to force a match."
+        )
 
     for title, values in (
         ("CURRIER", report.currier_counts),
@@ -309,7 +435,7 @@ def print_report(report: CorpusReport) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Generate a reproducible IVTFF corpus-QC report."
+        description="Generate a reproducible IVTFF + STA1 corpus-QC report."
     )
     parser.add_argument("source", type=Path)
     parser.add_argument(
@@ -324,29 +450,52 @@ def main() -> int:
         help="Optional path to save the complete report as JSON.",
     )
     parser.add_argument(
+        "--sta1-rules-dir",
+        type=Path,
+        default=DEFAULT_RULES_DIR,
+        help=(
+            "Directory containing official STA-Eva_def.bit, "
+            "STA-EvaT_def.bit, and STA-v101_def.bit files "
+            f"(default: {DEFAULT_RULES_DIR})"
+        ),
+    )
+    parser.add_argument(
         "--non-strict",
         action="store_true",
-        help="Allow parser to skip unrecognised data lines (not recommended for QC).",
+        help=(
+            "Allow IVTFF parser to skip unrecognised data lines. "
+            "Not recommended for QC."
+        ),
     )
     parser.add_argument(
         "--fail-on-mismatch",
         action="store_true",
-        help="Exit nonzero if a directly reproducible published count mismatches.",
+        help="Exit nonzero if any published count mismatches.",
     )
     args = parser.parse_args()
 
-    report = build_report(
-        args.source,
-        args.transcription_id,
-        strict=not args.non_strict,
-    )
+    try:
+        report = build_report(
+            args.source,
+            args.transcription_id,
+            strict=not args.non_strict,
+            sta1_rules_dir=args.sta1_rules_dir,
+        )
+    except STA1Error as exc:
+        print(f"STA1 QC ERROR: {exc}", file=sys.stderr)
+        return 2
 
     print_report(report)
 
     if args.json is not None:
         args.json.parent.mkdir(parents=True, exist_ok=True)
         args.json.write_text(
-            json.dumps(asdict(report), indent=2, sort_keys=True) + "\n",
+            json.dumps(
+                asdict(report),
+                indent=2,
+                sort_keys=True,
+            )
+            + "\n",
             encoding="utf-8",
         )
         print(f"\nSaved JSON report: {args.json}")

@@ -20,10 +20,12 @@
       "status": "PASS"
     },
     "sta1_characters": {
-      "delta": null,
+      "delta": 0,
       "expected": 155292,
-      "observed": null,
-      "status": "PENDING_STA1_CONVERSION"
+      "matched_convention": "ivtff_unknown_sequence",
+      "observed": 155352,
+      "observed_ivtff_semantic": 155292,
+      "status": "PASS_IVTFF_SEMANTIC"
     }
   },
   "currier_counts": {
@@ -72,6 +74,12 @@
     "zodiac": 335
   },
   "source_path": "data/raw/it/IT2a-n.txt",
+  "sta1_characters": 155352,
+  "sta1_characters_collapsed_unknown_runs": 155259,
+  "sta1_characters_ivtff_semantic": 155292,
+  "sta1_rules_file": "data/reference/sta1/STA-EvaT_def.bit",
+  "sta1_rules_sha256": "c8ff6e19b0273ceaa2f5a8a82584dc3bc9eec08f004864836988969601f9c96c",
+  "sta1_unknown_collapse_delta": 93,
   "transcription_id": "IT2a",
   "uncertain_space_occurrences": 0,
   "unknown_run_occurrences": 30,

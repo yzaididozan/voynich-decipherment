@@ -20,10 +20,10 @@
       "status": "PASS"
     },
     "sta1_characters": {
-      "delta": null,
+      "delta": 0,
       "expected": 157096,
-      "observed": null,
-      "status": "PENDING_STA1_CONVERSION"
+      "observed": 157096,
+      "status": "PASS"
     }
   },
   "currier_counts": {
@@ -72,6 +72,11 @@
     "zodiac": 335
   },
   "source_path": "data/raw/gc/GC2a-n.txt",
+  "sta1_characters": 157096,
+  "sta1_characters_collapsed_unknown_runs": 157083,
+  "sta1_rules_file": "data/reference/sta1/STA-v101_def.bit",
+  "sta1_rules_sha256": "ee6eed1a526b84a755cfcf4fa90fb2e7e004af7ed6c2eb46a3ab677ae1f6f322",
+  "sta1_unknown_collapse_delta": 13,
   "transcription_id": "GC2a",
   "uncertain_space_occurrences": 2459,
   "unknown_run_occurrences": 2,

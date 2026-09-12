@@ -20,10 +20,10 @@
       "status": "not_published"
     },
     "sta1_characters": {
-      "delta": null,
+      "delta": 0,
       "expected": 157254,
-      "observed": null,
-      "status": "PENDING_STA1_CONVERSION"
+      "observed": 157254,
+      "status": "PASS"
     }
   },
   "currier_counts": {
@@ -72,6 +72,11 @@
     "zodiac": 335
   },
   "source_path": "data/raw/rf/RF1b-e.txt",
+  "sta1_characters": 157254,
+  "sta1_characters_collapsed_unknown_runs": 157202,
+  "sta1_rules_file": "data/reference/sta1/STA-Eva_def.bit",
+  "sta1_rules_sha256": "7f37853510144fb3e2dc3ee9458d634f41e6d95bc1fbf1c4b8f479a53a021f81",
+  "sta1_unknown_collapse_delta": 52,
   "transcription_id": "RF1b-full",
   "uncertain_space_occurrences": 677,
   "unknown_run_occurrences": 22,

@@ -20,10 +20,10 @@
       "status": "PASS"
     },
     "sta1_characters": {
-      "delta": null,
+      "delta": 0,
       "expected": 157304,
-      "observed": null,
-      "status": "PENDING_STA1_CONVERSION"
+      "observed": 157304,
+      "status": "PASS"
     }
   },
   "currier_counts": {
@@ -72,6 +72,11 @@
     "zodiac": 335
   },
   "source_path": "data/raw/zl/ZL3b-n.txt",
+  "sta1_characters": 157304,
+  "sta1_characters_collapsed_unknown_runs": 157247,
+  "sta1_rules_file": "data/reference/sta1/STA-Eva_def.bit",
+  "sta1_rules_sha256": "7f37853510144fb3e2dc3ee9458d634f41e6d95bc1fbf1c4b8f479a53a021f81",
+  "sta1_unknown_collapse_delta": 57,
   "transcription_id": "ZL3b",
   "uncertain_space_occurrences": 2749,
   "unknown_run_occurrences": 26,
