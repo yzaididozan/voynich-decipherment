@@ -1,0 +1,11 @@
+view,training_sequences,training_events,seen_vocabulary_size,history_length,ngram_order,contexts,transitions
+space_free,3900,111070,190,0,1,1,111070
+space_free,3900,111070,190,1,2,182,111070
+space_free,3900,111070,190,2,3,1084,111070
+space_free,3900,111070,190,3,4,4546,111070
+space_free,3900,111070,190,4,5,14006,111070
+token_aware,3900,134699,191,0,1,1,134699
+token_aware,3900,134699,191,1,2,183,134699
+token_aware,3900,134699,191,2,3,997,134699
+token_aware,3900,134699,191,3,4,3952,134699
+token_aware,3900,134699,191,4,5,11085,134699

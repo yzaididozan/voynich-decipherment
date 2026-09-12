@@ -1,0 +1,18 @@
+{
+  "order_selection_metric": "validation_bits_per_event_within_view",
+  "orders": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "schema_version": "1.0",
+  "sequence_boundary": "locus",
+  "smoothing": "interpolated_witten_bell",
+  "unknown_policy": "reset_and_do_not_score",
+  "views": [
+    "space_free",
+    "token_aware"
+  ]
+}
