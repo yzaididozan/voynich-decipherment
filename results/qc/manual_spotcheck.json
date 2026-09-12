@@ -1,0 +1,1444 @@
+{
+  "automatic_metadata_check": {
+    "all_selected_loci_consistent": true,
+    "entries_with_differences": 0
+  },
+  "checkpoint": "manual_cross_transcription_spotcheck",
+  "corpora": [
+    "ZL3b",
+    "GC2a",
+    "IT2a",
+    "RF1b-full",
+    "RF1b-basic"
+  ],
+  "coverage": {
+    "currier": {
+      "A": 2,
+      "B": 10,
+      "UNSET": 3
+    },
+    "scribes": {
+      "1": 2,
+      "2": 7,
+      "3": 2,
+      "4": 3,
+      "5": 1
+    },
+    "sections": {
+      "astronomical": 2,
+      "biological": 5,
+      "cosmological": 1,
+      "herbal": 1,
+      "marginal_stars": 2,
+      "pharmaceutical": 1,
+      "text_only": 2,
+      "zodiac": 1
+    }
+  },
+  "entries": [
+    {
+      "currier": "B",
+      "folio": "f108r",
+      "locus": "f108r.46,+P0",
+      "locus_type": "P",
+      "metadata_consistent": true,
+      "metadata_differences": [],
+      "records": {
+        "GC2a": {
+          "currier": "B",
+          "folio": "f108r",
+          "locus": "f108r.46,+P0",
+          "locus_type": "P",
+          "original": "<f108r.46,+P0>    9kC89.4ohC8.9.4ohc9.okc89.ohc79.4oham.1co,8ay.1C9.4ohc89.ae",
+          "scribe": "3",
+          "section": "marginal_stars",
+          "source_line_number": 5218,
+          "source_line_numbers": [
+            5218
+          ],
+          "text_normalized": "9kC89.4ohC8.9.4ohc9.okc89.ohc79.4oham.1co,8ay.1C9.4ohc89.ae",
+          "text_raw": "9kC89.4ohC8.9.4ohc9.okc89.ohc79.4oham.1co,8ay.1C9.4ohc89.ae",
+          "transcription_id": "GC2a"
+        },
+        "IT2a": {
+          "currier": "B",
+          "folio": "f108r",
+          "locus": "f108r.46,+P0",
+          "locus_type": "P",
+          "original": "<f108r.46,+P0>    yteedy.qokeedy.qokey.otedy.okedy.qokaiin.cheodar.cheey.qokedy.al",
+          "scribe": "3",
+          "section": "marginal_stars",
+          "source_line_number": 4852,
+          "source_line_numbers": [
+            4852
+          ],
+          "text_normalized": "yteedy.qokeedy.qokey.otedy.okedy.qokaiin.cheodar.cheey.qokedy.al",
+          "text_raw": "yteedy.qokeedy.qokey.otedy.okedy.qokaiin.cheodar.cheey.qokedy.al",
+          "transcription_id": "IT2a"
+        },
+        "RF1b-basic": {
+          "currier": "B",
+          "folio": "f108r",
+          "locus": "f108r.46,+P0",
+          "locus_type": "P",
+          "original": "<f108r.46,+P0>    yteedy.qokeed.y.qokey.otedy.okedy.qokaiin.cheodar.cheey.qokedy.al",
+          "scribe": "3",
+          "section": "marginal_stars",
+          "source_line_number": 5019,
+          "source_line_numbers": [
+            5019
+          ],
+          "text_normalized": "yteedy.qokeed.y.qokey.otedy.okedy.qokaiin.cheodar.cheey.qokedy.al",
+          "text_raw": "yteedy.qokeed.y.qokey.otedy.okedy.qokaiin.cheodar.cheey.qokedy.al",
+          "transcription_id": "RF1b-basic"
+        },
+        "RF1b-full": {
+          "currier": "B",
+          "folio": "f108r",
+          "locus": "f108r.46,+P0",
+          "locus_type": "P",
+          "original": "<f108r.46,+P0>    yteedy.qokeed.y.qokey.otedy.oke@152;y.qokaiin.cheodar.cheey.qokedy.al",
+          "scribe": "3",
+          "section": "marginal_stars",
+          "source_line_number": 5019,
+          "source_line_numbers": [
+            5019
+          ],
+          "text_normalized": "yteedy.qokeed.y.qokey.otedy.oke@152;y.qokaiin.cheodar.cheey.qokedy.al",
+          "text_raw": "yteedy.qokeed.y.qokey.otedy.oke@152;y.qokaiin.cheodar.cheey.qokedy.al",
+          "transcription_id": "RF1b-full"
+        },
+        "ZL3b": {
+          "currier": "B",
+          "folio": "f108r",
+          "locus": "f108r.46,+P0",
+          "locus_type": "P",
+          "original": "<f108r.46,+P0>    yteedy.qokeed,y.qokey.otedy.okedy.qokaiin.cheodar.cheey.qokedy.al",
+          "scribe": "3",
+          "section": "marginal_stars",
+          "source_line_number": 7534,
+          "source_line_numbers": [
+            7534
+          ],
+          "text_normalized": "yteedy.qokeed,y.qokey.otedy.okedy.qokaiin.cheodar.cheey.qokedy.al",
+          "text_raw": "yteedy.qokeed,y.qokey.otedy.okedy.qokaiin.cheodar.cheey.qokedy.al",
+          "transcription_id": "ZL3b"
+        }
+      },
+      "scribe": "3",
+      "section": "marginal_stars",
+      "selection_rank": 1
+    },
+    {
+      "currier": null,
+      "folio": "f67r2",
+      "locus": "f67r2.68,&L0",
+      "locus_type": "L",
+      "metadata_consistent": true,
+      "metadata_differences": [],
+      "records": {
+        "GC2a": {
+          "currier": null,
+          "folio": "f67r2",
+          "locus": "f67r2.68,&L0",
+          "locus_type": "L",
+          "original": "<f67r2.68,&L0>    ocj1o8",
+          "scribe": "4",
+          "section": "astronomical",
+          "source_line_number": 1973,
+          "source_line_numbers": [
+            1973
+          ],
+          "text_normalized": "ocj1o8",
+          "text_raw": "ocj1o8",
+          "transcription_id": "GC2a"
+        },
+        "IT2a": {
+          "currier": null,
+          "folio": "f67r2",
+          "locus": "f67r2.68,&L0",
+          "locus_type": "L",
+          "original": "<f67r2.68,&L0>    oepchol",
+          "scribe": "4",
+          "section": "astronomical",
+          "source_line_number": 1855,
+          "source_line_numbers": [
+            1855
+          ],
+          "text_normalized": "oepchol",
+          "text_raw": "oepchol",
+          "transcription_id": "IT2a"
+        },
+        "RF1b-basic": {
+          "currier": null,
+          "folio": "f67r2",
+          "locus": "f67r2.68,&L0",
+          "locus_type": "L",
+          "original": "<f67r2.68,&L0>    oepchod",
+          "scribe": "4",
+          "section": "astronomical",
+          "source_line_number": 1856,
+          "source_line_numbers": [
+            1856
+          ],
+          "text_normalized": "oepchod",
+          "text_raw": "oepchod",
+          "transcription_id": "RF1b-basic"
+        },
+        "RF1b-full": {
+          "currier": null,
+          "folio": "f67r2",
+          "locus": "f67r2.68,&L0",
+          "locus_type": "L",
+          "original": "<f67r2.68,&L0>    oepchod",
+          "scribe": "4",
+          "section": "astronomical",
+          "source_line_number": 1856,
+          "source_line_numbers": [
+            1856
+          ],
+          "text_normalized": "oepchod",
+          "text_raw": "oepchod",
+          "transcription_id": "RF1b-full"
+        },
+        "ZL3b": {
+          "currier": null,
+          "folio": "f67r2",
+          "locus": "f67r2.68,&L0",
+          "locus_type": "L",
+          "original": "<f67r2.68,&L0>    oepchod",
+          "scribe": "4",
+          "section": "astronomical",
+          "source_line_number": 2937,
+          "source_line_numbers": [
+            2937
+          ],
+          "text_normalized": "oepchod",
+          "text_raw": "oepchod",
+          "transcription_id": "ZL3b"
+        }
+      },
+      "scribe": "4",
+      "section": "astronomical",
+      "selection_rank": 2
+    },
+    {
+      "currier": "A",
+      "folio": "f101v",
+      "locus": "f101v.24,+P0",
+      "locus_type": "P",
+      "metadata_consistent": true,
+      "metadata_differences": [],
+      "records": {
+        "GC2a": {
+          "currier": "A",
+          "folio": "f101v",
+          "locus": "f101v.24,+P0",
+          "locus_type": "P",
+          "original": "<f101v.24,+P0>    kdAe.2coe.4ohcoy.@247;oe.oe.1o.y.1ohc9.1oy.Kcc9.7am?.8am.1d89.1C9.hco.1coe.8aM.8ccoy.1cc89<$>",
+          "scribe": "1",
+          "section": "pharmaceutical",
+          "source_line_number": 4578,
+          "source_line_numbers": [
+            4578
+          ],
+          "text_normalized": "kdAe.2coe.4ohcoy.@247;oe.oe.1o.y.1ohc9.1oy.Kcc9.7am?.8am.1d89.1C9.hco.1coe.8aM.8ccoy.1cc89<$>",
+          "text_raw": "kdAe.2coe.4ohcoy.@247;oe.oe.1o.y.1ohc9.1oy.Kcc9.7am?.8am.1d89.1C9.hco.1coe.8aM.8ccoy.1cc89<$>",
+          "transcription_id": "GC2a"
+        },
+        "IT2a": {
+          "currier": "A",
+          "folio": "f101v",
+          "locus": "f101v.24,+P0",
+          "locus_type": "P",
+          "original": "<f101v.24,+P0>    teeal.sheol.qokeor.qkhol.olchor.chokey.chor.ctheey.da?s?<->???daiin.cheeody.cheey.keo.cheol.daiiin.deeor.cheedy<$>",
+          "scribe": "1",
+          "section": "pharmaceutical",
+          "source_line_number": 4231,
+          "source_line_numbers": [
+            4231
+          ],
+          "text_normalized": "teeal.sheol.qokeor.qkhol.olchor.chokey.chor.ctheey.da?s?<->???daiin.cheeody.cheey.keo.cheol.daiiin.deeor.cheedy<$>",
+          "text_raw": "teeal.sheol.qokeor.qkhol.olchor.chokey.chor.ctheey.da?s?<->???daiin.cheeody.cheey.keo.cheol.daiiin.deeor.cheedy<$>",
+          "transcription_id": "IT2a"
+        },
+        "RF1b-basic": {
+          "currier": "A",
+          "folio": "f101v",
+          "locus": "f101v.24,+P0",
+          "locus_type": "P",
+          "original": "<f101v.24,+P0>    teeeal.sheol.qokeor.ykhol.ol,cho.r.chokey.chor.ctheey.daiin???,daiin.cheeedy.cheey.keo.cheol.daiiin.deeor.cheedy",
+          "scribe": "1",
+          "section": "pharmaceutical",
+          "source_line_number": 4394,
+          "source_line_numbers": [
+            4394
+          ],
+          "text_normalized": "teeeal.sheol.qokeor.ykhol.ol,cho.r.chokey.chor.ctheey.daiin???,daiin.cheeedy.cheey.keo.cheol.daiiin.deeor.cheedy",
+          "text_raw": "teeeal.sheol.qokeor.ykhol.ol,cho.r.chokey.chor.ctheey.daiin???,daiin.cheeedy.cheey.keo.cheol.daiiin.deeor.cheedy",
+          "transcription_id": "RF1b-basic"
+        },
+        "RF1b-full": {
+          "currier": "A",
+          "folio": "f101v",
+          "locus": "f101v.24,+P0",
+          "locus_type": "P",
+          "original": "<f101v.24,+P0>    teee@221;l.sheol.qokeor.{ykh}ol.ol,cho.r.chokey.chor.ctheey.@152;aiin???,daiin.cheeedy.cheey.keo.cheol.daiiin.deeor.cheedy",
+          "scribe": "1",
+          "section": "pharmaceutical",
+          "source_line_number": 4394,
+          "source_line_numbers": [
+            4394
+          ],
+          "text_normalized": "teee@221;l.sheol.qokeor.{ykh}ol.ol,cho.r.chokey.chor.ctheey.@152;aiin???,daiin.cheeedy.cheey.keo.cheol.daiiin.deeor.cheedy",
+          "text_raw": "teee@221;l.sheol.qokeor.{ykh}ol.ol,cho.r.chokey.chor.ctheey.@152;aiin???,daiin.cheeedy.cheey.keo.cheol.daiiin.deeor.cheedy",
+          "transcription_id": "RF1b-full"
+        },
+        "ZL3b": {
+          "currier": "A",
+          "folio": "f101v",
+          "locus": "f101v.24,+P0",
+          "locus_type": "P",
+          "original": "<f101v.24,+P0>    teeeol.sheol.qokeor.{ykh}ol.olcho.r.chokey.chor.ctheey.daiin???daiin.cheeody.cheey,keo.cheol.daiiin.deeor.cheedy<$>",
+          "scribe": "1",
+          "section": "pharmaceutical",
+          "source_line_number": 6509,
+          "source_line_numbers": [
+            6509
+          ],
+          "text_normalized": "teeeol.sheol.qokeor.{ykh}ol.olcho.r.chokey.chor.ctheey.daiin???daiin.cheeody.cheey,keo.cheol.daiiin.deeor.cheedy<$>",
+          "text_raw": "teeeol.sheol.qokeor.{ykh}ol.olcho.r.chokey.chor.ctheey.daiin???daiin.cheeody.cheey,keo.cheol.daiiin.deeor.cheedy<$>",
+          "transcription_id": "ZL3b"
+        }
+      },
+      "scribe": "1",
+      "section": "pharmaceutical",
+      "selection_rank": 3
+    },
+    {
+      "currier": "B",
+      "folio": "f85r2",
+      "locus": "f85r2.1,@Cc",
+      "locus_type": "C",
+      "metadata_consistent": true,
+      "metadata_differences": [],
+      "records": {
+        "GC2a": {
+          "currier": "B",
+          "folio": "f85r2",
+          "locus": "f85r2.1,@Cc",
+          "locus_type": "C",
+          "original": "<f85r2.1,@Cc>     o8cc79.okc89.ojoCs.ay.1K9.ok189.okc79.okay.1cjam.okA8ay.oko8am.ojam.okam.4og11s.ok1c79.oeham.o8ay.ae,o,ccs.ok1c89.4okc8am.o8ay.oKo89.2c8am.oeam.oeuoy.8am.oe.ehc1E.os.Am.ok169.8ay.okccs.ofam.1J7ay",
+          "scribe": "2",
+          "section": "cosmological",
+          "source_line_number": 3664,
+          "source_line_numbers": [
+            3664
+          ],
+          "text_normalized": "o8cc79.okc89.ojoCs.ay.1K9.ok189.okc79.okay.1cjam.okA8ay.oko8am.ojam.okam.4og11s.ok1c79.oeham.o8ay.ae,o,ccs.ok1c89.4okc8am.o8ay.oKo89.2c8am.oeam.oeuoy.8am.oe.ehc1E.os.Am.ok169.8ay.okccs.ofam.1J7ay",
+          "text_raw": "o8cc79.okc89.ojoCs.ay.1K9.ok189.okc79.okay.1cjam.okA8ay.oko8am.ojam.okam.4og11s.ok1c79.oeham.o8ay.ae,o,ccs.ok1c89.4okc8am.o8ay.oKo89.2c8am.oeam.oeuoy.8am.oe.ehc1E.os.Am.ok169.8ay.okccs.ofam.1J7ay",
+          "transcription_id": "GC2a"
+        },
+        "IT2a": {
+          "currier": "B",
+          "folio": "f85r2",
+          "locus": "f85r2.1,@Cc",
+          "locus_type": "C",
+          "original": "<f85r2.1,@Cc>     odchdy.otedy.opoees.ar.chcthy.otchdy.otedy.otar.chepaiin.otadar.otodaiin.opoiin.otaiin.qopchchs.otchedy.olkaiin.odar.aloees.otchedy.qotedaiin.odar.octhody.shedaiin.olaiin.olfor.daiin.ol.lkech?.os.aiin.otchdy.dar.otees.ofaiin.chcphdar",
+          "scribe": "2",
+          "section": "cosmological",
+          "source_line_number": 3499,
+          "source_line_numbers": [
+            3499
+          ],
+          "text_normalized": "odchdy.otedy.opoees.ar.chcthy.otchdy.otedy.otar.chepaiin.otadar.otodaiin.opoiin.otaiin.qopchchs.otchedy.olkaiin.odar.aloees.otchedy.qotedaiin.odar.octhody.shedaiin.olaiin.olfor.daiin.ol.lkech?.os.aiin.otchdy.dar.otees.ofaiin.chcphdar",
+          "text_raw": "odchdy.otedy.opoees.ar.chcthy.otchdy.otedy.otar.chepaiin.otadar.otodaiin.opoiin.otaiin.qopchchs.otchedy.olkaiin.odar.aloees.otchedy.qotedaiin.odar.octhody.shedaiin.olaiin.olfor.daiin.ol.lkech?.os.aiin.otchdy.dar.otees.ofaiin.chcphdar",
+          "transcription_id": "IT2a"
+        },
+        "RF1b-basic": {
+          "currier": "B",
+          "folio": "f85r2",
+          "locus": "f85r2.1,@Cc",
+          "locus_type": "C",
+          "original": "<f85r2.1,@Cc>     odeedy.otedy.opoees.ar.chcthy.otchdy.otody.otar.chepaiin.otadar.otodaiin.opaiin.otaiin.qopchas.otchedy.olkaiin.odar.aloees.otchedy.qotedaiin.odar.octhody.shedaiin.olaiin.olfor.daiin.ol.lkechch.os.aiin.otchdy.dar.otees.ofaiin.chcphdar",
+          "scribe": "2",
+          "section": "cosmological",
+          "source_line_number": 3502,
+          "source_line_numbers": [
+            3502
+          ],
+          "text_normalized": "odeedy.otedy.opoees.ar.chcthy.otchdy.otody.otar.chepaiin.otadar.otodaiin.opaiin.otaiin.qopchas.otchedy.olkaiin.odar.aloees.otchedy.qotedaiin.odar.octhody.shedaiin.olaiin.olfor.daiin.ol.lkechch.os.aiin.otchdy.dar.otees.ofaiin.chcphdar",
+          "text_raw": "odeedy.otedy.opoees.ar.chcthy.otchdy.otody.otar.chepaiin.otadar.otodaiin.opaiin.otaiin.qopchas.otchedy.olkaiin.odar.aloees.otchedy.qotedaiin.odar.octhody.shedaiin.olaiin.olfor.daiin.ol.lkechch.os.aiin.otchdy.dar.otees.ofaiin.chcphdar",
+          "transcription_id": "RF1b-basic"
+        },
+        "RF1b-full": {
+          "currier": "B",
+          "folio": "f85r2",
+          "locus": "f85r2.1,@Cc",
+          "locus_type": "C",
+          "original": "<f85r2.1,@Cc>     odee@152;y.otedy.opoees.ar.chcthy.otchdy.oto@152;y.otar.chepaiin.ot@221;dar.otodaiin.opaiin.otaiin.qopchas.otche@152;y.olkaiin.odar.aloees.otchedy.qotedaiin.odar.octhody.shedaiin.olaiin.olfor.daiin.ol.lkechch.os.@221;iin.otchdy.dar.otees.ofaiin.chcph@152;ar",
+          "scribe": "2",
+          "section": "cosmological",
+          "source_line_number": 3502,
+          "source_line_numbers": [
+            3502
+          ],
+          "text_normalized": "odee@152;y.otedy.opoees.ar.chcthy.otchdy.oto@152;y.otar.chepaiin.ot@221;dar.otodaiin.opaiin.otaiin.qopchas.otche@152;y.olkaiin.odar.aloees.otchedy.qotedaiin.odar.octhody.shedaiin.olaiin.olfor.daiin.ol.lkechch.os.@221;iin.otchdy.dar.otees.ofaiin.chcph@152;ar",
+          "text_raw": "odee@152;y.otedy.opoees.ar.chcthy.otchdy.oto@152;y.otar.chepaiin.ot@221;dar.otodaiin.opaiin.otaiin.qopchas.otche@152;y.olkaiin.odar.aloees.otchedy.qotedaiin.odar.octhody.shedaiin.olaiin.olfor.daiin.ol.lkechch.os.@221;iin.otchdy.dar.otees.ofaiin.chcph@152;ar",
+          "transcription_id": "RF1b-full"
+        },
+        "ZL3b": {
+          "currier": "B",
+          "folio": "f85r2",
+          "locus": "f85r2.1,@Cc",
+          "locus_type": "C",
+          "original": "<f85r2.1,@Cc>     <!09:00>odeedy.otedy.opaees.ar.chcthy.otchdy.otody.otar.chepaiin.otodar.otodaiin.opaiin.otaiin.qopchas.otchedy.olkaiin.odar.aloees.otchedy.qotedaiin.odar.octhody.shedaiin.olaiin.olfor.daiin.ol.lkech[ch:?].os.aiin.oteedy.dar.otees.opaiin.chcphdar",
+          "scribe": "2",
+          "section": "cosmological",
+          "source_line_number": 5223,
+          "source_line_numbers": [
+            5223
+          ],
+          "text_normalized": "<!09:00>odeedy.otedy.opaees.ar.chcthy.otchdy.otody.otar.chepaiin.otodar.otodaiin.opaiin.otaiin.qopchas.otchedy.olkaiin.odar.aloees.otchedy.qotedaiin.odar.octhody.shedaiin.olaiin.olfor.daiin.ol.lkech[ch:?].os.aiin.oteedy.dar.otees.opaiin.chcphdar",
+          "text_raw": "<!09:00>odeedy.otedy.opaees.ar.chcthy.otchdy.otody.otar.chepaiin.otodar.otodaiin.opaiin.otaiin.qopchas.otchedy.olkaiin.odar.aloees.otchedy.qotedaiin.odar.octhody.shedaiin.olaiin.olfor.daiin.ol.lkech[ch:?].os.aiin.oteedy.dar.otees.opaiin.chcphdar",
+          "transcription_id": "ZL3b"
+        }
+      },
+      "scribe": "2",
+      "section": "cosmological",
+      "selection_rank": 4
+    },
+    {
+      "currier": "B",
+      "folio": "f66r",
+      "locus": "f66r.58,+P0",
+      "locus_type": "P",
+      "metadata_consistent": true,
+      "metadata_differences": [],
+      "records": {
+        "GC2a": {
+          "currier": "B",
+          "folio": "f66r",
+          "locus": "f66r.58,+P0",
+          "locus_type": "P",
+          "original": "<f66r.58,+P0>     82oe8aZ.8aeh9.3h9.4oh9.2ohaiy.1ok9.8ay.oh19.289.9hoe",
+          "scribe": "5",
+          "section": "text_only",
+          "source_line_number": 1844,
+          "source_line_numbers": [
+            1844
+          ],
+          "text_normalized": "82oe8aZ.8aeh9.3h9.4oh9.2ohaiy.1ok9.8ay.oh19.289.9hoe",
+          "text_raw": "82oe8aZ.8aeh9.3h9.4oh9.2ohaiy.1ok9.8ay.oh19.289.9hoe",
+          "transcription_id": "GC2a"
+        },
+        "IT2a": {
+          "currier": "B",
+          "folio": "f66r",
+          "locus": "f66r.58,+P0",
+          "locus_type": "P",
+          "original": "<f66r.58,+P0>     ?shol.daiir.dal.ky.shka.qoky.shekair.choty.dar.okchy.shdy.ykol",
+          "scribe": "5",
+          "section": "text_only",
+          "source_line_number": 1728,
+          "source_line_numbers": [
+            1728
+          ],
+          "text_normalized": "?shol.daiir.dal.ky.shka.qoky.shekair.choty.dar.okchy.shdy.ykol",
+          "text_raw": "?shol.daiir.dal.ky.shka.qoky.shekair.choty.dar.okchy.shdy.ykol",
+          "transcription_id": "IT2a"
+        },
+        "RF1b-basic": {
+          "currier": "B",
+          "folio": "f66r",
+          "locus": "f66r.58,+P0",
+          "locus_type": "P",
+          "original": "<f66r.58,+P0>     dsholdaiir.dalky.shky.qoky.shekair.choty.dar.okchy.shdy.ykol",
+          "scribe": "5",
+          "section": "text_only",
+          "source_line_number": 1729,
+          "source_line_numbers": [
+            1729
+          ],
+          "text_normalized": "dsholdaiir.dalky.shky.qoky.shekair.choty.dar.okchy.shdy.ykol",
+          "text_raw": "dsholdaiir.dalky.shky.qoky.shekair.choty.dar.okchy.shdy.ykol",
+          "transcription_id": "RF1b-basic"
+        },
+        "RF1b-full": {
+          "currier": "B",
+          "folio": "f66r",
+          "locus": "f66r.58,+P0",
+          "locus_type": "P",
+          "original": "<f66r.58,+P0>     dsholdaiir.dalky.shky.qoky.shekair.choty.dar.okchy.shdy.ykol",
+          "scribe": "5",
+          "section": "text_only",
+          "source_line_number": 1729,
+          "source_line_numbers": [
+            1729
+          ],
+          "text_normalized": "dsholdaiir.dalky.shky.qoky.shekair.choty.dar.okchy.shdy.ykol",
+          "text_raw": "dsholdaiir.dalky.shky.qoky.shekair.choty.dar.okchy.shdy.ykol",
+          "transcription_id": "RF1b-full"
+        },
+        "ZL3b": {
+          "currier": "B",
+          "folio": "f66r",
+          "locus": "f66r.58,+P0",
+          "locus_type": "P",
+          "original": "<f66r.58,+P0>     dsholdaiir.dalky.shky.qoky.shekair.choty.dar.okeey.shdy.ykol",
+          "scribe": "5",
+          "section": "text_only",
+          "source_line_number": 2758,
+          "source_line_numbers": [
+            2758
+          ],
+          "text_normalized": "dsholdaiir.dalky.shky.qoky.shekair.choty.dar.okeey.shdy.ykol",
+          "text_raw": "dsholdaiir.dalky.shky.qoky.shekair.choty.dar.okeey.shdy.ykol",
+          "transcription_id": "ZL3b"
+        }
+      },
+      "scribe": "5",
+      "section": "text_only",
+      "selection_rank": 5
+    },
+    {
+      "currier": "B",
+      "folio": "f82v",
+      "locus": "f82v.14,+P0",
+      "locus_type": "P",
+      "metadata_consistent": true,
+      "metadata_differences": [],
+      "records": {
+        "GC2a": {
+          "currier": "B",
+          "folio": "f82v",
+          "locus": "f82v.14,+P0",
+          "locus_type": "P",
+          "original": "<f82v.14,+P0>     8ae1c89.e1c9.y.oe.yoe.1cc9.s,an.5c9<$>",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3394,
+          "source_line_numbers": [
+            3394
+          ],
+          "text_normalized": "8ae1c89.e1c9.y.oe.yoe.1cc9.s,an.5c9<$>",
+          "text_raw": "8ae1c89.e1c9.y.oe.yoe.1cc9.s,an.5c9<$>",
+          "transcription_id": "GC2a"
+        },
+        "IT2a": {
+          "currier": "B",
+          "folio": "f82v",
+          "locus": "f82v.14,+P0",
+          "locus_type": "P",
+          "original": "<f82v.14,+P0>     dolchedy.lchey.rol.rol.cheey.sain.shey<$>",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3235,
+          "source_line_numbers": [
+            3235
+          ],
+          "text_normalized": "dolchedy.lchey.rol.rol.cheey.sain.shey<$>",
+          "text_raw": "dolchedy.lchey.rol.rol.cheey.sain.shey<$>",
+          "transcription_id": "IT2a"
+        },
+        "RF1b-basic": {
+          "currier": "B",
+          "folio": "f82v",
+          "locus": "f82v.14,+P0",
+          "locus_type": "P",
+          "original": "<f82v.14,+P0>     dalchedy.lchey.r,ol.rol.cheey.sain.shey",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3238,
+          "source_line_numbers": [
+            3238
+          ],
+          "text_normalized": "dalchedy.lchey.r,ol.rol.cheey.sain.shey",
+          "text_raw": "dalchedy.lchey.r,ol.rol.cheey.sain.shey",
+          "transcription_id": "RF1b-basic"
+        },
+        "RF1b-full": {
+          "currier": "B",
+          "folio": "f82v",
+          "locus": "f82v.14,+P0",
+          "locus_type": "P",
+          "original": "<f82v.14,+P0>     dalchedy.lchey.r,ol.rol.cheey.sain.{ch'}ey",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3238,
+          "source_line_numbers": [
+            3238
+          ],
+          "text_normalized": "dalchedy.lchey.r,ol.rol.cheey.sain.{ch'}ey",
+          "text_raw": "dalchedy.lchey.r,ol.rol.cheey.sain.{ch'}ey",
+          "transcription_id": "RF1b-full"
+        },
+        "ZL3b": {
+          "currier": "B",
+          "folio": "f82v",
+          "locus": "f82v.14,+P0",
+          "locus_type": "P",
+          "original": "<f82v.14,+P0>     dalchedy.lchey.rol.rol.cheey.s,ain.shey<$>",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 4876,
+          "source_line_numbers": [
+            4876
+          ],
+          "text_normalized": "dalchedy.lchey.rol.rol.cheey.s,ain.shey<$>",
+          "text_raw": "dalchedy.lchey.rol.rol.cheey.s,ain.shey<$>",
+          "transcription_id": "ZL3b"
+        }
+      },
+      "scribe": "2",
+      "section": "biological",
+      "selection_rank": 6
+    },
+    {
+      "currier": "A",
+      "folio": "f45v",
+      "locus": "f45v.10,+P0",
+      "locus_type": "P",
+      "metadata_consistent": true,
+      "metadata_differences": [],
+      "records": {
+        "GC2a": {
+          "currier": "A",
+          "folio": "f45v",
+          "locus": "f45v.10,+P0",
+          "locus_type": "P",
+          "original": "<f45v.10,+P0>     82oy.ok29.oh9.k2oeoe.9k1oy8",
+          "scribe": "1",
+          "section": "herbal",
+          "source_line_number": 1289,
+          "source_line_numbers": [
+            1289
+          ],
+          "text_normalized": "82oy.ok29.oh9.k2oeoe.9k1oy8",
+          "text_raw": "82oy.ok29.oh9.k2oeoe.9k1oy8",
+          "transcription_id": "GC2a"
+        },
+        "IT2a": {
+          "currier": "A",
+          "folio": "f45v",
+          "locus": "f45v.10,+P0",
+          "locus_type": "P",
+          "original": "<f45v.10,+P0>     dshor.otshy.oky.tsholol<->ytchor.d",
+          "scribe": "1",
+          "section": "herbal",
+          "source_line_number": 1202,
+          "source_line_numbers": [
+            1202
+          ],
+          "text_normalized": "dshor.otshy.oky.tsholol<->ytchor.d",
+          "text_raw": "dshor.otshy.oky.tsholol<->ytchor.d",
+          "transcription_id": "IT2a"
+        },
+        "RF1b-basic": {
+          "currier": "A",
+          "folio": "f45v",
+          "locus": "f45v.10,+P0",
+          "locus_type": "P",
+          "original": "<f45v.10,+P0>     dshor.otshy.oky.tsholol<->ytchord",
+          "scribe": "1",
+          "section": "herbal",
+          "source_line_number": 1203,
+          "source_line_numbers": [
+            1203
+          ],
+          "text_normalized": "dshor.otshy.oky.tsholol<->ytchord",
+          "text_raw": "dshor.otshy.oky.tsholol<->ytchord",
+          "transcription_id": "RF1b-basic"
+        },
+        "RF1b-full": {
+          "currier": "A",
+          "folio": "f45v",
+          "locus": "f45v.10,+P0",
+          "locus_type": "P",
+          "original": "<f45v.10,+P0>     dshor.otshy.oky.tsholol<->ytchord",
+          "scribe": "1",
+          "section": "herbal",
+          "source_line_number": 1203,
+          "source_line_numbers": [
+            1203
+          ],
+          "text_normalized": "dshor.otshy.oky.tsholol<->ytchord",
+          "text_raw": "dshor.otshy.oky.tsholol<->ytchord",
+          "transcription_id": "RF1b-full"
+        },
+        "ZL3b": {
+          "currier": "A",
+          "folio": "f45v",
+          "locus": "f45v.10,+P0",
+          "locus_type": "P",
+          "original": "<f45v.10,+P0>     dshor.otshy.oky.tsholol<->ytchord",
+          "scribe": "1",
+          "section": "herbal",
+          "source_line_number": 1958,
+          "source_line_numbers": [
+            1958
+          ],
+          "text_normalized": "dshor.otshy.oky.tsholol<->ytchord",
+          "text_raw": "dshor.otshy.oky.tsholol<->ytchord",
+          "transcription_id": "ZL3b"
+        }
+      },
+      "scribe": "1",
+      "section": "herbal",
+      "selection_rank": 7
+    },
+    {
+      "currier": null,
+      "folio": "f72v3",
+      "locus": "f72v3.31,&Lz",
+      "locus_type": "L",
+      "metadata_consistent": true,
+      "metadata_differences": [],
+      "records": {
+        "GC2a": {
+          "currier": null,
+          "folio": "f72v3",
+          "locus": "f72v3.31,&Lz",
+          "locus_type": "L",
+          "original": "<f72v3.31,&Lz>    okae9",
+          "scribe": "4",
+          "section": "zodiac",
+          "source_line_number": 2525,
+          "source_line_numbers": [
+            2525
+          ],
+          "text_normalized": "okae9",
+          "text_raw": "okae9",
+          "transcription_id": "GC2a"
+        },
+        "IT2a": {
+          "currier": null,
+          "folio": "f72v3",
+          "locus": "f72v3.31,&Lz",
+          "locus_type": "L",
+          "original": "<f72v3.31,&Lz>    otaly",
+          "scribe": "4",
+          "section": "zodiac",
+          "source_line_number": 2386,
+          "source_line_numbers": [
+            2386
+          ],
+          "text_normalized": "otaly",
+          "text_raw": "otaly",
+          "transcription_id": "IT2a"
+        },
+        "RF1b-basic": {
+          "currier": null,
+          "folio": "f72v3",
+          "locus": "f72v3.31,&Lz",
+          "locus_type": "L",
+          "original": "<f72v3.31,&Lz>    otaly",
+          "scribe": "4",
+          "section": "zodiac",
+          "source_line_number": 2389,
+          "source_line_numbers": [
+            2389
+          ],
+          "text_normalized": "otaly",
+          "text_raw": "otaly",
+          "transcription_id": "RF1b-basic"
+        },
+        "RF1b-full": {
+          "currier": null,
+          "folio": "f72v3",
+          "locus": "f72v3.31,&Lz",
+          "locus_type": "L",
+          "original": "<f72v3.31,&Lz>    otaly",
+          "scribe": "4",
+          "section": "zodiac",
+          "source_line_number": 2389,
+          "source_line_numbers": [
+            2389
+          ],
+          "text_normalized": "otaly",
+          "text_raw": "otaly",
+          "transcription_id": "RF1b-full"
+        },
+        "ZL3b": {
+          "currier": null,
+          "folio": "f72v3",
+          "locus": "f72v3.31,&Lz",
+          "locus_type": "L",
+          "original": "<f72v3.31,&Lz>    <!08:30>otaly",
+          "scribe": "4",
+          "section": "zodiac",
+          "source_line_number": 3782,
+          "source_line_numbers": [
+            3782
+          ],
+          "text_normalized": "<!08:30>otaly",
+          "text_raw": "<!08:30>otaly",
+          "transcription_id": "ZL3b"
+        }
+      },
+      "scribe": "4",
+      "section": "zodiac",
+      "selection_rank": 8
+    },
+    {
+      "currier": null,
+      "folio": "f68v1",
+      "locus": "f68v1.8,@Ro",
+      "locus_type": "R",
+      "metadata_consistent": true,
+      "metadata_differences": [],
+      "records": {
+        "GC2a": {
+          "currier": null,
+          "folio": "f68v1",
+          "locus": "f68v1.8,@Ro",
+          "locus_type": "R",
+          "original": "<f68v1.8,@Ro>     ohC9.1ch.1chc9s",
+          "scribe": "4",
+          "section": "astronomical",
+          "source_line_number": 2180,
+          "source_line_numbers": [
+            2180
+          ],
+          "text_normalized": "ohC9.1ch.1chc9s",
+          "text_raw": "ohC9.1ch.1chc9s",
+          "transcription_id": "GC2a"
+        },
+        "IT2a": {
+          "currier": null,
+          "folio": "f68v1",
+          "locus": "f68v1.8,@Ro",
+          "locus_type": "R",
+          "original": "<f68v1.8,@Ro>     okeey.ch.ek.chekeys",
+          "scribe": "4",
+          "section": "astronomical",
+          "source_line_number": 2053,
+          "source_line_numbers": [
+            2053
+          ],
+          "text_normalized": "okeey.ch.ek.chekeys",
+          "text_raw": "okeey.ch.ek.chekeys",
+          "transcription_id": "IT2a"
+        },
+        "RF1b-basic": {
+          "currier": null,
+          "folio": "f68v1",
+          "locus": "f68v1.8,@Ro",
+          "locus_type": "R",
+          "original": "<f68v1.8,@Ro>     okeey.chek.chekeys",
+          "scribe": "4",
+          "section": "astronomical",
+          "source_line_number": 2056,
+          "source_line_numbers": [
+            2056
+          ],
+          "text_normalized": "okeey.chek.chekeys",
+          "text_raw": "okeey.chek.chekeys",
+          "transcription_id": "RF1b-basic"
+        },
+        "RF1b-full": {
+          "currier": null,
+          "folio": "f68v1",
+          "locus": "f68v1.8,@Ro",
+          "locus_type": "R",
+          "original": "<f68v1.8,@Ro>     okeey.chek.chekeys",
+          "scribe": "4",
+          "section": "astronomical",
+          "source_line_number": 2056,
+          "source_line_numbers": [
+            2056
+          ],
+          "text_normalized": "okeey.chek.chekeys",
+          "text_raw": "okeey.chek.chekeys",
+          "transcription_id": "RF1b-full"
+        },
+        "ZL3b": {
+          "currier": null,
+          "folio": "f68v1",
+          "locus": "f68v1.8,@Ro",
+          "locus_type": "R",
+          "original": "<f68v1.8,@Ro>     okeey.chek<!k on top of e>.chekeys",
+          "scribe": "4",
+          "section": "astronomical",
+          "source_line_number": 3278,
+          "source_line_numbers": [
+            3278
+          ],
+          "text_normalized": "okeey.chek<!k on top of e>.chekeys",
+          "text_raw": "okeey.chek<!k on top of e>.chekeys",
+          "transcription_id": "ZL3b"
+        }
+      },
+      "scribe": "4",
+      "section": "astronomical",
+      "selection_rank": 9
+    },
+    {
+      "currier": "B",
+      "folio": "f115v",
+      "locus": "f115v.26,+P0",
+      "locus_type": "P",
+      "metadata_consistent": true,
+      "metadata_differences": [],
+      "records": {
+        "GC2a": {
+          "currier": "B",
+          "folio": "f115v",
+          "locus": "f115v.26,+P0",
+          "locus_type": "P",
+          "original": "<f115v.26,+P0>    81cc89.h1c89.e1cc9.yoy.ae.1ohc79.8oe.4ohdos.4oehcc79.4ohay.ax",
+          "scribe": "3",
+          "section": "marginal_stars",
+          "source_line_number": 5751,
+          "source_line_numbers": [
+            5751
+          ],
+          "text_normalized": "81cc89.h1c89.e1cc9.yoy.ae.1ohc79.8oe.4ohdos.4oehcc79.4ohay.ax",
+          "text_raw": "81cc89.h1c89.e1cc9.yoy.ae.1ohc79.8oe.4ohdos.4oehcc79.4ohay.ax",
+          "transcription_id": "GC2a"
+        },
+        "IT2a": {
+          "currier": "B",
+          "folio": "f115v",
+          "locus": "f115v.26,+P0",
+          "locus_type": "P",
+          "original": "<f115v.26,+P0>    dcheedy.kchedy.lcheey.ror.al.chokedy.dol.qokeeeos.qolkeedy.qokar.ar",
+          "scribe": "3",
+          "section": "marginal_stars",
+          "source_line_number": 5374,
+          "source_line_numbers": [
+            5374
+          ],
+          "text_normalized": "dcheedy.kchedy.lcheey.ror.al.chokedy.dol.qokeeeos.qolkeedy.qokar.ar",
+          "text_raw": "dcheedy.kchedy.lcheey.ror.al.chokedy.dol.qokeeeos.qolkeedy.qokar.ar",
+          "transcription_id": "IT2a"
+        },
+        "RF1b-basic": {
+          "currier": "B",
+          "folio": "f115v",
+          "locus": "f115v.26,+P0",
+          "locus_type": "P",
+          "original": "<f115v.26,+P0>    dcheedy.kchedy.lcheey.ror.al.chokedy.dol.qokeeeos.qolkeedy.qokar.ar",
+          "scribe": "3",
+          "section": "marginal_stars",
+          "source_line_number": 5541,
+          "source_line_numbers": [
+            5541
+          ],
+          "text_normalized": "dcheedy.kchedy.lcheey.ror.al.chokedy.dol.qokeeeos.qolkeedy.qokar.ar",
+          "text_raw": "dcheedy.kchedy.lcheey.ror.al.chokedy.dol.qokeeeos.qolkeedy.qokar.ar",
+          "transcription_id": "RF1b-basic"
+        },
+        "RF1b-full": {
+          "currier": "B",
+          "folio": "f115v",
+          "locus": "f115v.26,+P0",
+          "locus_type": "P",
+          "original": "<f115v.26,+P0>    dcheedy.kchedy.lcheey.ror.al.choke@152;y.dol.qokeeeos.qolkee@152;y.qokar.ar",
+          "scribe": "3",
+          "section": "marginal_stars",
+          "source_line_number": 5541,
+          "source_line_numbers": [
+            5541
+          ],
+          "text_normalized": "dcheedy.kchedy.lcheey.ror.al.choke@152;y.dol.qokeeeos.qolkee@152;y.qokar.ar",
+          "text_raw": "dcheedy.kchedy.lcheey.ror.al.choke@152;y.dol.qokeeeos.qolkee@152;y.qokar.ar",
+          "transcription_id": "RF1b-full"
+        },
+        "ZL3b": {
+          "currier": "B",
+          "folio": "f115v",
+          "locus": "f115v.26,+P0",
+          "locus_type": "P",
+          "original": "<f115v.26,+P0>    dcheedy.kchedy,lcheey.ror.al.chokedy.dol.qokeeeos.qolkeedy.qokar,ar",
+          "scribe": "3",
+          "section": "marginal_stars",
+          "source_line_number": 8393,
+          "source_line_numbers": [
+            8393
+          ],
+          "text_normalized": "dcheedy.kchedy,lcheey.ror.al.chokedy.dol.qokeeeos.qolkeedy.qokar,ar",
+          "text_raw": "dcheedy.kchedy,lcheey.ror.al.chokedy.dol.qokeeeos.qolkeedy.qokar,ar",
+          "transcription_id": "ZL3b"
+        }
+      },
+      "scribe": "3",
+      "section": "marginal_stars",
+      "selection_rank": 10
+    },
+    {
+      "currier": "B",
+      "folio": "f84r",
+      "locus": "f84r.45,+P1",
+      "locus_type": "P",
+      "metadata_consistent": true,
+      "metadata_differences": [],
+      "records": {
+        "GC2a": {
+          "currier": "B",
+          "folio": "f84r",
+          "locus": "f84r.45,+P1",
+          "locus_type": "P",
+          "original": "<f84r.45,+P1>     9kcoe,1c79.4ohoy.5chc89.ohc89.L9.8ap",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3569,
+          "source_line_numbers": [
+            3569
+          ],
+          "text_normalized": "9kcoe,1c79.4ohoy.5chc89.ohc89.L9.8ap",
+          "text_raw": "9kcoe,1c79.4ohoy.5chc89.ohc89.L9.8ap",
+          "transcription_id": "GC2a"
+        },
+        "IT2a": {
+          "currier": "B",
+          "folio": "f84r",
+          "locus": "f84r.45,+P1",
+          "locus_type": "P",
+          "original": "<f84r.45,+P1>     yt?yl.chedy.qokor.shekedy.okedy.ithhy.dam",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3407,
+          "source_line_numbers": [
+            3407
+          ],
+          "text_normalized": "yt?yl.chedy.qokor.shekedy.okedy.ithhy.dam",
+          "text_raw": "yt?yl.chedy.qokor.shekedy.okedy.ithhy.dam",
+          "transcription_id": "IT2a"
+        },
+        "RF1b-basic": {
+          "currier": "B",
+          "folio": "f84r",
+          "locus": "f84r.45,+P1",
+          "locus_type": "P",
+          "original": "<f84r.45,+P1>     yteolchedy.qokor.shekedy.okedy.cthhy.dam",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3410,
+          "source_line_numbers": [
+            3410
+          ],
+          "text_normalized": "yteolchedy.qokor.shekedy.okedy.cthhy.dam",
+          "text_raw": "yteolchedy.qokor.shekedy.okedy.cthhy.dam",
+          "transcription_id": "RF1b-basic"
+        },
+        "RF1b-full": {
+          "currier": "B",
+          "folio": "f84r",
+          "locus": "f84r.45,+P1",
+          "locus_type": "P",
+          "original": "<f84r.45,+P1>     yteolche@152;y.qokor.{ch'}ekedy.okedy.{cthh}y.dam",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3410,
+          "source_line_numbers": [
+            3410
+          ],
+          "text_normalized": "yteolche@152;y.qokor.{ch'}ekedy.okedy.{cthh}y.dam",
+          "text_raw": "yteolche@152;y.qokor.{ch'}ekedy.okedy.{cthh}y.dam",
+          "transcription_id": "RF1b-full"
+        },
+        "ZL3b": {
+          "currier": "B",
+          "folio": "f84r",
+          "locus": "f84r.45,+P1",
+          "locus_type": "P",
+          "original": "<f84r.45,+P1>     yteolchedy.qokor.shekedy.okedy.{cthh}y.dam",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 5090,
+          "source_line_numbers": [
+            5090
+          ],
+          "text_normalized": "yteolchedy.qokor.shekedy.okedy.{cthh}y.dam",
+          "text_raw": "yteolchedy.qokor.shekedy.okedy.{cthh}y.dam",
+          "transcription_id": "ZL3b"
+        }
+      },
+      "scribe": "2",
+      "section": "biological",
+      "selection_rank": 11
+    },
+    {
+      "currier": "B",
+      "folio": "f85r1",
+      "locus": "f85r1.33,+P0",
+      "locus_type": "P",
+      "metadata_consistent": true,
+      "metadata_differences": [],
+      "records": {
+        "GC2a": {
+          "currier": "B",
+          "folio": "f85r1",
+          "locus": "f85r1.33,+P0",
+          "locus_type": "P",
+          "original": "<f85r1.33,+P0>    sayaM.5c9.os,am.okay.9kay.okc89.oy.am.okay.oeay.oehcc79",
+          "scribe": "2",
+          "section": "text_only",
+          "source_line_number": 3659,
+          "source_line_numbers": [
+            3659
+          ],
+          "text_normalized": "sayaM.5c9.os,am.okay.9kay.okc89.oy.am.okay.oeay.oehcc79",
+          "text_raw": "sayaM.5c9.os,am.okay.9kay.okc89.oy.am.okay.oeay.oehcc79",
+          "transcription_id": "GC2a"
+        },
+        "IT2a": {
+          "currier": "B",
+          "folio": "f85r1",
+          "locus": "f85r1.33,+P0",
+          "locus_type": "P",
+          "original": "<f85r1.33,+P0>    raraiiin.shey.osaiin.otar.ytar.otedy.or.aiin.otar.alar.olkeedy",
+          "scribe": "2",
+          "section": "text_only",
+          "source_line_number": 3495,
+          "source_line_numbers": [
+            3495
+          ],
+          "text_normalized": "raraiiin.shey.osaiin.otar.ytar.otedy.or.aiin.otar.alar.olkeedy",
+          "text_raw": "raraiiin.shey.osaiin.otar.ytar.otedy.or.aiin.otar.alar.olkeedy",
+          "transcription_id": "IT2a"
+        },
+        "RF1b-basic": {
+          "currier": "B",
+          "folio": "f85r1",
+          "locus": "f85r1.33,+P0",
+          "locus_type": "P",
+          "original": "<f85r1.33,+P0>    saraiiin.shey.osaiin.otar.ytar.otedy.or.aiin.otar.olar.olkeedy",
+          "scribe": "2",
+          "section": "text_only",
+          "source_line_number": 3498,
+          "source_line_numbers": [
+            3498
+          ],
+          "text_normalized": "saraiiin.shey.osaiin.otar.ytar.otedy.or.aiin.otar.olar.olkeedy",
+          "text_raw": "saraiiin.shey.osaiin.otar.ytar.otedy.or.aiin.otar.olar.olkeedy",
+          "transcription_id": "RF1b-basic"
+        },
+        "RF1b-full": {
+          "currier": "B",
+          "folio": "f85r1",
+          "locus": "f85r1.33,+P0",
+          "locus_type": "P",
+          "original": "<f85r1.33,+P0>    saraiiin.{ch'}ey.osaiin.otar.ytar.otedy.or.aiin.otar.olar.olkee@152;y",
+          "scribe": "2",
+          "section": "text_only",
+          "source_line_number": 3498,
+          "source_line_numbers": [
+            3498
+          ],
+          "text_normalized": "saraiiin.{ch'}ey.osaiin.otar.ytar.otedy.or.aiin.otar.olar.olkee@152;y",
+          "text_raw": "saraiiin.{ch'}ey.osaiin.otar.ytar.otedy.or.aiin.otar.olar.olkee@152;y",
+          "transcription_id": "RF1b-full"
+        },
+        "ZL3b": {
+          "currier": "B",
+          "folio": "f85r1",
+          "locus": "f85r1.33,+P0",
+          "locus_type": "P",
+          "original": "<f85r1.33,+P0>    raraiiin.shey.osaiin.otar.ytar.otedy.or.aiin.otar.olar.olkeedy",
+          "scribe": "2",
+          "section": "text_only",
+          "source_line_number": 5209,
+          "source_line_numbers": [
+            5209
+          ],
+          "text_normalized": "raraiiin.shey.osaiin.otar.ytar.otedy.or.aiin.otar.olar.olkeedy",
+          "text_raw": "raraiiin.shey.osaiin.otar.ytar.otedy.or.aiin.otar.olar.olkeedy",
+          "transcription_id": "ZL3b"
+        }
+      },
+      "scribe": "2",
+      "section": "text_only",
+      "selection_rank": 12
+    },
+    {
+      "currier": "B",
+      "folio": "f81r",
+      "locus": "f81r.6,+P0",
+      "locus_type": "P",
+      "metadata_consistent": true,
+      "metadata_differences": [],
+      "records": {
+        "GC2a": {
+          "currier": "B",
+          "folio": "f81r",
+          "locus": "f81r.6,+P0",
+          "locus_type": "P",
+          "original": "<f81r.6,+P0>      say.oe.cscs.okC9.2oy.4ohC9.oe",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3276,
+          "source_line_numbers": [
+            3276
+          ],
+          "text_normalized": "say.oe.cscs.okC9.2oy.4ohC9.oe",
+          "text_raw": "say.oe.cscs.okC9.2oy.4ohC9.oe",
+          "transcription_id": "GC2a"
+        },
+        "IT2a": {
+          "currier": "B",
+          "folio": "f81r",
+          "locus": "f81r.6,+P0",
+          "locus_type": "P",
+          "original": "<f81r.6,+P0>      sar.ol.eses.oteey.shor.qokeey.ol",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3120,
+          "source_line_numbers": [
+            3120
+          ],
+          "text_normalized": "sar.ol.eses.oteey.shor.qokeey.ol",
+          "text_raw": "sar.ol.eses.oteey.shor.qokeey.ol",
+          "transcription_id": "IT2a"
+        },
+        "RF1b-basic": {
+          "currier": "B",
+          "folio": "f81r",
+          "locus": "f81r.6,+P0",
+          "locus_type": "P",
+          "original": "<f81r.6,+P0>      sar.ol.eses.oteey.shor.qokeey.ol",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3123,
+          "source_line_numbers": [
+            3123
+          ],
+          "text_normalized": "sar.ol.eses.oteey.shor.qokeey.ol",
+          "text_raw": "sar.ol.eses.oteey.shor.qokeey.ol",
+          "transcription_id": "RF1b-basic"
+        },
+        "RF1b-full": {
+          "currier": "B",
+          "folio": "f81r",
+          "locus": "f81r.6,+P0",
+          "locus_type": "P",
+          "original": "<f81r.6,+P0>      sar.ol.eses.oteey.shor.qokeey.ol",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3123,
+          "source_line_numbers": [
+            3123
+          ],
+          "text_normalized": "sar.ol.eses.oteey.shor.qokeey.ol",
+          "text_raw": "sar.ol.eses.oteey.shor.qokeey.ol",
+          "transcription_id": "RF1b-full"
+        },
+        "ZL3b": {
+          "currier": "B",
+          "folio": "f81r",
+          "locus": "f81r.6,+P0",
+          "locus_type": "P",
+          "original": "<f81r.6,+P0>      sar.ol,eses.oteey.shor.qokeey.ol",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 4731,
+          "source_line_numbers": [
+            4731
+          ],
+          "text_normalized": "sar.ol,eses.oteey.shor.qokeey.ol",
+          "text_raw": "sar.ol,eses.oteey.shor.qokeey.ol",
+          "transcription_id": "ZL3b"
+        }
+      },
+      "scribe": "2",
+      "section": "biological",
+      "selection_rank": 13
+    },
+    {
+      "currier": "B",
+      "folio": "f83r",
+      "locus": "f83r.6,+P0",
+      "locus_type": "P",
+      "metadata_consistent": true,
+      "metadata_differences": [],
+      "records": {
+        "GC2a": {
+          "currier": "B",
+          "folio": "f83r",
+          "locus": "f83r.6,+P0",
+          "locus_type": "P",
+          "original": "<f83r.6,+P0>      s1c89.1c819.4ohae.oe1c89.4oham.1c89.4ohC89.e1c89.4oh9",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3436,
+          "source_line_numbers": [
+            3436
+          ],
+          "text_normalized": "s1c89.1c819.4ohae.oe1c89.4oham.1c89.4ohC89.e1c89.4oh9",
+          "text_raw": "s1c89.1c819.4ohae.oe1c89.4oham.1c89.4ohC89.e1c89.4oh9",
+          "transcription_id": "GC2a"
+        },
+        "IT2a": {
+          "currier": "B",
+          "folio": "f83r",
+          "locus": "f83r.6,+P0",
+          "locus_type": "P",
+          "original": "<f83r.6,+P0>      schedy.chedchy.qokal.olchedy.qokaiin.chedy.qokeedy.lchedy.qoky",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3276,
+          "source_line_numbers": [
+            3276
+          ],
+          "text_normalized": "schedy.chedchy.qokal.olchedy.qokaiin.chedy.qokeedy.lchedy.qoky",
+          "text_raw": "schedy.chedchy.qokal.olchedy.qokaiin.chedy.qokeedy.lchedy.qoky",
+          "transcription_id": "IT2a"
+        },
+        "RF1b-basic": {
+          "currier": "B",
+          "folio": "f83r",
+          "locus": "f83r.6,+P0",
+          "locus_type": "P",
+          "original": "<f83r.6,+P0>      schedy.chedchy.qokal.olchedy.qokaiin.chedy.qokeedy.lchedy.qoky",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3279,
+          "source_line_numbers": [
+            3279
+          ],
+          "text_normalized": "schedy.chedchy.qokal.olchedy.qokaiin.chedy.qokeedy.lchedy.qoky",
+          "text_raw": "schedy.chedchy.qokal.olchedy.qokaiin.chedy.qokeedy.lchedy.qoky",
+          "transcription_id": "RF1b-basic"
+        },
+        "RF1b-full": {
+          "currier": "B",
+          "folio": "f83r",
+          "locus": "f83r.6,+P0",
+          "locus_type": "P",
+          "original": "<f83r.6,+P0>      schedy.chedchy.qokal.olchedy.qokaiin.chedy.qokeedy.lchedy.qoky",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3279,
+          "source_line_numbers": [
+            3279
+          ],
+          "text_normalized": "schedy.chedchy.qokal.olchedy.qokaiin.chedy.qokeedy.lchedy.qoky",
+          "text_raw": "schedy.chedchy.qokal.olchedy.qokaiin.chedy.qokeedy.lchedy.qoky",
+          "transcription_id": "RF1b-full"
+        },
+        "ZL3b": {
+          "currier": "B",
+          "folio": "f83r",
+          "locus": "f83r.6,+P0",
+          "locus_type": "P",
+          "original": "<f83r.6,+P0>      schedy.chedchy.qokal.olchedy.qokaiin.chedy.qokeedy.lchedy.qoky",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 4929,
+          "source_line_numbers": [
+            4929
+          ],
+          "text_normalized": "schedy.chedchy.qokal.olchedy.qokaiin.chedy.qokeedy.lchedy.qoky",
+          "text_raw": "schedy.chedchy.qokal.olchedy.qokaiin.chedy.qokeedy.lchedy.qoky",
+          "transcription_id": "ZL3b"
+        }
+      },
+      "scribe": "2",
+      "section": "biological",
+      "selection_rank": 14
+    },
+    {
+      "currier": "B",
+      "folio": "f80r",
+      "locus": "f80r.48,+P0",
+      "locus_type": "P",
+      "metadata_consistent": true,
+      "metadata_differences": [],
+      "records": {
+        "GC2a": {
+          "currier": "B",
+          "folio": "f80r",
+          "locus": "f80r.48,+P0",
+          "locus_type": "P",
+          "original": "<f80r.48,+P0>     sae.29.eom.1C9.4oke.3ck9.3coh9.4chim.1cc9.yap",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3217,
+          "source_line_numbers": [
+            3217
+          ],
+          "text_normalized": "sae.29.eom.1C9.4oke.3ck9.3coh9.4chim.1cc9.yap",
+          "text_raw": "sae.29.eom.1C9.4oke.3ck9.3coh9.4chim.1cc9.yap",
+          "transcription_id": "GC2a"
+        },
+        "IT2a": {
+          "currier": "B",
+          "folio": "f80r",
+          "locus": "f80r.48,+P0",
+          "locus_type": "P",
+          "original": "<f80r.48,+P0>     sal.shy.loiin.cheey.qotl.shety.cheoky.qokain.cheey.ram",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3063,
+          "source_line_numbers": [
+            3063
+          ],
+          "text_normalized": "sal.shy.loiin.cheey.qotl.shety.cheoky.qokain.cheey.ram",
+          "text_raw": "sal.shy.loiin.cheey.qotl.shety.cheoky.qokain.cheey.ram",
+          "transcription_id": "IT2a"
+        },
+        "RF1b-basic": {
+          "currier": "B",
+          "folio": "f80r",
+          "locus": "f80r.48,+P0",
+          "locus_type": "P",
+          "original": "<f80r.48,+P0>     sal.shy.loiin.cheey.qotl.shety.sheoky.qokiiin.cheey.ram",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3066,
+          "source_line_numbers": [
+            3066
+          ],
+          "text_normalized": "sal.shy.loiin.cheey.qotl.shety.sheoky.qokiiin.cheey.ram",
+          "text_raw": "sal.shy.loiin.cheey.qotl.shety.sheoky.qokiiin.cheey.ram",
+          "transcription_id": "RF1b-basic"
+        },
+        "RF1b-full": {
+          "currier": "B",
+          "folio": "f80r",
+          "locus": "f80r.48,+P0",
+          "locus_type": "P",
+          "original": "<f80r.48,+P0>     sal.shy.loiin.cheey.qotl.shety.sheoky.qokiiin.cheey.ram",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 3066,
+          "source_line_numbers": [
+            3066
+          ],
+          "text_normalized": "sal.shy.loiin.cheey.qotl.shety.sheoky.qokiiin.cheey.ram",
+          "text_raw": "sal.shy.loiin.cheey.qotl.shety.sheoky.qokiiin.cheey.ram",
+          "transcription_id": "RF1b-full"
+        },
+        "ZL3b": {
+          "currier": "B",
+          "folio": "f80r",
+          "locus": "f80r.48,+P0",
+          "locus_type": "P",
+          "original": "<f80r.48,+P0>     sal.shy.loiin.cheey.qotl.shety.sheoky.qokaiin.cheey.ram",
+          "scribe": "2",
+          "section": "biological",
+          "source_line_number": 4652,
+          "source_line_numbers": [
+            4652
+          ],
+          "text_normalized": "sal.shy.loiin.cheey.qotl.shety.sheoky.qokaiin.cheey.ram",
+          "text_raw": "sal.shy.loiin.cheey.qotl.shety.sheoky.qokaiin.cheey.ram",
+          "transcription_id": "ZL3b"
+        }
+      },
+      "scribe": "2",
+      "section": "biological",
+      "selection_rank": 15
+    }
+  ],
+  "manual_review": {
+    "reviewer_instruction": "Inspect all selected loci side by side. Confirm that each record refers to the same manuscript locus and that source text/provenance have not been shifted or misaligned. Record any discrepancy in the Markdown review sheet.",
+    "status": "PENDING"
+  },
+  "sample_size": 15,
+  "schema_version": "1.0",
+  "seed": 40814041438,
+  "selection_method": "deterministic greedy metadata-coverage sample from locus IDs present in all five transcriptions",
+  "shared_loci_total": 5213
+}
