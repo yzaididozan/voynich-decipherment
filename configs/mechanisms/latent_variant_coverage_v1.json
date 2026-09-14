@@ -1,0 +1,104 @@
+{
+  "control_output_root": "data/controls/ciphers/latent_variant_coverage_v1",
+  "evaluation_scope": "CONTROL VALIDATION ONLY",
+  "expected_relation_rows": 300,
+  "expected_runs": 60,
+  "experiment_id": "latent-variant-coverage-exploration-v1",
+  "exploratory_reporting": {
+    "automatic_winner_selection": false,
+    "confirmatory_candidate_selection_allowed": false,
+    "no_single_similarity_score": true,
+    "report_coverage_diagnostics": true,
+    "report_each_predictive_delta": true,
+    "report_seed_and_language_variation": true,
+    "success_threshold_frozen": false
+  },
+  "fit_scope": "CONTROL TRAIN ONLY",
+  "informed_by": {
+    "experiment_id": "latent-variant-exploration-v1",
+    "finding": "Phase 3A showed a consistent upward token-Markov-minus-trigram trajectory from K=1 to K=4, while only about 36%\u201348% of validation tokens were affected at N=64.",
+    "status": "post-hoc exploratory follow-up, not Level-2 retrofit"
+  },
+  "leakage_guards": {
+    "master_codebook_fit_on_control_train_only": true,
+    "reserved_control_test_encoded": false,
+    "reserved_control_test_parsed_or_scored": false,
+    "validation_does_not_select_targets_or_codebook": true,
+    "voynich_test_LOCKED_accessed": false
+  },
+  "level2_config_path": "configs/evaluation/level2_predictive_controls_v1.json",
+  "level2_split_root": "data/controls/splits/level2_v1",
+  "mechanism": {
+    "code_alphabet_size": 16,
+    "code_token_length": 4,
+    "coverage_target_counts": [
+      64,
+      256,
+      1024
+    ],
+    "fallback": "train_fitted_monoalphabetic_character_substitution",
+    "family_identity_positions": [
+      0,
+      1,
+      2
+    ],
+    "important_control": "Across N=64,256,1024, K=4, code alphabet size=16, code length=4, fallback mapping, master codebook, and occurrence-level variant choice are held fixed. Only the number of active TRAIN-selected lexical families changes.",
+    "master_key_policy": "Fit one 1024-word master codebook per source/seed from CONTROL TRAIN; N=64 and N=256 activate prefixes of the same frequency-ranked master target list, so mappings and variant choices for shared words are identical across N.",
+    "master_target_count": 1024,
+    "name": "related_multi_code_nomenclator_coverage",
+    "phase3a_comparison_note": "Phase 3A used two-glyph target codes; Phase 3A.2 uses four-glyph target codes in every condition. Therefore Phase-3A.2 N=64 is an internal baseline and is not treated as numerically identical to the Phase-3A N=64/K=4 condition.",
+    "target_word_selection": "top_train_frequency_then_lexicographic_tie_break",
+    "validation_unseen_character_policy": "reversible_unicode_codepoint_glyph",
+    "variant_choice": "uniform_deterministic_hash_by_occurrence",
+    "variant_count": 4,
+    "variant_operation": "single_token_final_glyph_substitution",
+    "variant_position": 3
+  },
+  "operational_relations": [
+    "hmm_space_free",
+    "hmm_token_aware",
+    "slot_grammar",
+    "token_markov",
+    "copy_edit"
+  ],
+  "phase_label": "Phase 3A.2 \u2014 Lexical Coverage Dose\u2013Response",
+  "primary_prediction": "Holding K=4 and code geometry fixed, increasing active lexical coverage from N=64 to N=256 to N=1024 should move the token-Markov-minus-matched-trigram validation delta upward (less negative and potentially positive), while the other four Voynich-direction relations remain positive.",
+  "question": "With related surface variation held fixed at K=4, does increasing the fraction of lexical items receiving variable ciphertext forms continue to weaken exact-token sequential predictability toward the Voynich regime while preserving the other four predictive relations?",
+  "result_output_root": "results/controls/latent_variant_coverage_exploration/v1",
+  "schema_version": "1.0",
+  "seeds": [
+    40814041438,
+    40814041439,
+    40814041440,
+    40814041441,
+    40814041442
+  ],
+  "source_root": "data/controls/languages_open_v1",
+  "sources": {
+    "french_profiterole_ud218": {
+      "expected_lines": 2632,
+      "expected_tokens": 20000,
+      "language": "French",
+      "source_sha256": "7f667acbc6bb124901d803749a0b518463bdd9d836b5c713646ec6037fcd8f91"
+    },
+    "german_rem_v21": {
+      "expected_lines": 4470,
+      "expected_tokens": 20000,
+      "language": "German",
+      "source_sha256": "343f261bf5c9338ba31cbb273c723b997f079dc6a026e768f328bbdfa122c601"
+    },
+    "italian_old_ud218": {
+      "expected_lines": 740,
+      "expected_tokens": 20000,
+      "language": "Italian",
+      "source_sha256": "fbcd49798c1ee6517578f7a36d7450e6cf71e21e9f8c3ba2841eea4611e072a4"
+    },
+    "latin_udante_ud218": {
+      "expected_lines": 725,
+      "expected_tokens": 20000,
+      "language": "Latin",
+      "source_sha256": "8e5eecd174b432056549ee7f5ef811ff1ab2814f14de6aa51973571cb22d5fd4"
+    }
+  },
+  "status": "exploratory"
+}

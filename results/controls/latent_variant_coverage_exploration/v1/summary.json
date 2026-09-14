@@ -1,0 +1,108 @@
+{
+  "automatic_winner_selected": false,
+  "code_alphabet_size": 16,
+  "code_token_length": 4,
+  "experiment_id": "latent-variant-coverage-exploration-v1",
+  "generator_sha256": "9a0e69a3707955db5b0eea8f98c5fff0e02e5af14091c6692c1a76e7a2404af8",
+  "level2_config_sha256": "6f6214286c9c8e47e90c27cf4c41da60f21c12fd8c31c07a4a98e3aada8b236c",
+  "master_codebook_invariance_across_n": true,
+  "next_step": "Interpret the coverage trajectory. If a stable candidate region emerges, write and freeze a separate Phase-3B confirmatory protocol before any reserved-test use. If the trajectory plateaus or disrupts other relations, retain the negative result and design the next exploratory intervention.",
+  "no_single_similarity_score": true,
+  "phase3a2_config_sha256": "5b9d34cba82717fb25a1a3945fc96d8137af83922d07d599a7ca511987a5b1e2",
+  "primary_prediction": "Holding K=4 and code geometry fixed, increasing active lexical coverage from N=64 to N=256 to N=1024 should move the token-Markov-minus-matched-trigram validation delta upward (less negative and potentially positive), while the other four Voynich-direction relations remain positive.",
+  "relation_rows": 300,
+  "reserved_control_test_encoded": false,
+  "reserved_control_test_parsed_or_scored": false,
+  "runs": 60,
+  "schema_version": "1.0",
+  "status": "exploratory",
+  "target_counts": [
+    64,
+    256,
+    1024
+  ],
+  "trajectory": {
+    "interpretation": "Exploratory trajectory only. Do not select a confirmatory N or access reserved-test data without a separate Phase-3B freeze.",
+    "other_four_relations_by_n": {
+      "1024": {
+        "copy_edit": {
+          "mean_delta_bits_per_event": 1.2415122886665213,
+          "strong_direction_runs_20": 20
+        },
+        "hmm_space_free": {
+          "mean_delta_bits_per_event": 0.48276000652864404,
+          "strong_direction_runs_20": 20
+        },
+        "hmm_token_aware": {
+          "mean_delta_bits_per_event": 0.3658733876927971,
+          "strong_direction_runs_20": 20
+        },
+        "slot_grammar": {
+          "mean_delta_bits_per_event": 0.27498605188846376,
+          "strong_direction_runs_20": 20
+        }
+      },
+      "256": {
+        "copy_edit": {
+          "mean_delta_bits_per_event": 1.5837259314906118,
+          "strong_direction_runs_20": 20
+        },
+        "hmm_space_free": {
+          "mean_delta_bits_per_event": 0.6200299519590888,
+          "strong_direction_runs_20": 20
+        },
+        "hmm_token_aware": {
+          "mean_delta_bits_per_event": 0.5990305492527738,
+          "strong_direction_runs_20": 20
+        },
+        "slot_grammar": {
+          "mean_delta_bits_per_event": 0.5293496076273558,
+          "strong_direction_runs_20": 20
+        }
+      },
+      "64": {
+        "copy_edit": {
+          "mean_delta_bits_per_event": 1.7867088264620463,
+          "strong_direction_runs_20": 20
+        },
+        "hmm_space_free": {
+          "mean_delta_bits_per_event": 0.7241781449666331,
+          "strong_direction_runs_20": 20
+        },
+        "hmm_token_aware": {
+          "mean_delta_bits_per_event": 0.7611538126140148,
+          "strong_direction_runs_20": 20
+        },
+        "slot_grammar": {
+          "mean_delta_bits_per_event": 0.6889133074663784,
+          "strong_direction_runs_20": 20
+        }
+      }
+    },
+    "token_markov_mean_delta_by_n": {
+      "1024": -0.41208453450530924,
+      "256": -0.42714249146791605,
+      "64": -0.3841538424282287
+    },
+    "token_markov_mean_delta_monotone_non_decreasing": false,
+    "validation_targeted_token_fraction_by_n": {
+      "1024": {
+        "max_language_mean": 0.7907921462423833,
+        "mean_across_languages": 0.743311772141809,
+        "min_language_mean": 0.6653859587844918
+      },
+      "256": {
+        "max_language_mean": 0.6389380530973451,
+        "mean_across_languages": 0.6026631668746689,
+        "min_language_mean": 0.5186866922808243
+      },
+      "64": {
+        "max_language_mean": 0.47575221238938054,
+        "mean_across_languages": 0.4343655373193477,
+        "min_language_mean": 0.36220747467691233
+      }
+    }
+  },
+  "variant_count": 4,
+  "voynich_locked_test_accessed": false
+}
