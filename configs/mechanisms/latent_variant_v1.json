@@ -1,0 +1,88 @@
+{
+  "base_mechanism": "related_multi_code_nomenclator",
+  "control_output_root": "data/controls/ciphers/latent_variant_v1",
+  "evaluation_scope": "CONTROL VALIDATION ONLY",
+  "expected_runs": 60,
+  "experiment_id": "latent-variant-exploration-v1",
+  "exploratory_reporting": {
+    "automatic_winner_selection": false,
+    "no_single_similarity_score": true,
+    "report_each_predictive_delta": true,
+    "report_seed_and_language_variation": true,
+    "success_threshold_frozen": false
+  },
+  "fit_scope": "CONTROL TRAIN ONLY",
+  "leakage_guards": {
+    "mechanism_key_fit_on_control_train_only": true,
+    "reserved_control_test_encoded": false,
+    "reserved_control_test_parsed_or_scored": false,
+    "validation_does_not_select_target_words_or_codebook": true,
+    "voynich_test_LOCKED_accessed": false
+  },
+  "level2_config_path": "configs/evaluation/level2_predictive_controls_v1.json",
+  "level2_split_root": "data/controls/splits/level2_v1",
+  "mechanism": {
+    "code_alphabet_size": 16,
+    "code_token_length": 2,
+    "fallback": "train_fitted_monoalphabetic_character_substitution",
+    "family_slot_width": 4,
+    "important_control": "The 16-symbol nomenclator code alphabet and two-glyph code length are held fixed across K=1,2,4. Only the number of permitted token-final variants changes.",
+    "k1_note": "K=1 is the internal fixed-code baseline for this Phase-3 family. It is not claimed to be byte-identical to the earlier Level-2 nomenclator.",
+    "nomenclator_words": 64,
+    "target_word_selection": "top_train_frequency_then_lexicographic_tie_break",
+    "validation_unseen_character_policy": "reversible_unicode_codepoint_glyph",
+    "variant_choice": "uniform_deterministic_hash_by_occurrence",
+    "variant_counts": [
+      1,
+      2,
+      4
+    ],
+    "variant_operation": "single_token_final_glyph_substitution"
+  },
+  "operational_relations": [
+    "hmm_space_free",
+    "hmm_token_aware",
+    "slot_grammar",
+    "token_markov",
+    "copy_edit"
+  ],
+  "primary_prediction": "As K increases from 1 to 2 to 4, the exact-token Markov minus matched trigram validation delta should move upward from the fixed-code regime toward zero and potentially positive values, while the other four Voynich-direction relations remain positive.",
+  "question": "Can constrained many-to-one lexical surface variation weaken exact-token sequential predictability while preserving the local glyph-level predictive structure observed in Voynich?",
+  "result_output_root": "results/controls/latent_variant_exploration/v1",
+  "schema_version": "1.0",
+  "seeds": [
+    40814041438,
+    40814041439,
+    40814041440,
+    40814041441,
+    40814041442
+  ],
+  "source_root": "data/controls/languages_open_v1",
+  "sources": {
+    "french_profiterole_ud218": {
+      "expected_lines": 2632,
+      "expected_tokens": 20000,
+      "language": "French",
+      "source_sha256": "7f667acbc6bb124901d803749a0b518463bdd9d836b5c713646ec6037fcd8f91"
+    },
+    "german_rem_v21": {
+      "expected_lines": 4470,
+      "expected_tokens": 20000,
+      "language": "German",
+      "source_sha256": "343f261bf5c9338ba31cbb273c723b997f079dc6a026e768f328bbdfa122c601"
+    },
+    "italian_old_ud218": {
+      "expected_lines": 740,
+      "expected_tokens": 20000,
+      "language": "Italian",
+      "source_sha256": "fbcd49798c1ee6517578f7a36d7450e6cf71e21e9f8c3ba2841eea4611e072a4"
+    },
+    "latin_udante_ud218": {
+      "expected_lines": 725,
+      "expected_tokens": 20000,
+      "language": "Latin",
+      "source_sha256": "8e5eecd174b432056549ee7f5ef811ff1ab2814f14de6aa51973571cb22d5fd4"
+    }
+  },
+  "status": "exploratory"
+}

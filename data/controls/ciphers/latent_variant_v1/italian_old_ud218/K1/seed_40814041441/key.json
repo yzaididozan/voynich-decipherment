@@ -1,0 +1,2287 @@
+{
+  "active_variants": {
+    "a": [
+      [
+        "N0003",
+        "N0001"
+      ]
+    ],
+    "ben": [
+      [
+        "N0013",
+        "N0007"
+      ]
+    ],
+    "ch": [
+      [
+        "N0012",
+        "N0007"
+      ]
+    ],
+    "che": [
+      [
+        "N0013",
+        "N0010"
+      ]
+    ],
+    "ché": [
+      [
+        "N0001",
+        "N0010"
+      ]
+    ],
+    "ci": [
+      [
+        "N0015",
+        "N0007"
+      ]
+    ],
+    "come": [
+      [
+        "N0008",
+        "N0009"
+      ]
+    ],
+    "con": [
+      [
+        "N0012",
+        "N0010"
+      ]
+    ],
+    "così": [
+      [
+        "N0004",
+        "N0007"
+      ]
+    ],
+    "d": [
+      [
+        "N0004",
+        "N0009"
+      ]
+    ],
+    "da": [
+      [
+        "N0005",
+        "N0007"
+      ]
+    ],
+    "de": [
+      [
+        "N0014",
+        "N0009"
+      ]
+    ],
+    "di": [
+      [
+        "N0016",
+        "N0001"
+      ]
+    ],
+    "disse": [
+      [
+        "N0011",
+        "N0010"
+      ]
+    ],
+    "e": [
+      [
+        "N0014",
+        "N0001"
+      ]
+    ],
+    "era": [
+      [
+        "N0002",
+        "N0007"
+      ]
+    ],
+    "fa": [
+      [
+        "N0007",
+        "N0007"
+      ]
+    ],
+    "fu": [
+      [
+        "N0009",
+        "N0010"
+      ]
+    ],
+    "già": [
+      [
+        "N0002",
+        "N0009"
+      ]
+    ],
+    "i": [
+      [
+        "N0004",
+        "N0010"
+      ]
+    ],
+    "il": [
+      [
+        "N0008",
+        "N0010"
+      ]
+    ],
+    "in": [
+      [
+        "N0002",
+        "N0010"
+      ]
+    ],
+    "io": [
+      [
+        "N0009",
+        "N0007"
+      ]
+    ],
+    "l": [
+      [
+        "N0010",
+        "N0010"
+      ]
+    ],
+    "la": [
+      [
+        "N0012",
+        "N0001"
+      ]
+    ],
+    "le": [
+      [
+        "N0010",
+        "N0009"
+      ]
+    ],
+    "li": [
+      [
+        "N0015",
+        "N0001"
+      ]
+    ],
+    "lo": [
+      [
+        "N0006",
+        "N0009"
+      ]
+    ],
+    "lor": [
+      [
+        "N0007",
+        "N0009"
+      ]
+    ],
+    "lui": [
+      [
+        "N0008",
+        "N0001"
+      ]
+    ],
+    "là": [
+      [
+        "N0011",
+        "N0007"
+      ]
+    ],
+    "m": [
+      [
+        "N0001",
+        "N0001"
+      ]
+    ],
+    "ma": [
+      [
+        "N0006",
+        "N0007"
+      ]
+    ],
+    "maestro": [
+      [
+        "N0009",
+        "N0009"
+      ]
+    ],
+    "me": [
+      [
+        "N0003",
+        "N0007"
+      ]
+    ],
+    "mi": [
+      [
+        "N0010",
+        "N0001"
+      ]
+    ],
+    "mio": [
+      [
+        "N0013",
+        "N0009"
+      ]
+    ],
+    "n": [
+      [
+        "N0016",
+        "N0009"
+      ]
+    ],
+    "ne": [
+      [
+        "N0006",
+        "N0001"
+      ]
+    ],
+    "noi": [
+      [
+        "N0005",
+        "N0001"
+      ]
+    ],
+    "non": [
+      [
+        "N0016",
+        "N0007"
+      ]
+    ],
+    "o": [
+      [
+        "N0009",
+        "N0001"
+      ]
+    ],
+    "or": [
+      [
+        "N0004",
+        "N0001"
+      ]
+    ],
+    "per": [
+      [
+        "N0010",
+        "N0007"
+      ]
+    ],
+    "perché": [
+      [
+        "N0015",
+        "N0010"
+      ]
+    ],
+    "più": [
+      [
+        "N0002",
+        "N0001"
+      ]
+    ],
+    "poi": [
+      [
+        "N0014",
+        "N0010"
+      ]
+    ],
+    "qual": [
+      [
+        "N0001",
+        "N0009"
+      ]
+    ],
+    "quando": [
+      [
+        "N0006",
+        "N0010"
+      ]
+    ],
+    "quel": [
+      [
+        "N0007",
+        "N0010"
+      ]
+    ],
+    "quella": [
+      [
+        "N0005",
+        "N0009"
+      ]
+    ],
+    "s": [
+      [
+        "N0008",
+        "N0007"
+      ]
+    ],
+    "se": [
+      [
+        "N0001",
+        "N0007"
+      ]
+    ],
+    "si": [
+      [
+        "N0011",
+        "N0001"
+      ]
+    ],
+    "son": [
+      [
+        "N0014",
+        "N0007"
+      ]
+    ],
+    "sua": [
+      [
+        "N0012",
+        "N0009"
+      ]
+    ],
+    "sì": [
+      [
+        "N0005",
+        "N0010"
+      ]
+    ],
+    "ti": [
+      [
+        "N0016",
+        "N0010"
+      ]
+    ],
+    "tu": [
+      [
+        "N0013",
+        "N0001"
+      ]
+    ],
+    "tutto": [
+      [
+        "N0003",
+        "N0010"
+      ]
+    ],
+    "un": [
+      [
+        "N0011",
+        "N0009"
+      ]
+    ],
+    "una": [
+      [
+        "N0015",
+        "N0009"
+      ]
+    ],
+    "vidi": [
+      [
+        "N0003",
+        "N0009"
+      ]
+    ],
+    "è": [
+      [
+        "N0007",
+        "N0001"
+      ]
+    ]
+  },
+  "code_alphabet_size": 16,
+  "code_symbols": [
+    "N0001",
+    "N0016",
+    "N0008",
+    "N0003",
+    "N0007",
+    "N0006",
+    "N0002",
+    "N0012",
+    "N0010",
+    "N0013",
+    "N0005",
+    "N0011",
+    "N0009",
+    "N0014",
+    "N0004",
+    "N0015"
+  ],
+  "families": {
+    "a": {
+      "canonical": [
+        "N0003",
+        "N0001"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0003",
+          "N0001"
+        ],
+        [
+          "N0003",
+          "N0016"
+        ],
+        [
+          "N0003",
+          "N0008"
+        ],
+        [
+          "N0003",
+          "N0003"
+        ]
+      ]
+    },
+    "ben": {
+      "canonical": [
+        "N0013",
+        "N0007"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0013",
+          "N0007"
+        ],
+        [
+          "N0013",
+          "N0006"
+        ],
+        [
+          "N0013",
+          "N0002"
+        ],
+        [
+          "N0013",
+          "N0012"
+        ]
+      ]
+    },
+    "ch": {
+      "canonical": [
+        "N0012",
+        "N0007"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0012",
+          "N0007"
+        ],
+        [
+          "N0012",
+          "N0006"
+        ],
+        [
+          "N0012",
+          "N0002"
+        ],
+        [
+          "N0012",
+          "N0012"
+        ]
+      ]
+    },
+    "che": {
+      "canonical": [
+        "N0013",
+        "N0010"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0013",
+          "N0010"
+        ],
+        [
+          "N0013",
+          "N0013"
+        ],
+        [
+          "N0013",
+          "N0005"
+        ],
+        [
+          "N0013",
+          "N0011"
+        ]
+      ]
+    },
+    "ché": {
+      "canonical": [
+        "N0001",
+        "N0010"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0001",
+          "N0010"
+        ],
+        [
+          "N0001",
+          "N0013"
+        ],
+        [
+          "N0001",
+          "N0005"
+        ],
+        [
+          "N0001",
+          "N0011"
+        ]
+      ]
+    },
+    "ci": {
+      "canonical": [
+        "N0015",
+        "N0007"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0015",
+          "N0007"
+        ],
+        [
+          "N0015",
+          "N0006"
+        ],
+        [
+          "N0015",
+          "N0002"
+        ],
+        [
+          "N0015",
+          "N0012"
+        ]
+      ]
+    },
+    "come": {
+      "canonical": [
+        "N0008",
+        "N0009"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0008",
+          "N0009"
+        ],
+        [
+          "N0008",
+          "N0014"
+        ],
+        [
+          "N0008",
+          "N0004"
+        ],
+        [
+          "N0008",
+          "N0015"
+        ]
+      ]
+    },
+    "con": {
+      "canonical": [
+        "N0012",
+        "N0010"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0012",
+          "N0010"
+        ],
+        [
+          "N0012",
+          "N0013"
+        ],
+        [
+          "N0012",
+          "N0005"
+        ],
+        [
+          "N0012",
+          "N0011"
+        ]
+      ]
+    },
+    "così": {
+      "canonical": [
+        "N0004",
+        "N0007"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0004",
+          "N0007"
+        ],
+        [
+          "N0004",
+          "N0006"
+        ],
+        [
+          "N0004",
+          "N0002"
+        ],
+        [
+          "N0004",
+          "N0012"
+        ]
+      ]
+    },
+    "d": {
+      "canonical": [
+        "N0004",
+        "N0009"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0004",
+          "N0009"
+        ],
+        [
+          "N0004",
+          "N0014"
+        ],
+        [
+          "N0004",
+          "N0004"
+        ],
+        [
+          "N0004",
+          "N0015"
+        ]
+      ]
+    },
+    "da": {
+      "canonical": [
+        "N0005",
+        "N0007"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0005",
+          "N0007"
+        ],
+        [
+          "N0005",
+          "N0006"
+        ],
+        [
+          "N0005",
+          "N0002"
+        ],
+        [
+          "N0005",
+          "N0012"
+        ]
+      ]
+    },
+    "de": {
+      "canonical": [
+        "N0014",
+        "N0009"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0014",
+          "N0009"
+        ],
+        [
+          "N0014",
+          "N0014"
+        ],
+        [
+          "N0014",
+          "N0004"
+        ],
+        [
+          "N0014",
+          "N0015"
+        ]
+      ]
+    },
+    "di": {
+      "canonical": [
+        "N0016",
+        "N0001"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0016",
+          "N0001"
+        ],
+        [
+          "N0016",
+          "N0016"
+        ],
+        [
+          "N0016",
+          "N0008"
+        ],
+        [
+          "N0016",
+          "N0003"
+        ]
+      ]
+    },
+    "disse": {
+      "canonical": [
+        "N0011",
+        "N0010"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0011",
+          "N0010"
+        ],
+        [
+          "N0011",
+          "N0013"
+        ],
+        [
+          "N0011",
+          "N0005"
+        ],
+        [
+          "N0011",
+          "N0011"
+        ]
+      ]
+    },
+    "e": {
+      "canonical": [
+        "N0014",
+        "N0001"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0014",
+          "N0001"
+        ],
+        [
+          "N0014",
+          "N0016"
+        ],
+        [
+          "N0014",
+          "N0008"
+        ],
+        [
+          "N0014",
+          "N0003"
+        ]
+      ]
+    },
+    "era": {
+      "canonical": [
+        "N0002",
+        "N0007"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0002",
+          "N0007"
+        ],
+        [
+          "N0002",
+          "N0006"
+        ],
+        [
+          "N0002",
+          "N0002"
+        ],
+        [
+          "N0002",
+          "N0012"
+        ]
+      ]
+    },
+    "fa": {
+      "canonical": [
+        "N0007",
+        "N0007"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0007",
+          "N0007"
+        ],
+        [
+          "N0007",
+          "N0006"
+        ],
+        [
+          "N0007",
+          "N0002"
+        ],
+        [
+          "N0007",
+          "N0012"
+        ]
+      ]
+    },
+    "fu": {
+      "canonical": [
+        "N0009",
+        "N0010"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0009",
+          "N0010"
+        ],
+        [
+          "N0009",
+          "N0013"
+        ],
+        [
+          "N0009",
+          "N0005"
+        ],
+        [
+          "N0009",
+          "N0011"
+        ]
+      ]
+    },
+    "già": {
+      "canonical": [
+        "N0002",
+        "N0009"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0002",
+          "N0009"
+        ],
+        [
+          "N0002",
+          "N0014"
+        ],
+        [
+          "N0002",
+          "N0004"
+        ],
+        [
+          "N0002",
+          "N0015"
+        ]
+      ]
+    },
+    "i": {
+      "canonical": [
+        "N0004",
+        "N0010"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0004",
+          "N0010"
+        ],
+        [
+          "N0004",
+          "N0013"
+        ],
+        [
+          "N0004",
+          "N0005"
+        ],
+        [
+          "N0004",
+          "N0011"
+        ]
+      ]
+    },
+    "il": {
+      "canonical": [
+        "N0008",
+        "N0010"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0008",
+          "N0010"
+        ],
+        [
+          "N0008",
+          "N0013"
+        ],
+        [
+          "N0008",
+          "N0005"
+        ],
+        [
+          "N0008",
+          "N0011"
+        ]
+      ]
+    },
+    "in": {
+      "canonical": [
+        "N0002",
+        "N0010"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0002",
+          "N0010"
+        ],
+        [
+          "N0002",
+          "N0013"
+        ],
+        [
+          "N0002",
+          "N0005"
+        ],
+        [
+          "N0002",
+          "N0011"
+        ]
+      ]
+    },
+    "io": {
+      "canonical": [
+        "N0009",
+        "N0007"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0009",
+          "N0007"
+        ],
+        [
+          "N0009",
+          "N0006"
+        ],
+        [
+          "N0009",
+          "N0002"
+        ],
+        [
+          "N0009",
+          "N0012"
+        ]
+      ]
+    },
+    "l": {
+      "canonical": [
+        "N0010",
+        "N0010"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0010",
+          "N0010"
+        ],
+        [
+          "N0010",
+          "N0013"
+        ],
+        [
+          "N0010",
+          "N0005"
+        ],
+        [
+          "N0010",
+          "N0011"
+        ]
+      ]
+    },
+    "la": {
+      "canonical": [
+        "N0012",
+        "N0001"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0012",
+          "N0001"
+        ],
+        [
+          "N0012",
+          "N0016"
+        ],
+        [
+          "N0012",
+          "N0008"
+        ],
+        [
+          "N0012",
+          "N0003"
+        ]
+      ]
+    },
+    "le": {
+      "canonical": [
+        "N0010",
+        "N0009"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0010",
+          "N0009"
+        ],
+        [
+          "N0010",
+          "N0014"
+        ],
+        [
+          "N0010",
+          "N0004"
+        ],
+        [
+          "N0010",
+          "N0015"
+        ]
+      ]
+    },
+    "li": {
+      "canonical": [
+        "N0015",
+        "N0001"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0015",
+          "N0001"
+        ],
+        [
+          "N0015",
+          "N0016"
+        ],
+        [
+          "N0015",
+          "N0008"
+        ],
+        [
+          "N0015",
+          "N0003"
+        ]
+      ]
+    },
+    "lo": {
+      "canonical": [
+        "N0006",
+        "N0009"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0006",
+          "N0009"
+        ],
+        [
+          "N0006",
+          "N0014"
+        ],
+        [
+          "N0006",
+          "N0004"
+        ],
+        [
+          "N0006",
+          "N0015"
+        ]
+      ]
+    },
+    "lor": {
+      "canonical": [
+        "N0007",
+        "N0009"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0007",
+          "N0009"
+        ],
+        [
+          "N0007",
+          "N0014"
+        ],
+        [
+          "N0007",
+          "N0004"
+        ],
+        [
+          "N0007",
+          "N0015"
+        ]
+      ]
+    },
+    "lui": {
+      "canonical": [
+        "N0008",
+        "N0001"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0008",
+          "N0001"
+        ],
+        [
+          "N0008",
+          "N0016"
+        ],
+        [
+          "N0008",
+          "N0008"
+        ],
+        [
+          "N0008",
+          "N0003"
+        ]
+      ]
+    },
+    "là": {
+      "canonical": [
+        "N0011",
+        "N0007"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0011",
+          "N0007"
+        ],
+        [
+          "N0011",
+          "N0006"
+        ],
+        [
+          "N0011",
+          "N0002"
+        ],
+        [
+          "N0011",
+          "N0012"
+        ]
+      ]
+    },
+    "m": {
+      "canonical": [
+        "N0001",
+        "N0001"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0001",
+          "N0001"
+        ],
+        [
+          "N0001",
+          "N0016"
+        ],
+        [
+          "N0001",
+          "N0008"
+        ],
+        [
+          "N0001",
+          "N0003"
+        ]
+      ]
+    },
+    "ma": {
+      "canonical": [
+        "N0006",
+        "N0007"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0006",
+          "N0007"
+        ],
+        [
+          "N0006",
+          "N0006"
+        ],
+        [
+          "N0006",
+          "N0002"
+        ],
+        [
+          "N0006",
+          "N0012"
+        ]
+      ]
+    },
+    "maestro": {
+      "canonical": [
+        "N0009",
+        "N0009"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0009",
+          "N0009"
+        ],
+        [
+          "N0009",
+          "N0014"
+        ],
+        [
+          "N0009",
+          "N0004"
+        ],
+        [
+          "N0009",
+          "N0015"
+        ]
+      ]
+    },
+    "me": {
+      "canonical": [
+        "N0003",
+        "N0007"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0003",
+          "N0007"
+        ],
+        [
+          "N0003",
+          "N0006"
+        ],
+        [
+          "N0003",
+          "N0002"
+        ],
+        [
+          "N0003",
+          "N0012"
+        ]
+      ]
+    },
+    "mi": {
+      "canonical": [
+        "N0010",
+        "N0001"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0010",
+          "N0001"
+        ],
+        [
+          "N0010",
+          "N0016"
+        ],
+        [
+          "N0010",
+          "N0008"
+        ],
+        [
+          "N0010",
+          "N0003"
+        ]
+      ]
+    },
+    "mio": {
+      "canonical": [
+        "N0013",
+        "N0009"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0013",
+          "N0009"
+        ],
+        [
+          "N0013",
+          "N0014"
+        ],
+        [
+          "N0013",
+          "N0004"
+        ],
+        [
+          "N0013",
+          "N0015"
+        ]
+      ]
+    },
+    "n": {
+      "canonical": [
+        "N0016",
+        "N0009"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0016",
+          "N0009"
+        ],
+        [
+          "N0016",
+          "N0014"
+        ],
+        [
+          "N0016",
+          "N0004"
+        ],
+        [
+          "N0016",
+          "N0015"
+        ]
+      ]
+    },
+    "ne": {
+      "canonical": [
+        "N0006",
+        "N0001"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0006",
+          "N0001"
+        ],
+        [
+          "N0006",
+          "N0016"
+        ],
+        [
+          "N0006",
+          "N0008"
+        ],
+        [
+          "N0006",
+          "N0003"
+        ]
+      ]
+    },
+    "noi": {
+      "canonical": [
+        "N0005",
+        "N0001"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0005",
+          "N0001"
+        ],
+        [
+          "N0005",
+          "N0016"
+        ],
+        [
+          "N0005",
+          "N0008"
+        ],
+        [
+          "N0005",
+          "N0003"
+        ]
+      ]
+    },
+    "non": {
+      "canonical": [
+        "N0016",
+        "N0007"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0016",
+          "N0007"
+        ],
+        [
+          "N0016",
+          "N0006"
+        ],
+        [
+          "N0016",
+          "N0002"
+        ],
+        [
+          "N0016",
+          "N0012"
+        ]
+      ]
+    },
+    "o": {
+      "canonical": [
+        "N0009",
+        "N0001"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0009",
+          "N0001"
+        ],
+        [
+          "N0009",
+          "N0016"
+        ],
+        [
+          "N0009",
+          "N0008"
+        ],
+        [
+          "N0009",
+          "N0003"
+        ]
+      ]
+    },
+    "or": {
+      "canonical": [
+        "N0004",
+        "N0001"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0004",
+          "N0001"
+        ],
+        [
+          "N0004",
+          "N0016"
+        ],
+        [
+          "N0004",
+          "N0008"
+        ],
+        [
+          "N0004",
+          "N0003"
+        ]
+      ]
+    },
+    "per": {
+      "canonical": [
+        "N0010",
+        "N0007"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0010",
+          "N0007"
+        ],
+        [
+          "N0010",
+          "N0006"
+        ],
+        [
+          "N0010",
+          "N0002"
+        ],
+        [
+          "N0010",
+          "N0012"
+        ]
+      ]
+    },
+    "perché": {
+      "canonical": [
+        "N0015",
+        "N0010"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0015",
+          "N0010"
+        ],
+        [
+          "N0015",
+          "N0013"
+        ],
+        [
+          "N0015",
+          "N0005"
+        ],
+        [
+          "N0015",
+          "N0011"
+        ]
+      ]
+    },
+    "più": {
+      "canonical": [
+        "N0002",
+        "N0001"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0002",
+          "N0001"
+        ],
+        [
+          "N0002",
+          "N0016"
+        ],
+        [
+          "N0002",
+          "N0008"
+        ],
+        [
+          "N0002",
+          "N0003"
+        ]
+      ]
+    },
+    "poi": {
+      "canonical": [
+        "N0014",
+        "N0010"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0014",
+          "N0010"
+        ],
+        [
+          "N0014",
+          "N0013"
+        ],
+        [
+          "N0014",
+          "N0005"
+        ],
+        [
+          "N0014",
+          "N0011"
+        ]
+      ]
+    },
+    "qual": {
+      "canonical": [
+        "N0001",
+        "N0009"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0001",
+          "N0009"
+        ],
+        [
+          "N0001",
+          "N0014"
+        ],
+        [
+          "N0001",
+          "N0004"
+        ],
+        [
+          "N0001",
+          "N0015"
+        ]
+      ]
+    },
+    "quando": {
+      "canonical": [
+        "N0006",
+        "N0010"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0006",
+          "N0010"
+        ],
+        [
+          "N0006",
+          "N0013"
+        ],
+        [
+          "N0006",
+          "N0005"
+        ],
+        [
+          "N0006",
+          "N0011"
+        ]
+      ]
+    },
+    "quel": {
+      "canonical": [
+        "N0007",
+        "N0010"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0007",
+          "N0010"
+        ],
+        [
+          "N0007",
+          "N0013"
+        ],
+        [
+          "N0007",
+          "N0005"
+        ],
+        [
+          "N0007",
+          "N0011"
+        ]
+      ]
+    },
+    "quella": {
+      "canonical": [
+        "N0005",
+        "N0009"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0005",
+          "N0009"
+        ],
+        [
+          "N0005",
+          "N0014"
+        ],
+        [
+          "N0005",
+          "N0004"
+        ],
+        [
+          "N0005",
+          "N0015"
+        ]
+      ]
+    },
+    "s": {
+      "canonical": [
+        "N0008",
+        "N0007"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0008",
+          "N0007"
+        ],
+        [
+          "N0008",
+          "N0006"
+        ],
+        [
+          "N0008",
+          "N0002"
+        ],
+        [
+          "N0008",
+          "N0012"
+        ]
+      ]
+    },
+    "se": {
+      "canonical": [
+        "N0001",
+        "N0007"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0001",
+          "N0007"
+        ],
+        [
+          "N0001",
+          "N0006"
+        ],
+        [
+          "N0001",
+          "N0002"
+        ],
+        [
+          "N0001",
+          "N0012"
+        ]
+      ]
+    },
+    "si": {
+      "canonical": [
+        "N0011",
+        "N0001"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0011",
+          "N0001"
+        ],
+        [
+          "N0011",
+          "N0016"
+        ],
+        [
+          "N0011",
+          "N0008"
+        ],
+        [
+          "N0011",
+          "N0003"
+        ]
+      ]
+    },
+    "son": {
+      "canonical": [
+        "N0014",
+        "N0007"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0014",
+          "N0007"
+        ],
+        [
+          "N0014",
+          "N0006"
+        ],
+        [
+          "N0014",
+          "N0002"
+        ],
+        [
+          "N0014",
+          "N0012"
+        ]
+      ]
+    },
+    "sua": {
+      "canonical": [
+        "N0012",
+        "N0009"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0012",
+          "N0009"
+        ],
+        [
+          "N0012",
+          "N0014"
+        ],
+        [
+          "N0012",
+          "N0004"
+        ],
+        [
+          "N0012",
+          "N0015"
+        ]
+      ]
+    },
+    "sì": {
+      "canonical": [
+        "N0005",
+        "N0010"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0005",
+          "N0010"
+        ],
+        [
+          "N0005",
+          "N0013"
+        ],
+        [
+          "N0005",
+          "N0005"
+        ],
+        [
+          "N0005",
+          "N0011"
+        ]
+      ]
+    },
+    "ti": {
+      "canonical": [
+        "N0016",
+        "N0010"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0016",
+          "N0010"
+        ],
+        [
+          "N0016",
+          "N0013"
+        ],
+        [
+          "N0016",
+          "N0005"
+        ],
+        [
+          "N0016",
+          "N0011"
+        ]
+      ]
+    },
+    "tu": {
+      "canonical": [
+        "N0013",
+        "N0001"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0013",
+          "N0001"
+        ],
+        [
+          "N0013",
+          "N0016"
+        ],
+        [
+          "N0013",
+          "N0008"
+        ],
+        [
+          "N0013",
+          "N0003"
+        ]
+      ]
+    },
+    "tutto": {
+      "canonical": [
+        "N0003",
+        "N0010"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0003",
+          "N0010"
+        ],
+        [
+          "N0003",
+          "N0013"
+        ],
+        [
+          "N0003",
+          "N0005"
+        ],
+        [
+          "N0003",
+          "N0011"
+        ]
+      ]
+    },
+    "un": {
+      "canonical": [
+        "N0011",
+        "N0009"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0011",
+          "N0009"
+        ],
+        [
+          "N0011",
+          "N0014"
+        ],
+        [
+          "N0011",
+          "N0004"
+        ],
+        [
+          "N0011",
+          "N0015"
+        ]
+      ]
+    },
+    "una": {
+      "canonical": [
+        "N0015",
+        "N0009"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0015",
+          "N0009"
+        ],
+        [
+          "N0015",
+          "N0014"
+        ],
+        [
+          "N0015",
+          "N0004"
+        ],
+        [
+          "N0015",
+          "N0015"
+        ]
+      ]
+    },
+    "vidi": {
+      "canonical": [
+        "N0003",
+        "N0009"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0003",
+          "N0009"
+        ],
+        [
+          "N0003",
+          "N0014"
+        ],
+        [
+          "N0003",
+          "N0004"
+        ],
+        [
+          "N0003",
+          "N0015"
+        ]
+      ]
+    },
+    "è": {
+      "canonical": [
+        "N0007",
+        "N0001"
+      ],
+      "variant_position_zero_based": 1,
+      "variants_max_k4": [
+        [
+          "N0007",
+          "N0001"
+        ],
+        [
+          "N0007",
+          "N0016"
+        ],
+        [
+          "N0007",
+          "N0008"
+        ],
+        [
+          "N0007",
+          "N0003"
+        ]
+      ]
+    }
+  },
+  "family_slot_width": 4,
+  "fit_scope": "CONTROL TRAIN ONLY",
+  "mechanism": "related_multi_code_nomenclator",
+  "mono_forward": {
+    "a": "M0010",
+    "b": "M0002",
+    "c": "M0022",
+    "d": "M0009",
+    "e": "M0015",
+    "f": "M0028",
+    "g": "M0021",
+    "h": "M0016",
+    "i": "M0011",
+    "l": "M0013",
+    "m": "M0012",
+    "n": "M0019",
+    "o": "M0014",
+    "p": "M0024",
+    "q": "M0027",
+    "r": "M0018",
+    "s": "M0017",
+    "t": "M0001",
+    "u": "M0026",
+    "v": "M0007",
+    "z": "M0020",
+    "à": "M0006",
+    "è": "M0023",
+    "é": "M0004",
+    "ì": "M0003",
+    "ò": "M0025",
+    "ó": "M0008",
+    "ù": "M0005"
+  },
+  "mono_reverse": {
+    "M0001": "t",
+    "M0002": "b",
+    "M0003": "ì",
+    "M0004": "é",
+    "M0005": "ù",
+    "M0006": "à",
+    "M0007": "v",
+    "M0008": "ó",
+    "M0009": "d",
+    "M0010": "a",
+    "M0011": "i",
+    "M0012": "m",
+    "M0013": "l",
+    "M0014": "o",
+    "M0015": "e",
+    "M0016": "h",
+    "M0017": "s",
+    "M0018": "r",
+    "M0019": "n",
+    "M0020": "z",
+    "M0021": "g",
+    "M0022": "c",
+    "M0023": "è",
+    "M0024": "p",
+    "M0025": "ò",
+    "M0026": "u",
+    "M0027": "q",
+    "M0028": "f"
+  },
+  "provenance": {
+    "generator_path": "/Users/yasamean/voynich-decipherment/src/ciphers/latent_variant.py",
+    "generator_sha256": "0aeb39bcebc83bb2e46d505321f7f6c0d2e6d636d00d81a973e13476c1107fbd",
+    "level2_config_path": "configs/evaluation/level2_predictive_controls_v1.json",
+    "level2_config_sha256": "6f6214286c9c8e47e90c27cf4c41da60f21c12fd8c31c07a4a98e3aada8b236c",
+    "phase3_config_path": "configs/mechanisms/latent_variant_v1.json",
+    "phase3_config_sha256": "d9a0a5a3515d1fa8189c80e4d0cae6b6435e9b7f36c97b9ce327feae22028e6d",
+    "source_path": "data/controls/languages_open_v1/italian_old_ud218/source.txt",
+    "source_sha256": "fbcd49798c1ee6517578f7a36d7450e6cf71e21e9f8c3ba2841eea4611e072a4",
+    "split_path": "data/controls/splits/level2_v1/italian_old_ud218.json",
+    "split_sha256": "8c8cf9dd8c675d79d6a547d89a9911158eeb2bce8b1fb347018e240c11740ea4"
+  },
+  "schema_version": "1.0",
+  "seed": 40814041441,
+  "target_word_train_counts": {
+    "a": 363,
+    "ben": 29,
+    "ch": 161,
+    "che": 504,
+    "ché": 30,
+    "ci": 29,
+    "come": 60,
+    "con": 118,
+    "così": 39,
+    "d": 69,
+    "da": 106,
+    "de": 82,
+    "di": 308,
+    "disse": 51,
+    "e": 555,
+    "era": 40,
+    "fa": 32,
+    "fu": 40,
+    "già": 33,
+    "i": 118,
+    "il": 324,
+    "in": 168,
+    "io": 148,
+    "l": 349,
+    "la": 328,
+    "le": 122,
+    "li": 119,
+    "lo": 101,
+    "lor": 33,
+    "lui": 31,
+    "là": 37,
+    "m": 44,
+    "ma": 64,
+    "maestro": 37,
+    "me": 50,
+    "mi": 171,
+    "mio": 47,
+    "n": 30,
+    "ne": 67,
+    "noi": 37,
+    "non": 180,
+    "o": 37,
+    "or": 30,
+    "per": 167,
+    "perché": 29,
+    "più": 69,
+    "poi": 58,
+    "qual": 29,
+    "quando": 34,
+    "quel": 59,
+    "quella": 34,
+    "s": 62,
+    "se": 83,
+    "si": 134,
+    "son": 38,
+    "sua": 35,
+    "sì": 92,
+    "ti": 48,
+    "tu": 79,
+    "tutto": 32,
+    "un": 71,
+    "una": 31,
+    "vidi": 30,
+    "è": 119
+  },
+  "target_words_frequency_ranked": [
+    "e",
+    "che",
+    "a",
+    "l",
+    "la",
+    "il",
+    "di",
+    "non",
+    "mi",
+    "in",
+    "per",
+    "ch",
+    "io",
+    "si",
+    "le",
+    "li",
+    "è",
+    "con",
+    "i",
+    "da",
+    "lo",
+    "sì",
+    "se",
+    "de",
+    "tu",
+    "un",
+    "d",
+    "più",
+    "ne",
+    "ma",
+    "s",
+    "come",
+    "quel",
+    "poi",
+    "disse",
+    "me",
+    "ti",
+    "mio",
+    "m",
+    "era",
+    "fu",
+    "così",
+    "son",
+    "là",
+    "maestro",
+    "noi",
+    "o",
+    "sua",
+    "quando",
+    "quella",
+    "già",
+    "lor",
+    "fa",
+    "tutto",
+    "lui",
+    "una",
+    "ché",
+    "n",
+    "or",
+    "vidi",
+    "ben",
+    "ci",
+    "perché",
+    "qual"
+  ],
+  "target_words_seed_assigned": [
+    "m",
+    "se",
+    "ché",
+    "qual",
+    "di",
+    "non",
+    "ti",
+    "n",
+    "lui",
+    "s",
+    "il",
+    "come",
+    "a",
+    "me",
+    "tutto",
+    "vidi",
+    "è",
+    "fa",
+    "quel",
+    "lor",
+    "ne",
+    "ma",
+    "quando",
+    "lo",
+    "più",
+    "era",
+    "in",
+    "già",
+    "la",
+    "ch",
+    "con",
+    "sua",
+    "mi",
+    "per",
+    "l",
+    "le",
+    "tu",
+    "ben",
+    "che",
+    "mio",
+    "noi",
+    "da",
+    "sì",
+    "quella",
+    "si",
+    "là",
+    "disse",
+    "un",
+    "o",
+    "io",
+    "fu",
+    "maestro",
+    "e",
+    "son",
+    "poi",
+    "de",
+    "or",
+    "così",
+    "i",
+    "d",
+    "li",
+    "ci",
+    "perché",
+    "una"
+  ],
+  "top_n": 64,
+  "validation_unseen_character_policy": "U<hex-codepoint>, deterministic and not fit from validation",
+  "variant_count": 1
+}

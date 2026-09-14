@@ -1,0 +1,87 @@
+{
+  "automatic_winner_selected": false,
+  "experiment_id": "latent-variant-exploration-v1",
+  "generator_sha256": "0aeb39bcebc83bb2e46d505321f7f6c0d2e6d636d00d81a973e13476c1107fbd",
+  "level2_config_sha256": "6f6214286c9c8e47e90c27cf4c41da60f21c12fd8c31c07a4a98e3aada8b236c",
+  "next_step": "If a stable mechanism region is scientifically interesting, write and freeze a separate Phase-3B confirmatory protocol before using any reserved-test data.",
+  "no_single_similarity_score": true,
+  "phase3_config_sha256": "d9a0a5a3515d1fa8189c80e4d0cae6b6435e9b7f36c97b9ce327feae22028e6d",
+  "primary_prediction": "As K increases from 1 to 2 to 4, the exact-token Markov minus matched trigram validation delta should move upward from the fixed-code regime toward zero and potentially positive values, while the other four Voynich-direction relations remain positive.",
+  "relation_rows": 300,
+  "reserved_control_test_encoded": false,
+  "reserved_control_test_parsed_or_scored": false,
+  "runs": 60,
+  "schema_version": "1.0",
+  "status": "exploratory",
+  "trajectory": {
+    "interpretation": "Exploratory trajectory only. Do not select a confirmatory K without writing a separate Phase-3B protocol first.",
+    "other_four_relations_by_k": {
+      "1": {
+        "copy_edit": {
+          "mean_delta_bits_per_event": 1.4066708968038193,
+          "strong_direction_runs_20": 20
+        },
+        "hmm_space_free": {
+          "mean_delta_bits_per_event": 0.3822384746884697,
+          "strong_direction_runs_20": 20
+        },
+        "hmm_token_aware": {
+          "mean_delta_bits_per_event": 0.3709545049496206,
+          "strong_direction_runs_20": 20
+        },
+        "slot_grammar": {
+          "mean_delta_bits_per_event": 0.6400395668186166,
+          "strong_direction_runs_20": 20
+        }
+      },
+      "2": {
+        "copy_edit": {
+          "mean_delta_bits_per_event": 1.3798184314725357,
+          "strong_direction_runs_20": 20
+        },
+        "hmm_space_free": {
+          "mean_delta_bits_per_event": 0.3380181522172392,
+          "strong_direction_runs_20": 20
+        },
+        "hmm_token_aware": {
+          "mean_delta_bits_per_event": 0.3665018394208299,
+          "strong_direction_runs_20": 20
+        },
+        "slot_grammar": {
+          "mean_delta_bits_per_event": 0.6357252133854066,
+          "strong_direction_runs_20": 20
+        }
+      },
+      "4": {
+        "copy_edit": {
+          "mean_delta_bits_per_event": 1.3351535159856287,
+          "strong_direction_runs_20": 20
+        },
+        "hmm_space_free": {
+          "mean_delta_bits_per_event": 0.2795038636319767,
+          "strong_direction_runs_20": 20
+        },
+        "hmm_token_aware": {
+          "mean_delta_bits_per_event": 0.35463611834093955,
+          "strong_direction_runs_20": 20
+        },
+        "slot_grammar": {
+          "mean_delta_bits_per_event": 0.6314369798582581,
+          "strong_direction_runs_20": 20
+        }
+      }
+    },
+    "token_markov_mean_delta_by_k": {
+      "1": -0.40885934891291176,
+      "2": -0.3714393000093196,
+      "4": -0.3290337874243656
+    },
+    "token_markov_mean_delta_monotone_non_decreasing": true
+  },
+  "variant_counts": [
+    1,
+    2,
+    4
+  ],
+  "voynich_locked_test_accessed": false
+}

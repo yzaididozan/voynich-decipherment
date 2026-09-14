@@ -1,0 +1,63 @@
+{
+  "evaluation_scope": "CONTROL VALIDATION ONLY",
+  "fit_scope": "CONTROL TRAIN ONLY",
+  "guardrails": [
+    "Target words and mechanism key are selected from CONTROL TRAIN only.",
+    "Validation cannot change the target-word set or codebook.",
+    "Reserved-test lines are represented by opaque JSONL placeholders and are not encoded.",
+    "K changes only the number of allowed final-position variants; code length and code alphabet geometry are fixed."
+  ],
+  "mechanism": "related_multi_code_nomenclator",
+  "provenance": {
+    "generator_path": "/Users/yasamean/voynich-decipherment/src/ciphers/latent_variant.py",
+    "generator_sha256": "0aeb39bcebc83bb2e46d505321f7f6c0d2e6d636d00d81a973e13476c1107fbd",
+    "level2_config_path": "configs/evaluation/level2_predictive_controls_v1.json",
+    "level2_config_sha256": "6f6214286c9c8e47e90c27cf4c41da60f21c12fd8c31c07a4a98e3aada8b236c",
+    "phase3_config_path": "configs/mechanisms/latent_variant_v1.json",
+    "phase3_config_sha256": "d9a0a5a3515d1fa8189c80e4d0cae6b6435e9b7f36c97b9ce327feae22028e6d",
+    "source_path": "data/controls/languages_open_v1/italian_old_ud218/source.txt",
+    "source_sha256": "fbcd49798c1ee6517578f7a36d7450e6cf71e21e9f8c3ba2841eea4611e072a4",
+    "split_path": "data/controls/splits/level2_v1/italian_old_ud218.json",
+    "split_sha256": "8c8cf9dd8c675d79d6a547d89a9911158eeb2bce8b1fb347018e240c11740ea4"
+  },
+  "reserved_lines": 109,
+  "reserved_test_encoded": false,
+  "round_trip_verified_train_validation": true,
+  "schema_version": "1.0",
+  "seed": 40814041441,
+  "status": "exploratory",
+  "train_diagnostics": {
+    "cipher_glyph_alphabet_size": 44,
+    "exact_cipher_token_recurrence_fraction": 0.7396234488660676,
+    "family_code_collision_count": 0,
+    "max_realized_variants_per_target_word": 4,
+    "mean_pairwise_hamming_distance_within_active_variant_family": 1.0,
+    "mean_realized_variants_per_target_word_present": 4.0,
+    "round_trip_accuracy": 1.0,
+    "same_surface_probability_given_same_target_plaintext_word": 0.25096628709440977,
+    "targeted_token_fraction": 0.47454000855798034,
+    "targeted_tokens": 6654,
+    "targeted_variant_utilization_fraction": 1.0,
+    "tokens": 14022,
+    "unique_cipher_tokens": 3651
+  },
+  "train_lines": 522,
+  "validation_diagnostics": {
+    "cipher_glyph_alphabet_size": 44,
+    "exact_cipher_token_recurrence_fraction": 0.5529203539823009,
+    "family_code_collision_count": 0,
+    "max_realized_variants_per_target_word": 4,
+    "mean_pairwise_hamming_distance_within_active_variant_family": 1.0,
+    "mean_realized_variants_per_target_word_present": 3.625,
+    "round_trip_accuracy": 1.0,
+    "same_surface_probability_given_same_target_plaintext_word": 0.24684375315624685,
+    "targeted_token_fraction": 0.47575221238938054,
+    "targeted_tokens": 1344,
+    "targeted_variant_utilization_fraction": 0.90625,
+    "tokens": 2825,
+    "unique_cipher_tokens": 1263
+  },
+  "validation_lines": 109,
+  "variant_count": 4,
+  "variant_operation": "single_token_final_glyph_substitution"
+}
