@@ -1,0 +1,87 @@
+{
+  "artifacts": [
+    "run_relation_matrix.csv",
+    "control_run_summary.csv",
+    "language_relation_replication.csv",
+    "family_hierarchy_summary.csv",
+    "runs/<source>/<family>/seed_<seed>/..."
+  ],
+  "config_sha256": "6f6214286c9c8e47e90c27cf4c41da60f21c12fd8c31c07a4a98e3aada8b236c",
+  "control_runs": 140,
+  "family_full_hierarchy_reproduction": {
+    "homophonic": false,
+    "monoalphabetic": false,
+    "nomenclator": false,
+    "null_insertion": false,
+    "syllabic_hybrid": false,
+    "transposition": false,
+    "verbose": false
+  },
+  "freeze_id": "level2-predictive-controls-v1",
+  "interpretation_guardrails": [
+    "Level 2 is confirmatory with respect to the already-observed Level-1 control patterns only because this protocol is frozen before any Level-2 predictive results are inspected.",
+    "All seven cipher families are evaluated; nomenclator and null insertion are not selectively advanced.",
+    "No model grid may be expanded after seeing Level-2 validation results.",
+    "A family that fails full hierarchy reproduction may still reproduce individual relations; report relation-level outcomes.",
+    "A full hierarchy match is structural evidence for a mechanism class, not a decipherment or proof of historical use.",
+    "Reserved control-test units are not used in Level 2.",
+    "Voynich test_LOCKED.txt is never required or accessed."
+  ],
+  "operational_relations": [
+    "hmm_space_free",
+    "hmm_token_aware",
+    "slot_grammar",
+    "token_markov",
+    "copy_edit"
+  ],
+  "relation_rows": 700,
+  "replication_rule": {
+    "family_full_hierarchy_reproduction": "all five operational relations are family-relation robust",
+    "family_relation_robust": "per-language relation replication in at least 3 of 4 languages",
+    "note": "Cipher-key seeds are robustness perturbations, not assumed statistically independent experimental replicates.",
+    "per_language_relation_replication": "at least 4 of 5 frozen cipher keys are strong direction matches",
+    "per_run_strong_direction_match": "delta > 0 and paired-bootstrap 95% CI lower bound > 0"
+  },
+  "reserved_test_parsed_or_scored": false,
+  "schema_version": "1.0",
+  "selection_caveat": "All comparisons are conditional on validation-selected HMM state count, slot-template count, token context order, and copy source window, matching the original Voynich workflow; the bootstrap does not include hyperparameter-selection uncertainty.",
+  "voynich_locked_test_accessed": false,
+  "voynich_reference": {
+    "copy_edit": {
+      "ci_95": [
+        1.04279,
+        1.19281
+      ],
+      "delta_bits_per_event": 1.135071
+    },
+    "hmm_space_free": {
+      "ci_95": [
+        0.022131,
+        0.064179
+      ],
+      "delta_bits_per_event": 0.049151
+    },
+    "hmm_token_aware": {
+      "ci_95": [
+        0.059544,
+        0.109025
+      ],
+      "delta_bits_per_event": 0.091018
+    },
+    "meaning": "Positive delta means the character trigram was better; values are the already-frozen Voynich validation comparisons.",
+    "slot_grammar": {
+      "ci_95": [
+        0.42698,
+        0.484166
+      ],
+      "delta_bits_per_event": 0.464165
+    },
+    "token_markov": {
+      "ci_95": [
+        0.104994,
+        0.149556
+      ],
+      "delta_bits_per_event": 0.127077
+    }
+  }
+}
