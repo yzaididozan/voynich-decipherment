@@ -1,0 +1,1109 @@
+{
+  "analysis_module_sha256": "b729ee11b1909ac2972a150c051671ad2ca7dad8bbe3456c80747324be19e4e5",
+  "detailed_primary_runs": 20,
+  "detailed_validation_token_rows": 58025,
+  "diagnostic_config_sha256": "296363defa5bf65ef3f82d2c514f9918fb14a46296de916c579e9eb88dbd104c",
+  "experiment_id": "token-markov-failure-localization-v1",
+  "followup_rule": "Use the diagnostic only to formulate one explicit Phase-3A.6 mechanism hypothesis. Freeze that follow-up protocol before generating or scoring new development controls. If the residual advantage is diffuse rather than localized, do not force a frequency- or transition-specific mechanism.",
+  "guardrails": {
+    "all_grouping_features_derived_from_train_only": true,
+    "no_automatic_phase3a6_mechanism_selection": true,
+    "no_confirmatory_p_values": true,
+    "no_new_cipher_generation": true,
+    "no_new_model_hyperparameter_selection": true,
+    "reserved_control_ciphertext_json_parsed": false,
+    "reserved_control_units_scored": false,
+    "selected_context_order_inherited_per_run": true,
+    "validation_used_only_for_contribution_scoring_and_group_assignment": true,
+    "voynich_locked_test_accessed": false
+  },
+  "level2_config_sha256": "6f6214286c9c8e47e90c27cf4c41da60f21c12fd8c31c07a4a98e3aada8b236c",
+  "localization": {
+    "language_summary": {
+      "French": {
+        "mean_seed_delta_bits_per_event": 0.008657261683253332,
+        "phase3a5_token_relation_status": "nonrobust",
+        "token_markov_advantage_bits": 15037.138765431113,
+        "token_markov_better_token_fraction": 0.3730534867975626,
+        "trigram_advantage_bits": 15931.217465768766
+      },
+      "German": {
+        "mean_seed_delta_bits_per_event": 0.07734154677190581,
+        "phase3a5_token_relation_status": "robust",
+        "token_markov_advantage_bits": 8898.101016789291,
+        "token_markov_better_token_fraction": 0.3338508268646642,
+        "trigram_advantage_bits": 16549.11353120092
+      },
+      "Italian": {
+        "mean_seed_delta_bits_per_event": 0.06675934405363955,
+        "phase3a5_token_relation_status": "robust",
+        "token_markov_advantage_bits": 9374.91168275581,
+        "token_markov_better_token_fraction": 0.2937345132743363,
+        "trigram_advantage_bits": 15845.227308434025
+      },
+      "Latin": {
+        "mean_seed_delta_bits_per_event": -0.053233829877933334,
+        "phase3a5_token_relation_status": "nonrobust",
+        "token_markov_advantage_bits": 21326.30708887121,
+        "token_markov_better_token_fraction": 0.3798113866573524,
+        "trigram_advantage_bits": 14787.063426665023
+      }
+    },
+    "top_token_markov_advantage_mass_bins": {
+      "ciphertext_bigram_frequency": {
+        "French": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_cipher_bigram_frequency_bin": "0"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.04479227344195251,
+            "share_of_language_token_markov_advantage_bits": 0.7689246081258793,
+            "tokens": 13679
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_cipher_bigram_frequency_bin": "1"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.7992192221246712,
+            "share_of_language_token_markov_advantage_bits": 0.14578206799808752,
+            "tokens": 426
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_cipher_bigram_frequency_bin": "2-3"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.4511710400625527,
+            "share_of_language_token_markov_advantage_bits": 0.053642587098127886,
+            "tokens": 308
+          }
+        ],
+        "German": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_cipher_bigram_frequency_bin": "0"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.1268030597857129,
+            "share_of_language_token_markov_advantage_bits": 0.6116318290867274,
+            "tokens": 12688
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_cipher_bigram_frequency_bin": "1"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.4256069030717249,
+            "share_of_language_token_markov_advantage_bits": 0.14007760785201356,
+            "tokens": 472
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_cipher_bigram_frequency_bin": "4-7"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.25365193283755444,
+            "share_of_language_token_markov_advantage_bits": 0.08891114823573897,
+            "tokens": 598
+          }
+        ],
+        "Italian": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_cipher_bigram_frequency_bin": "0"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.08418590878007369,
+            "share_of_language_token_markov_advantage_bits": 0.8359400278553851,
+            "tokens": 13768
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_cipher_bigram_frequency_bin": "1"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.9531372148257989,
+            "share_of_language_token_markov_advantage_bits": 0.12718027114578817,
+            "tokens": 232
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_cipher_bigram_frequency_bin": "2-3"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.6869905073758402,
+            "share_of_language_token_markov_advantage_bits": 0.029311871114028255,
+            "tokens": 82
+          }
+        ],
+        "Latin": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_cipher_bigram_frequency_bin": "0"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.04164284649669141,
+            "share_of_language_token_markov_advantage_bits": 0.9300509049705311,
+            "tokens": 14063
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_cipher_bigram_frequency_bin": "1"
+            },
+            "delta_bits_per_event_ratio_of_sums": -1.1127630880355353,
+            "share_of_language_token_markov_advantage_bits": 0.049986480729911825,
+            "tokens": 142
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_cipher_bigram_frequency_bin": "2-3"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.7150969483791678,
+            "share_of_language_token_markov_advantage_bits": 0.0140495783035604,
+            "tokens": 63
+          }
+        ]
+      },
+      "ciphertext_conditional_probability": {
+        "French": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_cipher_conditional_probability_bin": "0"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.04479227344195251,
+            "share_of_language_token_markov_advantage_bits": 0.7689246081258793,
+            "tokens": 13679
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_cipher_conditional_probability_bin": "(0,.01]"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.4254741111493989,
+            "share_of_language_token_markov_advantage_bits": 0.15370985684060867,
+            "tokens": 960
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_cipher_conditional_probability_bin": "(.01,.05]"
+            },
+            "delta_bits_per_event_ratio_of_sums": -1.2470322895943489,
+            "share_of_language_token_markov_advantage_bits": 0.029523136151151985,
+            "tokens": 58
+          }
+        ],
+        "German": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_cipher_conditional_probability_bin": "0"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.1268030597857129,
+            "share_of_language_token_markov_advantage_bits": 0.6116318290867274,
+            "tokens": 12688
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_cipher_conditional_probability_bin": "(0,.01]"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.2599282585456089,
+            "share_of_language_token_markov_advantage_bits": 0.3400478032531617,
+            "tokens": 2074
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_cipher_conditional_probability_bin": "(.05,.10]"
+            },
+            "delta_bits_per_event_ratio_of_sums": -1.3740309751635928,
+            "share_of_language_token_markov_advantage_bits": 0.019456724816221807,
+            "tokens": 22
+          }
+        ],
+        "Italian": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_cipher_conditional_probability_bin": "0"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.08418590878007369,
+            "share_of_language_token_markov_advantage_bits": 0.8359400278553851,
+            "tokens": 13768
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_cipher_conditional_probability_bin": "(0,.01]"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.5354597880845882,
+            "share_of_language_token_markov_advantage_bits": 0.05450076991233951,
+            "tokens": 186
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_cipher_conditional_probability_bin": "(.01,.05]"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.9049898465618191,
+            "share_of_language_token_markov_advantage_bits": 0.041798858146264474,
+            "tokens": 91
+          }
+        ],
+        "Latin": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_cipher_conditional_probability_bin": "0"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.04164284649669141,
+            "share_of_language_token_markov_advantage_bits": 0.9300509049705311,
+            "tokens": 14063
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_cipher_conditional_probability_bin": "(0,.01]"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.7550804834351693,
+            "share_of_language_token_markov_advantage_bits": 0.04262889483244626,
+            "tokens": 184
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_cipher_conditional_probability_bin": "(.01,.05]"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.9257026354979272,
+            "share_of_language_token_markov_advantage_bits": 0.007943409123303921,
+            "tokens": 32
+          }
+        ]
+      },
+      "ciphertext_recurrence": {
+        "French": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_cipher_current_frequency_bin": "1"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.5203124337510271,
+            "share_of_language_token_markov_advantage_bits": 0.5147184503665174,
+            "tokens": 1894
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_cipher_current_frequency_bin": "2-3"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.335127068161228,
+            "share_of_language_token_markov_advantage_bits": 0.2623712863273972,
+            "tokens": 1594
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_cipher_current_frequency_bin": "4-7"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.15932942218029256,
+            "share_of_language_token_markov_advantage_bits": 0.11337403027975979,
+            "tokens": 1379
+          }
+        ],
+        "German": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_cipher_current_frequency_bin": "1"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.2595773321209829,
+            "share_of_language_token_markov_advantage_bits": 0.43344577671633905,
+            "tokens": 1822
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_cipher_current_frequency_bin": "2-3"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.13193801034811511,
+            "share_of_language_token_markov_advantage_bits": 0.22470289749915554,
+            "tokens": 1662
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_cipher_current_frequency_bin": "8-15"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.04961432229577455,
+            "share_of_language_token_markov_advantage_bits": 0.12776094085874673,
+            "tokens": 2128
+          }
+        ],
+        "Italian": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_cipher_current_frequency_bin": "1"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.4165621040905845,
+            "share_of_language_token_markov_advantage_bits": 0.5443823779164494,
+            "tokens": 1558
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_cipher_current_frequency_bin": "2-3"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.21559314316048164,
+            "share_of_language_token_markov_advantage_bits": 0.24769452825278326,
+            "tokens": 1388
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_cipher_current_frequency_bin": "4-7"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.0025538043401644476,
+            "share_of_language_token_markov_advantage_bits": 0.07261196758396607,
+            "tokens": 1442
+          }
+        ],
+        "Latin": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_cipher_current_frequency_bin": "1"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.7323381423321536,
+            "share_of_language_token_markov_advantage_bits": 0.5146741685268019,
+            "tokens": 1751
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_cipher_current_frequency_bin": "2-3"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.5581353972306041,
+            "share_of_language_token_markov_advantage_bits": 0.29362732913895606,
+            "tokens": 1448
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_cipher_current_frequency_bin": "4-7"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.29690700463323333,
+            "share_of_language_token_markov_advantage_bits": 0.11581854294032817,
+            "tokens": 1196
+          }
+        ]
+      },
+      "line_position": {
+        "French": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "line_position_class": "medial"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.010485739852934274,
+            "share_of_language_token_markov_advantage_bits": 0.6470605225552674,
+            "tokens": 10915
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "line_position_class": "initial"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.07309521568291526,
+            "share_of_language_token_markov_advantage_bits": 0.1934728882442326,
+            "tokens": 1920
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "line_position_class": "final"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.05860607933744342,
+            "share_of_language_token_markov_advantage_bits": 0.15893387667100425,
+            "tokens": 1920
+          }
+        ],
+        "German": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "line_position_class": "medial"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.10393962025500106,
+            "share_of_language_token_markov_advantage_bits": 0.4183713657264672,
+            "tokens": 8475
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "line_position_class": "initial"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.04439817360994562,
+            "share_of_language_token_markov_advantage_bits": 0.3558932279554415,
+            "tokens": 3055
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "line_position_class": "final"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.11084481449740997,
+            "share_of_language_token_markov_advantage_bits": 0.2018805980380512,
+            "tokens": 3055
+          }
+        ],
+        "Italian": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "line_position_class": "medial"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.06727255045061158,
+            "share_of_language_token_markov_advantage_bits": 0.8848380743260791,
+            "tokens": 13035
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "line_position_class": "initial"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.06828447216985026,
+            "share_of_language_token_markov_advantage_bits": 0.08121508768599112,
+            "tokens": 545
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "line_position_class": "final"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.1540138822892262,
+            "share_of_language_token_markov_advantage_bits": 0.03394683798793475,
+            "tokens": 545
+          }
+        ],
+        "Latin": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "line_position_class": "medial"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.04886911829836318,
+            "share_of_language_token_markov_advantage_bits": 0.8998724910486022,
+            "tokens": 13255
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "line_position_class": "initial"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.2379360372074585,
+            "share_of_language_token_markov_advantage_bits": 0.06567103286552618,
+            "tokens": 530
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "line_position_class": "final"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.011262643421876852,
+            "share_of_language_token_markov_advantage_bits": 0.034456476085869235,
+            "tokens": 530
+          }
+        ]
+      },
+      "plaintext_bigram_frequency": {
+        "French": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_plain_bigram_frequency_bin": "0"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.06770140870643993,
+            "share_of_language_token_markov_advantage_bits": 0.4004338205974869,
+            "tokens": 7825
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_plain_bigram_frequency_bin": "2-3"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.019631040662524572,
+            "share_of_language_token_markov_advantage_bits": 0.12573310036917382,
+            "tokens": 1565
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_plain_bigram_frequency_bin": "1"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.03133195789217742,
+            "share_of_language_token_markov_advantage_bits": 0.11306504677447426,
+            "tokens": 1855
+          }
+        ],
+        "German": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_plain_bigram_frequency_bin": "0"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.13404561864319434,
+            "share_of_language_token_markov_advantage_bits": 0.40801849239098364,
+            "tokens": 8350
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_plain_bigram_frequency_bin": "32+"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.19814756066178074,
+            "share_of_language_token_markov_advantage_bits": 0.20789403368627488,
+            "tokens": 1655
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_plain_bigram_frequency_bin": "1"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.09347113941044206,
+            "share_of_language_token_markov_advantage_bits": 0.10258802153946221,
+            "tokens": 1630
+          }
+        ],
+        "Italian": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_plain_bigram_frequency_bin": "0"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.0917749952645309,
+            "share_of_language_token_markov_advantage_bits": 0.553083741382966,
+            "tokens": 9040
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_plain_bigram_frequency_bin": "1"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.04052948802111779,
+            "share_of_language_token_markov_advantage_bits": 0.12203419943593162,
+            "tokens": 1475
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_plain_bigram_frequency_bin": "4-7"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.019251023877454847,
+            "share_of_language_token_markov_advantage_bits": 0.10257091464383175,
+            "tokens": 960
+          }
+        ],
+        "Latin": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_plain_bigram_frequency_bin": "0"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.01961603452677469,
+            "share_of_language_token_markov_advantage_bits": 0.6648374079847392,
+            "tokens": 10775
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_plain_bigram_frequency_bin": "1"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.14781268867276678,
+            "share_of_language_token_markov_advantage_bits": 0.12234125356027,
+            "tokens": 1225
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_plain_bigram_frequency_bin": "2-3"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.19120195651776353,
+            "share_of_language_token_markov_advantage_bits": 0.11311424549558427,
+            "tokens": 1075
+          }
+        ]
+      },
+      "plaintext_conditional_probability": {
+        "French": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_plain_conditional_probability_bin": "0"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.06770140870643993,
+            "share_of_language_token_markov_advantage_bits": 0.4004338205974869,
+            "tokens": 7825
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_plain_conditional_probability_bin": "(.01,.05]"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.08048428086549479,
+            "share_of_language_token_markov_advantage_bits": 0.23180521363104542,
+            "tokens": 2615
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_plain_conditional_probability_bin": "(0,.01]"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.026940248500503416,
+            "share_of_language_token_markov_advantage_bits": 0.19330756468030588,
+            "tokens": 1790
+          }
+        ],
+        "German": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_plain_conditional_probability_bin": "0"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.13404561864319434,
+            "share_of_language_token_markov_advantage_bits": 0.40801849239098364,
+            "tokens": 8350
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_plain_conditional_probability_bin": "(.01,.05]"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.03302007129635888,
+            "share_of_language_token_markov_advantage_bits": 0.23313901753212984,
+            "tokens": 2755
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_plain_conditional_probability_bin": "(0,.01]"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.03171963466948852,
+            "share_of_language_token_markov_advantage_bits": 0.20361665967511813,
+            "tokens": 1885
+          }
+        ],
+        "Italian": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_plain_conditional_probability_bin": "0"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.0917749952645309,
+            "share_of_language_token_markov_advantage_bits": 0.553083741382966,
+            "tokens": 9040
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_plain_conditional_probability_bin": "(.01,.05]"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.0011442449715191535,
+            "share_of_language_token_markov_advantage_bits": 0.1681835372864128,
+            "tokens": 1725
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_plain_conditional_probability_bin": "(0,.01]"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.05527845397814257,
+            "share_of_language_token_markov_advantage_bits": 0.11332767401272835,
+            "tokens": 1120
+          }
+        ],
+        "Latin": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_plain_conditional_probability_bin": "0"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.01961603452677469,
+            "share_of_language_token_markov_advantage_bits": 0.6648374079847392,
+            "tokens": 10775
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_plain_conditional_probability_bin": "(.01,.05]"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.19195471296104522,
+            "share_of_language_token_markov_advantage_bits": 0.11750871540589318,
+            "tokens": 1235
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_plain_conditional_probability_bin": "(0,.01]"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.1492229786747726,
+            "share_of_language_token_markov_advantage_bits": 0.08705574197950694,
+            "tokens": 750
+          }
+        ]
+      },
+      "plaintext_frequency": {
+        "French": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_plain_current_frequency_bin": "8-15"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.1736587585206513,
+            "share_of_language_token_markov_advantage_bits": 0.23937837817016913,
+            "tokens": 1435
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_plain_current_frequency_bin": "4-7"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.02712731868193674,
+            "share_of_language_token_markov_advantage_bits": 0.17941453681469713,
+            "tokens": 1435
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "train_plain_current_frequency_bin": "32-63"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.2107873011427674,
+            "share_of_language_token_markov_advantage_bits": 0.1745476337782347,
+            "tokens": 1490
+          }
+        ],
+        "German": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_plain_current_frequency_bin": "128+"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.04853487352542014,
+            "share_of_language_token_markov_advantage_bits": 0.2129819465228217,
+            "tokens": 3500
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_plain_current_frequency_bin": "8-15"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.00696412358849239,
+            "share_of_language_token_markov_advantage_bits": 0.2022590376027047,
+            "tokens": 1445
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "train_plain_current_frequency_bin": "16-31"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.026350661812512003,
+            "share_of_language_token_markov_advantage_bits": 0.17551941026407233,
+            "tokens": 1575
+          }
+        ],
+        "Italian": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_plain_current_frequency_bin": "16-31"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.1459162405114656,
+            "share_of_language_token_markov_advantage_bits": 0.24352938467407226,
+            "tokens": 1395
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_plain_current_frequency_bin": "8-15"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.05365837687235313,
+            "share_of_language_token_markov_advantage_bits": 0.1783190328340665,
+            "tokens": 1060
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "train_plain_current_frequency_bin": "4-7"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.02416161366173647,
+            "share_of_language_token_markov_advantage_bits": 0.15286716184108465,
+            "tokens": 980
+          }
+        ],
+        "Latin": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_plain_current_frequency_bin": "16-31"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.3739903791633442,
+            "share_of_language_token_markov_advantage_bits": 0.22943318379424033,
+            "tokens": 1415
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_plain_current_frequency_bin": "8-15"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.26227702542686965,
+            "share_of_language_token_markov_advantage_bits": 0.22725813203320883,
+            "tokens": 1445
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "train_plain_current_frequency_bin": "4-7"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.1172768827636235,
+            "share_of_language_token_markov_advantage_bits": 0.15016730264454484,
+            "tokens": 1335
+          }
+        ]
+      },
+      "plaintext_token_length": {
+        "French": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "plaintext_token_length_bin": "4-5"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.007314554330643858,
+            "share_of_language_token_markov_advantage_bits": 0.3159820447324196,
+            "tokens": 3760
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "plaintext_token_length_bin": "6-7"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.014271876357921464,
+            "share_of_language_token_markov_advantage_bits": 0.25352408258519293,
+            "tokens": 2255
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "French",
+              "plaintext_token_length_bin": "8-10"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.06811045939540061,
+            "share_of_language_token_markov_advantage_bits": 0.22824396392827473,
+            "tokens": 1280
+          }
+        ],
+        "German": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "plaintext_token_length_bin": "4-5"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.07611218390843445,
+            "share_of_language_token_markov_advantage_bits": 0.39355234621066937,
+            "tokens": 3940
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "plaintext_token_length_bin": "1-3"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.05625221696492847,
+            "share_of_language_token_markov_advantage_bits": 0.39084813755933445,
+            "tokens": 8445
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "German",
+              "plaintext_token_length_bin": "6-7"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.11089714627003963,
+            "share_of_language_token_markov_advantage_bits": 0.1667784480195694,
+            "tokens": 1700
+          }
+        ],
+        "Italian": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "plaintext_token_length_bin": "4-5"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.04526320533413572,
+            "share_of_language_token_markov_advantage_bits": 0.4440079021021905,
+            "tokens": 3590
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "plaintext_token_length_bin": "6-7"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.07737195602118019,
+            "share_of_language_token_markov_advantage_bits": 0.25800153600223047,
+            "tokens": 2235
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Italian",
+              "plaintext_token_length_bin": "1-3"
+            },
+            "delta_bits_per_event_ratio_of_sums": 0.055943618205783065,
+            "share_of_language_token_markov_advantage_bits": 0.24668820183442866,
+            "tokens": 7360
+          }
+        ],
+        "Latin": [
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "plaintext_token_length_bin": "4-5"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.12902197302297144,
+            "share_of_language_token_markov_advantage_bits": 0.3163523628836773,
+            "tokens": 3690
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "plaintext_token_length_bin": "6-7"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.05736728395553688,
+            "share_of_language_token_markov_advantage_bits": 0.2633833722670891,
+            "tokens": 2880
+          },
+          {
+            "bin": {
+              "factorization": "1x16",
+              "language": "Latin",
+              "plaintext_token_length_bin": "8-10"
+            },
+            "delta_bits_per_event_ratio_of_sums": -0.020000482681228265,
+            "share_of_language_token_markov_advantage_bits": 0.23727802463063405,
+            "tokens": 2765
+          }
+        ]
+      }
+    },
+    "warning": "These are descriptive concentration summaries, not independent causal effects and not an automatic Phase-3A.6 mechanism choice."
+  },
+  "max_aggregate_parity_abs_error": 1.199040866595169e-14,
+  "parity_runs": 60,
+  "parity_runs_passed": 60,
+  "phase3a5_config_sha256": "a14fd5af12adc0e226b23c4939de3271d8c64eae616a628a163805a8efe880c7",
+  "phase3a5_generator_sha256": "52e996b39924b9b29384e77035077e81bb748865f1206afcdcbb1fa7522c915c",
+  "phase3a5_relation_matrix_sha256": "6a3bddb21785d2e1d082ab9c9ca0ab123a21c98930585c0249b9b3983d655c8d",
+  "primary_factorization": "1x16",
+  "reserved_control_ciphertext_json_parsed": false,
+  "reserved_control_units_scored": false,
+  "schema_version": "1.0",
+  "status": "exploratory_diagnostic",
+  "transition_rows": 51730,
+  "voynich_locked_test_accessed": false
+}

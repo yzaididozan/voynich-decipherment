@@ -1,0 +1,13 @@
+factorization,source_id,language,phase3a5_token_relation_status,seeds,mean_delta_bits_per_event,sd_delta_bits_per_event,positive_seeds,strong_seeds,selected_context_1_seeds,selected_context_2_seeds
+1x16,french_profiterole_ud218,French,nonrobust,5,0.00865726168325338,0.0039039831290513557,5,0,5,0
+1x16,german_rem_v21,German,robust,5,0.07734154677190537,0.002099204417124962,5,5,5,0
+1x16,italian_old_ud218,Italian,robust,5,0.06675934405363951,0.004814082199373747,5,5,5,0
+1x16,latin_udante_ud218,Latin,nonrobust,5,-0.053233829877932945,0.004232664769697101,0,0,5,0
+2x8,french_profiterole_ud218,French,nonrobust,5,0.008237282781429744,0.003766644257735635,5,0,5,0
+2x8,german_rem_v21,German,robust,5,0.07704523698489388,0.002054937718215604,5,5,5,0
+2x8,italian_old_ud218,Italian,robust,5,0.06649548008343933,0.004886274721723301,5,5,5,0
+2x8,latin_udante_ud218,Latin,nonrobust,5,-0.053359560710943034,0.00431305821313867,0,0,5,0
+4x4,french_profiterole_ud218,French,nonrobust,5,0.007686401685982247,0.003685261118039342,5,0,5,0
+4x4,german_rem_v21,German,robust,5,0.07674432241498455,0.001957927248061699,5,5,5,0
+4x4,italian_old_ud218,Italian,robust,5,0.06616702137244515,0.0049056447206738876,5,5,5,0
+4x4,latin_udante_ud218,Latin,nonrobust,5,-0.05346694730041222,0.004344946849912485,0,0,5,0

@@ -1,0 +1,273 @@
+{
+  "bins": {
+    "bigram_frequency": [
+      {
+        "label": "0",
+        "upper": 0
+      },
+      {
+        "label": "1",
+        "upper": 1
+      },
+      {
+        "label": "2-3",
+        "upper": 3
+      },
+      {
+        "label": "4-7",
+        "upper": 7
+      },
+      {
+        "label": "8-15",
+        "upper": 15
+      },
+      {
+        "label": "16-31",
+        "upper": 31
+      },
+      {
+        "label": "32+",
+        "upper": null
+      }
+    ],
+    "probability": [
+      {
+        "label": "0",
+        "upper": 0.0
+      },
+      {
+        "label": "(0,.01]",
+        "upper": 0.01
+      },
+      {
+        "label": "(.01,.05]",
+        "upper": 0.05
+      },
+      {
+        "label": "(.05,.10]",
+        "upper": 0.1
+      },
+      {
+        "label": "(.10,.25]",
+        "upper": 0.25
+      },
+      {
+        "label": "(.25,.50]",
+        "upper": 0.5
+      },
+      {
+        "label": "(.50,1]",
+        "upper": 1.0
+      }
+    ],
+    "token_frequency": [
+      {
+        "label": "0",
+        "upper": 0
+      },
+      {
+        "label": "1",
+        "upper": 1
+      },
+      {
+        "label": "2-3",
+        "upper": 3
+      },
+      {
+        "label": "4-7",
+        "upper": 7
+      },
+      {
+        "label": "8-15",
+        "upper": 15
+      },
+      {
+        "label": "16-31",
+        "upper": 31
+      },
+      {
+        "label": "32-63",
+        "upper": 63
+      },
+      {
+        "label": "64-127",
+        "upper": 127
+      },
+      {
+        "label": "128+",
+        "upper": null
+      }
+    ],
+    "token_length": [
+      {
+        "label": "1-3",
+        "upper": 3
+      },
+      {
+        "label": "4-5",
+        "upper": 5
+      },
+      {
+        "label": "6-7",
+        "upper": 7
+      },
+      {
+        "label": "8-10",
+        "upper": 10
+      },
+      {
+        "label": "11+",
+        "upper": null
+      }
+    ]
+  },
+  "expected_outputs": [
+    "aggregate_parity_checks.csv",
+    "token_contributions.csv",
+    "transition_contributions.csv",
+    "frequency_bin_summary.csv",
+    "bigram_frequency_bin_summary.csv",
+    "cipher_recurrence_bin_summary.csv",
+    "cipher_bigram_frequency_bin_summary.csv",
+    "plain_conditional_probability_bin_summary.csv",
+    "cipher_conditional_probability_bin_summary.csv",
+    "token_length_summary.csv",
+    "line_position_summary.csv",
+    "variant_index_summary.csv",
+    "top_frequency_summary.csv",
+    "language_summary.csv",
+    "factorization_robustness_summary.csv",
+    "summary.json",
+    "SHA256SUMS"
+  ],
+  "expected_runs": {
+    "aggregate_parity_checks": 60,
+    "detailed_primary_factorization_runs": 20
+  },
+  "experiment_id": "token-markov-failure-localization-v1",
+  "factorizations": {
+    "aggregate_parity_checks": [
+      "1x16",
+      "2x8",
+      "4x4"
+    ],
+    "primary_localization": "1x16",
+    "rationale": "1x16 is the Phase-3A.5 baseline and is closest to the atomic K=16 representation. All three factorizations had the same 2/4-language token-Markov failure pattern; the other two are retained as scorer parity/robustness checks rather than tripling detailed token output."
+  },
+  "features": {
+    "structural": [
+      "plaintext token length",
+      "line position class",
+      "Phase-3A.5 abstract variant index",
+      "previous abstract variant index",
+      "TRAIN variant-index bigram frequency"
+    ],
+    "train_only_ciphertext": [
+      "current exact ciphertext-token frequency",
+      "previous exact ciphertext-token frequency",
+      "previous-to-current exact ciphertext bigram frequency",
+      "P(cipher_current|cipher_previous)",
+      "cipher-previous next-type diversity",
+      "cipher-previous transition concentration"
+    ],
+    "train_only_plaintext": [
+      "current token frequency",
+      "previous token frequency",
+      "current token deterministic frequency rank",
+      "previous-to-current bigram frequency",
+      "P(current|previous)",
+      "previous-token next-type diversity",
+      "previous-token transition concentration",
+      "current-token predecessor diversity",
+      "top-N current-token membership"
+    ]
+  },
+  "followup_rule": "Use the diagnostic only to formulate one explicit Phase-3A.6 mechanism hypothesis. Freeze that follow-up protocol before generating or scoring new development controls. If the residual advantage is diffuse rather than localized, do not force a frequency- or transition-specific mechanism.",
+  "guardrails": {
+    "all_grouping_features_derived_from_train_only": true,
+    "no_automatic_phase3a6_mechanism_selection": true,
+    "no_confirmatory_p_values": true,
+    "no_new_cipher_generation": true,
+    "no_new_model_hyperparameter_selection": true,
+    "reserved_control_ciphertext_json_parsed": false,
+    "reserved_control_units_scored": false,
+    "selected_context_order_inherited_per_run": true,
+    "validation_used_only_for_contribution_scoring_and_group_assignment": true,
+    "voynich_locked_test_accessed": false
+  },
+  "inputs": {
+    "expected_level2_config_sha256": "6f6214286c9c8e47e90c27cf4c41da60f21c12fd8c31c07a4a98e3aada8b236c",
+    "expected_phase3a5_config_sha256": "a14fd5af12adc0e226b23c4939de3271d8c64eae616a628a163805a8efe880c7",
+    "expected_phase3a5_generator_sha256": "52e996b39924b9b29384e77035077e81bb748865f1206afcdcbb1fa7522c915c",
+    "level2_config_path": "configs/evaluation/level2_predictive_controls_v1.json",
+    "phase3a5_config_path": "configs/mechanisms/compositional_affix_factorization_v1.json",
+    "phase3a5_control_root": "data/controls/ciphers/compositional_affix_factorization_v1",
+    "phase3a5_generator_path": "src/ciphers/compositional_affix_factorization.py",
+    "phase3a5_relation_matrix": "results/controls/compositional_affix_factorization_exploration/v1/run_relation_matrix.csv",
+    "phase3a5_result_root": "results/controls/compositional_affix_factorization_exploration/v1",
+    "source_root": "data/controls/languages_open_v1",
+    "split_root": "data/controls/splits/level2_v1"
+  },
+  "interpretation_boundary": "This is a post-hoc development diagnostic. It does not test a new cipher, does not establish a Voynich plaintext property, and cannot by itself promote a mechanism to confirmation.",
+  "model": {
+    "aggregate_parity_tolerance": 1e-09,
+    "char_base_order": 3,
+    "event_denominator": "ciphertext glyphs plus one EOT event per token",
+    "matched_comparator": "the TokenMarkovModel internal token-reset character trigram with explicit EOT",
+    "max_context": 2,
+    "negative_delta_meaning": "exact-token Markov better",
+    "per_token_delta_definition": "token_markov_bits_minus_matched_trigram_bits",
+    "positive_delta_meaning": "matched trigram better",
+    "relation": "token_markov",
+    "selected_context_source": "Phase-3A.5 run_relation_matrix.csv"
+  },
+  "output_root": "results/diagnostics/token_markov_failure_localization/v1",
+  "phase_label": "Phase 3A.D1 \u2014 Token-Markov Failure Localization",
+  "primary_question": "Why does the frozen token-Markov-versus-matched-trigram relation replicate strongly in German and Italian but remain non-robust in French and Latin?",
+  "purpose": "Localize which TRAIN-derived lexical, transition, recurrence, length, position, and variant-schedule properties account for the residual exact-token Markov advantage in the Phase-3A.5 development controls.",
+  "schema_version": "1.0",
+  "seeds": [
+    40814041438,
+    40814041439,
+    40814041440,
+    40814041441,
+    40814041442
+  ],
+  "sources": {
+    "french_profiterole_ud218": {
+      "expected_lines": 2632,
+      "language": "French",
+      "phase3a5_strong_seeds": 0,
+      "phase3a5_token_relation_status": "nonrobust",
+      "source_sha256": "7f667acbc6bb124901d803749a0b518463bdd9d836b5c713646ec6037fcd8f91"
+    },
+    "german_rem_v21": {
+      "expected_lines": 4470,
+      "language": "German",
+      "phase3a5_strong_seeds": 5,
+      "phase3a5_token_relation_status": "robust",
+      "source_sha256": "343f261bf5c9338ba31cbb273c723b997f079dc6a026e768f328bbdfa122c601"
+    },
+    "italian_old_ud218": {
+      "expected_lines": 740,
+      "language": "Italian",
+      "phase3a5_strong_seeds": 5,
+      "phase3a5_token_relation_status": "robust",
+      "source_sha256": "fbcd49798c1ee6517578f7a36d7450e6cf71e21e9f8c3ba2841eea4611e072a4"
+    },
+    "latin_udante_ud218": {
+      "expected_lines": 725,
+      "language": "Latin",
+      "phase3a5_strong_seeds": 0,
+      "phase3a5_token_relation_status": "nonrobust",
+      "source_sha256": "8e5eecd174b432056549ee7f5ef811ff1ab2814f14de6aa51973571cb22d5fd4"
+    }
+  },
+  "status": "exploratory_diagnostic",
+  "top_n_frequency_sets": [
+    8,
+    16,
+    32,
+    64
+  ]
+}
