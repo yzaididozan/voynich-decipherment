@@ -1,0 +1,16 @@
+factorization,relation,languages_replicated,replicated_languages,relation_robust_3_of_4
+1x16,hmm_space_free,4,French;German;Italian;Latin,True
+1x16,hmm_token_aware,4,French;German;Italian;Latin,True
+1x16,slot_grammar,4,French;German;Italian;Latin,True
+1x16,token_markov,2,German;Italian,False
+1x16,copy_edit,4,French;German;Italian;Latin,True
+2x8,hmm_space_free,4,French;German;Italian;Latin,True
+2x8,hmm_token_aware,4,French;German;Italian;Latin,True
+2x8,slot_grammar,4,French;German;Italian;Latin,True
+2x8,token_markov,2,German;Italian,False
+2x8,copy_edit,4,French;German;Italian;Latin,True
+4x4,hmm_space_free,4,French;German;Italian;Latin,True
+4x4,hmm_token_aware,4,French;German;Italian;Latin,True
+4x4,slot_grammar,4,French;German;Italian;Latin,True
+4x4,token_markov,2,German;Italian,False
+4x4,copy_edit,4,French;German;Italian;Latin,True

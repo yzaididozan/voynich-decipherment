@@ -1,0 +1,52 @@
+{
+  "abstract_exact_token_partition_invariant_across_factorizations": true,
+  "automatic_winner_selected": false,
+  "base_form_preservation_verified": true,
+  "coverage_fraction": 1.0,
+  "experiment_id": "compositional-affix-factorization-exploration-v1",
+  "factorizations": [
+    "1x16",
+    "2x8",
+    "4x4"
+  ],
+  "generator_sha256": "52e996b39924b9b29384e77035077e81bb748865f1206afcdcbb1fa7522c915c",
+  "inherited_replication_rule": {
+    "full_hierarchy": "all five relations robust",
+    "language_relation_replication": ">=4/5 seeds strong_direction_match_voynich",
+    "purpose": "Report whether any development condition reaches the already-frozen Level-2 directional hierarchy rule. Do not automatically select a confirmatory condition.",
+    "relation_robustness": "replicated in >=3/4 languages"
+  },
+  "level2_config_sha256": "6f6214286c9c8e47e90c27cf4c41da60f21c12fd8c31c07a4a98e3aada8b236c",
+  "next_step": "If a factorization reaches the inherited full five-relation hierarchy on development validation, stop mechanism tuning and write/freeze a separate Phase-3B confirmatory protocol before reserved-test access. Otherwise retain the result and design a new exploratory mechanism without adding post-hoc factorizations.",
+  "no_single_similarity_score": true,
+  "parent_lineage_verifications": 60,
+  "parent_phase3a4_config_sha256": "514f440de8f086f0a5d9292f85289930de98fbc0893251e345ed134ef278b1f8",
+  "parent_phase3a4_generator_sha256": "3969000c5ca678a68f259f2967d4164f25dc1360b7bba0e945d619704d12b345",
+  "phase3a4_k16_variant_schedule_verified": true,
+  "phase3a5_config_sha256": "a14fd5af12adc0e226b23c4939de3271d8c64eae616a628a163805a8efe880c7",
+  "primary_prediction": "With variant count and suffix length held fixed, the token-Markov-minus-matched-trigram delta is predicted to be lowest under 1x16, intermediate under 2x8, and highest under 4x4, while the other four Voynich-direction relations remain positive. This is an exploratory representation-geometry prediction rather than a guaranteed information-theoretic consequence.",
+  "relation_rows": 300,
+  "reserved_control_test_encoded": false,
+  "reserved_control_test_parsed_or_scored": false,
+  "runs": 60,
+  "schema_version": "1.0",
+  "status": "exploratory",
+  "stop_rule": "Do not add new factorizations after seeing results within Phase 3A.5. If none reaches the inherited full-hierarchy rule, retain the result and design a new mechanism intervention rather than tuning this grid post hoc.",
+  "suffix_length_glyphs": 2,
+  "trajectory": {
+    "full_inherited_level2_hierarchy_by_factorization": {
+      "1x16": false,
+      "2x8": false,
+      "4x4": false
+    },
+    "interpretation": "Exploratory development result only. Even a factorization that reaches the inherited Level-2 hierarchy must be frozen in a separate Phase-3B protocol before reserved-test use.",
+    "token_markov_mean_delta_by_factorization": {
+      "1x16": 0.024881080657716326,
+      "2x8": 0.024604609784704978,
+      "4x4": 0.02428269954324993
+    },
+    "token_markov_prediction_order_non_decreasing": false
+  },
+  "voynich_locked_test_accessed": false,
+  "whole_token_variant_count": 16
+}

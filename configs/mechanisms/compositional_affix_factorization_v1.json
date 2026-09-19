@@ -1,0 +1,129 @@
+{
+  "control_output_root": "data/controls/ciphers/compositional_affix_factorization_v1",
+  "evaluation_scope": "CONTROL VALIDATION ONLY",
+  "expected_relation_rows": 300,
+  "expected_runs": 60,
+  "experiment_id": "compositional-affix-factorization-exploration-v1",
+  "exploratory_reporting": {
+    "automatic_winner_selection": false,
+    "confirmatory_candidate_selection_allowed": false,
+    "no_single_similarity_score": true,
+    "report_each_predictive_delta": true,
+    "report_factorization_diagnostics": true,
+    "report_inherited_replication_rule": true,
+    "report_parent_lineage_verification": true,
+    "report_seed_and_language_variation": true
+  },
+  "fit_scope": "CONTROL TRAIN ONLY",
+  "informed_by": {
+    "phase3a4_experiment": "base-form-suffix-extended-exploration-v1",
+    "phase3a4_result": "At K=16 the global token-Markov-minus-trigram mean crossed zero (+0.028097 bits/event) while HMM space-free, HMM token-aware, slot-grammar, and copy-edit remained strong in 20/20 runs. The token-Markov strong-direction rule replicated in German and Italian but not French or Latin (2/4 languages), short of the frozen >=3/4 language robustness rule.",
+    "status": "post-hoc exploratory mechanism refinement, not confirmatory"
+  },
+  "inherited_replication_rule": {
+    "full_hierarchy": "all five relations robust",
+    "language_relation_replication": ">=4/5 seeds strong_direction_match_voynich",
+    "purpose": "Report whether any development condition reaches the already-frozen Level-2 directional hierarchy rule. Do not automatically select a confirmatory condition.",
+    "relation_robustness": "replicated in >=3/4 languages"
+  },
+  "leakage_guards": {
+    "base_mapping_fit_on_control_train_only": true,
+    "reserved_control_test_encoded": false,
+    "reserved_control_test_parsed_or_scored": false,
+    "validation_does_not_fit_or_modify_mapping": true,
+    "voynich_test_LOCKED_accessed": false
+  },
+  "level2_config_path": "configs/evaluation/level2_predictive_controls_v1.json",
+  "level2_split_root": "data/controls/splits/level2_v1",
+  "mechanism": {
+    "affix_operation": "append_exactly_two_factor_glyphs_to_every_token",
+    "base_encoding": "exact_phase3a4_inherited_train_fitted_monoalphabetic_mapping",
+    "coverage": "all_train_and_validation_tokens",
+    "factorizations": [
+      {
+        "label": "1x16",
+        "slot_a_states": 1,
+        "slot_b_states": 16
+      },
+      {
+        "label": "2x8",
+        "slot_a_states": 2,
+        "slot_b_states": 8
+      },
+      {
+        "label": "4x4",
+        "slot_a_states": 4,
+        "slot_b_states": 4
+      }
+    ],
+    "identity_partition_control": "Because the same 16-way variant index is mapped bijectively to one two-glyph pair in every condition, exact surface-token equality is preserved as an abstract partition across factorizations. Only the glyph-level representation of the 16 variant identities changes.",
+    "information_note": "Under ideal uniform variant selection, every factorization carries the same four bits of variant identity. The experiment therefore tests representation geometry and finite-order/local predictability, not a reduction in nominal variant entropy.",
+    "master_factor_ordering": "One deterministic four-state A ordering and sixteen-state B ordering are defined per source/seed; each factorization activates prefixes of those same orders.",
+    "name": "compositional_affix_factorization",
+    "pair_mapping": "For factorization R x C with R*C=16 and variant index i in [0,15], slot_a_index=floor(i/C), slot_b_index=i mod C. The pair is unique, so all conditions retain exactly 16 whole-token variants.",
+    "slot_a_namespace": "A####",
+    "slot_b_namespace": "B####",
+    "suffix_length_glyphs": 2,
+    "token_length_control": "Every ciphertext token is encoded-base length + 2 in all three factorizations.",
+    "validation_unseen_character_policy": "same_as_phase3a4_reversible_unicode_codepoint_glyph",
+    "variant_index_choice": "Use the exact Phase-3A.4 K=16 occurrence rule: stable_hash('base-form-suffix-choice-v1', seed, line_index, token_index) % 16. Plaintext token identity is excluded.",
+    "whole_token_variant_count": 16
+  },
+  "operational_relations": [
+    "hmm_space_free",
+    "hmm_token_aware",
+    "slot_grammar",
+    "token_markov",
+    "copy_edit"
+  ],
+  "parent_phase3a4": {
+    "config_path": "configs/mechanisms/base_form_suffix_extended_v1.json",
+    "control_root": "data/controls/ciphers/base_form_suffix_extended_v1",
+    "expected_config_sha256": "514f440de8f086f0a5d9292f85289930de98fbc0893251e345ed134ef278b1f8",
+    "expected_generator_sha256": "3969000c5ca678a68f259f2967d4164f25dc1360b7bba0e945d619704d12b345",
+    "generator_path": "src/ciphers/base_form_suffix_extended.py",
+    "lineage_condition": "K16",
+    "lineage_requirement": "For each source/seed, Phase 3A.5 must inherit the exact Phase-3A.4 TRAIN-fitted monoalphabetic base mapping and exact K=16 occurrence variant-index schedule. Phase 3A.5 is not byte-identical to Phase 3A.4 because it replaces the one-glyph suffix with a two-glyph code."
+  },
+  "phase_label": "Phase 3A.5 \u2014 Compositional Affix Factorization",
+  "primary_prediction": "With variant count and suffix length held fixed, the token-Markov-minus-matched-trigram delta is predicted to be lowest under 1x16, intermediate under 2x8, and highest under 4x4, while the other four Voynich-direction relations remain positive. This is an exploratory representation-geometry prediction rather than a guaranteed information-theoretic consequence.",
+  "question": "Holding whole-token surface multiplicity fixed at 16, suffix length fixed at two glyphs, full base-form preservation fixed, and the occurrence-level variant-index schedule fixed, does increasingly balanced factorization of the 16 variants (1x16, 2x8, 4x4) improve the Voynich-direction predictive hierarchy by making the variant system more locally structured?",
+  "result_output_root": "results/controls/compositional_affix_factorization_exploration/v1",
+  "schema_version": "1.0",
+  "seeds": [
+    40814041438,
+    40814041439,
+    40814041440,
+    40814041441,
+    40814041442
+  ],
+  "source_root": "data/controls/languages_open_v1",
+  "sources": {
+    "french_profiterole_ud218": {
+      "expected_lines": 2632,
+      "expected_tokens": 20000,
+      "language": "French",
+      "source_sha256": "7f667acbc6bb124901d803749a0b518463bdd9d836b5c713646ec6037fcd8f91"
+    },
+    "german_rem_v21": {
+      "expected_lines": 4470,
+      "expected_tokens": 20000,
+      "language": "German",
+      "source_sha256": "343f261bf5c9338ba31cbb273c723b997f079dc6a026e768f328bbdfa122c601"
+    },
+    "italian_old_ud218": {
+      "expected_lines": 740,
+      "expected_tokens": 20000,
+      "language": "Italian",
+      "source_sha256": "fbcd49798c1ee6517578f7a36d7450e6cf71e21e9f8c3ba2841eea4611e072a4"
+    },
+    "latin_udante_ud218": {
+      "expected_lines": 725,
+      "expected_tokens": 20000,
+      "language": "Latin",
+      "source_sha256": "8e5eecd174b432056549ee7f5ef811ff1ab2814f14de6aa51973571cb22d5fd4"
+    }
+  },
+  "status": "exploratory",
+  "stop_rule": "Do not add new factorizations after seeing results within Phase 3A.5. If none reaches the inherited full-hierarchy rule, retain the result and design a new mechanism intervention rather than tuning this grid post hoc."
+}
