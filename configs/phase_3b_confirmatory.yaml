@@ -1,0 +1,132 @@
+schema_version: "1.0"
+experiment_id: "phase-3b-reserved-control-confirmation-v1"
+phase_label: "Phase 3B — Locked Reserved-Control Confirmation"
+status: "confirmatory"
+
+primary_question: >-
+  Does the exact frozen Phase 3A.6 recurrence-avoiding K=16 mechanism reproduce
+  the inherited five-relation Level-2 hierarchy on the untouched reserved
+  historical-language controls?
+
+candidate_mechanism:
+  name: "recurrence_avoiding_surface_allocation"
+  variant_count: 16
+  suffix_length_glyphs: 1
+  allocation_mode: "balanced_without_replacement_within_16_occurrence_cycles"
+  allocation_unit: "encoded lexical base"
+  base_encoding: "exact Phase-3A.4 TRAIN-fitted monoalphabetic mapping inherited by Phase 3A.6"
+  suffix_inventory: "exact Phase-3A.4 K16 master suffix inventory/order inherited by Phase 3A.6"
+  fit_scope: "CONTROL TRAIN ONLY"
+  confirmatory_evaluation_scope: "CONTROL RESERVED TEST ONLY"
+  reserved_state_policy: >-
+    Fit the key on TRAIN only. Encode TRAIN first. Freeze the final TRAIN
+    per-lexical-base occurrence counters. Encode RESERVED directly from that
+    TRAIN state in ascending reserved line index and left-to-right token order.
+    DEVELOPMENT VALIDATION is not encoded, read into the evaluator, or allowed
+    to advance allocation counters during Phase 3B.
+
+frozen_phase3a6:
+  config_path: "configs/mechanisms/recurrence_avoiding_surface_allocation_v1.json"
+  expected_config_sha256: "f26fef20aad928ee98a3e4824ca0911c8855de2ff1c0908d5388fae0ffbd2535"
+  generator_path: "src/ciphers/recurrence_avoiding_surface_allocation.py"
+  expected_generator_sha256: "2a6b27af36b0b896b40409450dffbd443d7a378d4deffaa390e8a989d25e33c9"
+  exploration_result_root: "results/controls/recurrence_avoiding_surface_allocation_exploration/v1"
+  required_exploration_summary:
+    experiment_id: "recurrence-avoiding-surface-allocation-exploration-v1"
+    status: "exploratory"
+    runs: 20
+    relation_rows: 100
+    variant_count: 16
+    suffix_length_glyphs: 1
+    parent_lineage_all_passed: true
+    zero_avoidable_validation_collisions_verified: true
+    full_inherited_level2_hierarchy: true
+    reserved_control_test_encoded: false
+    reserved_control_test_parsed_or_scored: false
+    voynich_locked_test_accessed: false
+
+frozen_level2:
+  config_path: "configs/evaluation/level2_predictive_controls_v1.json"
+  expected_config_sha256: "6f6214286c9c8e47e90c27cf4c41da60f21c12fd8c31c07a4a98e3aada8b236c"
+  required_freeze_id: "level2-predictive-controls-v1"
+  operational_relations:
+    - "hmm_space_free"
+    - "hmm_token_aware"
+    - "slot_grammar"
+    - "token_markov"
+    - "copy_edit"
+
+seeds:
+  - 40814041438
+  - 40814041439
+  - 40814041440
+  - 40814041441
+  - 40814041442
+
+source_root: "data/controls/languages_open_v1"
+split_root: "data/controls/splits/level2_v1"
+phase3a6_control_root: "data/controls/ciphers/recurrence_avoiding_surface_allocation_v1"
+confirmatory_control_root: "data/controls/ciphers/phase3b_reserved_confirmation_v1"
+result_output_root: "results/controls/phase3b_reserved_confirmation/v1"
+
+sources:
+  french_profiterole_ud218:
+    language: "French"
+    expected_lines: 2632
+    expected_tokens: 20000
+    expected_train_lines: 1858
+    expected_validation_lines: 387
+    expected_reserved_lines: 387
+    source_sha256: "7f667acbc6bb124901d803749a0b518463bdd9d836b5c713646ec6037fcd8f91"
+  german_rem_v21:
+    language: "German"
+    expected_lines: 4470
+    expected_tokens: 20000
+    expected_train_lines: 3155
+    expected_validation_lines: 657
+    expected_reserved_lines: 658
+    source_sha256: "343f261bf5c9338ba31cbb273c723b997f079dc6a026e768f328bbdfa122c601"
+  italian_old_ud218:
+    language: "Italian"
+    expected_lines: 740
+    expected_tokens: 20000
+    expected_train_lines: 522
+    expected_validation_lines: 109
+    expected_reserved_lines: 109
+    source_sha256: "fbcd49798c1ee6517578f7a36d7450e6cf71e21e9f8c3ba2841eea4611e072a4"
+  latin_udante_ud218:
+    language: "Latin"
+    expected_lines: 725
+    expected_tokens: 20000
+    expected_train_lines: 512
+    expected_validation_lines: 106
+    expected_reserved_lines: 107
+    source_sha256: "8e5eecd174b432056549ee7f5ef811ff1ab2814f14de6aa51973571cb22d5fd4"
+
+expected_runs: 20
+expected_relation_rows: 100
+
+confirmatory_decision_rule:
+  run_strong_direction_match: "delta > 0 and bootstrap CI lower > 0"
+  language_relation_replication: ">=4/5 seeds strong_direction_match_voynich"
+  relation_robustness: "replicated in >=3/4 languages"
+  phase3b_pass: "all five relations robust"
+  magnitude_matching_required: false
+  token_markov_special_threshold: false
+  automatic_relaxation_allowed: false
+
+leakage_guards:
+  validation_may_advance_reserved_state: false
+  validation_may_be_used_for_confirmatory_model_fit: false
+  reserved_may_modify_key: false
+  reserved_may_modify_hyperparameters: false
+  reserved_may_change_decision_rule: false
+  voynich_test_LOCKED_accessed: false
+
+one_shot_policy:
+  protocol_and_runner_must_be_committed_before_execution: true
+  config_hash_must_be_recorded_before_reserved_access: true
+  post_result_mechanism_tuning_with_same_reserved_set: false
+  post_result_threshold_tuning_with_same_reserved_set: false
+  phase3b_failure_is_retained_as_failure: true
+  phase3b_pass_does_not_access_voynich_automatically: true

@@ -1,0 +1,57 @@
+{
+  "allocation": "balanced_without_replacement_per_lexical_base",
+  "confirmatory_decision_rule": {
+    "automatic_relaxation_allowed": false,
+    "language_relation_replication": ">=4/5 seeds strong_direction_match_voynich",
+    "magnitude_matching_required": false,
+    "phase3b_pass": "all five relations robust",
+    "relation_robustness": "replicated in >=3/4 languages",
+    "run_strong_direction_match": "delta > 0 and bootstrap CI lower > 0",
+    "token_markov_special_threshold": false
+  },
+  "confirmatory_split": "reserved_test",
+  "decision": "PHASE_3B_PASS",
+  "development_validation_used": false,
+  "experiment_id": "phase-3b-reserved-control-confirmation-v1",
+  "full_inherited_level2_hierarchy": true,
+  "level2_config_sha256": "6f6214286c9c8e47e90c27cf4c41da60f21c12fd8c31c07a4a98e3aada8b236c",
+  "phase3a6_config_sha256": "f26fef20aad928ee98a3e4824ca0911c8855de2ff1c0908d5388fae0ffbd2535",
+  "phase3a6_exploration_summary_sha256": "7be73d40a22cbd82a0eb08bc5464834aac4a0ee7b407da131284b7f835637611",
+  "phase3a6_generator_sha256": "2a6b27af36b0b896b40409450dffbd443d7a378d4deffaa390e8a989d25e33c9",
+  "phase3b_config_sha256": "b712bbdf13e3bf121e5a045ad0d3b4a76e496a8246b4afdc63f6477a24564ce8",
+  "post_result_tuning_authorized": false,
+  "relation_rows": 100,
+  "reserved_state_policy": "direct_from_final_train_state_without_development_validation",
+  "runs": 20,
+  "schema_version": "1.0",
+  "status": "confirmatory",
+  "suffix_length_glyphs": 1,
+  "token_markov_by_language": {
+    "French": {
+      "language_relation_replicated": true,
+      "mean_delta_bits_per_event": 0.07981086984174288,
+      "positive_direction_seeds": 5,
+      "strong_direction_seeds": 5
+    },
+    "German": {
+      "language_relation_replicated": true,
+      "mean_delta_bits_per_event": 0.14783360154026254,
+      "positive_direction_seeds": 5,
+      "strong_direction_seeds": 5
+    },
+    "Italian": {
+      "language_relation_replicated": true,
+      "mean_delta_bits_per_event": 0.13315248712746533,
+      "positive_direction_seeds": 5,
+      "strong_direction_seeds": 5
+    },
+    "Latin": {
+      "language_relation_replicated": true,
+      "mean_delta_bits_per_event": 0.016602914169610815,
+      "positive_direction_seeds": 5,
+      "strong_direction_seeds": 5
+    }
+  },
+  "variant_count": 16,
+  "voynich_locked_test_accessed": false
+}

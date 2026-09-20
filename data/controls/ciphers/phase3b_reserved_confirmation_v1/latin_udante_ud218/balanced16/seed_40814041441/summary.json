@@ -1,0 +1,21 @@
+{
+  "development_validation_lines_encoded": 0,
+  "experiment_id": "phase-3b-reserved-control-confirmation-v1",
+  "provenance": {
+    "frozen_train_occurrence_state_sha256": "dbb31173d1d323d2ed30daeaeeb6d31042d7be773c1261bd3db2847cd861d76c",
+    "level2_config_sha256": "6f6214286c9c8e47e90c27cf4c41da60f21c12fd8c31c07a4a98e3aada8b236c",
+    "phase3a6_config_sha256": "f26fef20aad928ee98a3e4824ca0911c8855de2ff1c0908d5388fae0ffbd2535",
+    "phase3a6_exploration_summary_sha256": "7be73d40a22cbd82a0eb08bc5464834aac4a0ee7b407da131284b7f835637611",
+    "phase3a6_generator_sha256": "2a6b27af36b0b896b40409450dffbd443d7a378d4deffaa390e8a989d25e33c9",
+    "phase3b_config_sha256": "b712bbdf13e3bf121e5a045ad0d3b4a76e496a8246b4afdc63f6477a24564ce8",
+    "reserved_state_policy": "direct_from_final_train_state_without_development_validation",
+    "source_sha256": "8e5eecd174b432056549ee7f5ef811ff1ab2814f14de6aa51973571cb22d5fd4",
+    "split_sha256": "5fd8a813983e6588a21f3d9674a6df8fb6733d34c88d88adcac6423f75e48a29"
+  },
+  "reserved_continues_directly_from_final_train_state": true,
+  "reserved_lines_encoded": 107,
+  "schema_version": "1.0",
+  "status": "confirmatory",
+  "train_lines_encoded": 512,
+  "voynich_locked_test_accessed": false
+}

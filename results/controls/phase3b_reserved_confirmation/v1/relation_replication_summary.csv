@@ -1,0 +1,6 @@
+relation,languages_replicated,replicated_languages,relation_robust_3_of_4
+hmm_space_free,4,French;German;Italian;Latin,True
+hmm_token_aware,4,French;German;Italian;Latin,True
+slot_grammar,4,French;German;Italian;Latin,True
+token_markov,4,French;German;Italian;Latin,True
+copy_edit,4,French;German;Italian;Latin,True
