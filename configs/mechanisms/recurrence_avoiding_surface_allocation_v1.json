@@ -1,0 +1,149 @@
+{
+  "control_output_root": "data/controls/ciphers/recurrence_avoiding_surface_allocation_v1",
+  "diagnostic_lineage": {
+    "expected_phase3ad1_analysis_sha256": "b729ee11b1909ac2972a150c051671ad2ca7dad8bbe3456c80747324be19e4e5",
+    "expected_phase3ad1_config_sha256": "296363defa5bf65ef3f82d2c514f9918fb14a46296de916c579e9eb88dbd104c",
+    "phase3a5_relation_matrix_sha256_observed_in_diagnostic": "6a3bddb21785d2e1d082ab9c9ca0ab123a21c98930585c0249b9b3983d655c8d",
+    "phase3ad1_analysis_path": "src/analysis/token_markov_failure_localization.py",
+    "phase3ad1_config_path": "configs/diagnostics/token_markov_failure_localization_v1.json",
+    "phase3ad1_result_root": "results/diagnostics/token_markov_failure_localization/v1",
+    "required_parity_passes": 60,
+    "required_parity_runs": 60
+  },
+  "evaluation_scope": "CONTROL VALIDATION ONLY",
+  "expected_level2_config_sha256": "6f6214286c9c8e47e90c27cf4c41da60f21c12fd8c31c07a4a98e3aada8b236c",
+  "expected_relation_rows": 100,
+  "expected_runs": 20,
+  "experiment_id": "recurrence-avoiding-surface-allocation-exploration-v1",
+  "exploratory_reporting": {
+    "automatic_confirmatory_promotion": false,
+    "no_single_similarity_score": true,
+    "report_collision_comparison_to_phase3a4_K16": true,
+    "report_each_predictive_delta": true,
+    "report_inherited_replication_rule": true,
+    "report_parent_lineage_verification": true,
+    "report_seed_and_language_variation": true
+  },
+  "fit_scope": "CONTROL TRAIN ONLY",
+  "informed_by": {
+    "interpretation": "The intervention therefore targets avoidable exact-surface collisions, not transition memorization, suffix factorization, token length, or K.",
+    "phase3a4_result": "Base-preserving multiplicity moved token-Markov-minus-trigram from -0.128436 at K=4 to -0.038280 at K=8 and +0.028097 globally at K=16, while the other four predictive relations remained strong.",
+    "phase3a5_result": "Refactorizing the same 16 abstract identities as 1x16, 2x8, and 4x4 left the token-Markov relation essentially unchanged and non-robust at 2/4 languages.",
+    "phase3ad1_result": "The residual failure localized primarily to exact current-token recurrence rather than memorized exact transitions. In the key current-frequency=1 / exact-bigram-frequency=0 cell, token-Markov remained strongly better in all four languages, especially Latin (delta -0.7184 bits/event). For Latin, 93% of token-Markov advantage bits occurred on previously seen exact tokens whose exact preceding transition was unseen in TRAIN."
+  },
+  "inherited_replication_rule": {
+    "full_hierarchy": "all five relations robust",
+    "language_relation_replication": ">=4/5 seeds strong_direction_match_voynich",
+    "relation_robustness": "replicated in >=3/4 languages",
+    "run_strong_direction_match": "delta > 0 and bootstrap CI lower > 0"
+  },
+  "leakage_guards": {
+    "allocation_permutation_defined_without_validation_statistics": true,
+    "base_mapping_fit_on_control_train_only": true,
+    "reserved_control_test_encoded": false,
+    "reserved_control_test_parsed_or_scored": false,
+    "validation_counter_starts_from_frozen_train_count_only": true,
+    "validation_processed_online_without_lookahead": true,
+    "voynich_test_LOCKED_accessed": false
+  },
+  "level2_config_path": "configs/evaluation/level2_predictive_controls_v1.json",
+  "mechanism": {
+    "allocation_mode": "balanced_without_replacement_within_16_occurrence_cycles",
+    "allocation_unit": "encoded lexical base",
+    "base_encoding": "exact_phase3a4_train_fitted_monoalphabetic_mapping",
+    "collision_property": "If a base has appeared fewer than 16 times in TRAIN, early VALIDATION occurrences continue through suffixes not yet used for that base until all 16 have been exhausted. Exact-surface reuse is therefore avoided whenever it is avoidable under the fixed K=16 inventory.",
+    "coverage": "all_train_and_validation_tokens",
+    "cycle_property": "Within every consecutive block of 16 occurrences of the same encoded base, each of the 16 suffix variants is used exactly once.",
+    "name": "recurrence_avoiding_surface_allocation",
+    "not_changed": [
+      "K",
+      "suffix inventory",
+      "base form",
+      "token length",
+      "coverage",
+      "source languages",
+      "seeds",
+      "Level-2 evaluator",
+      "reserved-test status"
+    ],
+    "per_base_variant_permutation": "For each encoded lexical base and seed, deterministically order the 16 inherited suffix indices by stable hash over namespace, seed, serialized encoded base, and suffix index.",
+    "reserved_test_policy": "never encode reserved rows",
+    "suffix_inventory": "exact_phase3a4_K16_master_suffix_order",
+    "suffix_length_glyphs": 1,
+    "train_allocation": "Process TRAIN lines in ascending line index and tokens left-to-right. For each encoded base, occurrence number n receives permutation[n mod 16].",
+    "validation_allocation": "Freeze the final TRAIN occurrence count for each encoded base. Process VALIDATION lines in ascending line index and tokens left-to-right, continuing that base's occurrence counter from the TRAIN count. No validation look-ahead is permitted.",
+    "variant_count": 16
+  },
+  "operational_relations": [
+    "hmm_space_free",
+    "hmm_token_aware",
+    "slot_grammar",
+    "token_markov",
+    "copy_edit"
+  ],
+  "parent_phase3a4": {
+    "condition": "K16",
+    "config_path": "configs/mechanisms/base_form_suffix_extended_v1.json",
+    "control_root": "data/controls/ciphers/base_form_suffix_extended_v1",
+    "expected_config_sha256": "514f440de8f086f0a5d9292f85289930de98fbc0893251e345ed134ef278b1f8",
+    "expected_generator_sha256": "3969000c5ca678a68f259f2967d4164f25dc1360b7bba0e945d619704d12b345",
+    "generator_path": "src/ciphers/base_form_suffix_extended.py",
+    "lineage_requirements": [
+      "exact inherited TRAIN-fitted monoalphabetic base mapping",
+      "exact inherited 16-glyph master suffix inventory and order",
+      "exactly one suffix glyph appended to every TRAIN/VALIDATION token",
+      "same source/split/seed memberships"
+    ],
+    "result_root": "results/controls/base_form_suffix_extended_exploration/v1"
+  },
+  "phase_label": "Phase 3A.6 \u2014 Recurrence-Avoiding Base-Preserving Surface Allocation",
+  "primary_prediction": {
+    "mechanism_diagnostic": "Relative to the frozen Phase-3A.4 K16 parent controls, the fraction of VALIDATION exact ciphertext tokens already seen in TRAIN should fall, especially for lexical bases with fewer than 16 TRAIN occurrences.",
+    "other_four_relations": "HMM space-free, HMM token-aware, slot grammar, and copy-edit should remain robustly in the Voynich direction.",
+    "token_markov": "The token-Markov-minus-matched-trigram delta should move upward most strongly in Latin, then French, because Phase 3A.D1 localized their remaining failure to previously seen exact surface forms. German and Italian should remain positive."
+  },
+  "question": "Holding the Phase-3A.4 K=16 base encoding, suffix inventory, maximum surface multiplicity, token length, coverage, sources, seeds, and frozen Level-2 evaluator fixed, does balanced without-replacement allocation of the 16 surface variants reduce exact-surface recurrence enough to reproduce the Voynich-direction token-Markov relation across at least 3/4 languages?",
+  "result_output_root": "results/controls/recurrence_avoiding_surface_allocation_exploration/v1",
+  "schema_version": "1.0",
+  "seeds": [
+    40814041438,
+    40814041439,
+    40814041440,
+    40814041441,
+    40814041442
+  ],
+  "source_root": "data/controls/languages_open_v1",
+  "sources": {
+    "french_profiterole_ud218": {
+      "expected_lines": 2632,
+      "expected_tokens": 20000,
+      "language": "French",
+      "phase3ad1_status": "nonrobust",
+      "source_sha256": "7f667acbc6bb124901d803749a0b518463bdd9d836b5c713646ec6037fcd8f91"
+    },
+    "german_rem_v21": {
+      "expected_lines": 4470,
+      "expected_tokens": 20000,
+      "language": "German",
+      "phase3ad1_status": "robust",
+      "source_sha256": "343f261bf5c9338ba31cbb273c723b997f079dc6a026e768f328bbdfa122c601"
+    },
+    "italian_old_ud218": {
+      "expected_lines": 740,
+      "expected_tokens": 20000,
+      "language": "Italian",
+      "phase3ad1_status": "robust",
+      "source_sha256": "fbcd49798c1ee6517578f7a36d7450e6cf71e21e9f8c3ba2841eea4611e072a4"
+    },
+    "latin_udante_ud218": {
+      "expected_lines": 725,
+      "expected_tokens": 20000,
+      "language": "Latin",
+      "phase3ad1_status": "nonrobust",
+      "source_sha256": "8e5eecd174b432056549ee7f5ef811ff1ab2814f14de6aa51973571cb22d5fd4"
+    }
+  },
+  "split_root": "data/controls/splits/level2_v1",
+  "status": "exploratory",
+  "stop_rule": "Do not add K>16, additional balancing strengths, randomized schedules, frequency thresholds, or context-conditioned allocation after seeing Phase-3A.6 results. If the full hierarchy is not reproduced, retain the result and formulate a distinct new mechanism hypothesis."
+}

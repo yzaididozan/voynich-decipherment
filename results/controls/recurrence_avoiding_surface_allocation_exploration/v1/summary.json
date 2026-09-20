@@ -1,0 +1,67 @@
+{
+  "allocation": "balanced_without_replacement_per_lexical_base",
+  "automatic_confirmatory_promotion": false,
+  "experiment_id": "recurrence-avoiding-surface-allocation-exploration-v1",
+  "full_inherited_level2_hierarchy": true,
+  "generator_sha256": "2a6b27af36b0b896b40409450dffbd443d7a378d4deffaa390e8a989d25e33c9",
+  "inherited_replication_rule": {
+    "full_hierarchy": "all five relations robust",
+    "language_relation_replication": ">=4/5 seeds strong_direction_match_voynich",
+    "relation_robustness": "replicated in >=3/4 languages",
+    "run_strong_direction_match": "delta > 0 and bootstrap CI lower > 0"
+  },
+  "level2_config_sha256": "6f6214286c9c8e47e90c27cf4c41da60f21c12fd8c31c07a4a98e3aada8b236c",
+  "next_step": "If and only if all five inherited relations are robust on development validation, stop exploratory mechanism development and write/freeze a separate Phase-3B confirmatory protocol before reserved-test access. Otherwise retain this result and formulate a distinct new mechanism hypothesis without tuning this allocation.",
+  "parent_lineage_all_passed": true,
+  "parent_lineage_checks": 20,
+  "parent_phase3a4_config_sha256": "514f440de8f086f0a5d9292f85289930de98fbc0893251e345ed134ef278b1f8",
+  "parent_phase3a4_generator_sha256": "3969000c5ca678a68f259f2967d4164f25dc1360b7bba0e945d619704d12b345",
+  "phase3a6_config_sha256": "f26fef20aad928ee98a3e4824ca0911c8855de2ff1c0908d5388fae0ffbd2535",
+  "phase3ad1_analysis_sha256": "b729ee11b1909ac2972a150c051671ad2ca7dad8bbe3456c80747324be19e4e5",
+  "phase3ad1_config_sha256": "296363defa5bf65ef3f82d2c514f9918fb14a46296de916c579e9eb88dbd104c",
+  "phase3ad1_parity_passes": 60,
+  "phase3ad1_parity_runs": 60,
+  "phase3ad1_summary_sha256": "806d46ac811b0763ec6e96f6761aee0670c3148d2bee1a2b0d5e1a081334eda1",
+  "primary_prediction": {
+    "mechanism_diagnostic": "Relative to the frozen Phase-3A.4 K16 parent controls, the fraction of VALIDATION exact ciphertext tokens already seen in TRAIN should fall, especially for lexical bases with fewer than 16 TRAIN occurrences.",
+    "other_four_relations": "HMM space-free, HMM token-aware, slot grammar, and copy-edit should remain robustly in the Voynich direction.",
+    "token_markov": "The token-Markov-minus-matched-trigram delta should move upward most strongly in Latin, then French, because Phase 3A.D1 localized their remaining failure to previously seen exact surface forms. German and Italian should remain positive."
+  },
+  "relation_rows": 100,
+  "reserved_control_test_encoded": false,
+  "reserved_control_test_parsed_or_scored": false,
+  "runs": 20,
+  "schema_version": "1.0",
+  "status": "exploratory",
+  "stop_rule": "Do not add K>16, additional balancing strengths, randomized schedules, frequency thresholds, or context-conditioned allocation after seeing Phase-3A.6 results. If the full hierarchy is not reproduced, retain the result and formulate a distinct new mechanism hypothesis.",
+  "suffix_length_glyphs": 1,
+  "token_markov_by_language": {
+    "French": {
+      "language_relation_replicated": true,
+      "mean_delta_bits_per_event": 0.0878712355774578,
+      "positive_direction_seeds": 5,
+      "strong_direction_seeds": 5
+    },
+    "German": {
+      "language_relation_replicated": true,
+      "mean_delta_bits_per_event": 0.13358179919846974,
+      "positive_direction_seeds": 5,
+      "strong_direction_seeds": 5
+    },
+    "Italian": {
+      "language_relation_replicated": true,
+      "mean_delta_bits_per_event": 0.13313539988321565,
+      "positive_direction_seeds": 5,
+      "strong_direction_seeds": 5
+    },
+    "Latin": {
+      "language_relation_replicated": true,
+      "mean_delta_bits_per_event": 0.02431485383527816,
+      "positive_direction_seeds": 5,
+      "strong_direction_seeds": 5
+    }
+  },
+  "variant_count": 16,
+  "voynich_locked_test_accessed": false,
+  "zero_avoidable_validation_collisions_verified": true
+}
