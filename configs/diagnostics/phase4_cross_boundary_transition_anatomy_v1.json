@@ -1,0 +1,191 @@
+{
+  "anatomy_features": {
+    "concentration": [
+      "max_boundary_pair_probability",
+      "top5_boundary_pair_probability_mass",
+      "boundary_pair_simpson_concentration",
+      "boundary_pair_effective_simpson_pairs"
+    ],
+    "dependence": [
+      "initial_given_final_conditional_entropy_bits",
+      "final_given_initial_conditional_entropy_bits",
+      "final_initial_mutual_information_bits",
+      "normalized_mutual_information_joint_fraction"
+    ],
+    "joint_diversity": [
+      "boundary_pair_entropy_bits",
+      "distinct_boundary_pairs",
+      "effective_boundary_pairs"
+    ],
+    "marginal_diversity": [
+      "final_glyph_entropy_bits",
+      "initial_glyph_entropy_bits",
+      "distinct_final_glyphs",
+      "distinct_initial_glyphs",
+      "effective_final_glyphs",
+      "effective_initial_glyphs"
+    ],
+    "sample_size_checks": [
+      "boundary_pair_count"
+    ],
+    "support": [
+      "possible_boundary_pairs_from_observed_marginals",
+      "observed_pair_support_fraction"
+    ]
+  },
+  "association_analysis": {
+    "automatic_feature_selection": false,
+    "automatic_winner_ranking": false,
+    "features": [
+      "boundary_pair_count",
+      "final_glyph_entropy_bits",
+      "initial_glyph_entropy_bits",
+      "boundary_pair_entropy_bits",
+      "initial_given_final_conditional_entropy_bits",
+      "final_given_initial_conditional_entropy_bits",
+      "final_initial_mutual_information_bits",
+      "normalized_mutual_information_joint_fraction",
+      "distinct_final_glyphs",
+      "distinct_initial_glyphs",
+      "distinct_boundary_pairs",
+      "effective_final_glyphs",
+      "effective_initial_glyphs",
+      "effective_boundary_pairs",
+      "possible_boundary_pairs_from_observed_marginals",
+      "observed_pair_support_fraction",
+      "max_boundary_pair_probability",
+      "top5_boundary_pair_probability_mass",
+      "boundary_pair_simpson_concentration",
+      "boundary_pair_effective_simpson_pairs"
+    ],
+    "outcome": "boundary_boost_bits_per_event",
+    "p_values": false,
+    "statistics": [
+      "pearson_r",
+      "spearman_rho"
+    ]
+  },
+  "boundary_pair_definition": {
+    "boundary_pair": "(final glyph of previous readable token, initial glyph of current readable token) for adjacent tokens in the same readable segment",
+    "readable_segment": "maximal sequence of readable tokens within one analytical locus, split by any token containing Z1",
+    "readable_token": "nonempty analytical token not containing STA1 Z1"
+  },
+  "experiment_id": "phase4-cross-boundary-transition-anatomy-v1",
+  "formulae": {
+    "boundary_pair_effective_simpson_pairs": "1 / boundary_pair_simpson_concentration",
+    "boundary_pair_entropy_bits": "H(F,I)",
+    "boundary_pair_simpson_concentration": "sum_pair p(pair)^2",
+    "effective_boundary_pairs": "2 ** H(F,I)",
+    "effective_final_glyphs": "2 ** H(F)",
+    "effective_initial_glyphs": "2 ** H(I)",
+    "final_given_initial_conditional_entropy_bits": "H(F|I) = H(F,I) - H(I)",
+    "final_glyph_entropy_bits": "H(F)",
+    "final_initial_mutual_information_bits": "I(F;I) = H(F) + H(I) - H(F,I)",
+    "initial_given_final_conditional_entropy_bits": "H(I|F) = H(F,I) - H(F)",
+    "initial_glyph_entropy_bits": "H(I)",
+    "normalized_mutual_information_joint_fraction": "I(F;I) / H(F,I), with 0 when H(F,I)=0",
+    "observed_pair_support_fraction": "distinct_boundary_pairs / possible_boundary_pairs_from_observed_marginals",
+    "possible_boundary_pairs_from_observed_marginals": "distinct_final_glyphs * distinct_initial_glyphs"
+  },
+  "interpretation_boundary": "D3 is exploratory and post-hoc on an already-accessed Voynich test set. It decomposes a D2 finding; it does not independently confirm a mechanism, cannot change the Phase-4 decision, and cannot justify exclusion or retuning of any leaf or model.",
+  "outputs": {
+    "files": [
+      "per_leaf_boundary_anatomy.csv",
+      "anatomy_correlations.csv",
+      "anatomy_sensitivity.csv",
+      "boundary_pair_concentration.csv",
+      "f57_f49_anatomy.csv",
+      "summary.json",
+      "run_manifest.json",
+      "SHA256SUMS"
+    ],
+    "root": "results/diagnostics/phase4_cross_boundary_transition_anatomy/v1"
+  },
+  "parent_phase4d2": {
+    "config_path": "configs/diagnostics/phase4_boundary_contribution_v1.json",
+    "expected_config_sha256": "3c9328d15ac337f7765b448d2c3c59a4f9b5a9ab8decc901f7c6420b53741572",
+    "per_leaf_path": "results/diagnostics/phase4_boundary_contribution/v1/per_leaf_boundary_features.csv",
+    "preidentified_cross_view_negative_leaf_groups": [
+      "f57",
+      "f49"
+    ],
+    "preidentified_d2_all15_pearson_approx": 0.8046,
+    "preidentified_d2_all15_spearman_approx": 0.6357,
+    "preidentified_d2_feature": "across_transition_pair_entropy_bits",
+    "require_predictive_models_fit_or_rescored": false,
+    "required_atomic_leaf_groups": 15,
+    "required_boundary_boost_sign_counts": {
+      "negative": 0,
+      "positive": 15,
+      "zero": 0
+    },
+    "required_phase4_decision_retained": "INCONSISTENT_WITH_FULL_FIVE_RELATION_PATTERN",
+    "required_status": "exploratory_posthoc_locked_test_diagnostic",
+    "result_root": "results/diagnostics/phase4_boundary_contribution/v1",
+    "run_manifest_path": "results/diagnostics/phase4_boundary_contribution/v1/run_manifest.json",
+    "summary_path": "results/diagnostics/phase4_boundary_contribution/v1/summary.json"
+  },
+  "phase_label": "VOYAGER Phase 4.D3 \u2014 Cross-Boundary Transition Anatomy",
+  "preidentified_anomaly_analysis": {
+    "comparison_group": "all other locked-test atomic leaf groups",
+    "inferential_testing": false,
+    "leaf_groups": [
+      "f57",
+      "f49"
+    ],
+    "statistics": [
+      "feature_value",
+      "other_mean",
+      "other_median",
+      "other_population_sd",
+      "descriptive_z_vs_others",
+      "percentile_rank_among_all15"
+    ]
+  },
+  "primary_question": "What property of the joint distribution of token-final \u00d7 token-initial STA1 glyphs accounts descriptively for the D2 cross-boundary pair-entropy association with boundary_boost_bits_per_event?",
+  "prohibited_actions": [
+    "fit or rescore any predictive model",
+    "change the Phase-4 decision",
+    "exclude f57, f49, or another leaf from the original Phase-4 analysis",
+    "treat leave-one-out sensitivity conditions as independent confirmation",
+    "search additional anatomy features after viewing D3 and present them as frozen D3 features",
+    "use p-values or post-hoc thresholds to declare an anatomy component confirmed",
+    "change transcription, split, STA1 rules, or Z1 handling after viewing results",
+    "claim unique historical mechanism identification or decipherment"
+  ],
+  "purpose": "Decompose the pre-identified D2 association between cross-boundary transition-pair entropy and the token-aware HMM boundary boost into marginal diversity, joint diversity, dependence, support, and concentration components.",
+  "schema_version": "1.0",
+  "sensitivity_analysis": {
+    "conditions": {
+      "all15": [],
+      "without_f49": [
+        "f49"
+      ],
+      "without_f57": [
+        "f57"
+      ],
+      "without_f57_f49": [
+        "f57",
+        "f49"
+      ]
+    },
+    "purpose": "Determine whether each anatomy association is broad or strongly leveraged by the pre-identified D1/D2 anomalies; never reinterpret omitted-leaf conditions as alternate Phase-4 tests.",
+    "statistics": [
+      "pearson_r",
+      "spearman_rho"
+    ]
+  },
+  "status": "exploratory_posthoc_locked_test_diagnostic",
+  "voynich_inputs": {
+    "expected_source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "expected_sta1_rules_sha256": "7f37853510144fb3e2dc3ee9458d634f41e6d95bc1fbf1c4b8f479a53a021f81",
+    "expected_test_leaves": 15,
+    "locked_test_path": "data/splits/v1/test_LOCKED.txt",
+    "representation": "S0_ZL_CONVENTIONAL_STA1_GLYPHS",
+    "source_path": "data/raw/zl/ZL3b-n.txt",
+    "sta1_rules_path": "data/reference/sta1/STA-Eva_def.bit",
+    "test_hash_source": "Phase 4.D2 run_manifest.test_split_sha256",
+    "transcription_id": "ZL3b",
+    "unknown_policy": "Exclude any token containing STA1 Z1 and reset readable-token segment; never form a boundary pair through Z1 or across an analytical-locus boundary."
+  }
+}

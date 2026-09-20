@@ -1,0 +1,170 @@
+schema_version: '1.0'
+experiment_id: phase-5a-prospective-boundary-prediction-v1
+phase_label: VOYAGER Phase 5A — Prospective Boundary-Structure Prediction
+status: confirmatory_prospective_control_prediction
+primary_question: On genuinely fresh historical-language control material that was not used in Phase 3
+  development, Phase 3B confirmation, or Phase 4 diagnostics, does the frozen recurrence-aware K=16 mechanism
+  prospectively reproduce the D3-derived association between cross-boundary pair entropy and the benefit
+  of retaining token boundaries in the HMM-versus-trigram comparison?
+interpretation_boundary: Phase 5A tests one prospective mechanism-derived structural prediction on fresh
+  controls. A PASS strengthens evidence that the D3 boundary pattern is a consequence of the frozen mechanism
+  rather than a peculiarity discovered only in the Voynich locked sample. It does not identify the historical
+  Voynich mechanism, recover plaintext, or undo the Phase-4 five-relation FAIL.
+frozen_parent_d3:
+  config_path: configs/diagnostics/phase4_cross_boundary_transition_anatomy_v1.json
+  expected_config_sha256: cd67318339321b1397e8789a5dd5afbf44717255ccb985637fc4e2471bbf1230
+  summary_path: results/diagnostics/phase4_cross_boundary_transition_anatomy/v1/summary.json
+  run_manifest_path: results/diagnostics/phase4_cross_boundary_transition_anatomy/v1/run_manifest.json
+  required_status: exploratory_posthoc_locked_test_diagnostic
+  required_phase4_decision_retained: INCONSISTENT_WITH_FULL_FIVE_RELATION_PATTERN
+  require_d2_boundary_reconstruction_parity: true
+  require_predictive_models_fit_or_rescored: false
+  preidentified_outcome: boundary_boost_bits_per_event
+  d3_sensitivity_context_only:
+    all15_pearson: 0.8046
+    all15_spearman: 0.6357
+    without_f57_pearson: 0.4627
+    without_f57_spearman: 0.5516
+    without_f57_f49_pearson: 0.4846
+    without_f57_f49_spearman: 0.5549
+  preidentified_d2_feature: across_transition_pair_entropy_bits
+  d3_reconstructed_equivalent_feature: boundary_pair_entropy_bits
+  required_d3_formula: H(F,I)
+  required_d3_association_outcome: boundary_boost_bits_per_event
+  naming_bridge: D2 named the frozen quantity across_transition_pair_entropy_bits. D3 reconstructs the
+    same empirical joint entropy as boundary_pair_entropy_bits and requires count/entropy parity with
+    D2.
+frozen_mechanism:
+  name: recurrence_avoiding_surface_allocation
+  config_path: configs/mechanisms/recurrence_avoiding_surface_allocation_v1.json
+  expected_config_sha256: f26fef20aad928ee98a3e4824ca0911c8855de2ff1c0908d5388fae0ffbd2535
+  generator_path: src/ciphers/recurrence_avoiding_surface_allocation.py
+  expected_generator_sha256: 2a6b27af36b0b896b40409450dffbd443d7a378d4deffaa390e8a989d25e33c9
+  variant_count: 16
+  suffix_length_glyphs: 1
+  allocation_mode: balanced_without_replacement_within_16_occurrence_cycles
+  fit_scope: FRESH CONTROL TRAIN ONLY
+  test_state_policy: Fit the key on fresh TRAIN only. Encode TRAIN first. Freeze the final TRAIN per-base
+    occurrence counters. Encode the fresh LOCKED TEST directly from that TRAIN state in ascending test-line
+    order.
+frozen_hmm:
+  config_path: configs/baselines/hmm_v1.json
+  expected_config_sha256: 86c0e7bc5fa29d45230a57b41f9402321e118cf7f54a3a410fa5feafc649dd20
+  hidden_states:
+    space_free: 16
+    token_aware: 16
+  restarts: 5
+  restart_selection: highest TRAIN log likelihood only
+  test_selection: false
+frozen_ngram:
+  config_path: configs/baselines/ngram_v1.json
+  expected_config_sha256: f0c00cb95364aa7b138c215ccd3befa9991dc106740172115f5c685d57f7e31c
+  matched_order: 3
+  smoothing: interpolated_witten_bell
+  fit_scope: FRESH CONTROL TRAIN ONLY
+seeds:
+- 40814041438
+- 40814041439
+- 40814041440
+- 40814041441
+- 40814041442
+fresh_controls:
+  manifest_path: data/controls/languages_phase5a_v1/manifest.json
+  required_freeze_id: phase5a-fresh-historical-controls-v1
+  required_languages:
+  - French
+  - German
+  - Italian
+  - Latin
+  exactly_one_source_per_language: true
+  forbidden_prior_source_ids:
+  - french_profiterole_ud218
+  - german_rem_v21
+  - italian_old_ud218
+  - latin_udante_ud218
+  require_distinct_source_ids: true
+  require_train_and_test_separate_files: true
+  require_test_filename_suffix: test_LOCKED.txt
+  required_prospective_status: UNTOUCHED_BEFORE_PHASE5A_EXECUTION
+  require_selection_frozen_before_outcomes: true
+  preflight_test_policy: Before --execute-prospective-test, read the manifest and TRAIN files only. Do
+    not open, hash, stat, list, parse, count, or otherwise access a test_LOCKED.txt.
+  execution_test_policy: Write PROSPECTIVE_TEST_ACCESSED.json before first TEST touch, then verify TEST
+    hash, line count, and token count against the frozen manifest.
+test_unitization:
+  unit_count_per_source_seed: 15
+  method: contiguous_greedy_token_balanced_test_line_groups
+  line_boundaries_preserved: true
+  cross_line_boundary_pairs: false
+  deterministic_rule: Preserve TEST line order. For k=1..14 close the current unit after the first line
+    whose cumulative token count reaches or exceeds k/15 of total TEST tokens. Unit 15 receives all remaining
+    lines. No line is split.
+  score_grouping: The HMM and matched trigram reset at each original source line; per-line scores are
+    aggregated by frozen unit ID.
+primary_prediction:
+  feature: boundary_pair_entropy_bits
+  outcome: boundary_boost_bits_per_event
+  boundary_boost_definition: (token-aware HMM bits/event - token-aware matched trigram bits/event) minus
+    (space-free HMM bits/event - space-free matched trigram bits/event)
+  per_run_statistics:
+  - pearson_r
+  - spearman_rho
+  per_run_direction_match: pearson_r > 0 and spearman_rho > 0
+  seeds_per_language: 5
+  language_replication_rule: '>=4/5 seeds satisfy per_run_direction_match'
+  phase5a_support_rule: '>=3/4 languages replicate'
+  magnitude_threshold: null
+  p_value_threshold: null
+  confidence_interval_threshold: null
+  automatic_relaxation_allowed: false
+  feature_substitution_allowed: false
+secondary_predictions:
+  scored_for_primary_decision: false
+  features:
+    effective_boundary_pairs: positive
+    effective_final_glyphs: positive
+    effective_initial_glyphs: positive
+    observed_pair_support_fraction: negative
+    top5_boundary_pair_probability_mass: negative
+    boundary_pair_simpson_concentration: negative
+    boundary_pair_effective_simpson_pairs: positive
+boundary_anatomy:
+  pair_definition: For adjacent ciphertext tokens within the same original source line, boundary pair
+    = (final glyph of previous token, initial glyph of current token).
+  boundary_pair_entropy_bits: empirical Shannon H(F,I), base 2
+  effective_boundary_pairs: 2 ** H(F,I)
+  effective_final_glyphs: 2 ** H(F)
+  effective_initial_glyphs: 2 ** H(I)
+  observed_pair_support_fraction: distinct observed boundary pairs / (distinct final glyphs * distinct
+    initial glyphs)
+  top5_boundary_pair_probability_mass: sum of five largest pair probabilities
+  boundary_pair_simpson_concentration: sum p(pair)^2
+  boundary_pair_effective_simpson_pairs: 1 / sum p(pair)^2
+expected_grid:
+  languages: 4
+  seeds_per_language: 5
+  runs: 20
+  test_units_per_run: 15
+output_paths:
+  control_root: data/controls/ciphers/phase5a_boundary_prediction_v1
+  result_root: results/controls/phase5a_boundary_prediction/v1
+  access_marker: results/controls/phase5a_boundary_prediction/v1/PROSPECTIVE_TEST_ACCESSED.json
+decision_labels:
+  support: PHASE_5A_PROSPECTIVE_BOUNDARY_PREDICTION_SUPPORTED
+  not_supported: PHASE_5A_PROSPECTIVE_BOUNDARY_PREDICTION_NOT_SUPPORTED
+leakage_guards:
+  voynich_files_may_be_read: false
+  phase4_diagnostic_per_leaf_values_may_be_used_as_phase5a_observations: false
+  fresh_test_may_modify_key: false
+  fresh_test_may_modify_hyperparameters: false
+  fresh_test_may_modify_feature_definition: false
+  fresh_test_may_modify_unitization: false
+  fresh_test_may_modify_decision_rule: false
+one_shot_policy:
+  protocol_and_fresh_manifest_must_be_committed_before_execution: true
+  create_access_marker_before_first_test_touch: true
+  refuse_if_access_marker_already_exists: true
+  refuse_if_final_summary_already_exists: true
+  post_result_feature_substitution: false
+  post_result_threshold_tuning: false
+  post_result_unitization_tuning: false

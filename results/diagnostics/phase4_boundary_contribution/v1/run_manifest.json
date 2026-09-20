@@ -1,0 +1,21 @@
+{
+  "automatic_feature_selection": false,
+  "config_path": "configs/diagnostics/phase4_boundary_contribution_v1.json",
+  "config_sha256": "3c9328d15ac337f7765b448d2c3c59a4f9b5a9ab8decc901f7c6420b53741572",
+  "correlation_statistics": [
+    "pearson_r",
+    "spearman_rho"
+  ],
+  "development_validation_read_by_d2": false,
+  "feature_count": 17,
+  "p_values_computed": false,
+  "parent_d1_config_sha256": "f797b278e3e8d4389e8a5f3a537d527b38d06f01ecc6198b0bbce3f41e0aee17",
+  "parent_d1_per_leaf_sha256": "4cb74a2758ada5fa1497f42cf19e1e3e355eed7e9935a3720fa6a069c0370e06",
+  "parent_d1_run_manifest_sha256": "63a5ff5ed31dabafd0ea9e638d970959cd24da54a03951d52295a40a814102e7",
+  "parent_d1_summary_sha256": "a5d1616a8441b915f7ea4f0a599011cc67ad2fe926fd857ab242176869c1f790",
+  "predictive_models_fit_or_rescored_by_d2": false,
+  "source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+  "sta1_rules_sha256": "7f37853510144fb3e2dc3ee9458d634f41e6d95bc1fbf1c4b8f479a53a021f81",
+  "test_split_sha256": "4c0fcf3685f7a9d0c2a607ddc9da115616f5b09dc3a111a8a4fa30f8580553c2",
+  "test_was_already_accessed_before_d2": true
+}

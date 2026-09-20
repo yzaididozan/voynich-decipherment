@@ -1,0 +1,38 @@
+{
+  "atomic_leaf_groups": 15,
+  "d2_boundary_pair_reconstruction_parity_all_passed": true,
+  "experiment_id": "phase4-cross-boundary-transition-anatomy-v1",
+  "interpretation_boundary": "D3 is exploratory and post-hoc on an already-accessed Voynich test set. It decomposes a D2 finding; it does not independently confirm a mechanism, cannot change the Phase-4 decision, and cannot justify exclusion or retuning of any leaf or model.",
+  "parent_phase4_decision_retained": "INCONSISTENT_WITH_FULL_FIVE_RELATION_PATTERN",
+  "phase4_reclassification_permitted": false,
+  "predictive_models_fit_or_rescored": false,
+  "preidentified_cross_view_negative_leaf_groups": [
+    "f57",
+    "f49"
+  ],
+  "preidentified_d2_feature": "across_transition_pair_entropy_bits",
+  "preidentified_pair_entropy_sensitivity": {
+    "all15": {
+      "n_used": 15,
+      "pearson_r": 0.804591574027295,
+      "spearman_rho": 0.6357142857142857
+    },
+    "without_f49": {
+      "n_used": 14,
+      "pearson_r": 0.8141014403489131,
+      "spearman_rho": 0.643956043956044
+    },
+    "without_f57": {
+      "n_used": 14,
+      "pearson_r": 0.4626596466859791,
+      "spearman_rho": 0.5516483516483517
+    },
+    "without_f57_f49": {
+      "n_used": 13,
+      "pearson_r": 0.48462040824827984,
+      "spearman_rho": 0.554945054945055
+    }
+  },
+  "schema_version": "1.0",
+  "status": "exploratory_posthoc_locked_test_diagnostic"
+}

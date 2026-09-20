@@ -1,0 +1,100 @@
+{
+  "atomic_leaf_groups": 15,
+  "cross_view": {
+    "mean_token_aware_minus_space_free_leaf_delta": 0.051794066918296564,
+    "pearson_leaf_delta_correlation": 0.9670249252099823,
+    "sign_concordant_leaf_groups": 12,
+    "sign_discordant_leaf_groups": 3
+  },
+  "experiment_id": "phase4-space-free-hmm-localization-v1",
+  "interpretation_boundary": "Post-hoc localization only. No leaf, section, subgroup, alternative K, or alternative threshold may be used to retroactively convert Phase 4 into a pass.",
+  "most_space_free_downward_influential_leaf_groups": [
+    {
+      "leaf_group": "f57",
+      "loo_minus_full_delta_bits_per_event": 0.013287794386348577
+    },
+    {
+      "leaf_group": "f49",
+      "loo_minus_full_delta_bits_per_event": 0.009210437730741525
+    },
+    {
+      "leaf_group": "f55",
+      "loo_minus_full_delta_bits_per_event": 0.0028178916147217
+    },
+    {
+      "leaf_group": "f2",
+      "loo_minus_full_delta_bits_per_event": 0.0015248827349333
+    },
+    {
+      "leaf_group": "f13",
+      "loo_minus_full_delta_bits_per_event": 0.000930982505719255
+    }
+  ],
+  "most_space_free_upward_influential_leaf_groups": [
+    {
+      "leaf_group": "f103",
+      "loo_minus_full_delta_bits_per_event": -0.010851382068009306
+    },
+    {
+      "leaf_group": "f76",
+      "loo_minus_full_delta_bits_per_event": -0.010846095347134828
+    },
+    {
+      "leaf_group": "f75",
+      "loo_minus_full_delta_bits_per_event": -0.0073890897512510385
+    },
+    {
+      "leaf_group": "f58",
+      "loo_minus_full_delta_bits_per_event": -0.0027054771407025793
+    },
+    {
+      "leaf_group": "f31",
+      "loo_minus_full_delta_bits_per_event": -0.0016357966767896123
+    }
+  ],
+  "parent_phase4_decision_retained": "INCONSISTENT_WITH_FULL_FIVE_RELATION_PATTERN",
+  "phase4_parity_all_passed": true,
+  "phase4_reclassification_permitted": false,
+  "reconstructed_relations": {
+    "hmm_space_free": {
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 40814041438,
+      "bootstrap_units": 15,
+      "ci_95_lower": -0.02624974679181006,
+      "ci_95_upper": 0.06794564313342506,
+      "competitor_bits_per_event": 2.672612237754276,
+      "delta_competitor_minus_trigram_bits_per_event": 0.036928540297695545,
+      "relation": "hmm_space_free",
+      "selected_hyperparameter": 16,
+      "train_selected_restart": 3,
+      "train_selected_seed": 40814201441,
+      "trigram_bits_per_event": 2.6356836974565803
+    },
+    "hmm_token_aware": {
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 40814041438,
+      "bootstrap_units": 15,
+      "ci_95_lower": 0.03086872746142959,
+      "ci_95_upper": 0.11153284385592892,
+      "competitor_bits_per_event": 2.3933224457113247,
+      "delta_competitor_minus_trigram_bits_per_event": 0.08387824955755807,
+      "relation": "hmm_token_aware",
+      "selected_hyperparameter": 16,
+      "train_selected_restart": 3,
+      "train_selected_seed": 40815201441,
+      "trigram_bits_per_event": 2.3094441961537666
+    }
+  },
+  "schema_version": "1.0",
+  "space_free_leaf_direction_counts": {
+    "negative": 5,
+    "positive": 10,
+    "zero": 0
+  },
+  "status": "exploratory_posthoc_locked_test_diagnostic",
+  "token_aware_leaf_direction_counts": {
+    "negative": 2,
+    "positive": 13,
+    "zero": 0
+  }
+}

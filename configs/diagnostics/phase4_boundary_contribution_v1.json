@@ -1,0 +1,128 @@
+{
+  "boundary_feature_definitions": {
+    "across_boundary_transition": "ordered pair from the final glyph of one readable token to the first glyph of the next readable token in the same readable segment",
+    "adjacent_exact_repeat_fraction": "fraction of readable token boundaries where previous token equals current token exactly",
+    "boundary_boost_bits_per_event": "Phase 4.D1 token_aware_delta_bits_per_event minus space_free_delta_bits_per_event",
+    "boundary_count": "number of adjacent readable-token pairs inside readable segments",
+    "boundary_density_per_glyph": "boundary_count / readable_glyph_count",
+    "conditional_entropy_gap_across_minus_within_bits": "across-boundary H(next|previous) minus within-token H(next|previous)",
+    "pair_entropy_gap_across_minus_within_bits": "across-boundary transition-pair entropy minus within-token transition-pair entropy",
+    "readable_segment": "maximal sequence of readable tokens within one analytical locus, split by any token containing Z1",
+    "readable_token": "nonempty analytical token not containing STA1 Z1",
+    "repeated_token_occurrence_fraction": "fraction of readable token occurrences whose exact token type appears at least twice within the atomic leaf group",
+    "singleton_token_occurrence_fraction": "fraction of readable token occurrences whose exact token type appears exactly once within the atomic leaf group",
+    "singleton_type_fraction": "fraction of exact readable token types occurring exactly once",
+    "token_length": "number of STA1 glyphs in a readable token",
+    "transition_conditional_entropy_bits": "empirical conditional entropy H(next|previous), weighted by observed previous-glyph frequency",
+    "transition_pair_entropy_bits": "empirical Shannon entropy H(previous,next) of observed ordered transition-pair frequencies",
+    "type_token_ratio": "unique readable token types / readable token count",
+    "within_token_transition": "ordered adjacent STA1 glyph pair inside one readable token"
+  },
+  "correlation_analysis": {
+    "automatic_feature_selection": false,
+    "automatic_winner_ranking": false,
+    "features": [
+      "readable_token_count",
+      "readable_glyph_count",
+      "mean_token_length_glyphs",
+      "token_length_variance_population",
+      "boundary_density_per_glyph",
+      "vocabulary_size_exact_tokens",
+      "type_token_ratio",
+      "repeated_token_occurrence_fraction",
+      "singleton_token_occurrence_fraction",
+      "singleton_type_fraction",
+      "adjacent_exact_repeat_fraction",
+      "within_transition_conditional_entropy_bits",
+      "across_transition_conditional_entropy_bits",
+      "conditional_entropy_gap_across_minus_within_bits",
+      "within_transition_pair_entropy_bits",
+      "across_transition_pair_entropy_bits",
+      "pair_entropy_gap_across_minus_within_bits"
+    ],
+    "missing_value_policy": "Use only leaves with finite values for that pre-specified feature; report n_used and n_missing.",
+    "multiple_testing_correction": false,
+    "outcome": "boundary_boost_bits_per_event",
+    "p_values": false,
+    "statistics": [
+      "pearson_r",
+      "spearman_rho"
+    ]
+  },
+  "experiment_id": "phase4-boundary-contribution-v1",
+  "interpretation_boundary": "D2 is exploratory and post-hoc on an already-accessed test set. Correlations are descriptive, not independent tests. D2 cannot reclassify Phase 4, justify excluding leaves, identify a unique historical mechanism, or constitute decipherment.",
+  "outputs": {
+    "files": [
+      "per_leaf_boundary_features.csv",
+      "feature_correlations.csv",
+      "within_token_transition_summary.csv",
+      "cross_boundary_transition_summary.csv",
+      "f57_f49_comparison.csv",
+      "summary.json",
+      "run_manifest.json",
+      "SHA256SUMS"
+    ],
+    "root": "results/diagnostics/phase4_boundary_contribution/v1"
+  },
+  "parent_phase4d1": {
+    "config_path": "configs/diagnostics/phase4_space_free_hmm_localization_v1.json",
+    "expected_config_sha256": "f797b278e3e8d4389e8a5f3a537d527b38d06f01ecc6198b0bbce3f41e0aee17",
+    "per_leaf_path": "results/diagnostics/phase4_space_free_hmm_localization/v1/per_leaf_hmm_deltas.csv",
+    "preidentified_cross_view_negative_leaf_groups": [
+      "f57",
+      "f49"
+    ],
+    "require_phase4_parity_all_passed": true,
+    "required_atomic_leaf_groups": 15,
+    "required_phase4_decision_retained": "INCONSISTENT_WITH_FULL_FIVE_RELATION_PATTERN",
+    "required_status": "exploratory_posthoc_locked_test_diagnostic",
+    "result_root": "results/diagnostics/phase4_space_free_hmm_localization/v1",
+    "run_manifest_path": "results/diagnostics/phase4_space_free_hmm_localization/v1/run_manifest.json",
+    "summary_path": "results/diagnostics/phase4_space_free_hmm_localization/v1/summary.json"
+  },
+  "phase_label": "VOYAGER Phase 4.D2 \u2014 Boundary Contribution Localization",
+  "preidentified_anomaly_analysis": {
+    "comparison_group": "other 13 locked-test atomic leaf groups",
+    "inferential_testing": false,
+    "leaf_groups": [
+      "f57",
+      "f49"
+    ],
+    "statistics": [
+      "feature_value",
+      "other13_mean",
+      "other13_median",
+      "other13_population_sd",
+      "descriptive_z_vs_other13",
+      "percentile_rank_among_all15"
+    ]
+  },
+  "primary_questions": [
+    "Which pre-specified token/boundary structural features covary with the D1 boundary boost = token-aware delta - space-free delta?",
+    "What structural properties distinguish the two D1 cross-view negative leaf groups, f57 and f49, from the other locked-test leaves?"
+  ],
+  "prohibited_actions": [
+    "refit or rescore any HMM, trigram, slot grammar, Token-Markov, or copy-edit model",
+    "change the Phase-4 decision",
+    "drop f57, f49, or any other leaf from Phase 4",
+    "choose features after viewing D2 correlations and present them as preregistered",
+    "run subgroup significance tests and call a subgroup confirmatory",
+    "change the test split, transcription, STA1 representation, or Z1 reset rule",
+    "claim unique mechanism identification or decipherment"
+  ],
+  "purpose": "Explain descriptively why preserving Voynich token boundaries increased the HMM-minus-trigram delta on the Phase-4 locked leaves, without refitting models, changing Phase 4, or treating post-hoc associations as confirmatory evidence.",
+  "schema_version": "1.0",
+  "status": "exploratory_posthoc_locked_test_diagnostic",
+  "voynich_inputs": {
+    "expected_source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "expected_sta1_rules_sha256": "7f37853510144fb3e2dc3ee9458d634f41e6d95bc1fbf1c4b8f479a53a021f81",
+    "expected_test_leaves": 15,
+    "locked_test_path": "data/splits/v1/test_LOCKED.txt",
+    "representation": "S0_ZL_CONVENTIONAL_STA1_GLYPHS",
+    "source_path": "data/raw/zl/ZL3b-n.txt",
+    "sta1_rules_path": "data/reference/sta1/STA-Eva_def.bit",
+    "test_hash_source": "Phase 4.D1 run_manifest.test_split_sha256",
+    "transcription_id": "ZL3b",
+    "unknown_policy": "Exclude any token containing STA1 Z1 and reset readable-token segment; never form an across-boundary transition through Z1."
+  }
+}

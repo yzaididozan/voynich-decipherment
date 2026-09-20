@@ -1,0 +1,30 @@
+{
+  "French": {
+    "source_id": "french_gutenberg_les_miserables_t1_17489",
+    "corpus": "Victor Hugo, Les misérables, Tome I: Fantine (Project Gutenberg eBook 17489)",
+    "version": "Project Gutenberg eBook 17489; release 2006-01-10; last updated 2023-10-30; UTF-8 text retrieved 2026-09-20; raw SHA-256 a5de514ba7b9f2e1790e7e259c4e8b7a35ae1d29e4bf9a5f8767039c58b80503",
+    "license": "Public domain in the USA; distributed under the Project Gutenberg License",
+    "provenance": "UTF-8 plain text acquired from https://www.gutenberg.org/cache/epub/17489/pg17489.txt; retain the work body between the Project Gutenberg START and END markers, excluding both markers and repository boilerplate, with source line order preserved; the Phase 5A builder then freezes the shortest complete-line prefix reaching at least 20,000 usable normalized tokens."
+  },
+  "German": {
+    "source_id": "german_gutenberg_simplicissimus_55171",
+    "corpus": "Hans Jakob Christoph von Grimmelshausen, Der abenteuerliche Simplicissimus (Project Gutenberg eBook 55171)",
+    "version": "Project Gutenberg eBook 55171; release 2017-07-22; last updated 2024-10-23; UTF-8 text retrieved 2026-09-20; raw SHA-256 54590b68ce383e93c5935b3018e3f4f989c89c91984b7153c886cacf8fa64162",
+    "license": "Public domain in the USA; distributed under the Project Gutenberg License",
+    "provenance": "UTF-8 plain text acquired from https://www.gutenberg.org/cache/epub/55171/pg55171.txt; retain the work body between the Project Gutenberg START and END markers, excluding both markers and repository boilerplate, with source line order preserved; the Phase 5A builder then freezes the shortest complete-line prefix reaching at least 20,000 usable normalized tokens."
+  },
+  "Italian": {
+    "source_id": "italian_gutenberg_i_promessi_sposi_45334",
+    "corpus": "Alessandro Manzoni, I promessi sposi, Opere di Alessandro Manzoni, vol. 1 (Project Gutenberg eBook 45334)",
+    "version": "Project Gutenberg eBook 45334; release 2014-04-06; last updated 2024-10-24; UTF-8 text retrieved 2026-09-20; raw SHA-256 4cdd962f1910a49091b945eff4233798b8c13f74b011cee75a8cccc7467d3612",
+    "license": "Public domain in the USA; distributed under the Project Gutenberg License",
+    "provenance": "UTF-8 plain text acquired from https://www.gutenberg.org/cache/epub/45334/pg45334.txt; retain the work body between the Project Gutenberg START and END markers, excluding both markers and repository boilerplate, with source line order preserved; the Phase 5A builder then freezes the shortest complete-line prefix reaching at least 20,000 usable normalized tokens."
+  },
+  "Latin": {
+    "source_id": "latin_gutenberg_aeneidos_227",
+    "corpus": "Virgil, Aeneidos (Project Gutenberg eBook 227)",
+    "version": "Project Gutenberg eBook 227; release 1995-03-01; last updated 2021-01-01; UTF-8 text retrieved 2026-09-20; raw SHA-256 2620ba82c00964d1a1f0458c8cf171946f158a06de0d0e764594170602c4c7b8",
+    "license": "Public domain in the USA; distributed under the Project Gutenberg License",
+    "provenance": "UTF-8 plain text acquired from https://www.gutenberg.org/cache/epub/227/pg227.txt; retain the work body between the Project Gutenberg START and END markers, excluding both markers and repository boilerplate, with source line order preserved; the Phase 5A builder then freezes the shortest complete-line prefix reaching at least 20,000 usable normalized tokens."
+  }
+}

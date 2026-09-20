@@ -1,0 +1,17 @@
+relation,field,phase4_value,reconstructed_value,difference,tolerance,pass
+hmm_space_free,competitor_bits_per_event,2.672612237754276,2.672612237754276,0.0,1e-09,True
+hmm_space_free,trigram_bits_per_event,2.6356836974565803,2.6356836974565803,0.0,1e-09,True
+hmm_space_free,delta_competitor_minus_trigram_bits_per_event,0.036928540297695545,0.036928540297695545,0.0,1e-09,True
+hmm_space_free,ci_95_lower,-0.02624974679181006,-0.02624974679181006,0.0,1e-09,True
+hmm_space_free,ci_95_upper,0.06794564313342506,0.06794564313342506,0.0,1e-09,True
+hmm_space_free,bootstrap_units,15,15,0,0,True
+hmm_space_free,bootstrap_replicates,10000,10000,0,0,True
+hmm_space_free,bootstrap_seed,40814041438,40814041438,0,0,True
+hmm_token_aware,competitor_bits_per_event,2.3933224457113247,2.3933224457113247,0.0,1e-09,True
+hmm_token_aware,trigram_bits_per_event,2.3094441961537666,2.3094441961537666,0.0,1e-09,True
+hmm_token_aware,delta_competitor_minus_trigram_bits_per_event,0.08387824955755807,0.08387824955755807,0.0,1e-09,True
+hmm_token_aware,ci_95_lower,0.03086872746142959,0.03086872746142959,0.0,1e-09,True
+hmm_token_aware,ci_95_upper,0.11153284385592892,0.11153284385592892,0.0,1e-09,True
+hmm_token_aware,bootstrap_units,15,15,0,0,True
+hmm_token_aware,bootstrap_replicates,10000,10000,0,0,True
+hmm_token_aware,bootstrap_seed,40814041438,40814041438,0,0,True

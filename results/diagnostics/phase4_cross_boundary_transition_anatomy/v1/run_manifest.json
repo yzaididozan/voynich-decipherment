@@ -1,0 +1,200 @@
+{
+  "association_feature_count": 20,
+  "automatic_feature_selection": false,
+  "automatic_winner_ranking": false,
+  "config_path": "configs/diagnostics/phase4_cross_boundary_transition_anatomy_v1.json",
+  "config_sha256": "cd67318339321b1397e8789a5dd5afbf44717255ccb985637fc4e2471bbf1230",
+  "d2_pair_entropy_parity_all_passed": true,
+  "d2_pair_entropy_parity_tolerance": 1e-12,
+  "d2_reconstruction_parity_rows": [
+    {
+      "count_parity": true,
+      "d2_across_transition_pair_entropy_bits": 4.750657497265052,
+      "d2_boundary_pair_count": 868,
+      "d3_boundary_pair_count": 868,
+      "d3_boundary_pair_entropy_bits": 4.750657497265052,
+      "entropy_difference": 0.0,
+      "entropy_parity": true,
+      "entropy_tolerance": 1e-12,
+      "leaf_group": "f103"
+    },
+    {
+      "count_parity": true,
+      "d2_across_transition_pair_entropy_bits": 5.001750223124811,
+      "d2_boundary_pair_count": 124,
+      "d3_boundary_pair_count": 124,
+      "d3_boundary_pair_entropy_bits": 5.001750223124811,
+      "entropy_difference": 0.0,
+      "entropy_parity": true,
+      "entropy_tolerance": 1e-12,
+      "leaf_group": "f13"
+    },
+    {
+      "count_parity": true,
+      "d2_across_transition_pair_entropy_bits": 5.428848176351704,
+      "d2_boundary_pair_count": 143,
+      "d3_boundary_pair_count": 143,
+      "d3_boundary_pair_entropy_bits": 5.428848176351704,
+      "entropy_difference": 0.0,
+      "entropy_parity": true,
+      "entropy_tolerance": 1e-12,
+      "leaf_group": "f2"
+    },
+    {
+      "count_parity": true,
+      "d2_across_transition_pair_entropy_bits": 5.206410016424769,
+      "d2_boundary_pair_count": 185,
+      "d3_boundary_pair_count": 185,
+      "d3_boundary_pair_entropy_bits": 5.206410016424769,
+      "entropy_difference": 0.0,
+      "entropy_parity": true,
+      "entropy_tolerance": 1e-12,
+      "leaf_group": "f31"
+    },
+    {
+      "count_parity": true,
+      "d2_across_transition_pair_entropy_bits": 5.069579563226721,
+      "d2_boundary_pair_count": 210,
+      "d3_boundary_pair_count": 210,
+      "d3_boundary_pair_entropy_bits": 5.069579563226721,
+      "entropy_difference": 0.0,
+      "entropy_parity": true,
+      "entropy_tolerance": 1e-12,
+      "leaf_group": "f49"
+    },
+    {
+      "count_parity": true,
+      "d2_across_transition_pair_entropy_bits": 5.27906496507856,
+      "d2_boundary_pair_count": 89,
+      "d3_boundary_pair_count": 89,
+      "d3_boundary_pair_entropy_bits": 5.27906496507856,
+      "entropy_difference": 0.0,
+      "entropy_parity": true,
+      "entropy_tolerance": 1e-12,
+      "leaf_group": "f5"
+    },
+    {
+      "count_parity": true,
+      "d2_across_transition_pair_entropy_bits": 5.593181378134549,
+      "d2_boundary_pair_count": 112,
+      "d3_boundary_pair_count": 112,
+      "d3_boundary_pair_entropy_bits": 5.593181378134549,
+      "entropy_difference": 0.0,
+      "entropy_parity": true,
+      "entropy_tolerance": 1e-12,
+      "leaf_group": "f53"
+    },
+    {
+      "count_parity": true,
+      "d2_across_transition_pair_entropy_bits": 5.16824950466187,
+      "d2_boundary_pair_count": 204,
+      "d3_boundary_pair_count": 204,
+      "d3_boundary_pair_entropy_bits": 5.16824950466187,
+      "entropy_difference": 0.0,
+      "entropy_parity": true,
+      "entropy_tolerance": 1e-12,
+      "leaf_group": "f55"
+    },
+    {
+      "count_parity": true,
+      "d2_across_transition_pair_entropy_bits": 4.895763004346133,
+      "d2_boundary_pair_count": 159,
+      "d3_boundary_pair_count": 159,
+      "d3_boundary_pair_entropy_bits": 4.895763004346133,
+      "entropy_difference": 0.0,
+      "entropy_parity": true,
+      "entropy_tolerance": 1e-12,
+      "leaf_group": "f56"
+    },
+    {
+      "count_parity": true,
+      "d2_across_transition_pair_entropy_bits": 6.449863207502351,
+      "d2_boundary_pair_count": 261,
+      "d3_boundary_pair_count": 261,
+      "d3_boundary_pair_entropy_bits": 6.449863207502351,
+      "entropy_difference": 0.0,
+      "entropy_parity": true,
+      "entropy_tolerance": 1e-12,
+      "leaf_group": "f57"
+    },
+    {
+      "count_parity": true,
+      "d2_across_transition_pair_entropy_bits": 5.5530956243066925,
+      "d2_boundary_pair_count": 671,
+      "d3_boundary_pair_count": 671,
+      "d3_boundary_pair_entropy_bits": 5.5530956243066925,
+      "entropy_difference": 0.0,
+      "entropy_parity": true,
+      "entropy_tolerance": 1e-12,
+      "leaf_group": "f58"
+    },
+    {
+      "count_parity": true,
+      "d2_across_transition_pair_entropy_bits": 4.642128894312252,
+      "d2_boundary_pair_count": 152,
+      "d3_boundary_pair_count": 152,
+      "d3_boundary_pair_entropy_bits": 4.642128894312252,
+      "entropy_difference": 0.0,
+      "entropy_parity": true,
+      "entropy_tolerance": 1e-12,
+      "leaf_group": "f71"
+    },
+    {
+      "count_parity": true,
+      "d2_across_transition_pair_entropy_bits": 4.585239682676566,
+      "d2_boundary_pair_count": 653,
+      "d3_boundary_pair_count": 653,
+      "d3_boundary_pair_entropy_bits": 4.585239682676566,
+      "entropy_difference": 0.0,
+      "entropy_parity": true,
+      "entropy_tolerance": 1e-12,
+      "leaf_group": "f75"
+    },
+    {
+      "count_parity": true,
+      "d2_across_transition_pair_entropy_bits": 5.009699213015455,
+      "d2_boundary_pair_count": 871,
+      "d3_boundary_pair_count": 871,
+      "d3_boundary_pair_entropy_bits": 5.009699213015455,
+      "entropy_difference": 0.0,
+      "entropy_parity": true,
+      "entropy_tolerance": 1e-12,
+      "leaf_group": "f76"
+    },
+    {
+      "count_parity": true,
+      "d2_across_transition_pair_entropy_bits": 5.018060861777645,
+      "d2_boundary_pair_count": 274,
+      "d3_boundary_pair_count": 274,
+      "d3_boundary_pair_entropy_bits": 5.018060861777645,
+      "entropy_difference": 0.0,
+      "entropy_parity": true,
+      "entropy_tolerance": 1e-12,
+      "leaf_group": "f99"
+    }
+  ],
+  "development_validation_read_by_d3": false,
+  "p_values_computed": false,
+  "parent_d2_config_sha256": "3c9328d15ac337f7765b448d2c3c59a4f9b5a9ab8decc901f7c6420b53741572",
+  "parent_d2_per_leaf_sha256": "f85b4f8f963284837a2f93670efa7173264eede88ce702828ed7a11db6f9e04b",
+  "parent_d2_run_manifest_sha256": "f8324627944e4cfb5278f1de30d89b08f41b2a901374ec930e739de3b63e7eb3",
+  "parent_d2_summary_sha256": "ca892683ba7c7309595048baeb31ae16d1fe2633d3b1bc775dd821ad765a6322",
+  "predictive_models_fit_or_rescored_by_d3": false,
+  "sensitivity_conditions": {
+    "all15": [],
+    "without_f49": [
+      "f49"
+    ],
+    "without_f57": [
+      "f57"
+    ],
+    "without_f57_f49": [
+      "f57",
+      "f49"
+    ]
+  },
+  "source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+  "sta1_rules_sha256": "7f37853510144fb3e2dc3ee9458d634f41e6d95bc1fbf1c4b8f479a53a021f81",
+  "test_split_sha256": "4c0fcf3685f7a9d0c2a607ddc9da115616f5b09dc3a111a8a4fa30f8580553c2",
+  "test_was_already_accessed_before_d3": true
+}

@@ -1,0 +1,135 @@
+{
+  "bootstrap": {
+    "ci": "percentile_95",
+    "method": "paired resampling of atomic leaf groups with replacement; ratio-of-sums corpus bits/event",
+    "replicates": 10000,
+    "seed": 40814041438,
+    "unit": "atomic_physical_leaf_group"
+  },
+  "diagnostics": {
+    "cross_view": {
+      "report_leaf_delta_pearson_correlation": true,
+      "report_leaf_sign_concordance": true
+    },
+    "leave_one_leaf_out": {
+      "enabled": true,
+      "interpretation": "Influence diagnostic only. A leave-one-out positive result must not be presented as a Phase-4 pass."
+    },
+    "metadata": {
+      "fields": [
+        "section",
+        "currier",
+        "scribe",
+        "quire",
+        "locus_type"
+      ],
+      "group_statistics": "descriptive ratio-of-sums only",
+      "mixed_value_policy": "label as MIXED[value1|value2|...]",
+      "no_subgroup_significance_testing": true
+    },
+    "per_leaf": {
+      "metrics": [
+        "competitor bits/event",
+        "matched trigram bits/event",
+        "delta bits/event",
+        "raw delta bits",
+        "exact contribution to corpus delta",
+        "direction",
+        "token-aware minus space-free delta gap"
+      ],
+      "report_both_hmm_views": true
+    }
+  },
+  "experiment_id": "phase4-space-free-hmm-localization-v1",
+  "frozen_models": {
+    "expected_hmm_config_sha256": "86c0e7bc5fa29d45230a57b41f9402321e118cf7f54a3a410fa5feafc649dd20",
+    "expected_ngram_config_sha256": "f0c00cb95364aa7b138c215ccd3befa9991dc106740172115f5c685d57f7e31c",
+    "hmm_config_path": "configs/baselines/hmm_v1.json",
+    "hmm_restart_count": 5,
+    "hmm_restart_selection": "highest TRAIN likelihood only",
+    "hmm_space_free_hidden_states": 16,
+    "hmm_token_aware_hidden_states": 16,
+    "matched_trigram_order": 3,
+    "ngram_config_path": "configs/baselines/ngram_v1.json",
+    "no_test_hyperparameter_selection": true
+  },
+  "interpretation_boundary": "This is a post-hoc exploratory analysis over an already-accessed Voynich test set. It cannot convert the Phase-4 failure into a pass, cannot establish a successful subgroup, and cannot be used to retune the frozen Phase-4 model.",
+  "output_root": "results/diagnostics/phase4_space_free_hmm_localization/v1",
+  "outputs": [
+    "aggregate_parity.csv",
+    "per_leaf_hmm_deltas.csv",
+    "leave_one_leaf_out.csv",
+    "metadata_group_summary.csv",
+    "bootstrap/hmm_space_free.csv",
+    "bootstrap/hmm_token_aware.csv",
+    "summary.json",
+    "run_manifest.json",
+    "SHA256SUMS"
+  ],
+  "parent_phase4": {
+    "config_path": "configs/phase_4_voynich_locked.yaml",
+    "expected_config_sha256": "55b02cacb041872a20bc87db55d506a3d483da030c520553f77fac60ab9002db",
+    "expected_scorer_sha256": "a3990a1e4d834b8b302cf7fe0244bd902887ece82c248f7982232686d6f50045",
+    "relation_results_path": "results/locked/phase4_voynich/v1/relation_results.csv",
+    "require_all_five_relations_strong": false,
+    "require_locked_test_accessed": true,
+    "required_decision": "INCONSISTENT_WITH_FULL_FIVE_RELATION_PATTERN",
+    "required_relation_status": {
+      "copy_edit": true,
+      "hmm_space_free": false,
+      "hmm_token_aware": true,
+      "slot_grammar": true,
+      "token_markov": true
+    },
+    "result_root": "results/locked/phase4_voynich/v1",
+    "scorer_path": "src/evaluation/phase4_voynich_locked.py",
+    "summary_path": "results/locked/phase4_voynich/v1/summary.json"
+  },
+  "phase4_parity": {
+    "absolute_tolerance": 1e-09,
+    "relations": [
+      "hmm_space_free",
+      "hmm_token_aware"
+    ],
+    "require_parity_before_localization": true,
+    "required_fields": [
+      "competitor_bits_per_event",
+      "trigram_bits_per_event",
+      "delta_competitor_minus_trigram_bits_per_event",
+      "ci_95_lower",
+      "ci_95_upper",
+      "bootstrap_units",
+      "bootstrap_replicates",
+      "bootstrap_seed"
+    ]
+  },
+  "phase_label": "VOYAGER Phase 4.D1 \u2014 Space-Free HMM Failure Localization",
+  "primary_question": "Why did hmm_space_free have a positive locked-test point estimate but a paired-bootstrap interval crossing zero, while hmm_token_aware and the other three preregistered relations were strong?",
+  "prohibited_inferences": [
+    "reclassify Phase 4 as passed because four of five relations were strong",
+    "reclassify Phase 4 as passed because a subgroup or leave-one-out result is positive",
+    "drop or exclude any locked-test leaf based on this diagnostic",
+    "change HMM state count after viewing this diagnostic",
+    "change trigram order after viewing this diagnostic",
+    "change bootstrap seed, unit, replicate count, or confidence threshold to obtain significance",
+    "claim a manuscript section is confirmatorily supported based on post-hoc grouping",
+    "claim decipherment or unique historical mechanism"
+  ],
+  "purpose": "Localize the sole Phase-4 preregistered mismatch without changing, rescoring, or reclassifying the Phase-4 confirmatory decision. The diagnostic reconstructs the exact frozen HMM-vs-trigram TEST scores at the physical-leaf-group level and describes heterogeneity.",
+  "schema_version": "1.0",
+  "status": "exploratory_posthoc_locked_test_diagnostic",
+  "voynich_inputs": {
+    "expected_source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "expected_sta1_rules_sha256": "7f37853510144fb3e2dc3ee9458d634f41e6d95bc1fbf1c4b8f479a53a021f81",
+    "expected_test_leaves": 15,
+    "expected_train_leaves": 72,
+    "expected_train_sha256": "5bb5232d5e211a4bb90800f259294c554c1c9e2005548055ebaf94e782e3cc00",
+    "locked_test_path": "data/splits/v1/test_LOCKED.txt",
+    "representation": "S0_ZL_CONVENTIONAL_STA1_GLYPHS",
+    "source_path": "data/raw/zl/ZL3b-n.txt",
+    "sta1_rules_path": "data/reference/sta1/STA-Eva_def.bit",
+    "test_hash_source": "parent Phase-4 summary locked_test_sha256",
+    "train_split_path": "data/splits/v1/train.txt",
+    "transcription_id": "ZL3b"
+  }
+}

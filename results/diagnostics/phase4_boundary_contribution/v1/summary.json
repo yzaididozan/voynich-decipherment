@@ -1,0 +1,191 @@
+{
+  "atomic_leaf_groups": 15,
+  "boundary_boost_sign_counts": {
+    "negative": 0,
+    "positive": 15,
+    "zero": 0
+  },
+  "correlations": [
+    {
+      "confirmatory_interpretation_permitted": false,
+      "feature": "readable_token_count",
+      "n_missing": 0,
+      "n_used": 15,
+      "outcome": "boundary_boost_bits_per_event",
+      "p_values_computed": false,
+      "pearson_r": -0.08289276140320002,
+      "spearman_rho": 0.1
+    },
+    {
+      "confirmatory_interpretation_permitted": false,
+      "feature": "readable_glyph_count",
+      "n_missing": 0,
+      "n_used": 15,
+      "outcome": "boundary_boost_bits_per_event",
+      "p_values_computed": false,
+      "pearson_r": -0.144545311552765,
+      "spearman_rho": 0.010714285714285714
+    },
+    {
+      "confirmatory_interpretation_permitted": false,
+      "feature": "mean_token_length_glyphs",
+      "n_missing": 0,
+      "n_used": 15,
+      "outcome": "boundary_boost_bits_per_event",
+      "p_values_computed": false,
+      "pearson_r": -0.6536623597424206,
+      "spearman_rho": -0.44285714285714284
+    },
+    {
+      "confirmatory_interpretation_permitted": false,
+      "feature": "token_length_variance_population",
+      "n_missing": 0,
+      "n_used": 15,
+      "outcome": "boundary_boost_bits_per_event",
+      "p_values_computed": false,
+      "pearson_r": 0.6261773419015431,
+      "spearman_rho": 0.13214285714285715
+    },
+    {
+      "confirmatory_interpretation_permitted": false,
+      "feature": "boundary_density_per_glyph",
+      "n_missing": 0,
+      "n_used": 15,
+      "outcome": "boundary_boost_bits_per_event",
+      "p_values_computed": false,
+      "pearson_r": 0.7385764395564737,
+      "spearman_rho": 0.3142857142857143
+    },
+    {
+      "confirmatory_interpretation_permitted": false,
+      "feature": "vocabulary_size_exact_tokens",
+      "n_missing": 0,
+      "n_used": 15,
+      "outcome": "boundary_boost_bits_per_event",
+      "p_values_computed": false,
+      "pearson_r": -0.11360021921783507,
+      "spearman_rho": 0.075
+    },
+    {
+      "confirmatory_interpretation_permitted": false,
+      "feature": "type_token_ratio",
+      "n_missing": 0,
+      "n_used": 15,
+      "outcome": "boundary_boost_bits_per_event",
+      "p_values_computed": false,
+      "pearson_r": -0.18843573741943753,
+      "spearman_rho": -0.18928571428571428
+    },
+    {
+      "confirmatory_interpretation_permitted": false,
+      "feature": "repeated_token_occurrence_fraction",
+      "n_missing": 0,
+      "n_used": 15,
+      "outcome": "boundary_boost_bits_per_event",
+      "p_values_computed": false,
+      "pearson_r": 0.1472678760404449,
+      "spearman_rho": 0.18214285714285713
+    },
+    {
+      "confirmatory_interpretation_permitted": false,
+      "feature": "singleton_token_occurrence_fraction",
+      "n_missing": 0,
+      "n_used": 15,
+      "outcome": "boundary_boost_bits_per_event",
+      "p_values_computed": false,
+      "pearson_r": -0.1472678760404449,
+      "spearman_rho": -0.18214285714285713
+    },
+    {
+      "confirmatory_interpretation_permitted": false,
+      "feature": "singleton_type_fraction",
+      "n_missing": 0,
+      "n_used": 15,
+      "outcome": "boundary_boost_bits_per_event",
+      "p_values_computed": false,
+      "pearson_r": -0.012340487707154044,
+      "spearman_rho": -0.09642857142857143
+    },
+    {
+      "confirmatory_interpretation_permitted": false,
+      "feature": "adjacent_exact_repeat_fraction",
+      "n_missing": 0,
+      "n_used": 15,
+      "outcome": "boundary_boost_bits_per_event",
+      "p_values_computed": false,
+      "pearson_r": -0.1393108365497976,
+      "spearman_rho": -0.09730124597112036
+    },
+    {
+      "confirmatory_interpretation_permitted": false,
+      "feature": "within_transition_conditional_entropy_bits",
+      "n_missing": 0,
+      "n_used": 15,
+      "outcome": "boundary_boost_bits_per_event",
+      "p_values_computed": false,
+      "pearson_r": 0.3484259488865643,
+      "spearman_rho": 0.3142857142857143
+    },
+    {
+      "confirmatory_interpretation_permitted": false,
+      "feature": "across_transition_conditional_entropy_bits",
+      "n_missing": 0,
+      "n_used": 15,
+      "outcome": "boundary_boost_bits_per_event",
+      "p_values_computed": false,
+      "pearson_r": 0.08548361786972186,
+      "spearman_rho": -0.06785714285714285
+    },
+    {
+      "confirmatory_interpretation_permitted": false,
+      "feature": "conditional_entropy_gap_across_minus_within_bits",
+      "n_missing": 0,
+      "n_used": 15,
+      "outcome": "boundary_boost_bits_per_event",
+      "p_values_computed": false,
+      "pearson_r": -0.1445058465347323,
+      "spearman_rho": -0.2857142857142857
+    },
+    {
+      "confirmatory_interpretation_permitted": false,
+      "feature": "within_transition_pair_entropy_bits",
+      "n_missing": 0,
+      "n_used": 15,
+      "outcome": "boundary_boost_bits_per_event",
+      "p_values_computed": false,
+      "pearson_r": 0.5346885279516977,
+      "spearman_rho": 0.31785714285714284
+    },
+    {
+      "confirmatory_interpretation_permitted": false,
+      "feature": "across_transition_pair_entropy_bits",
+      "n_missing": 0,
+      "n_used": 15,
+      "outcome": "boundary_boost_bits_per_event",
+      "p_values_computed": false,
+      "pearson_r": 0.804591574027295,
+      "spearman_rho": 0.6357142857142857
+    },
+    {
+      "confirmatory_interpretation_permitted": false,
+      "feature": "pair_entropy_gap_across_minus_within_bits",
+      "n_missing": 0,
+      "n_used": 15,
+      "outcome": "boundary_boost_bits_per_event",
+      "p_values_computed": false,
+      "pearson_r": 0.6873093620010396,
+      "spearman_rho": 0.3392857142857143
+    }
+  ],
+  "experiment_id": "phase4-boundary-contribution-v1",
+  "interpretation_boundary": "D2 is exploratory and post-hoc on an already-accessed test set. Correlations are descriptive, not independent tests. D2 cannot reclassify Phase 4, justify excluding leaves, identify a unique historical mechanism, or constitute decipherment.",
+  "parent_phase4_decision_retained": "INCONSISTENT_WITH_FULL_FIVE_RELATION_PATTERN",
+  "phase4_reclassification_permitted": false,
+  "predictive_models_fit_or_rescored": false,
+  "preidentified_cross_view_negative_leaf_groups": [
+    "f57",
+    "f49"
+  ],
+  "schema_version": "1.0",
+  "status": "exploratory_posthoc_locked_test_diagnostic"
+}
