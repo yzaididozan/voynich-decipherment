@@ -1,0 +1,21 @@
+{
+  "event": "LOCKED_TEST_ACCESS_BEGUN",
+  "experiment_id": "phase-4-voynich-locked-evaluation-v1",
+  "note": "Presence of this file means test_LOCKED access was authorized. Do not treat the locked split as untouched after this point.",
+  "phase3b_summary_sha256": "3ac4a308fb7d38ba89a6253c7343de464be010b50e676a0c4795176bfe145e88",
+  "phase4_config_sha256": "55b02cacb041872a20bc87db55d506a3d483da030c520553f77fac60ab9002db",
+  "scorer_path": "/Users/yasamean/voynich-decipherment/src/evaluation/phase4_voynich_locked.py",
+  "scorer_sha256": "a3990a1e4d834b8b302cf7fe0244bd902887ece82c248f7982232686d6f50045",
+  "validation_frozen_models": {
+    "copy_edit": 16,
+    "hmm_space_free": 16,
+    "hmm_token_aware": 16,
+    "slot_grammar": 16,
+    "token_markov": 1,
+    "validation_summary_sha256": {
+      "copy_edit": "17039d0cf9521194adc6ce73e7daa430bdfc7d3cbb985d8a8a660cc13e3a5fe1",
+      "slot_grammar": "6ebbe75f3b705155d42e633a542d6dee6dfc871c1d4b65498d34e4a3d89bc03b",
+      "token_markov": "4cc69a519019791e67fb8a0a6c95aaf55d7bfa3247240817e8dc50a5d0fe0c3c"
+    }
+  }
+}

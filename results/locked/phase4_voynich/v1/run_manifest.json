@@ -1,0 +1,20 @@
+{
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 40814041438,
+  "frozen_hyperparameters": {
+    "copy_edit": 16,
+    "hmm_space_free": 16,
+    "hmm_token_aware": 16,
+    "slot_grammar": 16,
+    "token_markov": 1
+  },
+  "locked_test_sha256": "4c0fcf3685f7a9d0c2a607ddc9da115616f5b09dc3a111a8a4fa30f8580553c2",
+  "phase3b_summary_sha256": "3ac4a308fb7d38ba89a6253c7343de464be010b50e676a0c4795176bfe145e88",
+  "phase4_config_sha256": "55b02cacb041872a20bc87db55d506a3d483da030c520553f77fac60ab9002db",
+  "scorer_path": "/Users/yasamean/voynich-decipherment/src/evaluation/phase4_voynich_locked.py",
+  "scorer_sha256": "a3990a1e4d834b8b302cf7fe0244bd902887ece82c248f7982232686d6f50045",
+  "source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+  "sta1_rules_sha256": "7f37853510144fb3e2dc3ee9458d634f41e6d95bc1fbf1c4b8f479a53a021f81",
+  "train_split_sha256": "5bb5232d5e211a4bb90800f259294c554c1c9e2005548055ebaf94e782e3cc00",
+  "validation_split_sha256": "bdae856ac8c52849a0abd0fd6361f42fd57579e76f7f844309a7ddc9e0fc02f1"
+}

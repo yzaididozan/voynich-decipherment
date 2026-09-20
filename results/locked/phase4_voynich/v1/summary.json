@@ -1,0 +1,48 @@
+{
+  "all_five_relations_strong": false,
+  "decision": "INCONSISTENT_WITH_FULL_FIVE_RELATION_PATTERN",
+  "experiment_id": "phase-4-voynich-locked-evaluation-v1",
+  "interpretation": "A five-relation match is structural compatibility only and is non-discriminating among mechanisms that can reproduce the same fingerprint. It is not decipherment or mechanism identification.",
+  "locked_test_accessed": true,
+  "locked_test_sha256": "4c0fcf3685f7a9d0c2a607ddc9da115616f5b09dc3a111a8a4fa30f8580553c2",
+  "relations": {
+    "copy_edit": {
+      "ci_95_lower": 0.9485271668866365,
+      "ci_95_upper": 1.2148230514467258,
+      "delta_competitor_minus_trigram_bits_per_event": 1.1205746913812122,
+      "selected_hyperparameter": 16,
+      "strong_direction_match_voynich": true
+    },
+    "hmm_space_free": {
+      "ci_95_lower": -0.02624974679181006,
+      "ci_95_upper": 0.06794564313342506,
+      "delta_competitor_minus_trigram_bits_per_event": 0.036928540297695545,
+      "selected_hyperparameter": 16,
+      "strong_direction_match_voynich": false
+    },
+    "hmm_token_aware": {
+      "ci_95_lower": 0.03086872746142959,
+      "ci_95_upper": 0.11153284385592892,
+      "delta_competitor_minus_trigram_bits_per_event": 0.08387824955755807,
+      "selected_hyperparameter": 16,
+      "strong_direction_match_voynich": true
+    },
+    "slot_grammar": {
+      "ci_95_lower": 0.3967093038954569,
+      "ci_95_upper": 0.48692593834832154,
+      "delta_competitor_minus_trigram_bits_per_event": 0.4519590383201284,
+      "selected_hyperparameter": 16,
+      "strong_direction_match_voynich": true
+    },
+    "token_markov": {
+      "ci_95_lower": 0.08790296513246057,
+      "ci_95_upper": 0.1456326711316834,
+      "delta_competitor_minus_trigram_bits_per_event": 0.11083089020774262,
+      "selected_hyperparameter": 1,
+      "strong_direction_match_voynich": true
+    }
+  },
+  "schema_version": "1.0",
+  "status": "confirmatory_locked_test",
+  "test_physical_leaves": 15
+}
