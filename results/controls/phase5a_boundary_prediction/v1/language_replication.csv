@@ -1,0 +1,5 @@
+language,seeds,direction_match_seeds,language_replicated_4_of_5,mean_pearson_r,mean_spearman_rho
+French,5,3,False,0.03896074096871668,0.06714285714285714
+German,5,2,False,0.02212324966570996,0.02142857142857143
+Italian,5,3,False,0.03993490581902143,-0.0392857142857143
+Latin,5,1,False,-0.1513073803537251,-0.22785714285714287

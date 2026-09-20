@@ -1,0 +1,18 @@
+{
+  "experiment_id": "phase-5a-prospective-boundary-prediction-v1",
+  "provenance": {
+    "fresh_manifest_sha256": "52a2005974aff935821e6930b900923ab1bb3f7155ef05faa05c72304df35641",
+    "frozen_train_occurrence_state_sha256": "d831f97a6cb7d79f99bee7fdf38f225d5422b071bf22a25f3ab57c8372339bd6",
+    "mechanism_generator_sha256": "2a6b27af36b0b896b40409450dffbd443d7a378d4deffaa390e8a989d25e33c9",
+    "mechanism_seed": 40814041438,
+    "phase5a_config_sha256": "925c00d0a381541e1536264e4e07480d54e679ef593a40eb8cd0710925b8e42f",
+    "source_test_locked_sha256": "c9194825f993a0db30cec249af544382d4c7a798d73dad0767e26f25e5027900",
+    "source_train_sha256": "9f733b6cd22259755805a1266897fb5631fe42903ea4e8450aa9bb25a819019d",
+    "test_state_policy": "direct_from_final_train_state"
+  },
+  "schema_version": "1.0",
+  "status": "confirmatory_prospective_control_prediction",
+  "test_continues_directly_from_final_train_state": true,
+  "test_lines_encoded": 608,
+  "train_lines_encoded": 1560
+}

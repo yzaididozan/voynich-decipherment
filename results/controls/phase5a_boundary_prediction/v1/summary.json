@@ -1,0 +1,55 @@
+{
+  "decision": "PHASE_5A_PROSPECTIVE_BOUNDARY_PREDICTION_NOT_SUPPORTED",
+  "experiment_id": "phase-5a-prospective-boundary-prediction-v1",
+  "fresh_test_access_marker_sha256": "8d7412b0e88e063377aab7dc8d3dcbf83bf8c09da0432dfddc041c26146de637",
+  "interpretation_boundary": "Phase 5A tests one prospective mechanism-derived structural prediction on fresh controls. A PASS strengthens evidence that the D3 boundary pattern is a consequence of the frozen mechanism rather than a peculiarity discovered only in the Voynich locked sample. It does not identify the historical Voynich mechanism, recover plaintext, or undo the Phase-4 five-relation FAIL.",
+  "language_replication": [
+    {
+      "direction_match_seeds": 3,
+      "language": "French",
+      "language_replicated_4_of_5": false,
+      "mean_pearson_r": 0.03896074096871668,
+      "mean_spearman_rho": 0.06714285714285714,
+      "seeds": 5
+    },
+    {
+      "direction_match_seeds": 2,
+      "language": "German",
+      "language_replicated_4_of_5": false,
+      "mean_pearson_r": 0.02212324966570996,
+      "mean_spearman_rho": 0.02142857142857143,
+      "seeds": 5
+    },
+    {
+      "direction_match_seeds": 3,
+      "language": "Italian",
+      "language_replicated_4_of_5": false,
+      "mean_pearson_r": 0.03993490581902143,
+      "mean_spearman_rho": -0.0392857142857143,
+      "seeds": 5
+    },
+    {
+      "direction_match_seeds": 1,
+      "language": "Latin",
+      "language_replicated_4_of_5": false,
+      "mean_pearson_r": -0.1513073803537251,
+      "mean_spearman_rho": -0.22785714285714287,
+      "seeds": 5
+    }
+  ],
+  "language_rule": ">=4/5 seeds satisfy per_run_direction_match",
+  "languages_replicated": 0,
+  "per_unit_rows": 300,
+  "phase4_decision_changed": false,
+  "phase5a_rule": ">=3/4 languages replicate",
+  "primary_feature": "boundary_pair_entropy_bits",
+  "primary_outcome": "boundary_boost_bits_per_event",
+  "primary_prediction_supported": false,
+  "primary_run_rule": "pearson_r > 0 and spearman_rho > 0",
+  "replicated_languages": [],
+  "runs": 20,
+  "schema_version": "1.0",
+  "secondary_features_scored_for_primary_decision": false,
+  "status": "confirmatory_prospective_control_prediction",
+  "voynich_files_accessed": false
+}
