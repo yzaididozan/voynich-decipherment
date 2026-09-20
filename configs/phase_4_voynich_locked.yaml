@@ -1,0 +1,151 @@
+schema_version: "1.0"
+experiment_id: "phase-4-voynich-locked-evaluation-v1"
+phase_label: "VOYAGER Phase 4 — Locked Voynich Evaluation"
+status: "confirmatory_locked_test"
+
+question: >-
+  Does the actual locked Voynich test partition exhibit the same five
+  preregistered predictive relations that the frozen Phase 3A.6 mechanism
+  reproduced and Phase 3B confirmed on untouched historical-language controls?
+
+interpretation_boundary: >-
+  Phase 4 tests compatibility of the Voynich locked test with the confirmed
+  relation pattern. A full five-relation match is not identification of the
+  historical mechanism, plaintext, or source language. This Phase 4 test alone
+  is non-discriminating among any other mechanisms that can reproduce the same
+  five relations.
+
+phase3b:
+  config_path: "configs/phase_3b_confirmatory.yaml"
+  expected_config_sha256: "b712bbdf13e3bf121e5a045ad0d3b4a76e496a8246b4afdc63f6477a24564ce8"
+  result_summary_path: "results/controls/phase3b_reserved_confirmation/v1/summary.json"
+  required_decision: "PHASE_3B_PASS"
+  required_runs: 20
+  required_relation_rows: 100
+  require_full_hierarchy: true
+  require_voynich_locked_test_accessed: false
+
+confirmed_mechanism:
+  config_path: "configs/mechanisms/recurrence_avoiding_surface_allocation_v1.json"
+  expected_config_sha256: "f26fef20aad928ee98a3e4824ca0911c8855de2ff1c0908d5388fae0ffbd2535"
+  generator_path: "src/ciphers/recurrence_avoiding_surface_allocation.py"
+  expected_generator_sha256: "2a6b27af36b0b896b40409450dffbd443d7a378d4deffaa390e8a989d25e33c9"
+  variant_count: 16
+  suffix_length_glyphs: 1
+  allocation: "balanced_without_replacement_per_lexical_base"
+  note: >-
+    The mechanism is not applied to Voynich as a decoder. Its confirmed
+    control behavior motivates the frozen five-relation prediction tested here.
+
+frozen_level2:
+  config_path: "configs/evaluation/level2_predictive_controls_v1.json"
+  expected_config_sha256: "6f6214286c9c8e47e90c27cf4c41da60f21c12fd8c31c07a4a98e3aada8b236c"
+  required_freeze_id: "level2-predictive-controls-v1"
+  operational_relations:
+    - "hmm_space_free"
+    - "hmm_token_aware"
+    - "slot_grammar"
+    - "token_markov"
+    - "copy_edit"
+
+voynich_corpus:
+  transcription_id: "ZL3b"
+  source_path: "data/raw/zl/ZL3b-n.txt"
+  expected_source_sha256: "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+  format: "IVTFF 2.0"
+  alphabet: "Eva-"
+  sta1_rules_path: "data/reference/sta1/STA-Eva_def.bit"
+  expected_sta1_rules_sha256: "7f37853510144fb3e2dc3ee9458d634f41e6d95bc1fbf1c4b8f479a53a021f81"
+  representation: "S0_ZL_CONVENTIONAL_STA1_GLYPHS"
+  preprocessing:
+    certain_space: "token_boundary"
+    uncertain_space: "token_boundary"
+    drawing_interruptions: "token_boundary"
+    alternatives: "first_reading"
+    comments_and_tags: "excluded_by_existing_S0_pipeline"
+    unknown_symbol: "Z1 with relation-specific frozen handling"
+
+splits:
+  unit: "physical_leaf"
+  train_path: "data/splits/v1/train.txt"
+  expected_train_sha256: "5bb5232d5e211a4bb90800f259294c554c1c9e2005548055ebaf94e782e3cc00"
+  expected_train_leaves: 72
+  validation_path: "data/splits/v1/validation.txt"
+  expected_validation_sha256: "bdae856ac8c52849a0abd0fd6361f42fd57579e76f7f844309a7ddc9e0fc02f1"
+  expected_validation_leaves: 15
+  locked_test_path: "data/splits/v1/test_LOCKED.txt"
+  expected_test_leaves: 15
+  expected_total_physical_leaves: 102
+  split_seed: 40814041438
+  rosettes_linked_leaves: [85, 86]
+  important: >-
+    Preflight MUST NOT read, stat, hash, list, or parse test_LOCKED.txt.
+    It is first opened only after --execute-locked-test.
+
+validation_frozen_models:
+  hmm_space_free:
+    selected_hidden_states: 16
+    selection_source: "preexisting validation comparison; fixed before Phase 4"
+  hmm_token_aware:
+    selected_hidden_states: 16
+    selection_source: "preexisting validation comparison; fixed before Phase 4"
+  slot_grammar:
+    selected_template_count: 16
+    selection_source: "results/baselines/slot_grammar/v1/summary.json"
+  token_markov:
+    selected_context_order: "READ_PREEXISTING_VALIDATION_SUMMARY"
+    allowed_values: [1, 2]
+    selection_source: "results/baselines/token_markov/v1/summary.json"
+    summary_field: "selected_context_order"
+  copy_edit:
+    selected_source_window: 16
+    selection_source: "results/baselines/copy_edit/v1/summary.json"
+
+validation_summaries:
+  slot_grammar: "results/baselines/slot_grammar/v1/summary.json"
+  token_markov: "results/baselines/token_markov/v1/summary.json"
+  copy_edit: "results/baselines/copy_edit/v1/summary.json"
+
+test_evaluation:
+  bootstrap_unit: "physical_leaf"
+  bootstrap_replicates: 10000
+  bootstrap_seed: 40814041438
+  relation_strong_rule: "delta > 0 and paired_bootstrap_ci_95_lower > 0"
+  matched_trigram_order: 3
+  no_test_hyperparameter_selection: true
+  no_test_threshold_selection: true
+  no_test_model_grid_expansion: true
+
+decision_rule:
+  relation_match: "delta > 0 and 95% paired-bootstrap CI lower > 0"
+  full_relation_pattern: "all five relations match"
+  if_all_five_match: "CONSISTENT_NONDISCRIMINATING"
+  if_any_relation_does_not_match: "INCONSISTENT_WITH_FULL_FIVE_RELATION_PATTERN"
+  prohibited_output: "DISCRIMINATING_SUPPORT"
+  explanation: >-
+    All five matching supports compatibility with the confirmed mechanism's
+    predictive fingerprint, but Phase 4 does not compare every plausible
+    competing mechanism on the same locked test and therefore cannot identify
+    this mechanism uniquely.
+
+execution:
+  preflight_default: true
+  execute_flag: "--execute-locked-test"
+  result_output_root: "results/locked/phase4_voynich/v1"
+  execution_marker: "results/locked/phase4_voynich/v1/LOCKED_TEST_ACCESSED.json"
+  one_shot: true
+  scientific_failure_exit_code: 0
+  software_error_exit_code: 1
+
+prohibited_after_locked_test_access:
+  - "change K, suffix length, or allocation rule"
+  - "change Voynich transcription or primary representation to improve fit"
+  - "change tokenization or uncertainty handling to improve fit"
+  - "change train/validation/test membership"
+  - "select any hyperparameter using test_LOCKED"
+  - "expand any model grid"
+  - "change bootstrap unit, seed, replicate count, or confidence threshold"
+  - "drop a failed relation"
+  - "redefine the Phase 4 decision rule"
+  - "rerun a modified Phase 4 on the same locked test as confirmatory"
+  - "claim decipherment, plaintext recovery, source-language identification, or unique historical mechanism from this test"
