@@ -1,0 +1,7 @@
+{
+  "experiment_id": "phase-6b-voynich-recurrence-cycle-v1",
+  "meaning": "Phase 6B recurrence-statistic execution has begun on the previously accessed Voynich corpus.",
+  "phase6b_config_sha256": "63cf3a365165aea24f5fc461e31bee0ccb00a9e0406cb172e28e0bd1fcd09ac9",
+  "schema_version": "1.0",
+  "voynich_data_status": "PREVIOUSLY_ACCESSED_IN_EARLIER_PHASES"
+}

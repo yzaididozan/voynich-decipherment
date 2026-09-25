@@ -1,0 +1,20 @@
+{
+  "candidate_theoretical_contrast": 1.0,
+  "control_data_status": "REUSED_PHASE5A_DATA_ALREADY_ACCESSED",
+  "control_manifest_sha256": "52a2005974aff935821e6930b900923ab1bb3f7155ef05faa05c72304df35641",
+  "decision": "PHASE_6A_RECURRENCE_CYCLE_CONTROL_CALIBRATION_PASS",
+  "experiment_id": "phase-6a-recurrence-cycle-control-calibration-v1",
+  "interpretation_boundary": "Control-side calibration only. A PASS shows that the frozen period-16 statistic separates the fixed-cycle K=16 allocator from the two prespecified matched allocation alternatives on the reused historical-language controls. It does not test Voynich.",
+  "languages_replicated": 4,
+  "minimum_candidate_minus_best_null": 0.9607705276569158,
+  "phase4_decision_retained": "INCONSISTENT_WITH_FULL_FIVE_RELATION_PATTERN",
+  "phase5a_decision_retained": "PHASE_5A_PROSPECTIVE_BOUNDARY_PREDICTION_NOT_SUPPORTED",
+  "phase6a_config_sha256": "99a7c07fba77c68cdf6d9c080442ccd9b3ebbc1315e256c6c239028052cf7575",
+  "primary_statistic": "cycle16_contrast",
+  "required_success": "20/20 runs and 4/4 languages",
+  "runs": 20,
+  "schema_version": "1.0",
+  "status": "confirmatory_mechanism_control_calibration",
+  "successful_runs": 20,
+  "voynich_accessed": false
+}

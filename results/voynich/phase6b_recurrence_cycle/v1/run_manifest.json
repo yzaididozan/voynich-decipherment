@@ -1,0 +1,24 @@
+{
+  "base_family_rule": "tuple(token[:-1])",
+  "outputs": [
+    "ANALYSIS_EXECUTED.json",
+    "observed_lag_profile.csv",
+    "eligible_families.csv",
+    "permutation_distribution.csv",
+    "summary.json"
+  ],
+  "periods_tested_for_primary": [
+    16
+  ],
+  "permutation_replicates": 10000,
+  "permutation_seed": 40814041438,
+  "phase6a_summary_sha256": "f9289c39b6b76eb7c2ec6070a0125c6452d97b7f6100aae14547835ed229f1d2",
+  "phase6b_config_sha256": "63cf3a365165aea24f5fc461e31bee0ccb00a9e0406cb172e28e0bd1fcd09ac9",
+  "representation": "S0_ZL_CONVENTIONAL_STA1_GLYPHS",
+  "runner_sha256": "50432b6b53f62b68d1f8c8db9e02192a2b66e0460d36befefaff66600a157c9a",
+  "schema_version": "1.0",
+  "split_files_used": false,
+  "sta1_rules_sha256": "7f37853510144fb3e2dc3ee9458d634f41e6d95bc1fbf1c4b8f479a53a021f81",
+  "suffix_rule": "token[-1]",
+  "zl3b_source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+}

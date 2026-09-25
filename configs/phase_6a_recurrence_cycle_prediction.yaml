@@ -1,0 +1,187 @@
+schema_version: "1.0"
+experiment_id: "phase-6a-recurrence-cycle-control-calibration-v1"
+phase_label: "VOYAGER Phase 6A — Recurrence-Cycle Fingerprint Control Calibration"
+status: "confirmatory_mechanism_control_calibration"
+
+primary_question: >-
+  Does a statistic frozen directly from the recurrence-aware K=16 generator
+  reliably distinguish the frozen fixed-cycle allocator from two matched
+  alternatives that preserve its base representation and suffix inventory but
+  remove the fixed across-cycle recurrence?
+
+scientific_role: >-
+  Phase 6A is a control-side mechanism calibration. It does not test Voynich,
+  does not identify a historical mechanism, and does not revise the permanent
+  Phase 4 decision. The historical-language material is deliberately reused
+  from Phase 5A and is therefore not described as fresh or prospective data.
+
+parent_context:
+  phase4_decision_retained: "INCONSISTENT_WITH_FULL_FIVE_RELATION_PATTERN"
+  phase5a_decision: "PHASE_5A_PROSPECTIVE_BOUNDARY_PREDICTION_NOT_SUPPORTED"
+  phase5a_interpretation: >-
+    The D3-derived boundary-pair-entropy prediction did not replicate
+    prospectively under the frozen K=16 mechanism. Phase 6A therefore switches
+    to a prediction derived directly from the generator's fixed period-16
+    allocation rule rather than mining another Phase-5A feature.
+
+frozen_candidate:
+  name: "fixed_cycle_k16"
+  mechanism_name: "recurrence_avoiding_surface_allocation"
+  config_path: "configs/mechanisms/recurrence_avoiding_surface_allocation_v1.json"
+  expected_config_sha256: "f26fef20aad928ee98a3e4824ca0911c8855de2ff1c0908d5388fae0ffbd2535"
+  generator_path: "src/ciphers/recurrence_avoiding_surface_allocation.py"
+  expected_generator_sha256: "2a6b27af36b0b896b40409450dffbd443d7a378d4deffaa390e8a989d25e33c9"
+  variant_count: 16
+  suffix_length_glyphs: 1
+  rule: >-
+    Each encoded lexical base receives one deterministic permutation of the
+    sixteen suffix variants. Occurrence n uses permutation[n mod 16], so the
+    identical permutation repeats every 16 occurrences.
+
+matched_nulls:
+  cycle_shuffle:
+    name: "cycle_shuffle_k16"
+    module_path: "src/ciphers/recurrence_cycle_shuffle_null.py"
+    expected_sha256: "f9f46c1fb33de54a1d60ea0cb48cb51807af84e3cf8fe282f8081d2f8e3bea96"
+    preserves:
+      - "same TRAIN-fitted base map as candidate"
+      - "same 16 suffix glyphs"
+      - "one suffix glyph per token"
+      - "each suffix used exactly once within every 16-occurrence cycle"
+    changes: >-
+      Derive an independent deterministic permutation for each base × seed ×
+      cycle, destroying the fixed permutation across successive cycles.
+  iid:
+    name: "iid_k16"
+    module_path: "src/ciphers/recurrence_iid_null.py"
+    expected_sha256: "193025f23c3ad940c7c1ccc0bf3ab87894768c7771f3414565ca0bda9140e740"
+    preserves:
+      - "same TRAIN-fitted base map as candidate"
+      - "same 16 suffix glyphs"
+      - "one suffix glyph per token"
+    changes: >-
+      Allocate one of the sixteen suffixes independently by deterministic
+      base × seed × occurrence hashing, removing both within-cycle
+      without-replacement allocation and fixed period-16 recurrence.
+
+seeds:
+  - 40814041438
+  - 40814041439
+  - 40814041440
+  - 40814041441
+  - 40814041442
+
+control_corpus:
+  manifest_path: "data/controls/languages_phase5a_v1/manifest.json"
+  expected_manifest_sha256: "52a2005974aff935821e6930b900923ab1bb3f7155ef05faa05c72304df35641"
+  reuse_status: "REUSED_PHASE5A_DATA_ALREADY_ACCESSED"
+  required_languages: ["French", "German", "Italian", "Latin"]
+  required_source_ids:
+    - "french_gutenberg_les_miserables_t1_17489"
+    - "german_gutenberg_simplicissimus_55171"
+    - "italian_gutenberg_i_promessi_sposi_45334"
+    - "latin_gutenberg_aeneidos_227"
+  partitions_used: ["TRAIN", "TEST"]
+  stream_order: >-
+    Encode all TRAIN lines first in original line/token order, then continue
+    counters directly into TEST in original line/token order. Statistics are
+    computed over the combined encoded occurrence stream.
+  note: >-
+    These controls have already been accessed in Phase 5A. Their role here is
+    deterministic calibration of a mechanism-derived statistic, not prospective
+    external validation.
+
+observable_mapping:
+  base_family: "ciphertext token with exactly the final glyph removed"
+  suffix: "final ciphertext glyph"
+  occurrence_order: >-
+    Within each base family, preserve the order in which tokens appear in the
+    combined TRAIN-then-TEST source stream.
+  plaintext_labels_used_for_statistic: false
+
+primary_statistic:
+  name: "cycle16_contrast"
+  eligible_family_min_occurrences: 17
+  primary_lags: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  lag_match_rate: >-
+    For lag k, pool all eligible same-base occurrence pairs (i, i+k) and compute
+    the fraction whose observed suffix glyphs are identical.
+  formula: >-
+    cycle16_contrast = match_rate(lag=16) -
+    mean(match_rate(lag=k) for k in 1..15)
+  candidate_theoretical_pattern:
+    lag_1_through_15_match_rate: 0.0
+    lag_16_match_rate: 1.0
+    cycle16_contrast: 1.0
+  null_expectation:
+    cycle_shuffle: >-
+      Near zero contrast relative to the fixed candidate; lag-16 equality is
+      chance-level across independently reshuffled cycles.
+    iid: >-
+      Expected equality probability is approximately 1/16 at every lag, giving
+      expected cycle16_contrast approximately zero.
+  numerical_tolerance: 1.0e-12
+
+data_sufficiency:
+  minimum_eligible_families_per_source_seed: 10
+  minimum_lag16_pairs_per_source_seed: 64
+  fail_closed_if_not_met: true
+
+primary_decision:
+  per_source_seed_success_requires:
+    - "candidate fixed-cycle exact theoretical pattern within numerical_tolerance"
+    - "candidate cycle16_contrast > cycle_shuffle cycle16_contrast"
+    - "candidate cycle16_contrast > iid cycle16_contrast"
+    - "candidate cycle16_contrast - max(null contrasts) >= 0.50"
+  language_replication: "5/5 seeds must succeed"
+  phase6a_pass: "all 4/4 languages must replicate (20/20 source-seed runs)"
+  pass_label: "PHASE_6A_RECURRENCE_CYCLE_CONTROL_CALIBRATION_PASS"
+  fail_label: "PHASE_6A_RECURRENCE_CYCLE_CONTROL_CALIBRATION_FAIL"
+  no_relaxation_after_run: true
+
+secondary_descriptive:
+  lag32_match_rate:
+    minimum_family_occurrences: 33
+    candidate_expected: 1.0
+    enters_primary_decision: false
+  family_level_outputs:
+    - "eligible_family_count"
+    - "lag16_pair_count"
+    - "lag32_pair_count"
+  note: >-
+    Secondary outputs are descriptive only and may not rescue a failed primary
+    calibration.
+
+voynich_access:
+  permitted: false
+  forbidden_path_fragments:
+    - "data/raw/zl"
+    - "data/reference/sta1"
+    - "data/splits/v1"
+  rule: >-
+    Phase 6A must not open, hash, list, parse, score, or otherwise access any
+    Voynich transcription, split, or result-derived token stream.
+
+outputs:
+  result_dir: "results/controls/phase6a_recurrence_cycle/v1"
+  files:
+    - "per_lag_match_rates.csv"
+    - "per_run_cycle_statistics.csv"
+    - "language_replication.csv"
+    - "summary.json"
+    - "run_manifest.json"
+    - "SHA256SUMS"
+
+rerun_policy:
+  default: "refuse if summary.json already exists"
+  identical_rerun_flag: "--rerun-identical"
+  identical_rerun_requirement: >-
+    A rerun is allowed only when the current Phase 6A config SHA-256 exactly
+    matches the config SHA-256 stored in the existing summary. This is for
+    reproducibility only, not retuning.
+
+next_phase_gate: >-
+  Only after a frozen Phase 6A PASS should a separate Phase 6B Voynich
+  recurrence-cycle preregistration be written. Phase 6B must freeze the same
+  one-glyph stripping rule, period 16, eligible-family rule, statistic, and
+  decision logic before calculating the statistic on Voynich.

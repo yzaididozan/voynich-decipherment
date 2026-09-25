@@ -1,0 +1,36 @@
+{
+  "candidate_config_sha256": "f26fef20aad928ee98a3e4824ca0911c8855de2ff1c0908d5388fae0ffbd2535",
+  "candidate_generator_sha256": "2a6b27af36b0b896b40409450dffbd443d7a378d4deffaa390e8a989d25e33c9",
+  "control_manifest_path": "data/controls/languages_phase5a_v1/manifest.json",
+  "control_manifest_sha256": "52a2005974aff935821e6930b900923ab1bb3f7155ef05faa05c72304df35641",
+  "cycle_shuffle_sha256": "f9f46c1fb33de54a1d60ea0cb48cb51807af84e3cf8fe282f8081d2f8e3bea96",
+  "iid_null_sha256": "193025f23c3ad940c7c1ccc0bf3ab87894768c7771f3414565ca0bda9140e740",
+  "models": [
+    "fixed_cycle_k16",
+    "cycle_shuffle_k16",
+    "iid_k16"
+  ],
+  "output_files": [
+    "per_lag_match_rates.csv",
+    "per_run_cycle_statistics.csv",
+    "language_replication.csv",
+    "summary.json"
+  ],
+  "phase6a_config_sha256": "99a7c07fba77c68cdf6d9c080442ccd9b3ebbc1315e256c6c239028052cf7575",
+  "runner_sha256": "f6f72bd91cbe9df457659d62f5528cb87317e27193d031c77ebea6c00a9c4908",
+  "schema_version": "1.0",
+  "seeds": [
+    40814041438,
+    40814041439,
+    40814041440,
+    40814041441,
+    40814041442
+  ],
+  "source_ids": [
+    "french_gutenberg_les_miserables_t1_17489",
+    "german_gutenberg_simplicissimus_55171",
+    "italian_gutenberg_i_promessi_sposi_45334",
+    "latin_gutenberg_aeneidos_227"
+  ],
+  "voynich_accessed": false
+}

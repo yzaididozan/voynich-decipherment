@@ -1,0 +1,167 @@
+schema_version: "1.0"
+experiment_id: "phase-6b-voynich-recurrence-cycle-v1"
+phase_label: "VOYAGER Phase 6B — Preregistered Voynich Recurrence-Cycle Test"
+status: "preregistered_mechanism_derived_analysis_on_previously_accessed_voynich"
+
+primary_question: >-
+  Does the frozen S0/STA1 Voynich surface exhibit the period-16 same-family
+  suffix-recurrence fingerprint derived directly from the already-frozen
+  recurrence-aware K=16 generator, beyond what is expected from each observed
+  base family's own suffix-frequency distribution?
+
+interpretation_boundary: >-
+  Phase 6B is preregistered before calculating this recurrence statistic, but
+  the Voynich corpus itself has already been accessed in earlier phases.
+  Therefore Phase 6B is not a new untouched-manuscript test. A positive result
+  would establish a prespecified period-16 surface recurrence pattern under the
+  frozen representation; it would not uniquely identify K=16, recover
+  plaintext, identify a source language, or constitute decipherment.
+
+parent_phase6a:
+  config_path: "configs/phase_6a_recurrence_cycle_prediction.yaml"
+  expected_config_sha256: "99a7c07fba77c68cdf6d9c080442ccd9b3ebbc1315e256c6c239028052cf7575"
+  summary_path: "results/controls/phase6a_recurrence_cycle/v1/summary.json"
+  required_decision: "PHASE_6A_RECURRENCE_CYCLE_CONTROL_CALIBRATION_PASS"
+  required_successful_runs: 20
+  required_languages_replicated: 4
+  required_voynich_accessed: false
+  inherited_statistic: "cycle16_contrast"
+  inherited_period: 16
+  inherited_base_rule: "token[:-1]"
+  inherited_suffix_rule: "token[-1]"
+  inherited_minimum_family_occurrences: 17
+
+retained_prior_results:
+  phase4_decision: "INCONSISTENT_WITH_FULL_FIVE_RELATION_PATTERN"
+  phase5a_decision: "PHASE_5A_PROSPECTIVE_BOUNDARY_PREDICTION_NOT_SUPPORTED"
+  rule: >-
+    Phase 6B cannot alter, rescue, or reclassify either prior result.
+
+voynich_input:
+  transcription_id: "ZL3b"
+  source_path: "data/raw/zl/ZL3b-n.txt"
+  expected_source_sha256: "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+  sta1_rules_path: "data/reference/sta1/STA-Eva_def.bit"
+  expected_sta1_rules_sha256: "7f37853510144fb3e2dc3ee9458d634f41e6d95bc1fbf1c4b8f479a53a021f81"
+  representation: "S0_ZL_CONVENTIONAL_STA1_GLYPHS"
+  corpus_scope: "WHOLE_ZL3B_CORPUS_IN_TRANSCRIPTION_ORDER"
+  data_status: "PREVIOUSLY_ACCESSED_IN_EARLIER_PHASES"
+  split_files_used: false
+  order_rule: >-
+    Preserve the order returned by strict ZL3b IVTFF parsing, then analytical
+    locus order, then token order inside each locus. Base-family occurrence
+    sequences continue globally across locus and leaf boundaries.
+  readable_token_rule: >-
+    Include only nonempty analytical tokens with at least two STA1 glyphs and
+    no STA1 Z1. Tokens containing Z1 and one-glyph tokens are excluded.
+  unknown_policy: >-
+    Excluded Z1-containing tokens do not enter any observable base family.
+    They do not reset the occurrence sequence of other readable base families.
+  one_glyph_token_policy: >-
+    Exclude one-glyph tokens because removing the final glyph would leave an
+    empty observable base, which is outside the frozen Phase-6A mechanism
+    representation.
+
+observable_mapping:
+  base_family: "tuple(token[:-1])"
+  suffix: "token[-1]"
+  plaintext_used: false
+  family_sequence: >-
+    For each exact observable base_family, collect suffixes in global corpus
+    occurrence order.
+
+primary_statistic:
+  name: "cycle16_contrast"
+  period: 16
+  eligible_family_min_occurrences: 17
+  primary_lags: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  match_rate_definition: >-
+    For lag k, pool all pairs (i, i+k) within eligible base families and divide
+    the number with identical suffix glyphs by the total pooled pair count.
+  short_lag_mean: "mean(match_rate(k) for k in 1..15)"
+  cycle16_contrast_formula: "match_rate(16) - short_lag_mean"
+  positive_direction: "greater period-16 recurrence than the lag-1..15 baseline"
+  no_alternative_period_search: true
+  no_alternative_suffix_length_search: true
+  no_alternative_base_stripping_search: true
+
+data_sufficiency:
+  minimum_eligible_families: 10
+  minimum_lag16_pairs: 64
+  fail_closed_if_not_met: true
+
+within_family_permutation_null:
+  description: >-
+    Independently permute the observed suffix sequence within every eligible
+    base family. This exactly preserves family identity, family occurrence
+    count, suffix multiset/frequencies, and the set of tokens implied by the
+    frozen base+suffix decomposition while destroying suffix position relative
+    to occurrence number.
+  replicates: 10000
+  seed: 40814041438
+  tail: "one-sided upper"
+  monte_carlo_p_formula: "(1 + count(null_stat >= observed_stat)) / (replicates + 1)"
+  statistics_tested:
+    - "lag16_match_rate"
+    - "cycle16_contrast"
+  alpha_each: 0.001
+  conjunction_rule: >-
+    Both prespecified one-sided permutation p-values must be <= 0.001.
+    No multiple-testing correction is added because success requires the
+    conjunction rather than either test individually.
+
+primary_decision:
+  requirements:
+    - "data sufficiency thresholds pass"
+    - "observed cycle16_contrast > 0"
+    - "observed lag16_match_rate > every observed match_rate at lags 1..15"
+    - "permutation p for lag16_match_rate <= 0.001"
+    - "permutation p for cycle16_contrast <= 0.001"
+  detected_label: "PHASE_6B_PERIOD16_RECURRENCE_FINGERPRINT_DETECTED"
+  not_detected_label: "PHASE_6B_PERIOD16_RECURRENCE_FINGERPRINT_NOT_DETECTED"
+  no_relaxation_after_execution: true
+  no_secondary_rescue: true
+
+secondary_descriptive:
+  lag32:
+    enabled: true
+    family_min_occurrences: 33
+    statistic: "pooled same-suffix match rate at lag 32"
+    permutation_p_reported: true
+    enters_primary_decision: false
+  family_inventory:
+    report_distinct_suffixes_per_eligible_family: true
+    report_count_with_more_than_16_distinct_suffixes: true
+    enters_primary_decision: false
+
+execution:
+  preflight_default: true
+  explicit_execute_flag: "--execute-analysis"
+  marker_path: "results/voynich/phase6b_recurrence_cycle/v1/ANALYSIS_EXECUTED.json"
+  result_dir: "results/voynich/phase6b_recurrence_cycle/v1"
+  refuse_second_execution_by_default: true
+  identical_rerun_flag: "--rerun-identical"
+  identical_rerun_rule: >-
+    An exact rerun is allowed only when the stored marker/summary config SHA-256
+    equals the current config SHA-256. Reruns are for reproducibility only and
+    cannot change parameters or interpretation.
+
+outputs:
+  - "ANALYSIS_EXECUTED.json"
+  - "observed_lag_profile.csv"
+  - "eligible_families.csv"
+  - "permutation_distribution.csv"
+  - "summary.json"
+  - "run_manifest.json"
+  - "SHA256SUMS"
+
+prohibited_actions_after_execution:
+  - "change period 16 after seeing the result"
+  - "change the one-glyph suffix rule after seeing the result"
+  - "change token[:-1] base-family definition after seeing the result"
+  - "search alternative periods and promote the best one as confirmatory"
+  - "drop or add token families based on their observed recurrence behavior"
+  - "change the >=17 family threshold to improve the result"
+  - "change the permutation null or p-value threshold to improve the result"
+  - "use lag32 or any secondary output to rescue a failed primary decision"
+  - "claim unique mechanism identification, plaintext recovery, source language, or decipherment"
